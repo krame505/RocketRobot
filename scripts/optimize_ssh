@@ -1,0 +1,2 @@
+#/bin/bash
+bash script_ssh "nice bash optimize -DPOOL_FOUND_VERBOSE bool false" 9

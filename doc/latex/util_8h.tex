@@ -1,0 +1,67 @@
+\hypertarget{util_8h}{\section{util.\-h File Reference}
+\label{util_8h}\index{util.\-h@{util.\-h}}
+}
+
+
+Helper functions for the simulation.  
+
+
+{\ttfamily \#include \char`\"{}Neural\-Network.\-h\char`\"{}}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceutil}{util}
+\begin{DoxyCompactList}\small\item\em util namespace, contains helper functions to add and remove robots \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceutil_aba9dfe2df4467075a8bcbaccbbe65d55}{util\-::reset} ()
+\begin{DoxyCompactList}\small\item\em Removes all objects and resets to the initial state. \end{DoxyCompactList}\item 
+void \hyperlink{namespaceutil_a07ce92ef6b2053de6e300d9ae17fd9d6}{util\-::display} ()
+\begin{DoxyCompactList}\small\item\em Function to render all the objects.  This function is called repeatedly from the simulation, and iterates through the objects and calls their respective display functions. \end{DoxyCompactList}\item 
+void \hyperlink{namespaceutil_ab0e8cf018dc107d06862a57d79e80538}{util\-::advance} ()
+\begin{DoxyCompactList}\small\item\em Function to update the positions of all objects.  This function is called repeatedly from the simulation, and iterates through the objects and calls their respective update\-Position functions. \end{DoxyCompactList}\item 
+\hyperlink{structColor}{Color} \hyperlink{namespaceutil_a0f3ef8558c61f7969d479448b9c96c78}{util\-::new\-Color} ()
+\begin{DoxyCompactList}\small\item\em Gets a new, unused color. \end{DoxyCompactList}\item 
+int \hyperlink{namespaceutil_a16b3e2bc651bf6876b111d58ccddad3c}{util\-::get\-Num\-Robots\-Targets} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of robots/target pairs. \end{DoxyCompactList}\item 
+int \hyperlink{namespaceutil_aa562d1964b9fef18a6001d8fed63100d}{util\-::get\-Num\-Lights} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of lights. \end{DoxyCompactList}\item 
+int \hyperlink{namespaceutil_a63bc8a24e2203d0771fb75432296b06c}{util\-::get\-Num\-Obstacles} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of obstacles. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutil_ab3eebe9c6924888ecf5d29b2f871fbce}{util\-::add\-Robot\-Target} (int robot\-Type, int light\-Sensor\-Connection\-Pattern, int robot\-Sensor\-Connection\-Pattern, int obstacle\-Sensor\-Connection\-Pattern, int target\-Sensor\-Connection\-Pattern, float light\-Sensor\-Scale, float robot\-Sensor\-Scale, float obstacle\-Sensor\-Scale, float target\-Sensor\-Scale, int initial\-Speed, std\-::string neural\-Network\-File)
+\begin{DoxyCompactList}\small\item\em Adds a robot and paired target to the simulation. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutil_a22f8c077027e25734041006f8d94fd18}{util\-::add\-Robot} (int robot\-Type, int light\-Sensor\-Connection\-Pattern, int robot\-Sensor\-Connection\-Pattern, int obstacle\-Sensor\-Connection\-Pattern, int target\-Sensor\-Connection\-Pattern, float light\-Sensor\-Scale, float robot\-Sensor\-Scale, float obstacle\-Sensor\-Scale, float target\-Sensor\-Scale, int initial\-Speed, std\-::string neural\-Network\-File)
+\begin{DoxyCompactList}\small\item\em Adds a robot to the simulation. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutil_adecaea7e94744f17eb1000727b8c3e73}{util\-::add\-Neural\-Network\-Robot\-Target} (const \hyperlink{classNeuralNetwork}{Neural\-Network} \&network)
+\begin{DoxyCompactList}\small\item\em Adds a neural network robot and a paired target to the simulation. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutil_a4db9ace4269226be8f99f3718279dd51}{util\-::add\-Stationary\-Light\-Source} ()
+\begin{DoxyCompactList}\small\item\em Adds a light to the simulation. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutil_a2c7639eef5925d9a12a9663fcf09d090}{util\-::add\-Moving\-Light\-Source} ()
+\begin{DoxyCompactList}\small\item\em Adds a light to the simulation. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutil_a79d541c466cd33909ae7169988870aab}{util\-::add\-Obstacle} ()
+\begin{DoxyCompactList}\small\item\em Adds a obstacle to the simulation. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutil_a9d724ef3950b1c4f09591c45956215c3}{util\-::copy} (int id, \hyperlink{structLocation}{Location} loc)
+\begin{DoxyCompactList}\small\item\em Copies an object to a new \hyperlink{structLocation}{Location}. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutil_a8d9a09d5405e5cc87906edc59abbf181}{util\-::remove\-Robot\-Target} ()
+\begin{DoxyCompactList}\small\item\em Removes a robot from the simulation. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutil_a0847f03545c0a82374d35395471dd6c9}{util\-::remove\-Light\-Source} ()
+\begin{DoxyCompactList}\small\item\em Removes a light from the simulation. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutil_a6a1069f37e4e2f2acc661d44afd43739}{util\-::remove\-Obstacle} ()
+\begin{DoxyCompactList}\small\item\em Removes a obstacle from the simulation. \end{DoxyCompactList}\item 
+void \hyperlink{namespaceutil_a9d8909ba437d6f89c2876d197afc9074}{util\-::remove\-All\-Robot\-Target} ()
+\begin{DoxyCompactList}\small\item\em Removes all robots. \end{DoxyCompactList}\item 
+void \hyperlink{namespaceutil_a1782859440b46df8dd057a4eb7f98c48}{util\-::remove\-All\-Light\-Source} ()
+\begin{DoxyCompactList}\small\item\em Removes all lights. \end{DoxyCompactList}\item 
+void \hyperlink{namespaceutil_a132f470b2b1eedd9898a6084ca79f6b9}{util\-::remove\-All\-Obstacle} ()
+\begin{DoxyCompactList}\small\item\em Removes all obstacles. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutil_a236403e5af6e99e02323eb2dfb1cd88b}{util\-::open} (std\-::string filename)
+\begin{DoxyCompactList}\small\item\em Loads a simulation from a file. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutil_a4d49c61ae370afdb9ea58b4f4316220b}{util\-::save} (std\-::string filename)
+\begin{DoxyCompactList}\small\item\em Saves the current state to a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Helper functions for the simulation. \begin{DoxyAuthor}{Author}
+Lucas Kramer 
+\end{DoxyAuthor}

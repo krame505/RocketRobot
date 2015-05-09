@@ -1,0 +1,126 @@
+\hypertarget{classNeuralNetworkRobot}{\section{Neural\-Network\-Robot Class Reference}
+\label{classNeuralNetworkRobot}\index{Neural\-Network\-Robot@{Neural\-Network\-Robot}}
+}
+
+
+A robot controlled by a neural network with inputs from the sensors.  
+
+
+
+
+{\ttfamily \#include $<$Neural\-Network\-Robot.\-h$>$}
+
+Inheritance diagram for Neural\-Network\-Robot\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classNeuralNetworkRobot}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNeuralNetworkRobot_adee0b00b83cd1f9269efd5178f4320b3}{Neural\-Network\-Robot} (int radius, \hyperlink{structColor}{Color} color, \hyperlink{structColor}{Color} line\-Color, \hyperlink{classNeuralNetwork}{Neural\-Network} network, int target\-Id=-\/1, std\-::string \hyperlink{classNeuralNetworkRobot_a6ccb2a3dcfa6c5616fede96f7468d065}{filename}=\hyperlink{configuration_8h_ae7f5355b60ff97037b8008b7f6d6aa74}{G\-E\-T\-\_\-\-S\-T\-R\-I\-N\-G}(\char`\"{}D\-E\-F\-A\-U\-L\-T\-\_\-\-N\-E\-U\-R\-A\-L\-\_\-\-N\-E\-T\-W\-O\-R\-K\-\_\-\-F\-I\-L\-E\char`\"{}))
+\item 
+\hyperlink{classNeuralNetworkRobot_a016aaca79a56d7cd2b04583188541359}{Neural\-Network\-Robot} (int radius, \hyperlink{structLocation}{Location} loc, \hyperlink{structColor}{Color} color, \hyperlink{structColor}{Color} line\-Color, \hyperlink{classNeuralNetwork}{Neural\-Network} network, int target\-Id=-\/1, std\-::string \hyperlink{classNeuralNetworkRobot_a6ccb2a3dcfa6c5616fede96f7468d065}{filename}=\hyperlink{configuration_8h_ae7f5355b60ff97037b8008b7f6d6aa74}{G\-E\-T\-\_\-\-S\-T\-R\-I\-N\-G}(\char`\"{}D\-E\-F\-A\-U\-L\-T\-\_\-\-N\-E\-U\-R\-A\-L\-\_\-\-N\-E\-T\-W\-O\-R\-K\-\_\-\-F\-I\-L\-E\char`\"{}))
+\item 
+\hyperlink{classNeuralNetworkRobot_a881db4125bc7390a49f0603a51a38ff1}{$\sim$\-Neural\-Network\-Robot} ()
+\item 
+float \hyperlink{classNeuralNetworkRobot_a91c4210b62175e9ffb1ed3362df318af}{get\-Left\-Speed} (float left\-Light\-Sensor\-Val, float right\-Light\-Sensor\-Val, float left\-Robot\-Sensor\-Val, float right\-Robot\-Sensor\-Val, float left\-Obstacle\-Sensor\-Val, float right\-Obstacle\-Sensor\-Val, float left\-Target\-Sensor\-Val, float right\-Target\-Sensor\-Val)
+\item 
+float \hyperlink{classNeuralNetworkRobot_a7b3389e89eb3485ad9e074494624e204}{get\-Right\-Speed} (float left\-Light\-Sensor\-Val, float right\-Light\-Sensor\-Val, float left\-Robot\-Sensor\-Val, float right\-Robot\-Sensor\-Val, float left\-Obstacle\-Sensor\-Val, float right\-Obstacle\-Sensor\-Val, float left\-Target\-Sensor\-Val, float right\-Target\-Sensor\-Val)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std\-::string \hyperlink{classNeuralNetworkRobot_a6ccb2a3dcfa6c5616fede96f7468d065}{filename}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A robot controlled by a neural network with inputs from the sensors. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classNeuralNetworkRobot_adee0b00b83cd1f9269efd5178f4320b3}{\index{Neural\-Network\-Robot@{Neural\-Network\-Robot}!Neural\-Network\-Robot@{Neural\-Network\-Robot}}
+\index{Neural\-Network\-Robot@{Neural\-Network\-Robot}!NeuralNetworkRobot@{Neural\-Network\-Robot}}
+\subsubsection[{Neural\-Network\-Robot}]{\setlength{\rightskip}{0pt plus 5cm}Neural\-Network\-Robot\-::\-Neural\-Network\-Robot (
+\begin{DoxyParamCaption}
+\item[{int}]{radius, }
+\item[{{\bf Color}}]{color, }
+\item[{{\bf Color}}]{line\-Color, }
+\item[{{\bf Neural\-Network}}]{network, }
+\item[{int}]{target\-Id = {\ttfamily -\/1}, }
+\item[{std\-::string}]{filename = {\ttfamily {\bf G\-E\-T\-\_\-\-S\-T\-R\-I\-N\-G}(\char`\"{}DEFAULT\-\_\-NEURAL\-\_\-NETWORK\-\_\-FILE\char`\"{})}}
+\end{DoxyParamCaption}
+)}}\label{classNeuralNetworkRobot_adee0b00b83cd1f9269efd5178f4320b3}
+\hypertarget{classNeuralNetworkRobot_a016aaca79a56d7cd2b04583188541359}{\index{Neural\-Network\-Robot@{Neural\-Network\-Robot}!Neural\-Network\-Robot@{Neural\-Network\-Robot}}
+\index{Neural\-Network\-Robot@{Neural\-Network\-Robot}!NeuralNetworkRobot@{Neural\-Network\-Robot}}
+\subsubsection[{Neural\-Network\-Robot}]{\setlength{\rightskip}{0pt plus 5cm}Neural\-Network\-Robot\-::\-Neural\-Network\-Robot (
+\begin{DoxyParamCaption}
+\item[{int}]{radius, }
+\item[{{\bf Location}}]{loc, }
+\item[{{\bf Color}}]{color, }
+\item[{{\bf Color}}]{line\-Color, }
+\item[{{\bf Neural\-Network}}]{network, }
+\item[{int}]{target\-Id = {\ttfamily -\/1}, }
+\item[{std\-::string}]{filename = {\ttfamily {\bf G\-E\-T\-\_\-\-S\-T\-R\-I\-N\-G}(\char`\"{}DEFAULT\-\_\-NEURAL\-\_\-NETWORK\-\_\-FILE\char`\"{})}}
+\end{DoxyParamCaption}
+)}}\label{classNeuralNetworkRobot_a016aaca79a56d7cd2b04583188541359}
+\hypertarget{classNeuralNetworkRobot_a881db4125bc7390a49f0603a51a38ff1}{\index{Neural\-Network\-Robot@{Neural\-Network\-Robot}!$\sim$\-Neural\-Network\-Robot@{$\sim$\-Neural\-Network\-Robot}}
+\index{$\sim$\-Neural\-Network\-Robot@{$\sim$\-Neural\-Network\-Robot}!NeuralNetworkRobot@{Neural\-Network\-Robot}}
+\subsubsection[{$\sim$\-Neural\-Network\-Robot}]{\setlength{\rightskip}{0pt plus 5cm}Neural\-Network\-Robot\-::$\sim$\-Neural\-Network\-Robot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classNeuralNetworkRobot_a881db4125bc7390a49f0603a51a38ff1}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classNeuralNetworkRobot_a91c4210b62175e9ffb1ed3362df318af}{\index{Neural\-Network\-Robot@{Neural\-Network\-Robot}!get\-Left\-Speed@{get\-Left\-Speed}}
+\index{get\-Left\-Speed@{get\-Left\-Speed}!NeuralNetworkRobot@{Neural\-Network\-Robot}}
+\subsubsection[{get\-Left\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}float Neural\-Network\-Robot\-::get\-Left\-Speed (
+\begin{DoxyParamCaption}
+\item[{float}]{left\-Light\-Sensor\-Val, }
+\item[{float}]{right\-Light\-Sensor\-Val, }
+\item[{float}]{left\-Robot\-Sensor\-Val, }
+\item[{float}]{right\-Robot\-Sensor\-Val, }
+\item[{float}]{left\-Obstacle\-Sensor\-Val, }
+\item[{float}]{right\-Obstacle\-Sensor\-Val, }
+\item[{float}]{left\-Target\-Sensor\-Val, }
+\item[{float}]{right\-Target\-Sensor\-Val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classNeuralNetworkRobot_a91c4210b62175e9ffb1ed3362df318af}
+
+
+Implements \hyperlink{classRobot_a9c96f301ae826e7c535f6b705e44bcd6}{Robot}.
+
+\hypertarget{classNeuralNetworkRobot_a7b3389e89eb3485ad9e074494624e204}{\index{Neural\-Network\-Robot@{Neural\-Network\-Robot}!get\-Right\-Speed@{get\-Right\-Speed}}
+\index{get\-Right\-Speed@{get\-Right\-Speed}!NeuralNetworkRobot@{Neural\-Network\-Robot}}
+\subsubsection[{get\-Right\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}float Neural\-Network\-Robot\-::get\-Right\-Speed (
+\begin{DoxyParamCaption}
+\item[{float}]{left\-Light\-Sensor\-Val, }
+\item[{float}]{right\-Light\-Sensor\-Val, }
+\item[{float}]{left\-Robot\-Sensor\-Val, }
+\item[{float}]{right\-Robot\-Sensor\-Val, }
+\item[{float}]{left\-Obstacle\-Sensor\-Val, }
+\item[{float}]{right\-Obstacle\-Sensor\-Val, }
+\item[{float}]{left\-Target\-Sensor\-Val, }
+\item[{float}]{right\-Target\-Sensor\-Val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classNeuralNetworkRobot_a7b3389e89eb3485ad9e074494624e204}
+
+
+Implements \hyperlink{classRobot_a3289251979084c50b18a6006547d3f95}{Robot}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classNeuralNetworkRobot_a6ccb2a3dcfa6c5616fede96f7468d065}{\index{Neural\-Network\-Robot@{Neural\-Network\-Robot}!filename@{filename}}
+\index{filename@{filename}!NeuralNetworkRobot@{Neural\-Network\-Robot}}
+\subsubsection[{filename}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string Neural\-Network\-Robot\-::filename}}\label{classNeuralNetworkRobot_a6ccb2a3dcfa6c5616fede96f7468d065}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{NeuralNetworkRobot_8h}{Neural\-Network\-Robot.\-h}\item 
+\hyperlink{NeuralNetworkRobot_8cpp}{Neural\-Network\-Robot.\-cpp}\end{DoxyCompactItemize}

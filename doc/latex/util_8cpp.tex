@@ -1,0 +1,72 @@
+\hypertarget{util_8cpp}{\section{util.\-cpp File Reference}
+\label{util_8cpp}\index{util.\-cpp@{util.\-cpp}}
+}
+
+
+Implmentation of functions for the simulation.  
+
+
+{\ttfamily \#include $<$unistd.\-h$>$}\\*
+{\ttfamily \#include $<$stack$>$}\\*
+{\ttfamily \#include $<$queue$>$}\\*
+{\ttfamily \#include $<$mutex$>$}\\*
+{\ttfamily \#include $<$stdexcept$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$G\-L/glui.\-h$>$}\\*
+{\ttfamily \#include $<$assert.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}Robot.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Simple\-Robot.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Complex\-Robot.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Neural\-Network.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Neural\-Network\-Robot.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Target.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Obstacle.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Light\-Source.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Location.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}configuration.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}environment.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}util.\-h\char`\"{}}\\*
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\-::mutex \hyperlink{util_8cpp_a07e8c0b47b910eba25ad5161145cafbe}{objects\-Mutex}
+\item 
+stack$<$ int $>$ \hyperlink{util_8cpp_a8e53582184c46f3f2df1e881f4ce6c26}{robots}
+\item 
+stack$<$ int $>$ \hyperlink{util_8cpp_ab9de410301b97dc9df259f98b4024feb}{targets}
+\item 
+stack$<$ int $>$ \hyperlink{util_8cpp_aa0a20ee9a4f1d537b334cca6c160964a}{lights}
+\item 
+stack$<$ int $>$ \hyperlink{util_8cpp_a2c97a33d35ea38fee6586c9c0a18d5f5}{obstacles}
+\item 
+int \hyperlink{util_8cpp_ac3d27303e926a776ff70cccfa7d46e00}{color\-Num} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implmentation of functions for the simulation. \begin{DoxyAuthor}{Author}
+Lucas Kramer 
+\end{DoxyAuthor}
+
+
+\subsection{Variable Documentation}
+\hypertarget{util_8cpp_ac3d27303e926a776ff70cccfa7d46e00}{\index{util.\-cpp@{util.\-cpp}!color\-Num@{color\-Num}}
+\index{color\-Num@{color\-Num}!util.cpp@{util.\-cpp}}
+\subsubsection[{color\-Num}]{\setlength{\rightskip}{0pt plus 5cm}int color\-Num = 0}}\label{util_8cpp_ac3d27303e926a776ff70cccfa7d46e00}
+\hypertarget{util_8cpp_aa0a20ee9a4f1d537b334cca6c160964a}{\index{util.\-cpp@{util.\-cpp}!lights@{lights}}
+\index{lights@{lights}!util.cpp@{util.\-cpp}}
+\subsubsection[{lights}]{\setlength{\rightskip}{0pt plus 5cm}stack$<$int$>$ lights}}\label{util_8cpp_aa0a20ee9a4f1d537b334cca6c160964a}
+\hypertarget{util_8cpp_a07e8c0b47b910eba25ad5161145cafbe}{\index{util.\-cpp@{util.\-cpp}!objects\-Mutex@{objects\-Mutex}}
+\index{objects\-Mutex@{objects\-Mutex}!util.cpp@{util.\-cpp}}
+\subsubsection[{objects\-Mutex}]{\setlength{\rightskip}{0pt plus 5cm}std\-::mutex objects\-Mutex}}\label{util_8cpp_a07e8c0b47b910eba25ad5161145cafbe}
+\hypertarget{util_8cpp_a2c97a33d35ea38fee6586c9c0a18d5f5}{\index{util.\-cpp@{util.\-cpp}!obstacles@{obstacles}}
+\index{obstacles@{obstacles}!util.cpp@{util.\-cpp}}
+\subsubsection[{obstacles}]{\setlength{\rightskip}{0pt plus 5cm}stack$<$int$>$ obstacles}}\label{util_8cpp_a2c97a33d35ea38fee6586c9c0a18d5f5}
+\hypertarget{util_8cpp_a8e53582184c46f3f2df1e881f4ce6c26}{\index{util.\-cpp@{util.\-cpp}!robots@{robots}}
+\index{robots@{robots}!util.cpp@{util.\-cpp}}
+\subsubsection[{robots}]{\setlength{\rightskip}{0pt plus 5cm}stack$<$int$>$ robots}}\label{util_8cpp_a8e53582184c46f3f2df1e881f4ce6c26}
+\hypertarget{util_8cpp_ab9de410301b97dc9df259f98b4024feb}{\index{util.\-cpp@{util.\-cpp}!targets@{targets}}
+\index{targets@{targets}!util.cpp@{util.\-cpp}}
+\subsubsection[{targets}]{\setlength{\rightskip}{0pt plus 5cm}stack$<$int$>$ targets}}\label{util_8cpp_ab9de410301b97dc9df259f98b4024feb}

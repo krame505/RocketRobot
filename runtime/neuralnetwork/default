@@ -1,0 +1,29 @@
+# level 1 - inputs
+ input node 0
+ input node 1
+ input node 2
+ input node 3
+ input node 4
+ input node 5
+
+# level 2
+       node 6  connected to 0: 0.6 1: 0.6
+       node 7  connected to 1: 0.6 2: 0.6
+       node 8  connected to 2: 0.6 3: 0.6
+       node 9  connected to 3: 0.6 4: 0.6
+       node 10 connected to 4: 0.6 5: 0.6
+
+# level 3
+       node 11 connected to 6: 0.6 7: 0.6
+       node 12 connected to 7: 0.6 8: 0.6
+       node 13 connected to 8: 0.6 9: 0.6
+       node 14 connected to 9: 0.6 10: 0.6
+
+# level 4
+       node 15 connected to 11: 0.6 12: 0.6
+       node 16 default 0.5 connected to 12: 0.6 13: 0.6
+       node 17 connected to 13: 0.6 14: 0.6
+
+# level 5 - outputs
+output node 18 connected to 15: 0.5 16: 0.5 17: 0
+output node 19 connected to 15: 0 16: 0.5 17: 0.5

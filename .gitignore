@@ -1,0 +1,6 @@
+*~
+.fuse_hidden*
+*.o
+gorobot
+testrobot
+temp_initial.rsim

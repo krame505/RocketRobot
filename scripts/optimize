@@ -1,0 +1,11 @@
+#/bin/bash
+FLAGS="-DOPTIMIZE_SIMULATION bool true -DOPTIMIZE_VERBOSE bool false -DPOST_COLLISION_PAUSE int 0 $@"
+LOG=../runtime/neuralnetwork/log
+
+echo "Started optimize at "`date` >> $LOG
+
+for ((i=0;i<12;++i))
+do
+    ../bin/gorobot $FLAGS | tee -a $LOG &
+    sleep 1
+done

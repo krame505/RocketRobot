@@ -1,0 +1,27 @@
+#/bin/bash
+
+USERNAME=krame505
+HOST_BASE_NAME="lind40-"
+HOST_EXTENSION=".cselabs.umn.edu"
+FIRST_HOST=1
+LAST_HOST=20
+SRC_PATH="Documents/Classes/CSCI_3081/individual/repo-krame505/project/src"
+
+echo -n "Password for ${USERNAME}: "
+stty_orig=`stty -g` # save original terminal setting.
+stty -echo          # turn-off echoing.
+read PASSWORD       # read the password
+stty $stty_orig     # restore terminal setting.
+echo
+SCRIPT="cd ${SRC_PATH} && nohup $1 &"
+for HOSTNAME in $(seq -f "${HOST_BASE_NAME}%02g${HOST_EXTENSION}" $FIRST_HOST $LAST_HOST)
+do
+    echo "Starting $1 on ${HOSTNAME}"
+    ../lib/sshpass/sshpass -p ${PASSWORD} ssh -f -o ConnectTimeout=10 -l ${USERNAME} ${HOSTNAME} "${SCRIPT}"
+    if [ ! -z "$2" ]
+    then
+        sleep $2
+    fi
+done
+
+sleep 1

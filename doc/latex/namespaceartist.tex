@@ -1,0 +1,135 @@
+\hypertarget{namespaceartist}{\section{artist Namespace Reference}
+\label{namespaceartist}\index{artist@{artist}}
+}
+
+
+graphical commands  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceartist_a1448f39368e6eb1c1c070aba00767141}{draw\-Object} (\hyperlink{structLocation}{Location} loc, int radius, \hyperlink{structColor}{Color} color)
+\item 
+void \hyperlink{namespaceartist_a078dbf47b29eb68f94c0fb4bcf075923}{debug\-Arrow} (\hyperlink{structLocation}{Location} loc, int orientation)
+\item 
+void \hyperlink{namespaceartist_a54b058b55aa1c86eade343d055a91abc}{draw\-Light} (\hyperlink{structLocation}{Location} loc, int radius, \hyperlink{structColor}{Color} color)
+\item 
+void \hyperlink{namespaceartist_acdb1a447e5436ee484f84c8dd64410ee}{draw\-Obstacle} (\hyperlink{structLocation}{Location} loc, int radius)
+\item 
+void \hyperlink{namespaceartist_a3396363108746338a9f8d0d3bf334c09}{draw\-Sensor} (\hyperlink{structLocation}{Location} loc, int orientation, int angle, float intensity)
+\item 
+void \hyperlink{namespaceartist_aa60b5844db3fb3073387b39ba19ea0ad}{draw\-Robot} (\hyperlink{structLocation}{Location} loc, int radius, int orientation, \hyperlink{structColor}{Color} color, \hyperlink{structColor}{Color} line\-Color)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+graphical commands \begin{DoxyAuthor}{Author}
+Carl artist functions provide a contained way to display graphics without putting Open\-G\-L graphics in each file 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespaceartist_a078dbf47b29eb68f94c0fb4bcf075923}{\index{artist@{artist}!debug\-Arrow@{debug\-Arrow}}
+\index{debug\-Arrow@{debug\-Arrow}!artist@{artist}}
+\subsubsection[{debug\-Arrow}]{\setlength{\rightskip}{0pt plus 5cm}void artist\-::debug\-Arrow (
+\begin{DoxyParamCaption}
+\item[{{\bf Location}}]{loc, }
+\item[{int}]{orientation}
+\end{DoxyParamCaption}
+)}}\label{namespaceartist_a078dbf47b29eb68f94c0fb4bcf075923}
+\hypertarget{namespaceartist_a54b058b55aa1c86eade343d055a91abc}{\index{artist@{artist}!draw\-Light@{draw\-Light}}
+\index{draw\-Light@{draw\-Light}!artist@{artist}}
+\subsubsection[{draw\-Light}]{\setlength{\rightskip}{0pt plus 5cm}void artist\-::draw\-Light (
+\begin{DoxyParamCaption}
+\item[{{\bf Location}}]{loc, }
+\item[{int}]{radius, }
+\item[{{\bf Color}}]{color}
+\end{DoxyParamCaption}
+)}}\label{namespaceartist_a54b058b55aa1c86eade343d055a91abc}
+Draws a \hyperlink{classLightSource}{Light\-Source} 
+\begin{DoxyParams}{Parameters}
+{\em loc} & absolute \hyperlink{structLocation}{Location} to draw center of light \\
+\hline
+{\em radius} & radius of 'bulb' of light \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespaceartist_a1448f39368e6eb1c1c070aba00767141}{\index{artist@{artist}!draw\-Object@{draw\-Object}}
+\index{draw\-Object@{draw\-Object}!artist@{artist}}
+\subsubsection[{draw\-Object}]{\setlength{\rightskip}{0pt plus 5cm}void artist\-::draw\-Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Location}}]{loc, }
+\item[{int}]{radius, }
+\item[{{\bf Color}}]{color}
+\end{DoxyParamCaption}
+)}}\label{namespaceartist_a1448f39368e6eb1c1c070aba00767141}
+\begin{DoxyAuthor}{Author}
+Lucas Kramer Draws the default Object, which is a circle 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em loc} & absolute \hyperlink{structLocation}{Location} to draw center of circle \\
+\hline
+{\em radius} & radius of circle \\
+\hline
+{\em color} & the color of the circle \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespaceartist_acdb1a447e5436ee484f84c8dd64410ee}{\index{artist@{artist}!draw\-Obstacle@{draw\-Obstacle}}
+\index{draw\-Obstacle@{draw\-Obstacle}!artist@{artist}}
+\subsubsection[{draw\-Obstacle}]{\setlength{\rightskip}{0pt plus 5cm}void artist\-::draw\-Obstacle (
+\begin{DoxyParamCaption}
+\item[{{\bf Location}}]{loc, }
+\item[{int}]{radius}
+\end{DoxyParamCaption}
+)}}\label{namespaceartist_acdb1a447e5436ee484f84c8dd64410ee}
+Draws an obstacle 
+\begin{DoxyParams}{Parameters}
+{\em loc} & absolute \hyperlink{structLocation}{Location} to draw center of \hyperlink{classObstacle}{Obstacle} \\
+\hline
+{\em radius} & radius of \hyperlink{classObstacle}{Obstacle} \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespaceartist_aa60b5844db3fb3073387b39ba19ea0ad}{\index{artist@{artist}!draw\-Robot@{draw\-Robot}}
+\index{draw\-Robot@{draw\-Robot}!artist@{artist}}
+\subsubsection[{draw\-Robot}]{\setlength{\rightskip}{0pt plus 5cm}void artist\-::draw\-Robot (
+\begin{DoxyParamCaption}
+\item[{{\bf Location}}]{loc, }
+\item[{int}]{radius, }
+\item[{int}]{orientation, }
+\item[{{\bf Color}}]{color, }
+\item[{{\bf Color}}]{line\-Color}
+\end{DoxyParamCaption}
+)}}\label{namespaceartist_aa60b5844db3fb3073387b39ba19ea0ad}
+Draws a \hyperlink{classRobot}{Robot} 
+\begin{DoxyParams}{Parameters}
+{\em loc} & absolute \hyperlink{structLocation}{Location} of center of robot \\
+\hline
+{\em orientation} & absolute direction for robot to face \\
+\hline
+{\em color} & the color of the robot's body \\
+\hline
+{\em line\-Color} & the color of the robot's direction line \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespaceartist_a3396363108746338a9f8d0d3bf334c09}{\index{artist@{artist}!draw\-Sensor@{draw\-Sensor}}
+\index{draw\-Sensor@{draw\-Sensor}!artist@{artist}}
+\subsubsection[{draw\-Sensor}]{\setlength{\rightskip}{0pt plus 5cm}void artist\-::draw\-Sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf Location}}]{loc, }
+\item[{int}]{orientation, }
+\item[{int}]{angle, }
+\item[{float}]{intensity}
+\end{DoxyParamCaption}
+)}}\label{namespaceartist_a3396363108746338a9f8d0d3bf334c09}
+Draws a sensor 
+\begin{DoxyParams}{Parameters}
+{\em loc} & absolute \hyperlink{structLocation}{Location} to draw center of \hyperlink{classSensor}{Sensor} \\
+\hline
+{\em orientation} & absolute direction of sensor \\
+\hline
+{\em angle} & number of degrees that sensor senses in, with orientation in center \\
+\hline
+{\em intensity} & redness of sensor as value between 0 and 1, meant to indicate amount of light detected \\
+\hline
+\end{DoxyParams}

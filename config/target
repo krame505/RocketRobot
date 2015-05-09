@@ -1,0 +1,7 @@
+# Target configuration
+int TARGET_RADIUS = 10
+string TARGET_COLORS = "RGBOVY?" #Char colors
+
+int TARGET_SPEED = 30
+
+bool TARGET_RANDOM_WANDER = true

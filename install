@@ -1,0 +1,53 @@
+#!/bin/bash
+
+if [ ! -d ~/bin ]
+then
+    echo -e "This script's purpose is to place the 'rocketrobot' script in ~/bin.\n"
+    echo "You do no have a ~/bin directory, so this script is aborting."
+    exit 1
+fi
+
+echo "Found ~/bin"
+
+READLINK=readlink
+
+if [ -f rocketrobot ]
+then
+    REPO=$("$READLINK" -f ..)
+    SCRIPT=rocketrobot
+elif [ -f support/rocketrobot ]; then
+    REPO=$("$READLINK" -f .)
+    SCRIPT=support/rocketrobot
+elif [ -f scripts/rocketrobot ]; then
+    REPO=$("$READLINK" -f .)
+    SCRIPT=scripts/rocketrobot
+elif [ -f scripts/support/rocketrobot ]; then
+    REPO=$("$READLINK" -f .)
+    SCRIPT=scripts/support/rocketrobot
+else
+    echo "Couldn't find the rocketrobot executable!"
+    exit 2
+fi
+
+echo "Found $REPO"
+
+if [ -a ~/bin/rocketrobot ]
+then
+    rm ~/bin/rocketrobot
+    echo "Removed old(?) ~/bin/rocketrobot file."
+fi
+
+ln -s "$("$READLINK" -f "$SCRIPT")" ~/bin/
+
+if [ ! $? ]
+then
+    echo "Install failed!"
+    exit 3
+fi
+
+echo "Created ~/bin/rocketrobot"
+
+# Just in case
+chmod +x "$SCRIPT"
+
+echo "Install finished."

@@ -1,0 +1,20 @@
+ input node 0
+ input node 1
+ input node 2
+ input node 3
+ input node 4
+ input node 5
+       node 6 connected to 0: 0.67716 1: 0.598577
+       node 7 connected to 1: 0.580957 2: 0.617077
+       node 8 connected to 2: 0.6 3: 0.584781
+       node 9 connected to 3: 0.517377 4: 0.791037
+       node 10 connected to 4: 1.44981 5: 0.651568
+       node 11 connected to 6: 0.537267 7: 1.12803
+       node 12 connected to 7: 0.270836 8: 0.600011
+       node 13 connected to 8: 0.323307 9: 0.6
+       node 14 connected to 9: 0.6 10: 0.6
+       node 15 connected to 11: 0.477352 12: 0.559641
+       node 16 default 0.5 connected to 12: 0.642679 13: 0.500023
+       node 17 connected to 13: 0.620055 14: 0.0582038
+output node 18 connected to 15: 0.5 16: 0.561526 17: 0
+output node 19 connected to 15: 0 16: 0.5 17: 0.5

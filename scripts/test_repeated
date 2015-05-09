@@ -1,0 +1,10 @@
+#/bin/sh
+while :
+do
+        ../bin/gorobot \
+         -DSTART_IMMEDIATE bool true \
+         -DEXIT_ON_ALL_ROBOTS_FINISHED bool true \
+         -DNUM_OBSTACLES int 3 \
+         -DNUM_ROBOTS_TARGETS int 8
+         #--add-config ../config/fastspeeds \
+done

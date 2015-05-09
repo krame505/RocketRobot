@@ -1,0 +1,2 @@
+#/bin/sh
+../bin/gorobot -DNUM_ROBOTS_TARGETS int 10 -DDISPLAY_SENSOR int 2

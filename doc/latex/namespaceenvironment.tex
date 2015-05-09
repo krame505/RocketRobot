@@ -1,0 +1,548 @@
+\hypertarget{namespaceenvironment}{\section{environment Namespace Reference}
+\label{namespaceenvironment}\index{environment@{environment}}
+}
+
+
+environment namespace, handles all the objects as a group. Also manages object ids and collision detection  
+
+
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classObjectIterator}{Object\-Iterator} \hyperlink{namespaceenvironment_a3a7a388d4b4ceb0a34bf0c72579780e1}{object\-Iterator}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{namespaceenvironment_ae9ecf3e6b007d1c73cf18594d659b255}{add\-Object} (\hyperlink{classPhysicalObject}{Physical\-Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em Adds an object to the environment. \end{DoxyCompactList}\item 
+void \hyperlink{namespaceenvironment_a26801958350a15098c590192c8dcd751}{remove\-Object} (int id)
+\begin{DoxyCompactList}\small\item\em Removes an object from the environment. \end{DoxyCompactList}\item 
+void \hyperlink{namespaceenvironment_a883864c5c3c7f8ca4954781dae04bc11}{clear} ()
+\begin{DoxyCompactList}\small\item\em Removes all objects from the environment and resets the id counter. \end{DoxyCompactList}\item 
+unsigned \hyperlink{namespaceenvironment_a450984ea6790ba4e65e004133fb26c9c}{get\-Num\-Objects} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of objects in environment. \end{DoxyCompactList}\item 
+\hyperlink{classPhysicalObject}{Physical\-Object} $\ast$ \hyperlink{namespaceenvironment_a63ac0eb5daa2876cd17cacf3b86d732b}{get\-Object} (int id)
+\begin{DoxyCompactList}\small\item\em Finds an object from the environment. \end{DoxyCompactList}\item 
+\hyperlink{namespaceenvironment_a3a7a388d4b4ceb0a34bf0c72579780e1}{object\-Iterator} \hyperlink{namespaceenvironment_a8ae4deeff543f98dc5293b3949698dba}{get\-Objects\-Begin} ()
+\begin{DoxyCompactList}\small\item\em Gets an iterator to the beginning of the objects. \end{DoxyCompactList}\item 
+\hyperlink{namespaceenvironment_a3a7a388d4b4ceb0a34bf0c72579780e1}{object\-Iterator} \hyperlink{namespaceenvironment_aa9316445a3ee5c897df2bb6f7892069a}{get\-Objects\-End} ()
+\begin{DoxyCompactList}\small\item\em Gets an iterator to the end of the objects. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceenvironment_a113b0996be39cc900966f3c71398ff3f}{is\-Touching\-Wall} (\hyperlink{structLocation}{Location} l, int r)
+\item 
+bool \hyperlink{namespaceenvironment_a67da8bd372b3d5f78908cbe36568a96f}{is\-Touching\-Wall} (int id)
+\item 
+bool \hyperlink{namespaceenvironment_a7769cee3c77ed08a6e2f47bcef8d76e7}{is\-Touching\-Object} (\hyperlink{structLocation}{Location} l, int r, int id)
+\item 
+bool \hyperlink{namespaceenvironment_a9569646b039f32a98afb69ff3a6ed228}{is\-Touching\-Hitable\-Object} (\hyperlink{structLocation}{Location} l, int r, int id)
+\item 
+bool \hyperlink{namespaceenvironment_a4a54789c59de86e474668c53245f0a84}{is\-Touching\-Object} (\hyperlink{structLocation}{Location} l, int r)
+\item 
+bool \hyperlink{namespaceenvironment_ae366aba4972fe1073a477c5aabb724c4}{is\-Touching\-Hitable\-Object} (\hyperlink{structLocation}{Location} l, int r)
+\item 
+bool \hyperlink{namespaceenvironment_aaaeaf16534f26b06d9684fa077701e8d}{is\-Touching\-Object} (int id)
+\item 
+bool \hyperlink{namespaceenvironment_a8ce8be445c948e6c6f346e1abb1063de}{is\-Touching\-Hitable\-Object} (int id)
+\item 
+bool \hyperlink{namespaceenvironment_a73988f1cc00df0e77d67cd306469168b}{is\-Colliding} (\hyperlink{structLocation}{Location} l, int r)
+\item 
+bool \hyperlink{namespaceenvironment_a636bf120445810e363d967fee72cc4f9}{is\-Colliding} (int id)
+\item 
+bool \hyperlink{namespaceenvironment_a0dbd900478d4838132395dcf881e9b19}{is\-Colliding\-With\-Hitable} (\hyperlink{structLocation}{Location} l, int r)
+\item 
+bool \hyperlink{namespaceenvironment_a6957694956f081e560b07d91734598ed}{is\-Colliding\-With\-Hitable} (int id)
+\item 
+int \hyperlink{namespaceenvironment_ace3407a2775d185a81d663dc2600ede9}{get\-Collision\-Id} (\hyperlink{structLocation}{Location} l, int r, int id)
+\item 
+int \hyperlink{namespaceenvironment_a47ba5a3f1e24e3aa0e3fbbe2eea64fd6}{get\-Hitable\-Collision\-Id} (\hyperlink{structLocation}{Location} l, int r, int id)
+\item 
+int \hyperlink{namespaceenvironment_a631bd89b0962e6dc887ad7a5162385ee}{get\-Collision\-Id} (\hyperlink{structLocation}{Location} l, int r)
+\item 
+int \hyperlink{namespaceenvironment_a7a19d4a689b17d63b591a62279e26b18}{get\-Hitable\-Collision\-Id} (\hyperlink{structLocation}{Location} l, int r)
+\item 
+int \hyperlink{namespaceenvironment_aa5b2ad32b6718409dcec99b65eb7e692}{get\-Collision\-Id} (int id)
+\item 
+int \hyperlink{namespaceenvironment_a19c9e8b0afcc282f04eef509b53ac39b}{get\-Hitable\-Collision\-Id} (int id)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+environment namespace, handles all the objects as a group. Also manages object ids and collision detection 
+
+\subsection{Typedef Documentation}
+\hypertarget{namespaceenvironment_a3a7a388d4b4ceb0a34bf0c72579780e1}{\index{environment@{environment}!object\-Iterator@{object\-Iterator}}
+\index{object\-Iterator@{object\-Iterator}!environment@{environment}}
+\subsubsection[{object\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf Object\-Iterator} {\bf environment\-::object\-Iterator}}}\label{namespaceenvironment_a3a7a388d4b4ceb0a34bf0c72579780e1}
+An object iterator 
+
+\subsection{Function Documentation}
+\hypertarget{namespaceenvironment_ae9ecf3e6b007d1c73cf18594d659b255}{\index{environment@{environment}!add\-Object@{add\-Object}}
+\index{add\-Object@{add\-Object}!environment@{environment}}
+\subsubsection[{add\-Object}]{\setlength{\rightskip}{0pt plus 5cm}int environment\-::add\-Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Physical\-Object} $\ast$}]{object}
+\end{DoxyParamCaption}
+)}}\label{namespaceenvironment_ae9ecf3e6b007d1c73cf18594d659b255}
+
+
+Adds an object to the environment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & The object to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The assigned id of the object 
+\end{DoxyReturn}
+\hypertarget{namespaceenvironment_a883864c5c3c7f8ca4954781dae04bc11}{\index{environment@{environment}!clear@{clear}}
+\index{clear@{clear}!environment@{environment}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void environment\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceenvironment_a883864c5c3c7f8ca4954781dae04bc11}
+
+
+Removes all objects from the environment and resets the id counter. 
+
+\hypertarget{namespaceenvironment_ace3407a2775d185a81d663dc2600ede9}{\index{environment@{environment}!get\-Collision\-Id@{get\-Collision\-Id}}
+\index{get\-Collision\-Id@{get\-Collision\-Id}!environment@{environment}}
+\subsubsection[{get\-Collision\-Id}]{\setlength{\rightskip}{0pt plus 5cm}int environment\-::get\-Collision\-Id (
+\begin{DoxyParamCaption}
+\item[{{\bf Location}}]{l, }
+\item[{int}]{r, }
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{namespaceenvironment_ace3407a2775d185a81d663dc2600ede9}
+Determines what object is being hit by another object 
+\begin{DoxyParams}{Parameters}
+{\em l} & The \hyperlink{structLocation}{Location} of the object \\
+\hline
+{\em r} & The radius of the object \\
+\hline
+{\em id} & The id of the object to exclude \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The id of one object that is being hit, or -\/1 if it is hiting nothing or a wall 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{namespaceenvironment_a73988f1cc00df0e77d67cd306469168b}{is\-Colliding} 
+\end{DoxySeeAlso}
+\hypertarget{namespaceenvironment_a631bd89b0962e6dc887ad7a5162385ee}{\index{environment@{environment}!get\-Collision\-Id@{get\-Collision\-Id}}
+\index{get\-Collision\-Id@{get\-Collision\-Id}!environment@{environment}}
+\subsubsection[{get\-Collision\-Id}]{\setlength{\rightskip}{0pt plus 5cm}int environment\-::get\-Collision\-Id (
+\begin{DoxyParamCaption}
+\item[{{\bf Location}}]{l, }
+\item[{int}]{r}
+\end{DoxyParamCaption}
+)}}\label{namespaceenvironment_a631bd89b0962e6dc887ad7a5162385ee}
+Determines what object is being hit by another object 
+\begin{DoxyParams}{Parameters}
+{\em l} & The \hyperlink{structLocation}{Location} of the object \\
+\hline
+{\em r} & The radius of the object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The id of one object that is being hit, or -\/1 if it is hiting nothing or a wall 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{namespaceenvironment_a73988f1cc00df0e77d67cd306469168b}{is\-Colliding} 
+\end{DoxySeeAlso}
+\hypertarget{namespaceenvironment_aa5b2ad32b6718409dcec99b65eb7e692}{\index{environment@{environment}!get\-Collision\-Id@{get\-Collision\-Id}}
+\index{get\-Collision\-Id@{get\-Collision\-Id}!environment@{environment}}
+\subsubsection[{get\-Collision\-Id}]{\setlength{\rightskip}{0pt plus 5cm}int environment\-::get\-Collision\-Id (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{namespaceenvironment_aa5b2ad32b6718409dcec99b65eb7e692}
+Determines what object is being hit by another object 
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The id of one object that is being hit, or -\/1 if it is hiting nothing or a wall 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{namespaceenvironment_a73988f1cc00df0e77d67cd306469168b}{is\-Colliding} 
+\end{DoxySeeAlso}
+\hypertarget{namespaceenvironment_a47ba5a3f1e24e3aa0e3fbbe2eea64fd6}{\index{environment@{environment}!get\-Hitable\-Collision\-Id@{get\-Hitable\-Collision\-Id}}
+\index{get\-Hitable\-Collision\-Id@{get\-Hitable\-Collision\-Id}!environment@{environment}}
+\subsubsection[{get\-Hitable\-Collision\-Id}]{\setlength{\rightskip}{0pt plus 5cm}int environment\-::get\-Hitable\-Collision\-Id (
+\begin{DoxyParamCaption}
+\item[{{\bf Location}}]{l, }
+\item[{int}]{r, }
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{namespaceenvironment_a47ba5a3f1e24e3aa0e3fbbe2eea64fd6}
+Determines what hitable object is being hit by another object 
+\begin{DoxyParams}{Parameters}
+{\em l} & The \hyperlink{structLocation}{Location} of the object \\
+\hline
+{\em r} & The radius of the object \\
+\hline
+{\em id} & The id of the object to exclude \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The id of one hitable object that is being hit, or -\/1 if it is hiting nothing or a wall 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{namespaceenvironment_a73988f1cc00df0e77d67cd306469168b}{is\-Colliding} 
+\end{DoxySeeAlso}
+\hypertarget{namespaceenvironment_a7a19d4a689b17d63b591a62279e26b18}{\index{environment@{environment}!get\-Hitable\-Collision\-Id@{get\-Hitable\-Collision\-Id}}
+\index{get\-Hitable\-Collision\-Id@{get\-Hitable\-Collision\-Id}!environment@{environment}}
+\subsubsection[{get\-Hitable\-Collision\-Id}]{\setlength{\rightskip}{0pt plus 5cm}int environment\-::get\-Hitable\-Collision\-Id (
+\begin{DoxyParamCaption}
+\item[{{\bf Location}}]{l, }
+\item[{int}]{r}
+\end{DoxyParamCaption}
+)}}\label{namespaceenvironment_a7a19d4a689b17d63b591a62279e26b18}
+Determines what hitable object is being hit by another object 
+\begin{DoxyParams}{Parameters}
+{\em l} & The \hyperlink{structLocation}{Location} of the object \\
+\hline
+{\em r} & The radius of the object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The id of one hitable object that is being hit, or -\/1 if it is hiting nothing or a wall 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{namespaceenvironment_a73988f1cc00df0e77d67cd306469168b}{is\-Colliding} 
+\end{DoxySeeAlso}
+\hypertarget{namespaceenvironment_a19c9e8b0afcc282f04eef509b53ac39b}{\index{environment@{environment}!get\-Hitable\-Collision\-Id@{get\-Hitable\-Collision\-Id}}
+\index{get\-Hitable\-Collision\-Id@{get\-Hitable\-Collision\-Id}!environment@{environment}}
+\subsubsection[{get\-Hitable\-Collision\-Id}]{\setlength{\rightskip}{0pt plus 5cm}int environment\-::get\-Hitable\-Collision\-Id (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{namespaceenvironment_a19c9e8b0afcc282f04eef509b53ac39b}
+Determines what hitable object is being hit by another object 
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The id of one hitable object that is being hit, or -\/1 if it is hiting nothing or a wall 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{namespaceenvironment_a73988f1cc00df0e77d67cd306469168b}{is\-Colliding} 
+\end{DoxySeeAlso}
+\hypertarget{namespaceenvironment_a450984ea6790ba4e65e004133fb26c9c}{\index{environment@{environment}!get\-Num\-Objects@{get\-Num\-Objects}}
+\index{get\-Num\-Objects@{get\-Num\-Objects}!environment@{environment}}
+\subsubsection[{get\-Num\-Objects}]{\setlength{\rightskip}{0pt plus 5cm}unsigned environment\-::get\-Num\-Objects (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceenvironment_a450984ea6790ba4e65e004133fb26c9c}
+
+
+Gets the number of objects in environment. 
+
+\begin{DoxyReturn}{Returns}
+The number of objects 
+\end{DoxyReturn}
+\hypertarget{namespaceenvironment_a63ac0eb5daa2876cd17cacf3b86d732b}{\index{environment@{environment}!get\-Object@{get\-Object}}
+\index{get\-Object@{get\-Object}!environment@{environment}}
+\subsubsection[{get\-Object}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Physical\-Object} $\ast$ environment\-::get\-Object (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{namespaceenvironment_a63ac0eb5daa2876cd17cacf3b86d732b}
+
+
+Finds an object from the environment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the object to find \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The object that was looked iup 
+\end{DoxyReturn}
+\hypertarget{namespaceenvironment_a8ae4deeff543f98dc5293b3949698dba}{\index{environment@{environment}!get\-Objects\-Begin@{get\-Objects\-Begin}}
+\index{get\-Objects\-Begin@{get\-Objects\-Begin}!environment@{environment}}
+\subsubsection[{get\-Objects\-Begin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf object\-Iterator} environment\-::get\-Objects\-Begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceenvironment_a8ae4deeff543f98dc5293b3949698dba}
+
+
+Gets an iterator to the beginning of the objects. 
+
+\begin{DoxyReturn}{Returns}
+The iterator 
+\end{DoxyReturn}
+\hypertarget{namespaceenvironment_aa9316445a3ee5c897df2bb6f7892069a}{\index{environment@{environment}!get\-Objects\-End@{get\-Objects\-End}}
+\index{get\-Objects\-End@{get\-Objects\-End}!environment@{environment}}
+\subsubsection[{get\-Objects\-End}]{\setlength{\rightskip}{0pt plus 5cm}{\bf object\-Iterator} environment\-::get\-Objects\-End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceenvironment_aa9316445a3ee5c897df2bb6f7892069a}
+
+
+Gets an iterator to the end of the objects. 
+
+\begin{DoxyReturn}{Returns}
+The iterator 
+\end{DoxyReturn}
+\hypertarget{namespaceenvironment_a73988f1cc00df0e77d67cd306469168b}{\index{environment@{environment}!is\-Colliding@{is\-Colliding}}
+\index{is\-Colliding@{is\-Colliding}!environment@{environment}}
+\subsubsection[{is\-Colliding}]{\setlength{\rightskip}{0pt plus 5cm}bool environment\-::is\-Colliding (
+\begin{DoxyParamCaption}
+\item[{{\bf Location}}]{l, }
+\item[{int}]{r}
+\end{DoxyParamCaption}
+)}}\label{namespaceenvironment_a73988f1cc00df0e77d67cd306469168b}
+Checks if the object specified by the given \hyperlink{structLocation}{Location} and radius is touching a wall or any other objects 
+\begin{DoxyParams}{Parameters}
+{\em l} & The \hyperlink{structLocation}{Location} of the object \\
+\hline
+{\em r} & The radius of the object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true when the object is touching a wall or any other object 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{namespaceenvironment_a113b0996be39cc900966f3c71398ff3f}{is\-Touching\-Wall}, \hyperlink{namespaceenvironment_a7769cee3c77ed08a6e2f47bcef8d76e7}{is\-Touching\-Object} 
+\end{DoxySeeAlso}
+\hypertarget{namespaceenvironment_a636bf120445810e363d967fee72cc4f9}{\index{environment@{environment}!is\-Colliding@{is\-Colliding}}
+\index{is\-Colliding@{is\-Colliding}!environment@{environment}}
+\subsubsection[{is\-Colliding}]{\setlength{\rightskip}{0pt plus 5cm}bool environment\-::is\-Colliding (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{namespaceenvironment_a636bf120445810e363d967fee72cc4f9}
+Checks if the object specified by the given id is touching a wall or any other objects 
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true when the object is touching a wall or any other object 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{namespaceenvironment_a113b0996be39cc900966f3c71398ff3f}{is\-Touching\-Wall}, \hyperlink{namespaceenvironment_a7769cee3c77ed08a6e2f47bcef8d76e7}{is\-Touching\-Object} 
+\end{DoxySeeAlso}
+\hypertarget{namespaceenvironment_a0dbd900478d4838132395dcf881e9b19}{\index{environment@{environment}!is\-Colliding\-With\-Hitable@{is\-Colliding\-With\-Hitable}}
+\index{is\-Colliding\-With\-Hitable@{is\-Colliding\-With\-Hitable}!environment@{environment}}
+\subsubsection[{is\-Colliding\-With\-Hitable}]{\setlength{\rightskip}{0pt plus 5cm}bool environment\-::is\-Colliding\-With\-Hitable (
+\begin{DoxyParamCaption}
+\item[{{\bf Location}}]{l, }
+\item[{int}]{r}
+\end{DoxyParamCaption}
+)}}\label{namespaceenvironment_a0dbd900478d4838132395dcf881e9b19}
+Checks if the object specified by the given \hyperlink{structLocation}{Location} and radius is touching a wall or any other hitable objects 
+\begin{DoxyParams}{Parameters}
+{\em l} & The \hyperlink{structLocation}{Location} of the object \\
+\hline
+{\em r} & The radius of the object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true when the object is touching a wall or any other hitable object 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{namespaceenvironment_a113b0996be39cc900966f3c71398ff3f}{is\-Touching\-Wall}, \hyperlink{namespaceenvironment_a7769cee3c77ed08a6e2f47bcef8d76e7}{is\-Touching\-Object} 
+\end{DoxySeeAlso}
+\hypertarget{namespaceenvironment_a6957694956f081e560b07d91734598ed}{\index{environment@{environment}!is\-Colliding\-With\-Hitable@{is\-Colliding\-With\-Hitable}}
+\index{is\-Colliding\-With\-Hitable@{is\-Colliding\-With\-Hitable}!environment@{environment}}
+\subsubsection[{is\-Colliding\-With\-Hitable}]{\setlength{\rightskip}{0pt plus 5cm}bool environment\-::is\-Colliding\-With\-Hitable (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{namespaceenvironment_a6957694956f081e560b07d91734598ed}
+Checks if the object specified by the given id is touching a wall or any other hitable objects 
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true when the object is touching a wall or any other hitable object 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{namespaceenvironment_a113b0996be39cc900966f3c71398ff3f}{is\-Touching\-Wall}, \hyperlink{namespaceenvironment_a7769cee3c77ed08a6e2f47bcef8d76e7}{is\-Touching\-Object} 
+\end{DoxySeeAlso}
+\hypertarget{namespaceenvironment_a9569646b039f32a98afb69ff3a6ed228}{\index{environment@{environment}!is\-Touching\-Hitable\-Object@{is\-Touching\-Hitable\-Object}}
+\index{is\-Touching\-Hitable\-Object@{is\-Touching\-Hitable\-Object}!environment@{environment}}
+\subsubsection[{is\-Touching\-Hitable\-Object}]{\setlength{\rightskip}{0pt plus 5cm}bool environment\-::is\-Touching\-Hitable\-Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Location}}]{l, }
+\item[{int}]{r, }
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{namespaceenvironment_a9569646b039f32a98afb69ff3a6ed228}
+Same as \hyperlink{namespaceenvironment_a4a54789c59de86e474668c53245f0a84}{is\-Touching\-Object(\-Location l, int r)}, but ignores the object with the given id and non-\/hitable objects. 
+\begin{DoxyParams}{Parameters}
+{\em l} & The \hyperlink{structLocation}{Location} of the object \\
+\hline
+{\em r} & The radius of the object \\
+\hline
+{\em id} & The id of the object to ignore \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespaceenvironment_ae366aba4972fe1073a477c5aabb724c4}{\index{environment@{environment}!is\-Touching\-Hitable\-Object@{is\-Touching\-Hitable\-Object}}
+\index{is\-Touching\-Hitable\-Object@{is\-Touching\-Hitable\-Object}!environment@{environment}}
+\subsubsection[{is\-Touching\-Hitable\-Object}]{\setlength{\rightskip}{0pt plus 5cm}bool environment\-::is\-Touching\-Hitable\-Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Location}}]{l, }
+\item[{int}]{r}
+\end{DoxyParamCaption}
+)}}\label{namespaceenvironment_ae366aba4972fe1073a477c5aabb724c4}
+Checks if the object specified by the given \hyperlink{structLocation}{Location} and radius is touching any other hitable objects 
+\begin{DoxyParams}{Parameters}
+{\em l} & The \hyperlink{structLocation}{Location} of the object \\
+\hline
+{\em r} & The radius of the object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true when the object is touching any other hitable object 
+\end{DoxyReturn}
+\hypertarget{namespaceenvironment_a8ce8be445c948e6c6f346e1abb1063de}{\index{environment@{environment}!is\-Touching\-Hitable\-Object@{is\-Touching\-Hitable\-Object}}
+\index{is\-Touching\-Hitable\-Object@{is\-Touching\-Hitable\-Object}!environment@{environment}}
+\subsubsection[{is\-Touching\-Hitable\-Object}]{\setlength{\rightskip}{0pt plus 5cm}bool environment\-::is\-Touching\-Hitable\-Object (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{namespaceenvironment_a8ce8be445c948e6c6f346e1abb1063de}
+Checks if the object specified by the given id is touching any other hitable objects 
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true when the object is touching any other hitable object 
+\end{DoxyReturn}
+\hypertarget{namespaceenvironment_a7769cee3c77ed08a6e2f47bcef8d76e7}{\index{environment@{environment}!is\-Touching\-Object@{is\-Touching\-Object}}
+\index{is\-Touching\-Object@{is\-Touching\-Object}!environment@{environment}}
+\subsubsection[{is\-Touching\-Object}]{\setlength{\rightskip}{0pt plus 5cm}bool environment\-::is\-Touching\-Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Location}}]{l, }
+\item[{int}]{r, }
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{namespaceenvironment_a7769cee3c77ed08a6e2f47bcef8d76e7}
+Same as \hyperlink{namespaceenvironment_a4a54789c59de86e474668c53245f0a84}{is\-Touching\-Object(\-Location l, int r)}, but ignores the object with the given id. 
+\begin{DoxyParams}{Parameters}
+{\em l} & The \hyperlink{structLocation}{Location} of the object \\
+\hline
+{\em r} & The radius of the object \\
+\hline
+{\em id} & The id of the object to ignore \\
+\hline
+\end{DoxyParams}
+\hypertarget{namespaceenvironment_a4a54789c59de86e474668c53245f0a84}{\index{environment@{environment}!is\-Touching\-Object@{is\-Touching\-Object}}
+\index{is\-Touching\-Object@{is\-Touching\-Object}!environment@{environment}}
+\subsubsection[{is\-Touching\-Object}]{\setlength{\rightskip}{0pt plus 5cm}bool environment\-::is\-Touching\-Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Location}}]{l, }
+\item[{int}]{r}
+\end{DoxyParamCaption}
+)}}\label{namespaceenvironment_a4a54789c59de86e474668c53245f0a84}
+Checks if the object specified by the given \hyperlink{structLocation}{Location} and radius is touching any other objects 
+\begin{DoxyParams}{Parameters}
+{\em l} & The \hyperlink{structLocation}{Location} of the object \\
+\hline
+{\em r} & The radius of the object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true when the object is touching any other object 
+\end{DoxyReturn}
+\hypertarget{namespaceenvironment_aaaeaf16534f26b06d9684fa077701e8d}{\index{environment@{environment}!is\-Touching\-Object@{is\-Touching\-Object}}
+\index{is\-Touching\-Object@{is\-Touching\-Object}!environment@{environment}}
+\subsubsection[{is\-Touching\-Object}]{\setlength{\rightskip}{0pt plus 5cm}bool environment\-::is\-Touching\-Object (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{namespaceenvironment_aaaeaf16534f26b06d9684fa077701e8d}
+Checks if the object specified by the given id is touching any other objects 
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true when the object is touching any other object 
+\end{DoxyReturn}
+\hypertarget{namespaceenvironment_a113b0996be39cc900966f3c71398ff3f}{\index{environment@{environment}!is\-Touching\-Wall@{is\-Touching\-Wall}}
+\index{is\-Touching\-Wall@{is\-Touching\-Wall}!environment@{environment}}
+\subsubsection[{is\-Touching\-Wall}]{\setlength{\rightskip}{0pt plus 5cm}bool environment\-::is\-Touching\-Wall (
+\begin{DoxyParamCaption}
+\item[{{\bf Location}}]{l, }
+\item[{int}]{r}
+\end{DoxyParamCaption}
+)}}\label{namespaceenvironment_a113b0996be39cc900966f3c71398ff3f}
+Checks if an object is in the designated window
+
+It returns true whenever the following conditions are met\-: 
+
+x position -\/ radius $<$= 0 
+
+y position -\/ radius $<$= 0 
+
+x position + radius $>$= width  
+
+y position + radius $>$= height 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & The \hyperlink{structLocation}{Location} of the object \\
+\hline
+{\em r} & The radius of the object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true when the object is touching a wall 
+\end{DoxyReturn}
+\hypertarget{namespaceenvironment_a67da8bd372b3d5f78908cbe36568a96f}{\index{environment@{environment}!is\-Touching\-Wall@{is\-Touching\-Wall}}
+\index{is\-Touching\-Wall@{is\-Touching\-Wall}!environment@{environment}}
+\subsubsection[{is\-Touching\-Wall}]{\setlength{\rightskip}{0pt plus 5cm}bool environment\-::is\-Touching\-Wall (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{namespaceenvironment_a67da8bd372b3d5f78908cbe36568a96f}
+Checks if an object is in the designated window
+
+It reads in the width, height, x and y position of the object, and then returns true whenever the following conditions are met\-: 
+
+x position -\/ radius $<$= 0 
+
+y position -\/ radius $<$= 0 
+
+x position + radius $>$= width  
+
+y position + radius $>$= height 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true when the object is touching a wall 
+\end{DoxyReturn}
+\hypertarget{namespaceenvironment_a26801958350a15098c590192c8dcd751}{\index{environment@{environment}!remove\-Object@{remove\-Object}}
+\index{remove\-Object@{remove\-Object}!environment@{environment}}
+\subsubsection[{remove\-Object}]{\setlength{\rightskip}{0pt plus 5cm}void environment\-::remove\-Object (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{namespaceenvironment_a26801958350a15098c590192c8dcd751}
+
+
+Removes an object from the environment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the object to remove \\
+\hline
+\end{DoxyParams}

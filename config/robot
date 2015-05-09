@@ -1,0 +1,50 @@
+# Robot configuration
+int ROBOT_RADIUS = 30
+char ROBOT_COLOR = 'W'
+hex ROBOT_COLOR_HEX = 0xFFFFFF
+char COLLISION_COLOR = 'R'
+hex COLLISION_COLOR_HEX = 0xFF0000
+char UPDATE_COLOR = 'G'
+hex UPDATE_COLOR_HEX = 0x00FF00
+bool UPDATE_CHANGE_COLOR = false
+
+int ROBOT_INITIAL_SPEED = 10
+int ROBOT_MIN_SPEED = 0
+int ROBOT_MAX_SPEED = 200
+
+# Guidance
+int REORIENT_TIME        = 1 # Frames
+int POST_COLLISION_DELAY = 5 # Frames
+
+bool ENABLE_SENSORS = true
+
+bool ROBOTS_HITABLE = true
+
+int POST_COLLISION_PAUSE = 0 # Frames
+
+# These settings apply to all types of sensors
+float SENSOR_POSITION_X  = 25
+float SENSOR_POSITION_Y  = 25
+int SENSOR_ANGLE_LEFT  = 350
+int SENSOR_ANGLE_RIGHT = 10
+
+int SENSOR_VIEWANGLE = 135
+
+# Which sensors are displayed
+# 1: light sensors
+# 2: robot sensors
+# 3: obstacle sensors
+# 4: target sensors
+# default: no sensors
+int DISPLAY_SENSOR = 3
+
+# Translation from sensor readings to speeds
+float WALL_OBSTACLE_SCALE = 3
+float SENSOR_SCALE = 7000
+float ROTATION_SCALE_FACTOR = 2
+float SPEED_SCALE_FACTOR = 78
+
+int MAX_ROTATION = 15
+
+use "complexrobot"
+use "neuralnetworkrobot"

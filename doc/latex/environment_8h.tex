@@ -1,0 +1,79 @@
+\hypertarget{environment_8h}{\section{environment.\-h File Reference}
+\label{environment_8h}\index{environment.\-h@{environment.\-h}}
+}
+{\ttfamily \#include \char`\"{}Location.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}configuration.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$unordered\-\_\-map$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$mutex$>$}\\*
+{\ttfamily \#include $<$stdexcept$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classObjectIterator}{Object\-Iterator}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classObjectIterator}{Object\-Iterator} class, a simple iterator for the object in environment. \end{DoxyCompactList}\item 
+class \hyperlink{classNoOpenLocationException}{No\-Open\-Location\-Exception}
+\begin{DoxyCompactList}\small\item\em An exception to be thrown when an open \hyperlink{structLocation}{Location} cannot be found. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceenvironment}{environment}
+\begin{DoxyCompactList}\small\item\em environment namespace, handles all the objects as a group. Also manages object ids and collision detection \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classObjectIterator}{Object\-Iterator} \hyperlink{namespaceenvironment_a3a7a388d4b4ceb0a34bf0c72579780e1}{environment\-::object\-Iterator}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{namespaceenvironment_ae9ecf3e6b007d1c73cf18594d659b255}{environment\-::add\-Object} (\hyperlink{classPhysicalObject}{Physical\-Object} $\ast$object)
+\begin{DoxyCompactList}\small\item\em Adds an object to the environment. \end{DoxyCompactList}\item 
+void \hyperlink{namespaceenvironment_a26801958350a15098c590192c8dcd751}{environment\-::remove\-Object} (int id)
+\begin{DoxyCompactList}\small\item\em Removes an object from the environment. \end{DoxyCompactList}\item 
+void \hyperlink{namespaceenvironment_a883864c5c3c7f8ca4954781dae04bc11}{environment\-::clear} ()
+\begin{DoxyCompactList}\small\item\em Removes all objects from the environment and resets the id counter. \end{DoxyCompactList}\item 
+unsigned \hyperlink{namespaceenvironment_a450984ea6790ba4e65e004133fb26c9c}{environment\-::get\-Num\-Objects} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of objects in environment. \end{DoxyCompactList}\item 
+\hyperlink{classPhysicalObject}{Physical\-Object} $\ast$ \hyperlink{namespaceenvironment_a63ac0eb5daa2876cd17cacf3b86d732b}{environment\-::get\-Object} (int id)
+\begin{DoxyCompactList}\small\item\em Finds an object from the environment. \end{DoxyCompactList}\item 
+\hyperlink{namespaceenvironment_a3a7a388d4b4ceb0a34bf0c72579780e1}{object\-Iterator} \hyperlink{namespaceenvironment_a8ae4deeff543f98dc5293b3949698dba}{environment\-::get\-Objects\-Begin} ()
+\begin{DoxyCompactList}\small\item\em Gets an iterator to the beginning of the objects. \end{DoxyCompactList}\item 
+\hyperlink{namespaceenvironment_a3a7a388d4b4ceb0a34bf0c72579780e1}{object\-Iterator} \hyperlink{namespaceenvironment_aa9316445a3ee5c897df2bb6f7892069a}{environment\-::get\-Objects\-End} ()
+\begin{DoxyCompactList}\small\item\em Gets an iterator to the end of the objects. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceenvironment_a113b0996be39cc900966f3c71398ff3f}{environment\-::is\-Touching\-Wall} (\hyperlink{structLocation}{Location} l, int r)
+\item 
+bool \hyperlink{namespaceenvironment_a67da8bd372b3d5f78908cbe36568a96f}{environment\-::is\-Touching\-Wall} (int id)
+\item 
+bool \hyperlink{namespaceenvironment_a7769cee3c77ed08a6e2f47bcef8d76e7}{environment\-::is\-Touching\-Object} (\hyperlink{structLocation}{Location} l, int r, int id)
+\item 
+bool \hyperlink{namespaceenvironment_a9569646b039f32a98afb69ff3a6ed228}{environment\-::is\-Touching\-Hitable\-Object} (\hyperlink{structLocation}{Location} l, int r, int id)
+\item 
+bool \hyperlink{namespaceenvironment_a4a54789c59de86e474668c53245f0a84}{environment\-::is\-Touching\-Object} (\hyperlink{structLocation}{Location} l, int r)
+\item 
+bool \hyperlink{namespaceenvironment_ae366aba4972fe1073a477c5aabb724c4}{environment\-::is\-Touching\-Hitable\-Object} (\hyperlink{structLocation}{Location} l, int r)
+\item 
+bool \hyperlink{namespaceenvironment_aaaeaf16534f26b06d9684fa077701e8d}{environment\-::is\-Touching\-Object} (int id)
+\item 
+bool \hyperlink{namespaceenvironment_a8ce8be445c948e6c6f346e1abb1063de}{environment\-::is\-Touching\-Hitable\-Object} (int id)
+\item 
+bool \hyperlink{namespaceenvironment_a73988f1cc00df0e77d67cd306469168b}{environment\-::is\-Colliding} (\hyperlink{structLocation}{Location} l, int r)
+\item 
+bool \hyperlink{namespaceenvironment_a636bf120445810e363d967fee72cc4f9}{environment\-::is\-Colliding} (int id)
+\item 
+bool \hyperlink{namespaceenvironment_a0dbd900478d4838132395dcf881e9b19}{environment\-::is\-Colliding\-With\-Hitable} (\hyperlink{structLocation}{Location} l, int r)
+\item 
+bool \hyperlink{namespaceenvironment_a6957694956f081e560b07d91734598ed}{environment\-::is\-Colliding\-With\-Hitable} (int id)
+\item 
+int \hyperlink{namespaceenvironment_ace3407a2775d185a81d663dc2600ede9}{environment\-::get\-Collision\-Id} (\hyperlink{structLocation}{Location} l, int r, int id)
+\item 
+int \hyperlink{namespaceenvironment_a47ba5a3f1e24e3aa0e3fbbe2eea64fd6}{environment\-::get\-Hitable\-Collision\-Id} (\hyperlink{structLocation}{Location} l, int r, int id)
+\item 
+int \hyperlink{namespaceenvironment_a631bd89b0962e6dc887ad7a5162385ee}{environment\-::get\-Collision\-Id} (\hyperlink{structLocation}{Location} l, int r)
+\item 
+int \hyperlink{namespaceenvironment_a7a19d4a689b17d63b591a62279e26b18}{environment\-::get\-Hitable\-Collision\-Id} (\hyperlink{structLocation}{Location} l, int r)
+\item 
+int \hyperlink{namespaceenvironment_aa5b2ad32b6718409dcec99b65eb7e692}{environment\-::get\-Collision\-Id} (int id)
+\item 
+int \hyperlink{namespaceenvironment_a19c9e8b0afcc282f04eef509b53ac39b}{environment\-::get\-Hitable\-Collision\-Id} (int id)
+\end{DoxyCompactItemize}

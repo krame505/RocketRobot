@@ -1,0 +1,35 @@
+# Settings for the neural network robot
+string DEFAULT_NEURAL_NETWORK_FILE = "$INSTALL_DIR/runtime/neuralnetwork/optimized"
+
+float NEURAL_NETWORK_SPEED_SCALE = 1
+
+# Optimization
+bool OPTIMIZE_VERBOSE   = true
+bool POOL_FOUND_VERBOSE = true
+bool LOCK_VERBOSE       = false
+bool PRINT_POOL         = false
+
+string TEMP_NEURAL_NETWORK_FILE      = "$INSTALL_DIR/runtime/neuralnetwork/optimized_temp"
+string OPTIMAL_NEURAL_NETWORK_FILE   = "$INSTALL_DIR/runtime/neuralnetwork/optimized"
+string POOL_NEURAL_NETWORK_BASE_FILE = "$INSTALL_DIR/runtime/neuralnetwork/optimized_pool_"
+string BEST_PERFORMANCE_FILE         = "$INSTALL_DIR/runtime/neuralnetwork/performances"
+string NEURAL_NETWORK_LOCK_NAME      = "optimized_lock27" # For now, increment this every time it hangs on startup
+
+int NUM_OPTIMIZE_TRIALS = 20
+int STEP_LIMIT = 100000
+
+int MAX_POOL_SIZE           = 100
+int SUB_POOL_SIZE           = 50
+int MIN_DIVERSITY           = 1000
+int NUM_CONNECTIONS_MUTATED = 3
+float MUTATION_AMOUNT       = 1
+
+float TARGET_SENSOR_SCALE = 1 # Scale before passing to the network
+
+int NUM_OPTIMIZE_ROBOTS_TARGETS = 2
+int NUM_OPTIMIZE_OBSTACLES      = 6
+
+int OPTIMIZE_MAZE_TARGET_SPEED = 0
+
+int NUM_OPTIMIZE_OBSTACLES_TRIALS = 20
+int NUM_OPTIMIZE_OBSTACLES_ROBOTS_TARGETS = 10

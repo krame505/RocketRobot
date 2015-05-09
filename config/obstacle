@@ -1,0 +1,5 @@
+# Obstacle configuration
+int MIN_OBSTACLE_RADIUS = 30
+int MAX_OBSTACLE_RADIUS = 100
+char OBSTACLE_COLOR = 'G'
+hex OBSTACLE_COLOR_HEX = 0xC0C0C0

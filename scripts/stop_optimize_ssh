@@ -1,0 +1,2 @@
+#/bin/bash
+bash script_ssh "bash stop_optimize"

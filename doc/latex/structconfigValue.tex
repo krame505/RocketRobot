@@ -1,0 +1,61 @@
+\hypertarget{structconfigValue}{\section{config\-Value Struct Reference}
+\label{structconfigValue}\index{config\-Value@{config\-Value}}
+}
+
+
+This struct holds a configuration value of any legal type.  
+
+
+
+
+{\ttfamily \#include $<$configuration.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::string \hyperlink{structconfigValue_a2557316e4aad2ae77db15e19422e8aae}{type}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>int \hyperlink{structconfigValue_a85f3ab82fc453795a31914bec4bfa877}{intVal}\\
+\>float \hyperlink{structconfigValue_a5ee65a7274dd76adc86467789da27075}{floatVal}\\
+\>char \hyperlink{structconfigValue_a21dd817d08a5648100732180b81f714e}{charVal}\\
+\>bool \hyperlink{structconfigValue_a559a52e0234967d6fb4c0e58030de255}{boolVal}\\
+\>const char $\ast$ \hyperlink{structconfigValue_ab7bde03d2ca73f84b5da8fd21b479790}{stringVal}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This struct holds a configuration value of any legal type. 
+
+Note that string\-Val is stored as a const char $\ast$ in the union due to restrictions in C++ not allowing complex types in unions. The string is converted to a char $\ast$ after it is parsed, and is converted back in get\-String\-Val. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structconfigValue_a0dba5866afbc59ae85680fd2a13c80ad}{\subsubsection[{"@1}]{\setlength{\rightskip}{0pt plus 5cm}union \{ ... \} }}\label{structconfigValue_a0dba5866afbc59ae85680fd2a13c80ad}
+An anonymous union of all possible types that can be stored. \hypertarget{structconfigValue_a559a52e0234967d6fb4c0e58030de255}{\index{config\-Value@{config\-Value}!bool\-Val@{bool\-Val}}
+\index{bool\-Val@{bool\-Val}!configValue@{config\-Value}}
+\subsubsection[{bool\-Val}]{\setlength{\rightskip}{0pt plus 5cm}bool config\-Value\-::bool\-Val}}\label{structconfigValue_a559a52e0234967d6fb4c0e58030de255}
+\hypertarget{structconfigValue_a21dd817d08a5648100732180b81f714e}{\index{config\-Value@{config\-Value}!char\-Val@{char\-Val}}
+\index{char\-Val@{char\-Val}!configValue@{config\-Value}}
+\subsubsection[{char\-Val}]{\setlength{\rightskip}{0pt plus 5cm}char config\-Value\-::char\-Val}}\label{structconfigValue_a21dd817d08a5648100732180b81f714e}
+\hypertarget{structconfigValue_a5ee65a7274dd76adc86467789da27075}{\index{config\-Value@{config\-Value}!float\-Val@{float\-Val}}
+\index{float\-Val@{float\-Val}!configValue@{config\-Value}}
+\subsubsection[{float\-Val}]{\setlength{\rightskip}{0pt plus 5cm}float config\-Value\-::float\-Val}}\label{structconfigValue_a5ee65a7274dd76adc86467789da27075}
+\hypertarget{structconfigValue_a85f3ab82fc453795a31914bec4bfa877}{\index{config\-Value@{config\-Value}!int\-Val@{int\-Val}}
+\index{int\-Val@{int\-Val}!configValue@{config\-Value}}
+\subsubsection[{int\-Val}]{\setlength{\rightskip}{0pt plus 5cm}int config\-Value\-::int\-Val}}\label{structconfigValue_a85f3ab82fc453795a31914bec4bfa877}
+\hypertarget{structconfigValue_ab7bde03d2ca73f84b5da8fd21b479790}{\index{config\-Value@{config\-Value}!string\-Val@{string\-Val}}
+\index{string\-Val@{string\-Val}!configValue@{config\-Value}}
+\subsubsection[{string\-Val}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ config\-Value\-::string\-Val}}\label{structconfigValue_ab7bde03d2ca73f84b5da8fd21b479790}
+\hypertarget{structconfigValue_a2557316e4aad2ae77db15e19422e8aae}{\index{config\-Value@{config\-Value}!type@{type}}
+\index{type@{type}!configValue@{config\-Value}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string config\-Value\-::type}}\label{structconfigValue_a2557316e4aad2ae77db15e19422e8aae}
+The name of the type that is stored (\char`\"{}int\char`\"{}, \char`\"{}float\char`\"{}, \char`\"{}char\char`\"{}, \char`\"{}bool\char`\"{}, or \char`\"{}string\char`\"{}) or an error code from parsing (\char`\"{}invalid type name\char`\"{} or \char`\"{}invalid
+syntax\char`\"{}). 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{configuration_8h}{configuration.\-h}\end{DoxyCompactItemize}

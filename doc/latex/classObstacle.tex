@@ -1,0 +1,158 @@
+\hypertarget{classObstacle}{\section{Obstacle Class Reference}
+\label{classObstacle}\index{Obstacle@{Obstacle}}
+}
+
+
+\hyperlink{classObstacle}{Obstacle} for the robot to hit/avoid.  
+
+
+
+
+{\ttfamily \#include $<$Obstacle.\-h$>$}
+
+Inheritance diagram for Obstacle\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classObstacle}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classObstacle_a05684b15f4ea925bd64601e534650ce7}{Obstacle} (int radius, \hyperlink{structColor}{Color} color)
+\item 
+\hyperlink{classObstacle_ae4f3c942fab622b38e32f1c2514f0924}{Obstacle} (int max\-Radius, int min\-Radius, \hyperlink{structColor}{Color} color)
+\item 
+\hyperlink{classObstacle_a28e78317f4f4b06fb6acec5a75f918c4}{Obstacle} (int radius, \hyperlink{structLocation}{Location} loc, \hyperlink{structColor}{Color} color)
+\item 
+bool \hyperlink{classObstacle_a6ea72857ac6d643be7bb3bd3a1a30995}{handle\-Collision} (int other\-Id, bool was\-Hit)
+\item 
+\hyperlink{classObstacle_af2f9cc9c6cff75dca0974fd5ac4f71a9}{$\sim$\-Obstacle} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classObstacle}{Obstacle} for the robot to hit/avoid. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classObstacle_a05684b15f4ea925bd64601e534650ce7}{\index{Obstacle@{Obstacle}!Obstacle@{Obstacle}}
+\index{Obstacle@{Obstacle}!Obstacle@{Obstacle}}
+\subsubsection[{Obstacle}]{\setlength{\rightskip}{0pt plus 5cm}Obstacle\-::\-Obstacle (
+\begin{DoxyParamCaption}
+\item[{int}]{radius, }
+\item[{{\bf Color}}]{color}
+\end{DoxyParamCaption}
+)}}\label{classObstacle_a05684b15f4ea925bd64601e534650ce7}
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & the radius in pixels \\
+\hline
+{\em color} & a struct of float value 0 to 1 representing a hexedecimal color \\
+\hline
+{\em config} & a configuration table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyParagraph}{Initialization}
+\hyperlink{classObstacle}{Obstacle} is initialized with the following values\-: 
+\end{DoxyParagraph}
+
+
+Radius\-: D\-E\-F\-A\-U\-L\-T\-\_\-\-R\-A\-D\-I\-U\-S as specified in ../config/default  
+
+Orientation\-: random 
+
+Speed\-: 0 
+
+Position\-: (loc.\-x, loc.\-y)   \hypertarget{classObstacle_ae4f3c942fab622b38e32f1c2514f0924}{\index{Obstacle@{Obstacle}!Obstacle@{Obstacle}}
+\index{Obstacle@{Obstacle}!Obstacle@{Obstacle}}
+\subsubsection[{Obstacle}]{\setlength{\rightskip}{0pt plus 5cm}Obstacle\-::\-Obstacle (
+\begin{DoxyParamCaption}
+\item[{int}]{max\-Radius, }
+\item[{int}]{min\-Radius, }
+\item[{{\bf Color}}]{color}
+\end{DoxyParamCaption}
+)}}\label{classObstacle_ae4f3c942fab622b38e32f1c2514f0924}
+
+\begin{DoxyParams}{Parameters}
+{\em min\-Radius} & the minimum radius in pixels \\
+\hline
+{\em max\-Radius} & the maximum radius in pixels \\
+\hline
+{\em color} & a struct of float value 0 to 1 representing a hexedecimal color \\
+\hline
+\end{DoxyParams}
+\begin{DoxyParagraph}{Initialization}
+\hyperlink{classObstacle}{Obstacle} is initialized with the following values\-: 
+\end{DoxyParagraph}
+
+
+Orientation\-: random 
+
+Speed\-: 0 
+
+Position\-: (loc.\-x, loc.\-y)   \hypertarget{classObstacle_a28e78317f4f4b06fb6acec5a75f918c4}{\index{Obstacle@{Obstacle}!Obstacle@{Obstacle}}
+\index{Obstacle@{Obstacle}!Obstacle@{Obstacle}}
+\subsubsection[{Obstacle}]{\setlength{\rightskip}{0pt plus 5cm}Obstacle\-::\-Obstacle (
+\begin{DoxyParamCaption}
+\item[{int}]{radius, }
+\item[{{\bf Location}}]{loc, }
+\item[{{\bf Color}}]{color}
+\end{DoxyParamCaption}
+)}}\label{classObstacle_a28e78317f4f4b06fb6acec5a75f918c4}
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & the radius in pixels \\
+\hline
+{\em color} & a struct of float value 0 to 1 representing a hexedecimal color \\
+\hline
+{\em loc} & a struct of the x,y start \hyperlink{structLocation}{Location} in pixels \\
+\hline
+\end{DoxyParams}
+\begin{DoxyParagraph}{Initialization}
+\hyperlink{classObstacle}{Obstacle} is initialized with the following values\-: 
+\end{DoxyParagraph}
+
+
+Orientation\-: 0 
+
+Speed\-: 0 
+
+Position\-: (loc.\-x, loc.\-y)   \hypertarget{classObstacle_af2f9cc9c6cff75dca0974fd5ac4f71a9}{\index{Obstacle@{Obstacle}!$\sim$\-Obstacle@{$\sim$\-Obstacle}}
+\index{$\sim$\-Obstacle@{$\sim$\-Obstacle}!Obstacle@{Obstacle}}
+\subsubsection[{$\sim$\-Obstacle}]{\setlength{\rightskip}{0pt plus 5cm}Obstacle\-::$\sim$\-Obstacle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classObstacle_af2f9cc9c6cff75dca0974fd5ac4f71a9}
+This is the class destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classObstacle_a6ea72857ac6d643be7bb3bd3a1a30995}{\index{Obstacle@{Obstacle}!handle\-Collision@{handle\-Collision}}
+\index{handle\-Collision@{handle\-Collision}!Obstacle@{Obstacle}}
+\subsubsection[{handle\-Collision}]{\setlength{\rightskip}{0pt plus 5cm}bool Obstacle\-::handle\-Collision (
+\begin{DoxyParamCaption}
+\item[{int}]{other\-Id, }
+\item[{bool}]{was\-Hit}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classObstacle_a6ea72857ac6d643be7bb3bd3a1a30995}
+\begin{DoxyAuthor}{Author}
+Lucas Kramer This function gives \hyperlink{classObstacle}{Obstacle} an appropriate reaction when a collision occurs. Does nothing for now 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em other\-Id} & id of the object that it collides with \\
+\hline
+{\em was\-Hit} & tells if the object was hit previously \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classPhysicalObject_a400ba3545479ebbf8b1b4a046906e562}{Physical\-Object}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Obstacle_8h}{Obstacle.\-h}\item 
+\hyperlink{Obstacle_8cpp}{Obstacle.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,141 @@
+\hypertarget{classNeuralNetwork}{\section{Neural\-Network Class Reference}
+\label{classNeuralNetwork}\index{Neural\-Network@{Neural\-Network}}
+}
+
+
+A representation of a neural network.  
+
+
+
+
+{\ttfamily \#include $<$Neural\-Network.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classNeuralNetwork_a993f0131fa3470bd936f205a1de97346}{Neural\-Network} (const \hyperlink{classNeuralNetwork}{Neural\-Network} \&other)
+\item 
+\hyperlink{classNeuralNetwork_a1a07b6aec54c5890b2a8d612fd684289}{Neural\-Network} (const std\-::string \&filename)
+\item 
+std\-::vector$<$ float $>$ \hyperlink{classNeuralNetwork_ae69f98b81f2ca075327a0b4b83fe593e}{compute} (const std\-::vector$<$ float $>$ \&inputs)
+\item 
+\hyperlink{classNeuralNetwork}{Neural\-Network} \hyperlink{classNeuralNetwork_a28d9213fcff2a94a4d26b11354d248c8}{mutate} (int num\-Changed, float amount)
+\item 
+\hyperlink{classNeuralNetwork}{Neural\-Network} \hyperlink{classNeuralNetwork_a68d01cce8de3c89a174e4f4f77dcbbcd}{combine} (const \hyperlink{classNeuralNetwork}{Neural\-Network} \&other)
+\item 
+void \hyperlink{classNeuralNetwork_a716f02c9468ddfaf53f8eaf19b755f44}{write} (const std\-::string \&filename)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classNeuralNetwork}{Neural\-Network} \hyperlink{classNeuralNetwork_a079b5b4583999d6b35b4b8bb23a68fb7}{load} (const std\-::string \&filename)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A representation of a neural network. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classNeuralNetwork_a993f0131fa3470bd936f205a1de97346}{\index{Neural\-Network@{Neural\-Network}!Neural\-Network@{Neural\-Network}}
+\index{Neural\-Network@{Neural\-Network}!NeuralNetwork@{Neural\-Network}}
+\subsubsection[{Neural\-Network}]{\setlength{\rightskip}{0pt plus 5cm}Neural\-Network\-::\-Neural\-Network (
+\begin{DoxyParamCaption}
+\item[{const {\bf Neural\-Network} \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{classNeuralNetwork_a993f0131fa3470bd936f205a1de97346}
+The copy constructor 
+\begin{DoxyParams}{Parameters}
+{\em other} & the network to copy \\
+\hline
+\end{DoxyParams}
+\hypertarget{classNeuralNetwork_a1a07b6aec54c5890b2a8d612fd684289}{\index{Neural\-Network@{Neural\-Network}!Neural\-Network@{Neural\-Network}}
+\index{Neural\-Network@{Neural\-Network}!NeuralNetwork@{Neural\-Network}}
+\subsubsection[{Neural\-Network}]{\setlength{\rightskip}{0pt plus 5cm}Neural\-Network\-::\-Neural\-Network (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{filename}
+\end{DoxyParamCaption}
+)}}\label{classNeuralNetwork_a1a07b6aec54c5890b2a8d612fd684289}
+Constructs a network from a file description 
+\begin{DoxyParams}{Parameters}
+{\em filename} & the description filename \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classNeuralNetwork_a68d01cce8de3c89a174e4f4f77dcbbcd}{\index{Neural\-Network@{Neural\-Network}!combine@{combine}}
+\index{combine@{combine}!NeuralNetwork@{Neural\-Network}}
+\subsubsection[{combine}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Neural\-Network} Neural\-Network\-::combine (
+\begin{DoxyParamCaption}
+\item[{const {\bf Neural\-Network} \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{classNeuralNetwork_a68d01cce8de3c89a174e4f4f77dcbbcd}
+Combines the network with another network by constructing a new network with half the connection strengths from each. Throws an exception if the networks have incompatible structures \begin{DoxyReturn}{Returns}
+the new network 
+\end{DoxyReturn}
+\hypertarget{classNeuralNetwork_ae69f98b81f2ca075327a0b4b83fe593e}{\index{Neural\-Network@{Neural\-Network}!compute@{compute}}
+\index{compute@{compute}!NeuralNetwork@{Neural\-Network}}
+\subsubsection[{compute}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ float $>$ Neural\-Network\-::compute (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ float $>$ \&}]{inputs}
+\end{DoxyParamCaption}
+)}}\label{classNeuralNetwork_ae69f98b81f2ca075327a0b4b83fe593e}
+Computes the output values of a network for a vector of inputs. Throws an exception if an incorrect number of inputs is provided 
+\begin{DoxyParams}{Parameters}
+{\em inputs} & a vector containing the inputs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector containing the outputs 
+\end{DoxyReturn}
+\hypertarget{classNeuralNetwork_a079b5b4583999d6b35b4b8bb23a68fb7}{\index{Neural\-Network@{Neural\-Network}!load@{load}}
+\index{load@{load}!NeuralNetwork@{Neural\-Network}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Neural\-Network} Neural\-Network\-::load (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classNeuralNetwork_a079b5b4583999d6b35b4b8bb23a68fb7}
+Loads a network from a file 
+\begin{DoxyParams}{Parameters}
+{\em filename} & the filename to load \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the new network 
+\end{DoxyReturn}
+\hypertarget{classNeuralNetwork_a28d9213fcff2a94a4d26b11354d248c8}{\index{Neural\-Network@{Neural\-Network}!mutate@{mutate}}
+\index{mutate@{mutate}!NeuralNetwork@{Neural\-Network}}
+\subsubsection[{mutate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Neural\-Network} Neural\-Network\-::mutate (
+\begin{DoxyParamCaption}
+\item[{int}]{num\-Changed, }
+\item[{float}]{amount}
+\end{DoxyParamCaption}
+)}}\label{classNeuralNetwork_a28d9213fcff2a94a4d26b11354d248c8}
+Mutates the network by changing num\-Changed connection strengths by a random number between -\/amount and amount 
+\begin{DoxyParams}{Parameters}
+{\em num\-Changed} & the number of connections to mutate \\
+\hline
+{\em amount} & the maximum amount to change the connections \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the new network 
+\end{DoxyReturn}
+\hypertarget{classNeuralNetwork_a716f02c9468ddfaf53f8eaf19b755f44}{\index{Neural\-Network@{Neural\-Network}!write@{write}}
+\index{write@{write}!NeuralNetwork@{Neural\-Network}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void Neural\-Network\-::write (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{filename}
+\end{DoxyParamCaption}
+)}}\label{classNeuralNetwork_a716f02c9468ddfaf53f8eaf19b755f44}
+Writes the network to a file 
+\begin{DoxyParams}{Parameters}
+{\em filename} & the file to write \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{NeuralNetwork_8h}{Neural\-Network.\-h}\item 
+\hyperlink{NeuralNetwork_8cpp}{Neural\-Network.\-cpp}\end{DoxyCompactItemize}

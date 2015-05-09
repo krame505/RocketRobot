@@ -1,0 +1,217 @@
+\hypertarget{classComplexRobot}{\section{Complex\-Robot Class Reference}
+\label{classComplexRobot}\index{Complex\-Robot@{Complex\-Robot}}
+}
+
+
+A complex robot with configurable feedback from all sensors.  
+
+
+
+
+{\ttfamily \#include $<$Complex\-Robot.\-h$>$}
+
+Inheritance diagram for Complex\-Robot\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classComplexRobot}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classComplexRobot_ac1c27bb32c2bc66f7b34317947b3fc17}{Complex\-Robot} ()
+\item 
+\hyperlink{classComplexRobot_a3e45d7e3a708c5c44908bb360a04e656}{Complex\-Robot} (int radius, \hyperlink{structColor}{Color} color, \hyperlink{structColor}{Color} line\-Color, bool \hyperlink{classComplexRobot_a371e0363adebfa9898b7db2827e62216}{enable\-Light\-Sensors}, bool \hyperlink{classComplexRobot_afbd7060c1ba7505825bd8a6d87755c57}{enable\-Robot\-Sensors}, bool \hyperlink{classComplexRobot_a1a92f81d958c5497dad6c0fb470193e6}{enable\-Obstacle\-Sensors}, bool \hyperlink{classComplexRobot_a5480d20648fefda9eab9e3a31cb74a8e}{enable\-Target\-Sensors}, bool \hyperlink{classComplexRobot_a56421342335d639c79fce6c4087e92ba}{light\-Sensors\-Crossed}, bool \hyperlink{classComplexRobot_a329fa033f98c4611fc6fd08f1ec0c1a2}{robot\-Sensors\-Crossed}, bool \hyperlink{classComplexRobot_aa1bbfff6b94d790366c903e8ee9d7c35}{obstacle\-Sensors\-Crossed}, bool \hyperlink{classComplexRobot_ac7fa0582f9c586b38c1dc73382a1c5a9}{target\-Sensors\-Crossed}, float \hyperlink{classComplexRobot_afb1bda51a4a0d99fa2eea1fe8f7ee240}{light\-Sensor\-Scale}, float \hyperlink{classComplexRobot_ac433b802cfc866917bc32680357e0b3e}{robot\-Sensor\-Scale}, float \hyperlink{classComplexRobot_a62e4d0dafe87412f5d868a3a7a462209}{obstacle\-Sensor\-Scale}, float \hyperlink{classComplexRobot_a95cae4898e63c23418684c87e6ab0176}{target\-Sensor\-Scale}, int \hyperlink{classComplexRobot_a38ae464727dfb577e24a2b4c1a305e5d}{default\-Speed}, int target\-Id=-\/1)
+\item 
+\hyperlink{classComplexRobot_a45c21b79ada7a4cce275e4c94c62c01f}{Complex\-Robot} (int radius, \hyperlink{structLocation}{Location} loc, \hyperlink{structColor}{Color} color, \hyperlink{structColor}{Color} line\-Color, bool \hyperlink{classComplexRobot_a371e0363adebfa9898b7db2827e62216}{enable\-Light\-Sensors}, bool \hyperlink{classComplexRobot_afbd7060c1ba7505825bd8a6d87755c57}{enable\-Robot\-Sensors}, bool \hyperlink{classComplexRobot_a1a92f81d958c5497dad6c0fb470193e6}{enable\-Obstacle\-Sensors}, bool \hyperlink{classComplexRobot_a5480d20648fefda9eab9e3a31cb74a8e}{enable\-Target\-Sensors}, bool \hyperlink{classComplexRobot_a56421342335d639c79fce6c4087e92ba}{light\-Sensors\-Crossed}, bool \hyperlink{classComplexRobot_a329fa033f98c4611fc6fd08f1ec0c1a2}{robot\-Sensors\-Crossed}, bool \hyperlink{classComplexRobot_aa1bbfff6b94d790366c903e8ee9d7c35}{obstacle\-Sensors\-Crossed}, bool \hyperlink{classComplexRobot_ac7fa0582f9c586b38c1dc73382a1c5a9}{target\-Sensors\-Crossed}, float \hyperlink{classComplexRobot_afb1bda51a4a0d99fa2eea1fe8f7ee240}{light\-Sensor\-Scale}, float \hyperlink{classComplexRobot_ac433b802cfc866917bc32680357e0b3e}{robot\-Sensor\-Scale}, float \hyperlink{classComplexRobot_a62e4d0dafe87412f5d868a3a7a462209}{obstacle\-Sensor\-Scale}, float \hyperlink{classComplexRobot_a95cae4898e63c23418684c87e6ab0176}{target\-Sensor\-Scale}, int \hyperlink{classComplexRobot_a38ae464727dfb577e24a2b4c1a305e5d}{default\-Speed}, int target\-Id=-\/1)
+\item 
+\hyperlink{classComplexRobot_a4ce778d818e7ad00d2ef47a387f12865}{$\sim$\-Complex\-Robot} ()
+\item 
+float \hyperlink{classComplexRobot_aa50c7f5ed4f288987fe2557b41a9bf32}{get\-Left\-Speed} (float left\-Light\-Sensor\-Val, float right\-Light\-Sensor\-Val, float left\-Robot\-Sensor\-Val, float right\-Robot\-Sensor\-Val, float left\-Obstacle\-Sensor\-Val, float right\-Obstacle\-Sensor\-Val, float left\-Target\-Sensor\-Val, float right\-Target\-Sensor\-Val)
+\item 
+float \hyperlink{classComplexRobot_ac038c2dbcc242d68a3ef9e533673bdf6}{get\-Right\-Speed} (float left\-Light\-Sensor\-Val, float right\-Light\-Sensor\-Val, float left\-Robot\-Sensor\-Val, float right\-Robot\-Sensor\-Val, float left\-Obstacle\-Sensor\-Val, float right\-Obstacle\-Sensor\-Val, float left\-Target\-Sensor\-Val, float right\-Target\-Sensor\-Val)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const bool \hyperlink{classComplexRobot_a371e0363adebfa9898b7db2827e62216}{enable\-Light\-Sensors}
+\item 
+const bool \hyperlink{classComplexRobot_afbd7060c1ba7505825bd8a6d87755c57}{enable\-Robot\-Sensors}
+\item 
+const bool \hyperlink{classComplexRobot_a1a92f81d958c5497dad6c0fb470193e6}{enable\-Obstacle\-Sensors}
+\item 
+const bool \hyperlink{classComplexRobot_a5480d20648fefda9eab9e3a31cb74a8e}{enable\-Target\-Sensors}
+\item 
+const bool \hyperlink{classComplexRobot_a56421342335d639c79fce6c4087e92ba}{light\-Sensors\-Crossed}
+\item 
+const bool \hyperlink{classComplexRobot_a329fa033f98c4611fc6fd08f1ec0c1a2}{robot\-Sensors\-Crossed}
+\item 
+const bool \hyperlink{classComplexRobot_aa1bbfff6b94d790366c903e8ee9d7c35}{obstacle\-Sensors\-Crossed}
+\item 
+const bool \hyperlink{classComplexRobot_ac7fa0582f9c586b38c1dc73382a1c5a9}{target\-Sensors\-Crossed}
+\item 
+const float \hyperlink{classComplexRobot_afb1bda51a4a0d99fa2eea1fe8f7ee240}{light\-Sensor\-Scale}
+\item 
+const float \hyperlink{classComplexRobot_ac433b802cfc866917bc32680357e0b3e}{robot\-Sensor\-Scale}
+\item 
+const float \hyperlink{classComplexRobot_a62e4d0dafe87412f5d868a3a7a462209}{obstacle\-Sensor\-Scale}
+\item 
+const float \hyperlink{classComplexRobot_a95cae4898e63c23418684c87e6ab0176}{target\-Sensor\-Scale}
+\item 
+const int \hyperlink{classComplexRobot_a38ae464727dfb577e24a2b4c1a305e5d}{default\-Speed}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A complex robot with configurable feedback from all sensors. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classComplexRobot_ac1c27bb32c2bc66f7b34317947b3fc17}{\index{Complex\-Robot@{Complex\-Robot}!Complex\-Robot@{Complex\-Robot}}
+\index{Complex\-Robot@{Complex\-Robot}!ComplexRobot@{Complex\-Robot}}
+\subsubsection[{Complex\-Robot}]{\setlength{\rightskip}{0pt plus 5cm}Complex\-Robot\-::\-Complex\-Robot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classComplexRobot_ac1c27bb32c2bc66f7b34317947b3fc17}
+\hypertarget{classComplexRobot_a3e45d7e3a708c5c44908bb360a04e656}{\index{Complex\-Robot@{Complex\-Robot}!Complex\-Robot@{Complex\-Robot}}
+\index{Complex\-Robot@{Complex\-Robot}!ComplexRobot@{Complex\-Robot}}
+\subsubsection[{Complex\-Robot}]{\setlength{\rightskip}{0pt plus 5cm}Complex\-Robot\-::\-Complex\-Robot (
+\begin{DoxyParamCaption}
+\item[{int}]{radius, }
+\item[{{\bf Color}}]{color, }
+\item[{{\bf Color}}]{line\-Color, }
+\item[{bool}]{enable\-Light\-Sensors, }
+\item[{bool}]{enable\-Robot\-Sensors, }
+\item[{bool}]{enable\-Obstacle\-Sensors, }
+\item[{bool}]{enable\-Target\-Sensors, }
+\item[{bool}]{light\-Sensors\-Crossed, }
+\item[{bool}]{robot\-Sensors\-Crossed, }
+\item[{bool}]{obstacle\-Sensors\-Crossed, }
+\item[{bool}]{target\-Sensors\-Crossed, }
+\item[{float}]{light\-Sensor\-Scale, }
+\item[{float}]{robot\-Sensor\-Scale, }
+\item[{float}]{obstacle\-Sensor\-Scale, }
+\item[{float}]{target\-Sensor\-Scale, }
+\item[{int}]{default\-Speed, }
+\item[{int}]{target\-Id = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}}\label{classComplexRobot_a3e45d7e3a708c5c44908bb360a04e656}
+\hypertarget{classComplexRobot_a45c21b79ada7a4cce275e4c94c62c01f}{\index{Complex\-Robot@{Complex\-Robot}!Complex\-Robot@{Complex\-Robot}}
+\index{Complex\-Robot@{Complex\-Robot}!ComplexRobot@{Complex\-Robot}}
+\subsubsection[{Complex\-Robot}]{\setlength{\rightskip}{0pt plus 5cm}Complex\-Robot\-::\-Complex\-Robot (
+\begin{DoxyParamCaption}
+\item[{int}]{radius, }
+\item[{{\bf Location}}]{loc, }
+\item[{{\bf Color}}]{color, }
+\item[{{\bf Color}}]{line\-Color, }
+\item[{bool}]{enable\-Light\-Sensors, }
+\item[{bool}]{enable\-Robot\-Sensors, }
+\item[{bool}]{enable\-Obstacle\-Sensors, }
+\item[{bool}]{enable\-Target\-Sensors, }
+\item[{bool}]{light\-Sensors\-Crossed, }
+\item[{bool}]{robot\-Sensors\-Crossed, }
+\item[{bool}]{obstacle\-Sensors\-Crossed, }
+\item[{bool}]{target\-Sensors\-Crossed, }
+\item[{float}]{light\-Sensor\-Scale, }
+\item[{float}]{robot\-Sensor\-Scale, }
+\item[{float}]{obstacle\-Sensor\-Scale, }
+\item[{float}]{target\-Sensor\-Scale, }
+\item[{int}]{default\-Speed, }
+\item[{int}]{target\-Id = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}}\label{classComplexRobot_a45c21b79ada7a4cce275e4c94c62c01f}
+\hypertarget{classComplexRobot_a4ce778d818e7ad00d2ef47a387f12865}{\index{Complex\-Robot@{Complex\-Robot}!$\sim$\-Complex\-Robot@{$\sim$\-Complex\-Robot}}
+\index{$\sim$\-Complex\-Robot@{$\sim$\-Complex\-Robot}!ComplexRobot@{Complex\-Robot}}
+\subsubsection[{$\sim$\-Complex\-Robot}]{\setlength{\rightskip}{0pt plus 5cm}Complex\-Robot\-::$\sim$\-Complex\-Robot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classComplexRobot_a4ce778d818e7ad00d2ef47a387f12865}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classComplexRobot_aa50c7f5ed4f288987fe2557b41a9bf32}{\index{Complex\-Robot@{Complex\-Robot}!get\-Left\-Speed@{get\-Left\-Speed}}
+\index{get\-Left\-Speed@{get\-Left\-Speed}!ComplexRobot@{Complex\-Robot}}
+\subsubsection[{get\-Left\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}float Complex\-Robot\-::get\-Left\-Speed (
+\begin{DoxyParamCaption}
+\item[{float}]{left\-Light\-Sensor\-Val, }
+\item[{float}]{right\-Light\-Sensor\-Val, }
+\item[{float}]{left\-Robot\-Sensor\-Val, }
+\item[{float}]{right\-Robot\-Sensor\-Val, }
+\item[{float}]{left\-Obstacle\-Sensor\-Val, }
+\item[{float}]{right\-Obstacle\-Sensor\-Val, }
+\item[{float}]{left\-Target\-Sensor\-Val, }
+\item[{float}]{right\-Target\-Sensor\-Val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classComplexRobot_aa50c7f5ed4f288987fe2557b41a9bf32}
+
+
+Implements \hyperlink{classRobot_a9c96f301ae826e7c535f6b705e44bcd6}{Robot}.
+
+\hypertarget{classComplexRobot_ac038c2dbcc242d68a3ef9e533673bdf6}{\index{Complex\-Robot@{Complex\-Robot}!get\-Right\-Speed@{get\-Right\-Speed}}
+\index{get\-Right\-Speed@{get\-Right\-Speed}!ComplexRobot@{Complex\-Robot}}
+\subsubsection[{get\-Right\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}float Complex\-Robot\-::get\-Right\-Speed (
+\begin{DoxyParamCaption}
+\item[{float}]{left\-Light\-Sensor\-Val, }
+\item[{float}]{right\-Light\-Sensor\-Val, }
+\item[{float}]{left\-Robot\-Sensor\-Val, }
+\item[{float}]{right\-Robot\-Sensor\-Val, }
+\item[{float}]{left\-Obstacle\-Sensor\-Val, }
+\item[{float}]{right\-Obstacle\-Sensor\-Val, }
+\item[{float}]{left\-Target\-Sensor\-Val, }
+\item[{float}]{right\-Target\-Sensor\-Val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classComplexRobot_ac038c2dbcc242d68a3ef9e533673bdf6}
+
+
+Implements \hyperlink{classRobot_a3289251979084c50b18a6006547d3f95}{Robot}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classComplexRobot_a38ae464727dfb577e24a2b4c1a305e5d}{\index{Complex\-Robot@{Complex\-Robot}!default\-Speed@{default\-Speed}}
+\index{default\-Speed@{default\-Speed}!ComplexRobot@{Complex\-Robot}}
+\subsubsection[{default\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}const int Complex\-Robot\-::default\-Speed}}\label{classComplexRobot_a38ae464727dfb577e24a2b4c1a305e5d}
+\hypertarget{classComplexRobot_a371e0363adebfa9898b7db2827e62216}{\index{Complex\-Robot@{Complex\-Robot}!enable\-Light\-Sensors@{enable\-Light\-Sensors}}
+\index{enable\-Light\-Sensors@{enable\-Light\-Sensors}!ComplexRobot@{Complex\-Robot}}
+\subsubsection[{enable\-Light\-Sensors}]{\setlength{\rightskip}{0pt plus 5cm}const bool Complex\-Robot\-::enable\-Light\-Sensors}}\label{classComplexRobot_a371e0363adebfa9898b7db2827e62216}
+\hypertarget{classComplexRobot_a1a92f81d958c5497dad6c0fb470193e6}{\index{Complex\-Robot@{Complex\-Robot}!enable\-Obstacle\-Sensors@{enable\-Obstacle\-Sensors}}
+\index{enable\-Obstacle\-Sensors@{enable\-Obstacle\-Sensors}!ComplexRobot@{Complex\-Robot}}
+\subsubsection[{enable\-Obstacle\-Sensors}]{\setlength{\rightskip}{0pt plus 5cm}const bool Complex\-Robot\-::enable\-Obstacle\-Sensors}}\label{classComplexRobot_a1a92f81d958c5497dad6c0fb470193e6}
+\hypertarget{classComplexRobot_afbd7060c1ba7505825bd8a6d87755c57}{\index{Complex\-Robot@{Complex\-Robot}!enable\-Robot\-Sensors@{enable\-Robot\-Sensors}}
+\index{enable\-Robot\-Sensors@{enable\-Robot\-Sensors}!ComplexRobot@{Complex\-Robot}}
+\subsubsection[{enable\-Robot\-Sensors}]{\setlength{\rightskip}{0pt plus 5cm}const bool Complex\-Robot\-::enable\-Robot\-Sensors}}\label{classComplexRobot_afbd7060c1ba7505825bd8a6d87755c57}
+\hypertarget{classComplexRobot_a5480d20648fefda9eab9e3a31cb74a8e}{\index{Complex\-Robot@{Complex\-Robot}!enable\-Target\-Sensors@{enable\-Target\-Sensors}}
+\index{enable\-Target\-Sensors@{enable\-Target\-Sensors}!ComplexRobot@{Complex\-Robot}}
+\subsubsection[{enable\-Target\-Sensors}]{\setlength{\rightskip}{0pt plus 5cm}const bool Complex\-Robot\-::enable\-Target\-Sensors}}\label{classComplexRobot_a5480d20648fefda9eab9e3a31cb74a8e}
+\hypertarget{classComplexRobot_afb1bda51a4a0d99fa2eea1fe8f7ee240}{\index{Complex\-Robot@{Complex\-Robot}!light\-Sensor\-Scale@{light\-Sensor\-Scale}}
+\index{light\-Sensor\-Scale@{light\-Sensor\-Scale}!ComplexRobot@{Complex\-Robot}}
+\subsubsection[{light\-Sensor\-Scale}]{\setlength{\rightskip}{0pt plus 5cm}const float Complex\-Robot\-::light\-Sensor\-Scale}}\label{classComplexRobot_afb1bda51a4a0d99fa2eea1fe8f7ee240}
+\hypertarget{classComplexRobot_a56421342335d639c79fce6c4087e92ba}{\index{Complex\-Robot@{Complex\-Robot}!light\-Sensors\-Crossed@{light\-Sensors\-Crossed}}
+\index{light\-Sensors\-Crossed@{light\-Sensors\-Crossed}!ComplexRobot@{Complex\-Robot}}
+\subsubsection[{light\-Sensors\-Crossed}]{\setlength{\rightskip}{0pt plus 5cm}const bool Complex\-Robot\-::light\-Sensors\-Crossed}}\label{classComplexRobot_a56421342335d639c79fce6c4087e92ba}
+\hypertarget{classComplexRobot_a62e4d0dafe87412f5d868a3a7a462209}{\index{Complex\-Robot@{Complex\-Robot}!obstacle\-Sensor\-Scale@{obstacle\-Sensor\-Scale}}
+\index{obstacle\-Sensor\-Scale@{obstacle\-Sensor\-Scale}!ComplexRobot@{Complex\-Robot}}
+\subsubsection[{obstacle\-Sensor\-Scale}]{\setlength{\rightskip}{0pt plus 5cm}const float Complex\-Robot\-::obstacle\-Sensor\-Scale}}\label{classComplexRobot_a62e4d0dafe87412f5d868a3a7a462209}
+\hypertarget{classComplexRobot_aa1bbfff6b94d790366c903e8ee9d7c35}{\index{Complex\-Robot@{Complex\-Robot}!obstacle\-Sensors\-Crossed@{obstacle\-Sensors\-Crossed}}
+\index{obstacle\-Sensors\-Crossed@{obstacle\-Sensors\-Crossed}!ComplexRobot@{Complex\-Robot}}
+\subsubsection[{obstacle\-Sensors\-Crossed}]{\setlength{\rightskip}{0pt plus 5cm}const bool Complex\-Robot\-::obstacle\-Sensors\-Crossed}}\label{classComplexRobot_aa1bbfff6b94d790366c903e8ee9d7c35}
+\hypertarget{classComplexRobot_ac433b802cfc866917bc32680357e0b3e}{\index{Complex\-Robot@{Complex\-Robot}!robot\-Sensor\-Scale@{robot\-Sensor\-Scale}}
+\index{robot\-Sensor\-Scale@{robot\-Sensor\-Scale}!ComplexRobot@{Complex\-Robot}}
+\subsubsection[{robot\-Sensor\-Scale}]{\setlength{\rightskip}{0pt plus 5cm}const float Complex\-Robot\-::robot\-Sensor\-Scale}}\label{classComplexRobot_ac433b802cfc866917bc32680357e0b3e}
+\hypertarget{classComplexRobot_a329fa033f98c4611fc6fd08f1ec0c1a2}{\index{Complex\-Robot@{Complex\-Robot}!robot\-Sensors\-Crossed@{robot\-Sensors\-Crossed}}
+\index{robot\-Sensors\-Crossed@{robot\-Sensors\-Crossed}!ComplexRobot@{Complex\-Robot}}
+\subsubsection[{robot\-Sensors\-Crossed}]{\setlength{\rightskip}{0pt plus 5cm}const bool Complex\-Robot\-::robot\-Sensors\-Crossed}}\label{classComplexRobot_a329fa033f98c4611fc6fd08f1ec0c1a2}
+\hypertarget{classComplexRobot_a95cae4898e63c23418684c87e6ab0176}{\index{Complex\-Robot@{Complex\-Robot}!target\-Sensor\-Scale@{target\-Sensor\-Scale}}
+\index{target\-Sensor\-Scale@{target\-Sensor\-Scale}!ComplexRobot@{Complex\-Robot}}
+\subsubsection[{target\-Sensor\-Scale}]{\setlength{\rightskip}{0pt plus 5cm}const float Complex\-Robot\-::target\-Sensor\-Scale}}\label{classComplexRobot_a95cae4898e63c23418684c87e6ab0176}
+\hypertarget{classComplexRobot_ac7fa0582f9c586b38c1dc73382a1c5a9}{\index{Complex\-Robot@{Complex\-Robot}!target\-Sensors\-Crossed@{target\-Sensors\-Crossed}}
+\index{target\-Sensors\-Crossed@{target\-Sensors\-Crossed}!ComplexRobot@{Complex\-Robot}}
+\subsubsection[{target\-Sensors\-Crossed}]{\setlength{\rightskip}{0pt plus 5cm}const bool Complex\-Robot\-::target\-Sensors\-Crossed}}\label{classComplexRobot_ac7fa0582f9c586b38c1dc73382a1c5a9}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ComplexRobot_8h}{Complex\-Robot.\-h}\item 
+\hyperlink{ComplexRobot_8cpp}{Complex\-Robot.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,3 @@
+ input node 0
+       node 1 connected to 0: 7
+output node 2 connected to 0: 0.4 1: 1.2

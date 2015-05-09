@@ -1,0 +1,105 @@
+\hypertarget{classOptimizeSimulation}{\section{Optimize\-Simulation Class Reference}
+\label{classOptimizeSimulation}\index{Optimize\-Simulation@{Optimize\-Simulation}}
+}
+
+
+\hyperlink{classOptimizeSimulation}{Optimize\-Simulation} class, sets up environments and robots.  
+
+
+
+
+{\ttfamily \#include $<$Optimize\-Simulation.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classOptimizeSimulation_a24503060026d2f4bb2224e6ba3f554a5}{Optimize\-Simulation} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em The constructor for the \hyperlink{classSimulation}{Simulation} class. \end{DoxyCompactList}\item 
+virtual \hyperlink{classOptimizeSimulation_a4c097b55978ea713789ea1f4b97630e1}{$\sim$\-Optimize\-Simulation} ()
+\item 
+void \hyperlink{classOptimizeSimulation_a51f48566cb982a61daa877d213c528b0}{run\-Main\-Loop} ()
+\item 
+int \hyperlink{classOptimizeSimulation_af14f1d43b9c80f3a3121bd62a133ce28}{get\-Performance} (const \hyperlink{classNeuralNetwork}{Neural\-Network} \&network)
+\item 
+int \hyperlink{classOptimizeSimulation_ace9c1e57f259d3e69aa1fbd8d971985c}{get\-Performance\-Random\-Repeated} (const \hyperlink{classNeuralNetwork}{Neural\-Network} \&network)
+\item 
+int \hyperlink{classOptimizeSimulation_ab2d721222b5dc4a2831d70af136409e7}{get\-Performance\-Maze} (const \hyperlink{classNeuralNetwork}{Neural\-Network} \&network)
+\item 
+int \hyperlink{classOptimizeSimulation_a27f0912295edf0a54e4251bb17291bba}{get\-Performance\-Obstacles} (const \hyperlink{classNeuralNetwork}{Neural\-Network} \&network)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classOptimizeSimulation}{Optimize\-Simulation} class, sets up environments and robots. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classOptimizeSimulation_a24503060026d2f4bb2224e6ba3f554a5}{\index{Optimize\-Simulation@{Optimize\-Simulation}!Optimize\-Simulation@{Optimize\-Simulation}}
+\index{Optimize\-Simulation@{Optimize\-Simulation}!OptimizeSimulation@{Optimize\-Simulation}}
+\subsubsection[{Optimize\-Simulation}]{\setlength{\rightskip}{0pt plus 5cm}Optimize\-Simulation\-::\-Optimize\-Simulation (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{classOptimizeSimulation_a24503060026d2f4bb2224e6ba3f554a5}
+
+
+The constructor for the \hyperlink{classSimulation}{Simulation} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & The number of command-\/line arguments \\
+\hline
+{\em argv} & The command-\/line arguments \\
+\hline
+\end{DoxyParams}
+\hypertarget{classOptimizeSimulation_a4c097b55978ea713789ea1f4b97630e1}{\index{Optimize\-Simulation@{Optimize\-Simulation}!$\sim$\-Optimize\-Simulation@{$\sim$\-Optimize\-Simulation}}
+\index{$\sim$\-Optimize\-Simulation@{$\sim$\-Optimize\-Simulation}!OptimizeSimulation@{Optimize\-Simulation}}
+\subsubsection[{$\sim$\-Optimize\-Simulation}]{\setlength{\rightskip}{0pt plus 5cm}Optimize\-Simulation\-::$\sim$\-Optimize\-Simulation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classOptimizeSimulation_a4c097b55978ea713789ea1f4b97630e1}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classOptimizeSimulation_af14f1d43b9c80f3a3121bd62a133ce28}{\index{Optimize\-Simulation@{Optimize\-Simulation}!get\-Performance@{get\-Performance}}
+\index{get\-Performance@{get\-Performance}!OptimizeSimulation@{Optimize\-Simulation}}
+\subsubsection[{get\-Performance}]{\setlength{\rightskip}{0pt plus 5cm}int Optimize\-Simulation\-::get\-Performance (
+\begin{DoxyParamCaption}
+\item[{const {\bf Neural\-Network} \&}]{network}
+\end{DoxyParamCaption}
+)}}\label{classOptimizeSimulation_af14f1d43b9c80f3a3121bd62a133ce28}
+\hypertarget{classOptimizeSimulation_ab2d721222b5dc4a2831d70af136409e7}{\index{Optimize\-Simulation@{Optimize\-Simulation}!get\-Performance\-Maze@{get\-Performance\-Maze}}
+\index{get\-Performance\-Maze@{get\-Performance\-Maze}!OptimizeSimulation@{Optimize\-Simulation}}
+\subsubsection[{get\-Performance\-Maze}]{\setlength{\rightskip}{0pt plus 5cm}int Optimize\-Simulation\-::get\-Performance\-Maze (
+\begin{DoxyParamCaption}
+\item[{const {\bf Neural\-Network} \&}]{network}
+\end{DoxyParamCaption}
+)}}\label{classOptimizeSimulation_ab2d721222b5dc4a2831d70af136409e7}
+\hypertarget{classOptimizeSimulation_a27f0912295edf0a54e4251bb17291bba}{\index{Optimize\-Simulation@{Optimize\-Simulation}!get\-Performance\-Obstacles@{get\-Performance\-Obstacles}}
+\index{get\-Performance\-Obstacles@{get\-Performance\-Obstacles}!OptimizeSimulation@{Optimize\-Simulation}}
+\subsubsection[{get\-Performance\-Obstacles}]{\setlength{\rightskip}{0pt plus 5cm}int Optimize\-Simulation\-::get\-Performance\-Obstacles (
+\begin{DoxyParamCaption}
+\item[{const {\bf Neural\-Network} \&}]{network}
+\end{DoxyParamCaption}
+)}}\label{classOptimizeSimulation_a27f0912295edf0a54e4251bb17291bba}
+\hypertarget{classOptimizeSimulation_ace9c1e57f259d3e69aa1fbd8d971985c}{\index{Optimize\-Simulation@{Optimize\-Simulation}!get\-Performance\-Random\-Repeated@{get\-Performance\-Random\-Repeated}}
+\index{get\-Performance\-Random\-Repeated@{get\-Performance\-Random\-Repeated}!OptimizeSimulation@{Optimize\-Simulation}}
+\subsubsection[{get\-Performance\-Random\-Repeated}]{\setlength{\rightskip}{0pt plus 5cm}int Optimize\-Simulation\-::get\-Performance\-Random\-Repeated (
+\begin{DoxyParamCaption}
+\item[{const {\bf Neural\-Network} \&}]{network}
+\end{DoxyParamCaption}
+)}}\label{classOptimizeSimulation_ace9c1e57f259d3e69aa1fbd8d971985c}
+\hypertarget{classOptimizeSimulation_a51f48566cb982a61daa877d213c528b0}{\index{Optimize\-Simulation@{Optimize\-Simulation}!run\-Main\-Loop@{run\-Main\-Loop}}
+\index{run\-Main\-Loop@{run\-Main\-Loop}!OptimizeSimulation@{Optimize\-Simulation}}
+\subsubsection[{run\-Main\-Loop}]{\setlength{\rightskip}{0pt plus 5cm}void Optimize\-Simulation\-::run\-Main\-Loop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classOptimizeSimulation_a51f48566cb982a61daa877d213c528b0}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{OptimizeSimulation_8h}{Optimize\-Simulation.\-h}\item 
+\hyperlink{OptimizeSimulation_8cpp}{Optimize\-Simulation.\-cpp}\end{DoxyCompactItemize}

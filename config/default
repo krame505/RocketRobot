@@ -1,0 +1,63 @@
+# This is the default configuration file. 
+
+# General util
+bool OPTIMIZE_SIMULATION         = false
+bool DEBUG_MESSAGES              = false
+bool START_IMMEDIATE             = false
+bool EXIT_ON_ALL_ROBOTS_FINISHED = false
+
+# Window size
+int DISPLAY_WIDTH  = 800
+int DISPLAY_HEIGHT = 675
+int FRAME_SHIFT    = 0   # The calculation of the glui size is slightly off, so we need to adjust it manually
+
+# Graphics
+int START_DELAY       = 10
+int FRAMES_PER_SECOND = 30
+int SLICES_PER_CIRCLE = 29
+
+# Control window
+int MAX_MESSAGES = 16
+int MAX_MESSAGE_LENGTH = 85
+int MAX_STAT_LENGTH = 42
+
+# Colors
+bool USE_HEX_COLORS = true
+float COLOR_DELTA   = 0.2
+
+# Simulation parameters
+int NUM_ROBOTS_TARGETS = 2
+int NUM_LIGHT_SOURCES  = 10
+int NUM_OBSTACLES      = 6
+
+int DEFAULT_ROBOT_TYPE = 2 # Neural network
+
+bool ENABLE_TARGETS = true
+
+string INITIAL_SIMULATION_FILE = "$INSTALL_DIR/runtime/temp_initial.rsim"
+string INSTALL_DIR             = ".."
+string WORKING_DIR             = "."
+
+# Default values for PhysicalObject
+int DEFAULT_RADIUS     = 10
+int DEFAULT_X_POSITION = 100
+int DEFAULT_Y_POSITION = 100
+
+# Placing objects
+int FIND_LOCATION_RETRIES = 100
+int PLACE_ALL_RETRIES     = 20
+
+# Collision handling
+use "collisions"
+
+# Robot configuration
+use "robot"
+
+# Target configuration
+use "target"
+
+# Obstacle configuration
+use "obstacle"
+
+# LightSource configuration
+use "lightsource"

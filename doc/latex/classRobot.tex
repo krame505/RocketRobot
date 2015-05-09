@@ -1,0 +1,299 @@
+\hypertarget{classRobot}{\section{Robot Class Reference}
+\label{classRobot}\index{Robot@{Robot}}
+}
+
+
+\hyperlink{classRobot}{Robot} that moves around the window and bumps into obstacles.  
+
+
+
+
+{\ttfamily \#include $<$Robot.\-h$>$}
+
+Inheritance diagram for Robot\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classRobot}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRobot_a2ddd4ae79de00f20b5ceb2df49f7d05e}{Robot} (\hyperlink{Robot_8h_a78d284d08fd22d809fd436256f2cbc39}{Robot\-Type} \hyperlink{classRobot_a49eb06af6d6981c941a24edc54210316}{robot\-Type}, int radius, \hyperlink{structColor}{Color} color, \hyperlink{structColor}{Color} line\-Color, int target\-Id=-\/1)
+\item 
+\hyperlink{classRobot_a3fa5c6664ffed53633e6e90fd398c287}{Robot} (\hyperlink{Robot_8h_a78d284d08fd22d809fd436256f2cbc39}{Robot\-Type} \hyperlink{classRobot_a49eb06af6d6981c941a24edc54210316}{robot\-Type}, int radius, \hyperlink{structLocation}{Location} loc, \hyperlink{structColor}{Color} color, \hyperlink{structColor}{Color} line\-Color, int target\-Id=-\/1)
+\item 
+\hyperlink{classRobot_a924320124b09c2f2ac1621aa210d5f38}{$\sim$\-Robot} ()
+\item 
+int \hyperlink{classRobot_a23f5bb01abf88e4c0edd370949080a4c}{get\-Target} () const 
+\item 
+void \hyperlink{classRobot_aa1b41b16fe5609310c4b7d23a4553970}{set\-Target} (int id)
+\item 
+bool \hyperlink{classRobot_a94d8b5083b9426e3769a5f84f310093e}{handle\-Collision} (int other\-Id, bool was\-Hit)
+\item 
+void \hyperlink{classRobot_adc34eec22821c2dce23904a5ea75cf13}{update} ()
+\item 
+void \hyperlink{classRobot_a6f8e6aaedcb7c130d37b5e653faea070}{update\-Members} ()
+\item 
+void \hyperlink{classRobot_a079c44b63ede22b1b6be4297934886da}{display} ()
+\item 
+void \hyperlink{classRobot_a9a44e2faef3d3927473ac0bacad8b670}{set\-Line\-Color} (\hyperlink{structColor}{Color} line\-Color)
+\item 
+\hyperlink{structColor}{Color} \hyperlink{classRobot_adf3e43c63f0173fe05cc35ef8d607aca}{get\-Line\-Color} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{Robot_8h_a78d284d08fd22d809fd436256f2cbc39}{Robot\-Type} \hyperlink{classRobot_a49eb06af6d6981c941a24edc54210316}{robot\-Type}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual float \hyperlink{classRobot_a9c96f301ae826e7c535f6b705e44bcd6}{get\-Left\-Speed} (float left\-Light\-Sensor\-Val, float right\-Light\-Sensor\-Val, float left\-Robot\-Sensor\-Val, float right\-Robot\-Sensor\-Val, float left\-Obstacle\-Sensor\-Val, float right\-Obstacle\-Sensor\-Val, float left\-Target\-Sensor\-Val, float right\-Target\-Sensor\-Val)=0
+\item 
+virtual float \hyperlink{classRobot_a3289251979084c50b18a6006547d3f95}{get\-Right\-Speed} (float left\-Light\-Sensor\-Val, float right\-Light\-Sensor\-Val, float left\-Robot\-Sensor\-Val, float right\-Robot\-Sensor\-Val, float left\-Obstacle\-Sensor\-Val, float right\-Obstacle\-Sensor\-Val, float left\-Target\-Sensor\-Val, float right\-Target\-Sensor\-Val)=0
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classRobot}{Robot} that moves around the window and bumps into obstacles. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classRobot_a2ddd4ae79de00f20b5ceb2df49f7d05e}{\index{Robot@{Robot}!Robot@{Robot}}
+\index{Robot@{Robot}!Robot@{Robot}}
+\subsubsection[{Robot}]{\setlength{\rightskip}{0pt plus 5cm}Robot\-::\-Robot (
+\begin{DoxyParamCaption}
+\item[{{\bf Robot\-Type}}]{robot\-Type, }
+\item[{int}]{radius, }
+\item[{{\bf Color}}]{color, }
+\item[{{\bf Color}}]{line\-Color, }
+\item[{int}]{target\-Id = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}}\label{classRobot_a2ddd4ae79de00f20b5ceb2df49f7d05e}
+
+\begin{DoxyParams}{Parameters}
+{\em robot\-Type} & the robot type \\
+\hline
+{\em radius} & the radius in pixels \\
+\hline
+{\em color} & color of the robot itself, a struct of float value 0 to 1 representing a hexedecimal color \\
+\hline
+{\em line\-Color} & color of the line, a struct of float value 0 to 1 representing a hexedecimal color \\
+\hline
+\end{DoxyParams}
+\begin{DoxyParagraph}{Initialization}
+\hyperlink{classRobot}{Robot} is initialized with the following values\-: 
+\end{DoxyParagraph}
+
+
+Orientation\-: 0 
+
+Speed\-: 0 
+
+Position\-: (loc.\-x, loc.\-y)   \hypertarget{classRobot_a3fa5c6664ffed53633e6e90fd398c287}{\index{Robot@{Robot}!Robot@{Robot}}
+\index{Robot@{Robot}!Robot@{Robot}}
+\subsubsection[{Robot}]{\setlength{\rightskip}{0pt plus 5cm}Robot\-::\-Robot (
+\begin{DoxyParamCaption}
+\item[{{\bf Robot\-Type}}]{robot\-Type, }
+\item[{int}]{radius, }
+\item[{{\bf Location}}]{loc, }
+\item[{{\bf Color}}]{color, }
+\item[{{\bf Color}}]{line\-Color, }
+\item[{int}]{target\-Id = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}}\label{classRobot_a3fa5c6664ffed53633e6e90fd398c287}
+
+\begin{DoxyParams}{Parameters}
+{\em robot\-Type} & the robot type \\
+\hline
+{\em radius} & the radius in pixels \\
+\hline
+{\em color} & a struct of float value 0 to 1 representing a hexedecimal color \\
+\hline
+{\em linecolor} & color of the line, a struct of float value 0 to 1 representing a hexedecimal color \\
+\hline
+{\em loc} & start \hyperlink{structLocation}{Location} of the robot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyParagraph}{Initialization}
+\hyperlink{classRobot}{Robot} is initialized with the following values\-: 
+\end{DoxyParagraph}
+
+
+Orientation\-: random 
+
+Speed\-: 0 
+
+Position\-: (loc.\-x, loc.\-y)   \hypertarget{classRobot_a924320124b09c2f2ac1621aa210d5f38}{\index{Robot@{Robot}!$\sim$\-Robot@{$\sim$\-Robot}}
+\index{$\sim$\-Robot@{$\sim$\-Robot}!Robot@{Robot}}
+\subsubsection[{$\sim$\-Robot}]{\setlength{\rightskip}{0pt plus 5cm}Robot\-::$\sim$\-Robot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classRobot_a924320124b09c2f2ac1621aa210d5f38}
+This is the class destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classRobot_a079c44b63ede22b1b6be4297934886da}{\index{Robot@{Robot}!display@{display}}
+\index{display@{display}!Robot@{Robot}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\-::display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classRobot_a079c44b63ede22b1b6be4297934886da}
+\begin{DoxyAuthor}{Author}
+Lucas Kramer This function displays the \hyperlink{classRobot}{Robot} in the graphics 
+\end{DoxyAuthor}
+
+
+Reimplemented from \hyperlink{classPhysicalObject_a6a0326df3efc0a1ea23892e3fcd4b11e}{Physical\-Object}.
+
+\hypertarget{classRobot_a9c96f301ae826e7c535f6b705e44bcd6}{\index{Robot@{Robot}!get\-Left\-Speed@{get\-Left\-Speed}}
+\index{get\-Left\-Speed@{get\-Left\-Speed}!Robot@{Robot}}
+\subsubsection[{get\-Left\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}virtual float Robot\-::get\-Left\-Speed (
+\begin{DoxyParamCaption}
+\item[{float}]{left\-Light\-Sensor\-Val, }
+\item[{float}]{right\-Light\-Sensor\-Val, }
+\item[{float}]{left\-Robot\-Sensor\-Val, }
+\item[{float}]{right\-Robot\-Sensor\-Val, }
+\item[{float}]{left\-Obstacle\-Sensor\-Val, }
+\item[{float}]{right\-Obstacle\-Sensor\-Val, }
+\item[{float}]{left\-Target\-Sensor\-Val, }
+\item[{float}]{right\-Target\-Sensor\-Val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{classRobot_a9c96f301ae826e7c535f6b705e44bcd6}
+
+
+Implemented in \hyperlink{classComplexRobot_aa50c7f5ed4f288987fe2557b41a9bf32}{Complex\-Robot}, \hyperlink{classNeuralNetworkRobot_a91c4210b62175e9ffb1ed3362df318af}{Neural\-Network\-Robot}, and \hyperlink{classSimpleRobot_a3dd2f39fc84a1d9fa4384c69255b3e79}{Simple\-Robot}.
+
+\hypertarget{classRobot_adf3e43c63f0173fe05cc35ef8d607aca}{\index{Robot@{Robot}!get\-Line\-Color@{get\-Line\-Color}}
+\index{get\-Line\-Color@{get\-Line\-Color}!Robot@{Robot}}
+\subsubsection[{get\-Line\-Color}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Color} Robot\-::get\-Line\-Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classRobot_adf3e43c63f0173fe05cc35ef8d607aca}
+\hypertarget{classRobot_a3289251979084c50b18a6006547d3f95}{\index{Robot@{Robot}!get\-Right\-Speed@{get\-Right\-Speed}}
+\index{get\-Right\-Speed@{get\-Right\-Speed}!Robot@{Robot}}
+\subsubsection[{get\-Right\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}virtual float Robot\-::get\-Right\-Speed (
+\begin{DoxyParamCaption}
+\item[{float}]{left\-Light\-Sensor\-Val, }
+\item[{float}]{right\-Light\-Sensor\-Val, }
+\item[{float}]{left\-Robot\-Sensor\-Val, }
+\item[{float}]{right\-Robot\-Sensor\-Val, }
+\item[{float}]{left\-Obstacle\-Sensor\-Val, }
+\item[{float}]{right\-Obstacle\-Sensor\-Val, }
+\item[{float}]{left\-Target\-Sensor\-Val, }
+\item[{float}]{right\-Target\-Sensor\-Val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}}\label{classRobot_a3289251979084c50b18a6006547d3f95}
+
+
+Implemented in \hyperlink{classComplexRobot_ac038c2dbcc242d68a3ef9e533673bdf6}{Complex\-Robot}, \hyperlink{classNeuralNetworkRobot_a7b3389e89eb3485ad9e074494624e204}{Neural\-Network\-Robot}, and \hyperlink{classSimpleRobot_ae94b1dd9d31f2cbeb21fcbd5413a8a3a}{Simple\-Robot}.
+
+\hypertarget{classRobot_a23f5bb01abf88e4c0edd370949080a4c}{\index{Robot@{Robot}!get\-Target@{get\-Target}}
+\index{get\-Target@{get\-Target}!Robot@{Robot}}
+\subsubsection[{get\-Target}]{\setlength{\rightskip}{0pt plus 5cm}int Robot\-::get\-Target (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classRobot_a23f5bb01abf88e4c0edd370949080a4c}
+\begin{DoxyAuthor}{Author}
+Lucas Kramer This function gets the id of the target for the robot to seek. 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the id of the target \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRobot_a94d8b5083b9426e3769a5f84f310093e}{\index{Robot@{Robot}!handle\-Collision@{handle\-Collision}}
+\index{handle\-Collision@{handle\-Collision}!Robot@{Robot}}
+\subsubsection[{handle\-Collision}]{\setlength{\rightskip}{0pt plus 5cm}bool Robot\-::handle\-Collision (
+\begin{DoxyParamCaption}
+\item[{int}]{other\-Id, }
+\item[{bool}]{was\-Hit}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classRobot_a94d8b5083b9426e3769a5f84f310093e}
+\begin{DoxyAuthor}{Author}
+Lucas Kramer This function gives \hyperlink{classRobot}{Robot} an appropriate reaction when a collision occurs 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em other\-Id} & id of the object that it collides with \\
+\hline
+{\em was\-Hit} & tells if the object was hit previously \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classPhysicalObject_a400ba3545479ebbf8b1b4a046906e562}{Physical\-Object}.
+
+\hypertarget{classRobot_a9a44e2faef3d3927473ac0bacad8b670}{\index{Robot@{Robot}!set\-Line\-Color@{set\-Line\-Color}}
+\index{set\-Line\-Color@{set\-Line\-Color}!Robot@{Robot}}
+\subsubsection[{set\-Line\-Color}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\-::set\-Line\-Color (
+\begin{DoxyParamCaption}
+\item[{{\bf Color}}]{line\-Color}
+\end{DoxyParamCaption}
+)}}\label{classRobot_a9a44e2faef3d3927473ac0bacad8b670}
+\begin{DoxyAuthor}{Author}
+Lucas Kramer This function sets a new color for the robot's direction line. 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em line\-Color} & color of the line, a struct of float value 0 to 1 representing a hexedecimal color \\
+\hline
+\end{DoxyParams}
+\hypertarget{classRobot_aa1b41b16fe5609310c4b7d23a4553970}{\index{Robot@{Robot}!set\-Target@{set\-Target}}
+\index{set\-Target@{set\-Target}!Robot@{Robot}}
+\subsubsection[{set\-Target}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\-::set\-Target (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}}\label{classRobot_aa1b41b16fe5609310c4b7d23a4553970}
+\begin{DoxyAuthor}{Author}
+Lucas Kramer This function sets the id of the target for the robot to seek. 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+the target id 
+\end{DoxyReturn}
+\hypertarget{classRobot_adc34eec22821c2dce23904a5ea75cf13}{\index{Robot@{Robot}!update@{update}}
+\index{update@{update}!Robot@{Robot}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classRobot_adc34eec22821c2dce23904a5ea75cf13}
+\begin{DoxyAuthor}{Author}
+Lucas Kramer This function updates the \hyperlink{classRobot}{Robot}'s wheel speeds from the sensors 
+\end{DoxyAuthor}
+
+
+Reimplemented from \hyperlink{classPhysicalObject_a3005ac0afce838049101db17525f6004}{Physical\-Object}.
+
+\hypertarget{classRobot_a6f8e6aaedcb7c130d37b5e653faea070}{\index{Robot@{Robot}!update\-Members@{update\-Members}}
+\index{update\-Members@{update\-Members}!Robot@{Robot}}
+\subsubsection[{update\-Members}]{\setlength{\rightskip}{0pt plus 5cm}void Robot\-::update\-Members (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classRobot_a6f8e6aaedcb7c130d37b5e653faea070}
+\begin{DoxyAuthor}{Author}
+Lucas Kramer This function updates the position of the robot's sub-\/objects 
+\end{DoxyAuthor}
+
+
+Reimplemented from \hyperlink{classPhysicalObject_a4fc8c0c62b8e12a63ebdf13136d577ac}{Physical\-Object}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classRobot_a49eb06af6d6981c941a24edc54210316}{\index{Robot@{Robot}!robot\-Type@{robot\-Type}}
+\index{robot\-Type@{robot\-Type}!Robot@{Robot}}
+\subsubsection[{robot\-Type}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Robot\-Type} Robot\-::robot\-Type}}\label{classRobot_a49eb06af6d6981c941a24edc54210316}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Robot_8h}{Robot.\-h}\item 
+\hyperlink{Robot_8cpp}{Robot.\-cpp}\end{DoxyCompactItemize}

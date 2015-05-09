@@ -1,0 +1,57 @@
+\hypertarget{Color_8h}{\section{Color.\-h File Reference}
+\label{Color_8h}\index{Color.\-h@{Color.\-h}}
+}
+
+
+Definintions for representing any hexedecimal color.  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structColor}{Color}
+\begin{DoxyCompactList}\small\item\em This struct holds the representation of a color. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{Color_8h_a34de2dea1461260a1e294eee2dae69b9}{G\-E\-T\-\_\-\-C\-O\-L\-O\-R}(C\-O\-L\-O\-R\-\_\-\-V\-A\-R)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structColor}{Color} \hyperlink{Color_8h_a0af5129fc90cfaec2f17f58fb0fb9686}{Color}
+\begin{DoxyCompactList}\small\item\em This struct holds the representation of a color. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definintions for representing any hexedecimal color. \begin{DoxyAuthor}{Author}
+Lucas Kramer 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{Color_8h_a34de2dea1461260a1e294eee2dae69b9}{\index{Color.\-h@{Color.\-h}!G\-E\-T\-\_\-\-C\-O\-L\-O\-R@{G\-E\-T\-\_\-\-C\-O\-L\-O\-R}}
+\index{G\-E\-T\-\_\-\-C\-O\-L\-O\-R@{G\-E\-T\-\_\-\-C\-O\-L\-O\-R}!Color.h@{Color.\-h}}
+\subsubsection[{G\-E\-T\-\_\-\-C\-O\-L\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-E\-T\-\_\-\-C\-O\-L\-O\-R(
+\begin{DoxyParamCaption}
+\item[{}]{C\-O\-L\-O\-R\-\_\-\-V\-A\-R}
+\end{DoxyParamCaption}
+)}}\label{Color_8h_a34de2dea1461260a1e294eee2dae69b9}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+(\hyperlink{configuration_8h_a9b28b0b1d1d7c5f1b1cfd5241f1d511e}{GET\_BOOL}(\textcolor{stringliteral}{"USE\_HEX\_COLORS"})?                          \hyperlink{Color_8h_a0af5129fc90cfaec2f17f58fb0fb9686}{\(\backslash\)}
+\hyperlink{Color_8h_a0af5129fc90cfaec2f17f58fb0fb9686}{   Color}(\hyperlink{configuration_8h_ad074a97012cd402b5c71597589d1fcc2}{GET\_INT}(COLOR\_VAR \textcolor{stringliteral}{"\_HEX"})) :                   \(\backslash\)
+   \hyperlink{structColor}{Color}(\hyperlink{configuration_8h_ad309f6b5536d6eca848e3779c9515d1b}{GET\_CHAR}(COLOR\_VAR)))
+\end{DoxyCode}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{Color_8h_a0af5129fc90cfaec2f17f58fb0fb9686}{\index{Color.\-h@{Color.\-h}!Color@{Color}}
+\index{Color@{Color}!Color.h@{Color.\-h}}
+\subsubsection[{Color}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Color}  {\bf Color}}}\label{Color_8h_a0af5129fc90cfaec2f17f58fb0fb9686}
+
+
+This struct holds the representation of a color. 
+
+Each field is a float value that shoult be between 0 and 1. This allows a direct translation from hex colors, with each field being the hex R\-G\-B value / 255. 

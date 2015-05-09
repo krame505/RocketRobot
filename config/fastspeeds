@@ -1,0 +1,6 @@
+# This file contains some alternate speeds to make the simulation run faster.  
+# This is useful for debugging collision behavior.  
+#int ROBOT_INITIAL_SPEED  = 600
+#int TARGET_SPEED         = 300
+
+int FRAMES_PER_SECOND = 1000

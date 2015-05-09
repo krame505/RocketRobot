@@ -1,0 +1,477 @@
+\hypertarget{classBaseGfxApp}{\section{Base\-Gfx\-App Class Reference}
+\label{classBaseGfxApp}\index{Base\-Gfx\-App@{Base\-Gfx\-App}}
+}
+
+
+Graphics driver class.  
+
+
+
+
+{\ttfamily \#include $<$Base\-Gfx\-App.\-h$>$}
+
+Inheritance diagram for Base\-Gfx\-App\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classBaseGfxApp}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBaseGfxApp_a534a4b5293a35947fdae3805a103541d}{Base\-Gfx\-App} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, int \hyperlink{classBaseGfxApp_ace089a1a94fb6bb0bc17e1b7fa48e05d}{width}, int \hyperlink{classBaseGfxApp_aa253dbe16a20c40e0a1bf8ff942ceea3}{height}, int x, int y, int glut\-Flags, bool create\-G\-L\-U\-I\-Win, int glui\-Win\-X, int glui\-Win\-Y)
+\item 
+virtual \hyperlink{classBaseGfxApp_aceb6194bd818c0ffa980a6990fd03027}{$\sim$\-Base\-Gfx\-App} ()
+\item 
+void \hyperlink{classBaseGfxApp_a4b3b1a475b7f2babaf1b477c34b15fb1}{set\-Caption} (const std\-::string \&caption)
+\item 
+void \hyperlink{classBaseGfxApp_acda031916c00d56c2dc901e2653e3083}{run\-Main\-Loop} ()
+\item 
+virtual void \hyperlink{classBaseGfxApp_ac8de2d5a955582547af5619b771b4d6d}{display} ()
+\item 
+virtual void \hyperlink{classBaseGfxApp_a432317fc7c028b2c6702eb2232e85425}{advance} ()
+\item 
+virtual void \hyperlink{classBaseGfxApp_a0956b82d7fa58b623c498aea7073dbba}{mouse\-Moved} (int x, int y)
+\item 
+virtual void \hyperlink{classBaseGfxApp_abb23f716dd6612b3a72938e41525d338}{mouse\-Dragged} (int x, int y)
+\item 
+virtual void \hyperlink{classBaseGfxApp_aaaccf5a5e923a9465441a5ee712424a8}{left\-Mouse\-Down} (int x, int y)
+\item 
+virtual void \hyperlink{classBaseGfxApp_a0a2961a932b02b2f9d7d0bb408f6fb51}{left\-Mouse\-Up} (int x, int y)
+\item 
+virtual void \hyperlink{classBaseGfxApp_afa87e6a71220945e41f0424e540125d9}{right\-Mouse\-Down} (int x, int y)
+\item 
+virtual void \hyperlink{classBaseGfxApp_a812643d563522a993457dd565c33f8f6}{right\-Mouse\-Up} (int x, int y)
+\item 
+virtual void \hyperlink{classBaseGfxApp_a2c98cae9bb5ad1fb1832a6d4812670f8}{middle\-Mouse\-Down} (int x, int y)
+\item 
+virtual void \hyperlink{classBaseGfxApp_a00fc05e8d9629b72302b5adf014bdb0c}{middle\-Mouse\-Up} (int x, int y)
+\item 
+virtual void \hyperlink{classBaseGfxApp_a6d91e0cb7a3d48cad33956efe7eb36ca}{keyboard} (unsigned char c, int x, int y)
+\item 
+virtual void \hyperlink{classBaseGfxApp_a345566e62c9e4ec3705ec4d1c4c75f1f}{keyboard\-Special} (int key, int x, int y)
+\item 
+virtual void \hyperlink{classBaseGfxApp_acc4a40ce11edd6b6660a19cb4802a2bf}{keyboard\-Up} (unsigned char c, int x, int y)
+\item 
+virtual void \hyperlink{classBaseGfxApp_afd14b435ff93b1e7f461cb8bd1a6fd59}{keyboard\-Special\-Up} (int key, int x, int y)
+\item 
+virtual void \hyperlink{classBaseGfxApp_a5d8d5d778a8aecd7f5f8e9c87f4c3d20}{reshape} (int \hyperlink{classBaseGfxApp_ace089a1a94fb6bb0bc17e1b7fa48e05d}{width}, int \hyperlink{classBaseGfxApp_aa253dbe16a20c40e0a1bf8ff942ceea3}{height})
+\item 
+virtual void \hyperlink{classBaseGfxApp_a2978a7c358794c67df73b66776b2cef3}{glui\-Control} (int control\-I\-D)
+\item 
+int \hyperlink{classBaseGfxApp_ace089a1a94fb6bb0bc17e1b7fa48e05d}{width} () const 
+\item 
+int \hyperlink{classBaseGfxApp_aa253dbe16a20c40e0a1bf8ff942ceea3}{height} () const 
+\item 
+int \hyperlink{classBaseGfxApp_ae9779f948eff6f45beec08091e98a803}{handle} ()
+\item 
+G\-L\-U\-I $\ast$ \hyperlink{classBaseGfxApp_ac721a0fedce80308c5c0e5695016e95d}{glui} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classBaseGfxApp_a4faec5e773876411a8b1912b0c1a0080}{graphics\-Begin} (int v, int delay)
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classBaseGfxApp_a73c82d9170ffded2289883a8e47628a1}{graphics\-Timer} (int v)
+\item 
+static void \hyperlink{classBaseGfxApp_a5fe6a77d37044cbe28647ed3391bbb7a}{s\-\_\-reshape} (int \hyperlink{classBaseGfxApp_ace089a1a94fb6bb0bc17e1b7fa48e05d}{width}, int \hyperlink{classBaseGfxApp_aa253dbe16a20c40e0a1bf8ff942ceea3}{height})
+\item 
+static void \hyperlink{classBaseGfxApp_a52edb2569227319feb68779844e7d857}{s\-\_\-keyboard} (unsigned char c, int x, int y)
+\item 
+static void \hyperlink{classBaseGfxApp_a1e8d90a4faab60300ddf2a4ea9b83115}{s\-\_\-keyboardspecial} (int key, int x, int y)
+\item 
+static void \hyperlink{classBaseGfxApp_aa1ca205af9d6cee33949f2e6adf4c923}{s\-\_\-keyboardup} (unsigned char c, int x, int y)
+\item 
+static void \hyperlink{classBaseGfxApp_a0e4dfe006f3cc9126c1cc8ad32784f75}{s\-\_\-keyboardspecialup} (int key, int x, int y)
+\item 
+static void \hyperlink{classBaseGfxApp_a5e640f2394f7e038d0dd2b469d5c2e24}{s\-\_\-mousemotion} (int x, int y)
+\item 
+static void \hyperlink{classBaseGfxApp_a22dd953bfb75add9fd0f8f2f8be535c5}{s\-\_\-mousebtn} (int b, int s, int x, int y)
+\item 
+static void \hyperlink{classBaseGfxApp_a58415c6151a2a80e1fe2eaa9919a4dab}{s\-\_\-draw} ()
+\item 
+static void \hyperlink{classBaseGfxApp_ad4a963321f1147d68369225ab0c7f32f}{s\-\_\-gluicallback} (int control\-I\-D)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classBaseGfxApp_ad8697d6fdd10e6f336c3a662016b4fa7}{m\-\_\-glut\-Window\-Handle}
+\item 
+G\-L\-U\-I $\ast$ \hyperlink{classBaseGfxApp_a6eb1673b80283727221da2242211af1d}{m\-\_\-glui}
+\item 
+bool \hyperlink{classBaseGfxApp_a2e70a389224f8affe7c137f7e20dc8c1}{m\-\_\-drag}
+\item 
+int \hyperlink{classBaseGfxApp_a7e5ef1c8f25fe081b4a1fd4ce6a96e07}{m\-\_\-width}
+\item 
+int \hyperlink{classBaseGfxApp_ac078e4fc20b5c2fe0c744966b850b412}{m\-\_\-height}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classBaseGfxApp}{Base\-Gfx\-App} $\ast$ \hyperlink{classBaseGfxApp_a65ba89b98af31e2649a0546631931000}{s\-\_\-current\-App} = N\-U\-L\-L
+\item 
+static bool \hyperlink{classBaseGfxApp_afa4690383ea27713016ef75b9fb1e42f}{s\-\_\-glut\-Initialized} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Graphics driver class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBaseGfxApp_a534a4b5293a35947fdae3805a103541d}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!Base\-Gfx\-App@{Base\-Gfx\-App}}
+\index{Base\-Gfx\-App@{Base\-Gfx\-App}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{Base\-Gfx\-App}]{\setlength{\rightskip}{0pt plus 5cm}Base\-Gfx\-App\-::\-Base\-Gfx\-App (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{glut\-Flags, }
+\item[{bool}]{create\-G\-L\-U\-I\-Win, }
+\item[{int}]{glui\-Win\-X, }
+\item[{int}]{glui\-Win\-Y}
+\end{DoxyParamCaption}
+)}}\label{classBaseGfxApp_a534a4b5293a35947fdae3805a103541d}
+\hypertarget{classBaseGfxApp_aceb6194bd818c0ffa980a6990fd03027}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!$\sim$\-Base\-Gfx\-App@{$\sim$\-Base\-Gfx\-App}}
+\index{$\sim$\-Base\-Gfx\-App@{$\sim$\-Base\-Gfx\-App}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{$\sim$\-Base\-Gfx\-App}]{\setlength{\rightskip}{0pt plus 5cm}Base\-Gfx\-App\-::$\sim$\-Base\-Gfx\-App (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBaseGfxApp_aceb6194bd818c0ffa980a6990fd03027}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBaseGfxApp_a432317fc7c028b2c6702eb2232e85425}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!advance@{advance}}
+\index{advance@{advance}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{advance}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Base\-Gfx\-App\-::advance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBaseGfxApp_a432317fc7c028b2c6702eb2232e85425}
+
+
+Reimplemented in \hyperlink{classSimulation_a4938ccecec0e9356cf547ef7bd5bbdf8}{Simulation}.
+
+\hypertarget{classBaseGfxApp_ac8de2d5a955582547af5619b771b4d6d}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!display@{display}}
+\index{display@{display}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Base\-Gfx\-App\-::display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBaseGfxApp_ac8de2d5a955582547af5619b771b4d6d}
+
+
+Reimplemented in \hyperlink{classSimulation_a449dcb7d97dfba99efe770de2f399c31}{Simulation}.
+
+\hypertarget{classBaseGfxApp_ac721a0fedce80308c5c0e5695016e95d}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!glui@{glui}}
+\index{glui@{glui}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{glui}]{\setlength{\rightskip}{0pt plus 5cm}G\-L\-U\-I$\ast$ Base\-Gfx\-App\-::glui (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBaseGfxApp_ac721a0fedce80308c5c0e5695016e95d}
+\hypertarget{classBaseGfxApp_a2978a7c358794c67df73b66776b2cef3}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!glui\-Control@{glui\-Control}}
+\index{glui\-Control@{glui\-Control}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{glui\-Control}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Base\-Gfx\-App\-::glui\-Control (
+\begin{DoxyParamCaption}
+\item[{int}]{control\-I\-D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBaseGfxApp_a2978a7c358794c67df73b66776b2cef3}
+
+
+Reimplemented in \hyperlink{classSimulation_a1607cd18e552ab9f4a6f57d362f7121a}{Simulation}.
+
+\hypertarget{classBaseGfxApp_a4faec5e773876411a8b1912b0c1a0080}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!graphics\-Begin@{graphics\-Begin}}
+\index{graphics\-Begin@{graphics\-Begin}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{graphics\-Begin}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Gfx\-App\-::graphics\-Begin (
+\begin{DoxyParamCaption}
+\item[{int}]{v, }
+\item[{int}]{delay}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classBaseGfxApp_a4faec5e773876411a8b1912b0c1a0080}
+This function starts the graphics after a delay. \hypertarget{classBaseGfxApp_a73c82d9170ffded2289883a8e47628a1}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!graphics\-Timer@{graphics\-Timer}}
+\index{graphics\-Timer@{graphics\-Timer}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{graphics\-Timer}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Gfx\-App\-::graphics\-Timer (
+\begin{DoxyParamCaption}
+\item[{int}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classBaseGfxApp_a73c82d9170ffded2289883a8e47628a1}
+This function calls itself using glut\-Timer\-Func once per frame. \hypertarget{classBaseGfxApp_ae9779f948eff6f45beec08091e98a803}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!handle@{handle}}
+\index{handle@{handle}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{handle}]{\setlength{\rightskip}{0pt plus 5cm}int Base\-Gfx\-App\-::handle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classBaseGfxApp_ae9779f948eff6f45beec08091e98a803}
+\hypertarget{classBaseGfxApp_aa253dbe16a20c40e0a1bf8ff942ceea3}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!height@{height}}
+\index{height@{height}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{height}]{\setlength{\rightskip}{0pt plus 5cm}int Base\-Gfx\-App\-::height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBaseGfxApp_aa253dbe16a20c40e0a1bf8ff942ceea3}
+\hypertarget{classBaseGfxApp_a6d91e0cb7a3d48cad33956efe7eb36ca}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!keyboard@{keyboard}}
+\index{keyboard@{keyboard}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{keyboard}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Base\-Gfx\-App\-::keyboard (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{c, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBaseGfxApp_a6d91e0cb7a3d48cad33956efe7eb36ca}
+
+
+Reimplemented in \hyperlink{classSimulation_af2fc2b7caf1b85fb68c82375c3391569}{Simulation}.
+
+\hypertarget{classBaseGfxApp_a345566e62c9e4ec3705ec4d1c4c75f1f}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!keyboard\-Special@{keyboard\-Special}}
+\index{keyboard\-Special@{keyboard\-Special}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{keyboard\-Special}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Base\-Gfx\-App\-::keyboard\-Special (
+\begin{DoxyParamCaption}
+\item[{int}]{key, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBaseGfxApp_a345566e62c9e4ec3705ec4d1c4c75f1f}
+
+
+Reimplemented in \hyperlink{classSimulation_ac60b25961b18057239efcb610b5c679f}{Simulation}.
+
+\hypertarget{classBaseGfxApp_afd14b435ff93b1e7f461cb8bd1a6fd59}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!keyboard\-Special\-Up@{keyboard\-Special\-Up}}
+\index{keyboard\-Special\-Up@{keyboard\-Special\-Up}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{keyboard\-Special\-Up}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Base\-Gfx\-App\-::keyboard\-Special\-Up (
+\begin{DoxyParamCaption}
+\item[{int}]{key, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBaseGfxApp_afd14b435ff93b1e7f461cb8bd1a6fd59}
+\hypertarget{classBaseGfxApp_acc4a40ce11edd6b6660a19cb4802a2bf}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!keyboard\-Up@{keyboard\-Up}}
+\index{keyboard\-Up@{keyboard\-Up}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{keyboard\-Up}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Base\-Gfx\-App\-::keyboard\-Up (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{c, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBaseGfxApp_acc4a40ce11edd6b6660a19cb4802a2bf}
+\hypertarget{classBaseGfxApp_aaaccf5a5e923a9465441a5ee712424a8}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!left\-Mouse\-Down@{left\-Mouse\-Down}}
+\index{left\-Mouse\-Down@{left\-Mouse\-Down}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{left\-Mouse\-Down}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Base\-Gfx\-App\-::left\-Mouse\-Down (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBaseGfxApp_aaaccf5a5e923a9465441a5ee712424a8}
+
+
+Reimplemented in \hyperlink{classSimulation_a786d1ba31d29937f0ac6f3ea88f8a607}{Simulation}.
+
+\hypertarget{classBaseGfxApp_a0a2961a932b02b2f9d7d0bb408f6fb51}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!left\-Mouse\-Up@{left\-Mouse\-Up}}
+\index{left\-Mouse\-Up@{left\-Mouse\-Up}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{left\-Mouse\-Up}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Base\-Gfx\-App\-::left\-Mouse\-Up (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBaseGfxApp_a0a2961a932b02b2f9d7d0bb408f6fb51}
+
+
+Reimplemented in \hyperlink{classSimulation_a62ef254d85017074cd521a5787b5a234}{Simulation}.
+
+\hypertarget{classBaseGfxApp_a2c98cae9bb5ad1fb1832a6d4812670f8}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!middle\-Mouse\-Down@{middle\-Mouse\-Down}}
+\index{middle\-Mouse\-Down@{middle\-Mouse\-Down}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{middle\-Mouse\-Down}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Base\-Gfx\-App\-::middle\-Mouse\-Down (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBaseGfxApp_a2c98cae9bb5ad1fb1832a6d4812670f8}
+
+
+Reimplemented in \hyperlink{classSimulation_a4a8fb0f5c7cff8e747ae11d46653d18b}{Simulation}.
+
+\hypertarget{classBaseGfxApp_a00fc05e8d9629b72302b5adf014bdb0c}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!middle\-Mouse\-Up@{middle\-Mouse\-Up}}
+\index{middle\-Mouse\-Up@{middle\-Mouse\-Up}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{middle\-Mouse\-Up}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Base\-Gfx\-App\-::middle\-Mouse\-Up (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBaseGfxApp_a00fc05e8d9629b72302b5adf014bdb0c}
+\hypertarget{classBaseGfxApp_abb23f716dd6612b3a72938e41525d338}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!mouse\-Dragged@{mouse\-Dragged}}
+\index{mouse\-Dragged@{mouse\-Dragged}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{mouse\-Dragged}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Base\-Gfx\-App\-::mouse\-Dragged (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBaseGfxApp_abb23f716dd6612b3a72938e41525d338}
+
+
+Reimplemented in \hyperlink{classSimulation_af942a4554aa7a45b468ea7e5bc2e0c4b}{Simulation}.
+
+\hypertarget{classBaseGfxApp_a0956b82d7fa58b623c498aea7073dbba}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!mouse\-Moved@{mouse\-Moved}}
+\index{mouse\-Moved@{mouse\-Moved}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{mouse\-Moved}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Base\-Gfx\-App\-::mouse\-Moved (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBaseGfxApp_a0956b82d7fa58b623c498aea7073dbba}
+\hypertarget{classBaseGfxApp_a5d8d5d778a8aecd7f5f8e9c87f4c3d20}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!reshape@{reshape}}
+\index{reshape@{reshape}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{reshape}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Gfx\-App\-::reshape (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classBaseGfxApp_a5d8d5d778a8aecd7f5f8e9c87f4c3d20}
+\hypertarget{classBaseGfxApp_afa87e6a71220945e41f0424e540125d9}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!right\-Mouse\-Down@{right\-Mouse\-Down}}
+\index{right\-Mouse\-Down@{right\-Mouse\-Down}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{right\-Mouse\-Down}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Base\-Gfx\-App\-::right\-Mouse\-Down (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBaseGfxApp_afa87e6a71220945e41f0424e540125d9}
+\hypertarget{classBaseGfxApp_a812643d563522a993457dd565c33f8f6}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!right\-Mouse\-Up@{right\-Mouse\-Up}}
+\index{right\-Mouse\-Up@{right\-Mouse\-Up}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{right\-Mouse\-Up}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Base\-Gfx\-App\-::right\-Mouse\-Up (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classBaseGfxApp_a812643d563522a993457dd565c33f8f6}
+\hypertarget{classBaseGfxApp_acda031916c00d56c2dc901e2653e3083}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!run\-Main\-Loop@{run\-Main\-Loop}}
+\index{run\-Main\-Loop@{run\-Main\-Loop}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{run\-Main\-Loop}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Gfx\-App\-::run\-Main\-Loop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBaseGfxApp_acda031916c00d56c2dc901e2653e3083}
+\hypertarget{classBaseGfxApp_a58415c6151a2a80e1fe2eaa9919a4dab}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!s\-\_\-draw@{s\-\_\-draw}}
+\index{s\-\_\-draw@{s\-\_\-draw}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{s\-\_\-draw}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Gfx\-App\-::s\-\_\-draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classBaseGfxApp_a58415c6151a2a80e1fe2eaa9919a4dab}
+\hypertarget{classBaseGfxApp_ad4a963321f1147d68369225ab0c7f32f}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!s\-\_\-gluicallback@{s\-\_\-gluicallback}}
+\index{s\-\_\-gluicallback@{s\-\_\-gluicallback}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{s\-\_\-gluicallback}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Gfx\-App\-::s\-\_\-gluicallback (
+\begin{DoxyParamCaption}
+\item[{int}]{control\-I\-D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classBaseGfxApp_ad4a963321f1147d68369225ab0c7f32f}
+\hypertarget{classBaseGfxApp_a52edb2569227319feb68779844e7d857}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!s\-\_\-keyboard@{s\-\_\-keyboard}}
+\index{s\-\_\-keyboard@{s\-\_\-keyboard}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{s\-\_\-keyboard}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Gfx\-App\-::s\-\_\-keyboard (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{c, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classBaseGfxApp_a52edb2569227319feb68779844e7d857}
+\hypertarget{classBaseGfxApp_a1e8d90a4faab60300ddf2a4ea9b83115}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!s\-\_\-keyboardspecial@{s\-\_\-keyboardspecial}}
+\index{s\-\_\-keyboardspecial@{s\-\_\-keyboardspecial}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{s\-\_\-keyboardspecial}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Gfx\-App\-::s\-\_\-keyboardspecial (
+\begin{DoxyParamCaption}
+\item[{int}]{key, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classBaseGfxApp_a1e8d90a4faab60300ddf2a4ea9b83115}
+\hypertarget{classBaseGfxApp_a0e4dfe006f3cc9126c1cc8ad32784f75}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!s\-\_\-keyboardspecialup@{s\-\_\-keyboardspecialup}}
+\index{s\-\_\-keyboardspecialup@{s\-\_\-keyboardspecialup}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{s\-\_\-keyboardspecialup}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Gfx\-App\-::s\-\_\-keyboardspecialup (
+\begin{DoxyParamCaption}
+\item[{int}]{key, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classBaseGfxApp_a0e4dfe006f3cc9126c1cc8ad32784f75}
+\hypertarget{classBaseGfxApp_aa1ca205af9d6cee33949f2e6adf4c923}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!s\-\_\-keyboardup@{s\-\_\-keyboardup}}
+\index{s\-\_\-keyboardup@{s\-\_\-keyboardup}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{s\-\_\-keyboardup}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Gfx\-App\-::s\-\_\-keyboardup (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{c, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classBaseGfxApp_aa1ca205af9d6cee33949f2e6adf4c923}
+\hypertarget{classBaseGfxApp_a22dd953bfb75add9fd0f8f2f8be535c5}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!s\-\_\-mousebtn@{s\-\_\-mousebtn}}
+\index{s\-\_\-mousebtn@{s\-\_\-mousebtn}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{s\-\_\-mousebtn}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Gfx\-App\-::s\-\_\-mousebtn (
+\begin{DoxyParamCaption}
+\item[{int}]{b, }
+\item[{int}]{s, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classBaseGfxApp_a22dd953bfb75add9fd0f8f2f8be535c5}
+\hypertarget{classBaseGfxApp_a5e640f2394f7e038d0dd2b469d5c2e24}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!s\-\_\-mousemotion@{s\-\_\-mousemotion}}
+\index{s\-\_\-mousemotion@{s\-\_\-mousemotion}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{s\-\_\-mousemotion}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Gfx\-App\-::s\-\_\-mousemotion (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classBaseGfxApp_a5e640f2394f7e038d0dd2b469d5c2e24}
+\hypertarget{classBaseGfxApp_a5fe6a77d37044cbe28647ed3391bbb7a}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!s\-\_\-reshape@{s\-\_\-reshape}}
+\index{s\-\_\-reshape@{s\-\_\-reshape}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{s\-\_\-reshape}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Gfx\-App\-::s\-\_\-reshape (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classBaseGfxApp_a5fe6a77d37044cbe28647ed3391bbb7a}
+\hypertarget{classBaseGfxApp_a4b3b1a475b7f2babaf1b477c34b15fb1}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!set\-Caption@{set\-Caption}}
+\index{set\-Caption@{set\-Caption}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{set\-Caption}]{\setlength{\rightskip}{0pt plus 5cm}void Base\-Gfx\-App\-::set\-Caption (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{caption}
+\end{DoxyParamCaption}
+)}}\label{classBaseGfxApp_a4b3b1a475b7f2babaf1b477c34b15fb1}
+\hypertarget{classBaseGfxApp_ace089a1a94fb6bb0bc17e1b7fa48e05d}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!width@{width}}
+\index{width@{width}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{width}]{\setlength{\rightskip}{0pt plus 5cm}int Base\-Gfx\-App\-::width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBaseGfxApp_ace089a1a94fb6bb0bc17e1b7fa48e05d}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classBaseGfxApp_a2e70a389224f8affe7c137f7e20dc8c1}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!m\-\_\-drag@{m\-\_\-drag}}
+\index{m\-\_\-drag@{m\-\_\-drag}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{m\-\_\-drag}]{\setlength{\rightskip}{0pt plus 5cm}bool Base\-Gfx\-App\-::m\-\_\-drag\hspace{0.3cm}{\ttfamily [protected]}}}\label{classBaseGfxApp_a2e70a389224f8affe7c137f7e20dc8c1}
+\hypertarget{classBaseGfxApp_a6eb1673b80283727221da2242211af1d}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!m\-\_\-glui@{m\-\_\-glui}}
+\index{m\-\_\-glui@{m\-\_\-glui}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{m\-\_\-glui}]{\setlength{\rightskip}{0pt plus 5cm}G\-L\-U\-I$\ast$ Base\-Gfx\-App\-::m\-\_\-glui\hspace{0.3cm}{\ttfamily [protected]}}}\label{classBaseGfxApp_a6eb1673b80283727221da2242211af1d}
+\hypertarget{classBaseGfxApp_ad8697d6fdd10e6f336c3a662016b4fa7}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!m\-\_\-glut\-Window\-Handle@{m\-\_\-glut\-Window\-Handle}}
+\index{m\-\_\-glut\-Window\-Handle@{m\-\_\-glut\-Window\-Handle}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{m\-\_\-glut\-Window\-Handle}]{\setlength{\rightskip}{0pt plus 5cm}int Base\-Gfx\-App\-::m\-\_\-glut\-Window\-Handle\hspace{0.3cm}{\ttfamily [protected]}}}\label{classBaseGfxApp_ad8697d6fdd10e6f336c3a662016b4fa7}
+Underlying glut window handle \hypertarget{classBaseGfxApp_ac078e4fc20b5c2fe0c744966b850b412}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!m\-\_\-height@{m\-\_\-height}}
+\index{m\-\_\-height@{m\-\_\-height}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{m\-\_\-height}]{\setlength{\rightskip}{0pt plus 5cm}int Base\-Gfx\-App\-::m\-\_\-height\hspace{0.3cm}{\ttfamily [protected]}}}\label{classBaseGfxApp_ac078e4fc20b5c2fe0c744966b850b412}
+\hypertarget{classBaseGfxApp_a7e5ef1c8f25fe081b4a1fd4ce6a96e07}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!m\-\_\-width@{m\-\_\-width}}
+\index{m\-\_\-width@{m\-\_\-width}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{m\-\_\-width}]{\setlength{\rightskip}{0pt plus 5cm}int Base\-Gfx\-App\-::m\-\_\-width\hspace{0.3cm}{\ttfamily [protected]}}}\label{classBaseGfxApp_a7e5ef1c8f25fe081b4a1fd4ce6a96e07}
+\hypertarget{classBaseGfxApp_a65ba89b98af31e2649a0546631931000}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!s\-\_\-current\-App@{s\-\_\-current\-App}}
+\index{s\-\_\-current\-App@{s\-\_\-current\-App}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{s\-\_\-current\-App}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Base\-Gfx\-App} $\ast$ Base\-Gfx\-App\-::s\-\_\-current\-App = N\-U\-L\-L\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classBaseGfxApp_a65ba89b98af31e2649a0546631931000}
+G\-L\-U\-T and G\-L\-U\-I event callbacks are sent to the current window/app. Right now, there is only one window anyway (not counting the G\-L\-U\-I U\-I window.. in the future could be extended to support more windows. In any case, some structure like this is always needed when using glut with C++, since the glut callbacks must be either global or static functions. \hypertarget{classBaseGfxApp_afa4690383ea27713016ef75b9fb1e42f}{\index{Base\-Gfx\-App@{Base\-Gfx\-App}!s\-\_\-glut\-Initialized@{s\-\_\-glut\-Initialized}}
+\index{s\-\_\-glut\-Initialized@{s\-\_\-glut\-Initialized}!BaseGfxApp@{Base\-Gfx\-App}}
+\subsubsection[{s\-\_\-glut\-Initialized}]{\setlength{\rightskip}{0pt plus 5cm}bool Base\-Gfx\-App\-::s\-\_\-glut\-Initialized = false\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classBaseGfxApp_afa4690383ea27713016ef75b9fb1e42f}
+Has glut\-Init been called? (only allowed once per program) 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{BaseGfxApp_8h}{Base\-Gfx\-App.\-h}\item 
+\hyperlink{BaseGfxApp_8cpp}{Base\-Gfx\-App.\-cpp}\end{DoxyCompactItemize}

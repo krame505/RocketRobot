@@ -1,0 +1,161 @@
+\hypertarget{classObjectIterator}{\section{Object\-Iterator Class Reference}
+\label{classObjectIterator}\index{Object\-Iterator@{Object\-Iterator}}
+}
+
+
+\hyperlink{classObjectIterator}{Object\-Iterator} class, a simple iterator for the object in environment.  
+
+
+
+
+{\ttfamily \#include $<$environment.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classObjectIterator_a063765a03cce97a12c59787a1cda5121}{Object\-Iterator} ()
+\begin{DoxyCompactList}\small\item\em The default constructor, the iterated objects are allways the iter\-Objects vector in environment. \end{DoxyCompactList}\item 
+\hyperlink{classObjectIterator_acf20f72fa4c98e62b4a8dde10350df9f}{Object\-Iterator} (const \hyperlink{classObjectIterator}{Object\-Iterator} \&other)
+\begin{DoxyCompactList}\small\item\em The copy constructor, the iterated objects are allways the iter\-Objects vector in environment. \end{DoxyCompactList}\item 
+\hyperlink{classObjectIterator_a69e552a361c315f532bec9ee0bfe15a5}{$\sim$\-Object\-Iterator} ()
+\begin{DoxyCompactList}\small\item\em The destructor, does nothing. \end{DoxyCompactList}\item 
+void \hyperlink{classObjectIterator_aa693c5c3e5c105c6bcea5efe92ffdb22}{operator++} ()
+\item 
+void \hyperlink{classObjectIterator_a819be81f90fae313d20f83ee90c1057b}{operator++} (int)
+\item 
+\hyperlink{classPhysicalObject}{Physical\-Object} $\ast$ \hyperlink{classObjectIterator_aab94d8abe38edb14c18123a048dcd3d7}{operator$\ast$} ()
+\item 
+bool \hyperlink{classObjectIterator_a704f9538ed03b9c3f2c2e4a3076cac4d}{operator$>$} (const \hyperlink{classObjectIterator}{Object\-Iterator} \&other)
+\item 
+bool \hyperlink{classObjectIterator_a11f9437f4388b9bbc22c61663f68ec00}{operator$<$} (const \hyperlink{classObjectIterator}{Object\-Iterator} \&other)
+\item 
+bool \hyperlink{classObjectIterator_a7ad66f18da8432ef42eb488be531c265}{operator==} (const \hyperlink{classObjectIterator}{Object\-Iterator} \&other)
+\item 
+bool \hyperlink{classObjectIterator_af0b33a8a06ecb11c5c0cbfa59f40876f}{operator!=} (const \hyperlink{classObjectIterator}{Object\-Iterator} \&other)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespaceenvironment_a3a7a388d4b4ceb0a34bf0c72579780e1}{environment\-::object\-Iterator} \hyperlink{classObjectIterator_a90638e8c73155e7113b6c4d3fdb54c57}{environment\-::get\-Objects\-Begin} ()
+\item 
+\hyperlink{namespaceenvironment_a3a7a388d4b4ceb0a34bf0c72579780e1}{environment\-::object\-Iterator} \hyperlink{classObjectIterator_aede0069c558675c8d0c64d3662a42d62}{environment\-::get\-Objects\-End} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classObjectIterator}{Object\-Iterator} class, a simple iterator for the object in environment. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classObjectIterator_a063765a03cce97a12c59787a1cda5121}{\index{Object\-Iterator@{Object\-Iterator}!Object\-Iterator@{Object\-Iterator}}
+\index{Object\-Iterator@{Object\-Iterator}!ObjectIterator@{Object\-Iterator}}
+\subsubsection[{Object\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}Object\-Iterator\-::\-Object\-Iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classObjectIterator_a063765a03cce97a12c59787a1cda5121}
+
+
+The default constructor, the iterated objects are allways the iter\-Objects vector in environment. 
+
+\hypertarget{classObjectIterator_acf20f72fa4c98e62b4a8dde10350df9f}{\index{Object\-Iterator@{Object\-Iterator}!Object\-Iterator@{Object\-Iterator}}
+\index{Object\-Iterator@{Object\-Iterator}!ObjectIterator@{Object\-Iterator}}
+\subsubsection[{Object\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}Object\-Iterator\-::\-Object\-Iterator (
+\begin{DoxyParamCaption}
+\item[{const {\bf Object\-Iterator} \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{classObjectIterator_acf20f72fa4c98e62b4a8dde10350df9f}
+
+
+The copy constructor, the iterated objects are allways the iter\-Objects vector in environment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The \hyperlink{classObjectIterator}{Object\-Iterator} to copy \\
+\hline
+\end{DoxyParams}
+\hypertarget{classObjectIterator_a69e552a361c315f532bec9ee0bfe15a5}{\index{Object\-Iterator@{Object\-Iterator}!$\sim$\-Object\-Iterator@{$\sim$\-Object\-Iterator}}
+\index{$\sim$\-Object\-Iterator@{$\sim$\-Object\-Iterator}!ObjectIterator@{Object\-Iterator}}
+\subsubsection[{$\sim$\-Object\-Iterator}]{\setlength{\rightskip}{0pt plus 5cm}Object\-Iterator\-::$\sim$\-Object\-Iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classObjectIterator_a69e552a361c315f532bec9ee0bfe15a5}
+
+
+The destructor, does nothing. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classObjectIterator_af0b33a8a06ecb11c5c0cbfa59f40876f}{\index{Object\-Iterator@{Object\-Iterator}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!ObjectIterator@{Object\-Iterator}}
+\subsubsection[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}bool Object\-Iterator\-::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Object\-Iterator} \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{classObjectIterator_af0b33a8a06ecb11c5c0cbfa59f40876f}
+\hypertarget{classObjectIterator_aab94d8abe38edb14c18123a048dcd3d7}{\index{Object\-Iterator@{Object\-Iterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!ObjectIterator@{Object\-Iterator}}
+\subsubsection[{operator$\ast$}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Physical\-Object} $\ast$ Object\-Iterator\-::operator$\ast$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classObjectIterator_aab94d8abe38edb14c18123a048dcd3d7}
+\hypertarget{classObjectIterator_aa693c5c3e5c105c6bcea5efe92ffdb22}{\index{Object\-Iterator@{Object\-Iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!ObjectIterator@{Object\-Iterator}}
+\subsubsection[{operator++}]{\setlength{\rightskip}{0pt plus 5cm}void Object\-Iterator\-::operator++ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classObjectIterator_aa693c5c3e5c105c6bcea5efe92ffdb22}
+\hypertarget{classObjectIterator_a819be81f90fae313d20f83ee90c1057b}{\index{Object\-Iterator@{Object\-Iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!ObjectIterator@{Object\-Iterator}}
+\subsubsection[{operator++}]{\setlength{\rightskip}{0pt plus 5cm}void Object\-Iterator\-::operator++ (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}}\label{classObjectIterator_a819be81f90fae313d20f83ee90c1057b}
+\hypertarget{classObjectIterator_a11f9437f4388b9bbc22c61663f68ec00}{\index{Object\-Iterator@{Object\-Iterator}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!ObjectIterator@{Object\-Iterator}}
+\subsubsection[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}bool Object\-Iterator\-::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Object\-Iterator} \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{classObjectIterator_a11f9437f4388b9bbc22c61663f68ec00}
+\hypertarget{classObjectIterator_a7ad66f18da8432ef42eb488be531c265}{\index{Object\-Iterator@{Object\-Iterator}!operator==@{operator==}}
+\index{operator==@{operator==}!ObjectIterator@{Object\-Iterator}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool Object\-Iterator\-::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Object\-Iterator} \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{classObjectIterator_a7ad66f18da8432ef42eb488be531c265}
+\hypertarget{classObjectIterator_a704f9538ed03b9c3f2c2e4a3076cac4d}{\index{Object\-Iterator@{Object\-Iterator}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!ObjectIterator@{Object\-Iterator}}
+\subsubsection[{operator$>$}]{\setlength{\rightskip}{0pt plus 5cm}bool Object\-Iterator\-::operator$>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Object\-Iterator} \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{classObjectIterator_a704f9538ed03b9c3f2c2e4a3076cac4d}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classObjectIterator_a90638e8c73155e7113b6c4d3fdb54c57}{\index{Object\-Iterator@{Object\-Iterator}!environment\-::get\-Objects\-Begin@{environment\-::get\-Objects\-Begin}}
+\index{environment\-::get\-Objects\-Begin@{environment\-::get\-Objects\-Begin}!ObjectIterator@{Object\-Iterator}}
+\subsubsection[{environment\-::get\-Objects\-Begin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf environment\-::object\-Iterator} {\bf environment\-::get\-Objects\-Begin} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classObjectIterator_a90638e8c73155e7113b6c4d3fdb54c57}
+\hypertarget{classObjectIterator_aede0069c558675c8d0c64d3662a42d62}{\index{Object\-Iterator@{Object\-Iterator}!environment\-::get\-Objects\-End@{environment\-::get\-Objects\-End}}
+\index{environment\-::get\-Objects\-End@{environment\-::get\-Objects\-End}!ObjectIterator@{Object\-Iterator}}
+\subsubsection[{environment\-::get\-Objects\-End}]{\setlength{\rightskip}{0pt plus 5cm}{\bf environment\-::object\-Iterator} {\bf environment\-::get\-Objects\-End} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classObjectIterator_aede0069c558675c8d0c64d3662a42d62}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{environment_8h}{environment.\-h}\item 
+\hyperlink{environment_8cpp}{environment.\-cpp}\end{DoxyCompactItemize}

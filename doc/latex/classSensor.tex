@@ -1,0 +1,256 @@
+\hypertarget{classSensor}{\section{Sensor Class Reference}
+\label{classSensor}\index{Sensor@{Sensor}}
+}
+
+
+{\ttfamily \#include $<$Sensor.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSensor_a37f7683054a1cd9ea12834b702d8886d}{Sensor} (\hyperlink{structLocation}{Location} loc, int orientation, \hyperlink{PhysicalObject_8h_a842c5e2e69277690b064bf363c017980}{Object\-Type} type\-Detected)
+\item 
+\hyperlink{classSensor_a8db2f6b1569016548b226725e4eb3301}{Sensor} (\hyperlink{structLocation}{Location} loc, int orientation, int view\-Angle, \hyperlink{PhysicalObject_8h_a842c5e2e69277690b064bf363c017980}{Object\-Type} type\-Detected)
+\item 
+void \hyperlink{classSensor_addabbd59236833da1adfe341e4c18f80}{set\-Position} (float x, float y)
+\item 
+void \hyperlink{classSensor_ab177881093c0f4dc22f5951f27638c86}{set\-Position} (\hyperlink{structLocation}{Location} loc)
+\item 
+\hyperlink{structLocation}{Location} \hyperlink{classSensor_a021d0c08cc8cdf5d7eae9b58af02589f}{get\-Position} ()
+\item 
+float \hyperlink{classSensor_a32aadaf1e0c393eea51ee54df853cd7b}{get\-X\-Position} ()
+\item 
+float \hyperlink{classSensor_a87d42b5670accfc0dff1abc438875a73}{get\-Y\-Position} ()
+\item 
+void \hyperlink{classSensor_ae496cb993bf7c3b4876527a36ae95272}{set\-Orientation} (int orientation)
+\item 
+int \hyperlink{classSensor_a178e33bafb97b61319f17325223cf7de}{get\-Orientation} ()
+\item 
+void \hyperlink{classSensor_ad2138006b3d6a7779b17fd84e5a6f081}{set\-View\-Angle} (int degrees)
+\item 
+int \hyperlink{classSensor_ab5bc3039acc0d11c9cefb08515452aff}{get\-View\-Angle} ()
+\item 
+void \hyperlink{classSensor_a10ab10a83beb503b30a3a950149a2da9}{set\-Type\-Detected} (\hyperlink{PhysicalObject_8h_a842c5e2e69277690b064bf363c017980}{Object\-Type} type)
+\item 
+\hyperlink{PhysicalObject_8h_a842c5e2e69277690b064bf363c017980}{Object\-Type} \hyperlink{classSensor_a8c43057ed1d49be620595262ae720281}{get\-Type\-Detected} ()
+\item 
+void \hyperlink{classSensor_a9a2b1a48810e63b3d0621e8cea1ef81f}{update\-Position} (\hyperlink{structLocation}{Location} robot\-Loc, int robot\-Angle)
+\item 
+void \hyperlink{classSensor_ac77b1ae6ae7b06dcc60127c7cef88336}{display} ()
+\item 
+float \hyperlink{classSensor_ac0aad8c71f6156d2c8c626b304e67595}{sense} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classSensor_a37f7683054a1cd9ea12834b702d8886d}{\index{Sensor@{Sensor}!Sensor@{Sensor}}
+\index{Sensor@{Sensor}!Sensor@{Sensor}}
+\subsubsection[{Sensor}]{\setlength{\rightskip}{0pt plus 5cm}Sensor\-::\-Sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf Location}}]{loc, }
+\item[{int}]{orientation, }
+\item[{{\bf Object\-Type}}]{type\-Detected}
+\end{DoxyParamCaption}
+)}}\label{classSensor_a37f7683054a1cd9ea12834b702d8886d}
+\hyperlink{classSensor}{Sensor} constructor with default angle 
+\begin{DoxyParams}{Parameters}
+{\em loc} & \hyperlink{structLocation}{Location} of the sensor in x and y \\
+\hline
+{\em orientation} & orientation of the sensor \\
+\hline
+{\em type\-Detected} & type that sensor will detect \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSensor_a8db2f6b1569016548b226725e4eb3301}{\index{Sensor@{Sensor}!Sensor@{Sensor}}
+\index{Sensor@{Sensor}!Sensor@{Sensor}}
+\subsubsection[{Sensor}]{\setlength{\rightskip}{0pt plus 5cm}Sensor\-::\-Sensor (
+\begin{DoxyParamCaption}
+\item[{{\bf Location}}]{loc, }
+\item[{int}]{orientation, }
+\item[{int}]{view\-Angle, }
+\item[{{\bf Object\-Type}}]{type\-Detected}
+\end{DoxyParamCaption}
+)}}\label{classSensor_a8db2f6b1569016548b226725e4eb3301}
+\hyperlink{classSensor}{Sensor} constructor 
+\begin{DoxyParams}{Parameters}
+{\em loc} & \hyperlink{structLocation}{Location} of the sensor in x and y \\
+\hline
+{\em orientation} & orientation of the sensor \\
+\hline
+{\em view\-Angle} & view angle of the sensor in degrees \\
+\hline
+{\em type\-Detected} & type that sensor will detect \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classSensor_ac77b1ae6ae7b06dcc60127c7cef88336}{\index{Sensor@{Sensor}!display@{display}}
+\index{display@{display}!Sensor@{Sensor}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void Sensor\-::display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSensor_ac77b1ae6ae7b06dcc60127c7cef88336}
+Displays the sensor \begin{DoxyAuthor}{Author}
+Carl 
+\end{DoxyAuthor}
+\hypertarget{classSensor_a178e33bafb97b61319f17325223cf7de}{\index{Sensor@{Sensor}!get\-Orientation@{get\-Orientation}}
+\index{get\-Orientation@{get\-Orientation}!Sensor@{Sensor}}
+\subsubsection[{get\-Orientation}]{\setlength{\rightskip}{0pt plus 5cm}int Sensor\-::get\-Orientation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSensor_a178e33bafb97b61319f17325223cf7de}
+Returns the orientation of the sensor \begin{DoxyReturn}{Returns}
+orientation in degrees 
+\end{DoxyReturn}
+\hypertarget{classSensor_a021d0c08cc8cdf5d7eae9b58af02589f}{\index{Sensor@{Sensor}!get\-Position@{get\-Position}}
+\index{get\-Position@{get\-Position}!Sensor@{Sensor}}
+\subsubsection[{get\-Position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Location} Sensor\-::get\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSensor_a021d0c08cc8cdf5d7eae9b58af02589f}
+Returns a \hyperlink{structLocation}{Location} struct of x and y position in pixels of the sensor \begin{DoxyReturn}{Returns}
+A \hyperlink{structLocation}{Location} struct of x and y position 
+\end{DoxyReturn}
+\hypertarget{classSensor_a8c43057ed1d49be620595262ae720281}{\index{Sensor@{Sensor}!get\-Type\-Detected@{get\-Type\-Detected}}
+\index{get\-Type\-Detected@{get\-Type\-Detected}!Sensor@{Sensor}}
+\subsubsection[{get\-Type\-Detected}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object\-Type} Sensor\-::get\-Type\-Detected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSensor_a8c43057ed1d49be620595262ae720281}
+Returns the type that sensor detects \begin{DoxyAuthor}{Author}
+Himawan 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+type the sensor detects 
+\end{DoxyReturn}
+\hypertarget{classSensor_ab5bc3039acc0d11c9cefb08515452aff}{\index{Sensor@{Sensor}!get\-View\-Angle@{get\-View\-Angle}}
+\index{get\-View\-Angle@{get\-View\-Angle}!Sensor@{Sensor}}
+\subsubsection[{get\-View\-Angle}]{\setlength{\rightskip}{0pt plus 5cm}int Sensor\-::get\-View\-Angle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSensor_ab5bc3039acc0d11c9cefb08515452aff}
+Returns the view angle of the sensor \begin{DoxyReturn}{Returns}
+view angle in degrees 
+\end{DoxyReturn}
+\hypertarget{classSensor_a32aadaf1e0c393eea51ee54df853cd7b}{\index{Sensor@{Sensor}!get\-X\-Position@{get\-X\-Position}}
+\index{get\-X\-Position@{get\-X\-Position}!Sensor@{Sensor}}
+\subsubsection[{get\-X\-Position}]{\setlength{\rightskip}{0pt plus 5cm}float Sensor\-::get\-X\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSensor_a32aadaf1e0c393eea51ee54df853cd7b}
+Returns the x position in pixels of the sensor \begin{DoxyReturn}{Returns}
+x position 
+\end{DoxyReturn}
+\hypertarget{classSensor_a87d42b5670accfc0dff1abc438875a73}{\index{Sensor@{Sensor}!get\-Y\-Position@{get\-Y\-Position}}
+\index{get\-Y\-Position@{get\-Y\-Position}!Sensor@{Sensor}}
+\subsubsection[{get\-Y\-Position}]{\setlength{\rightskip}{0pt plus 5cm}float Sensor\-::get\-Y\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSensor_a87d42b5670accfc0dff1abc438875a73}
+Returns the y position in pixels of the sensor \begin{DoxyReturn}{Returns}
+y position 
+\end{DoxyReturn}
+\hypertarget{classSensor_ac0aad8c71f6156d2c8c626b304e67595}{\index{Sensor@{Sensor}!sense@{sense}}
+\index{sense@{sense}!Sensor@{Sensor}}
+\subsubsection[{sense}]{\setlength{\rightskip}{0pt plus 5cm}float Sensor\-::sense (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSensor_ac0aad8c71f6156d2c8c626b304e67595}
+Returns some strength by sensing the environment \begin{DoxyAuthor}{Author}
+Carl \& Himawan 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+the strength of sensor reading of \mbox{[}0..1\mbox{]} 
+\end{DoxyReturn}
+\hypertarget{classSensor_ae496cb993bf7c3b4876527a36ae95272}{\index{Sensor@{Sensor}!set\-Orientation@{set\-Orientation}}
+\index{set\-Orientation@{set\-Orientation}!Sensor@{Sensor}}
+\subsubsection[{set\-Orientation}]{\setlength{\rightskip}{0pt plus 5cm}void Sensor\-::set\-Orientation (
+\begin{DoxyParamCaption}
+\item[{int}]{orientation}
+\end{DoxyParamCaption}
+)}}\label{classSensor_ae496cb993bf7c3b4876527a36ae95272}
+Sets the orientation for the sensor 
+\begin{DoxyParams}{Parameters}
+{\em orientation} & The orientation of the object in degrees \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSensor_addabbd59236833da1adfe341e4c18f80}{\index{Sensor@{Sensor}!set\-Position@{set\-Position}}
+\index{set\-Position@{set\-Position}!Sensor@{Sensor}}
+\subsubsection[{set\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void Sensor\-::set\-Position (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y}
+\end{DoxyParamCaption}
+)}}\label{classSensor_addabbd59236833da1adfe341e4c18f80}
+Sets the position for the sensor 
+\begin{DoxyParams}{Parameters}
+{\em x} & x position in pixels \\
+\hline
+{\em y} & y position in pixels \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSensor_ab177881093c0f4dc22f5951f27638c86}{\index{Sensor@{Sensor}!set\-Position@{set\-Position}}
+\index{set\-Position@{set\-Position}!Sensor@{Sensor}}
+\subsubsection[{set\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void Sensor\-::set\-Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Location}}]{loc}
+\end{DoxyParamCaption}
+)}}\label{classSensor_ab177881093c0f4dc22f5951f27638c86}
+Sets the position for the sensor 
+\begin{DoxyParams}{Parameters}
+{\em loc} & A struct of the x and y \hyperlink{structLocation}{Location} in pixels \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSensor_a10ab10a83beb503b30a3a950149a2da9}{\index{Sensor@{Sensor}!set\-Type\-Detected@{set\-Type\-Detected}}
+\index{set\-Type\-Detected@{set\-Type\-Detected}!Sensor@{Sensor}}
+\subsubsection[{set\-Type\-Detected}]{\setlength{\rightskip}{0pt plus 5cm}void Sensor\-::set\-Type\-Detected (
+\begin{DoxyParamCaption}
+\item[{{\bf Object\-Type}}]{type}
+\end{DoxyParamCaption}
+)}}\label{classSensor_a10ab10a83beb503b30a3a950149a2da9}
+Sets the object type that the sensor detects \begin{DoxyAuthor}{Author}
+Himawan 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em type} & object type to detect \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSensor_ad2138006b3d6a7779b17fd84e5a6f081}{\index{Sensor@{Sensor}!set\-View\-Angle@{set\-View\-Angle}}
+\index{set\-View\-Angle@{set\-View\-Angle}!Sensor@{Sensor}}
+\subsubsection[{set\-View\-Angle}]{\setlength{\rightskip}{0pt plus 5cm}void Sensor\-::set\-View\-Angle (
+\begin{DoxyParamCaption}
+\item[{int}]{degrees}
+\end{DoxyParamCaption}
+)}}\label{classSensor_ad2138006b3d6a7779b17fd84e5a6f081}
+Sets the view angle of the sensor 
+\begin{DoxyParams}{Parameters}
+{\em degrees} & The view angle of the sensor in degrees \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSensor_a9a2b1a48810e63b3d0621e8cea1ef81f}{\index{Sensor@{Sensor}!update\-Position@{update\-Position}}
+\index{update\-Position@{update\-Position}!Sensor@{Sensor}}
+\subsubsection[{update\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void Sensor\-::update\-Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Location}}]{robot\-Loc, }
+\item[{int}]{robot\-Angle}
+\end{DoxyParamCaption}
+)}}\label{classSensor_a9a2b1a48810e63b3d0621e8cea1ef81f}
+Called to update the position of the sensor match the updated position of the robot \begin{DoxyAuthor}{Author}
+Carl 
+\end{DoxyAuthor}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Sensor_8h}{Sensor.\-h}\item 
+\hyperlink{Sensor_8cpp}{Sensor.\-cpp}\end{DoxyCompactItemize}

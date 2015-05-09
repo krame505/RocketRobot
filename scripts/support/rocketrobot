@@ -1,0 +1,16 @@
+#!/bin/bash
+READLINK=readlink
+
+CURRENT_DIR=`pwd -P`
+ME=$("$READLINK" -f "${BASH_SOURCE}")
+RR_HOME=${ME/\/scripts\/support\/rocketrobot//}
+RR="$RR_HOME/bin/gorobot"
+
+if [ ! -f "$RR" ]
+then
+    echo "Couldn't find the RocketRobot executable, aborting."
+    echo "Tried $RR"
+    exit 1
+fi
+
+$RR --use-config "$RR_HOME/config/default" -DINSTALL_DIR string $RR_HOME -DWORKING_DIR string $CURRENT_DIR $@

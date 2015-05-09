@@ -1,0 +1,169 @@
+\hypertarget{classLightSource}{\section{Light\-Source Class Reference}
+\label{classLightSource}\index{Light\-Source@{Light\-Source}}
+}
+
+
+\hyperlink{classLightSource}{Light\-Source} for the robot to seek.  
+
+
+
+
+{\ttfamily \#include $<$Light\-Source.\-h$>$}
+
+Inheritance diagram for Light\-Source\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classLightSource}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classLightSource_a11168d72f5e489b8d4b5c6056682e5fa}{Light\-Source} (int radius, \hyperlink{structColor}{Color} color)
+\item 
+\hyperlink{classLightSource_aa13ee0c57818324958659a5a88bf4b1d}{Light\-Source} (int max\-Radius, int min\-Radius, \hyperlink{structColor}{Color} color)
+\item 
+\hyperlink{classLightSource_a953998d4d97c0efda733c208258e4a8b}{Light\-Source} (int radius, \hyperlink{structLocation}{Location} loc, \hyperlink{structColor}{Color} color)
+\item 
+bool \hyperlink{classLightSource_a6c0da63e11edd3f108c9fe8c2a9dfd52}{handle\-Collision} (int other\-Id, bool was\-Hit)
+\item 
+\hyperlink{classLightSource_a55e5876407fd4af9e9b4ede7ff46cc85}{$\sim$\-Light\-Source} ()
+\item 
+void \hyperlink{classLightSource_a2148117298a6bb0d60dcfb3bd99700db}{display} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classLightSource}{Light\-Source} for the robot to seek. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classLightSource_a11168d72f5e489b8d4b5c6056682e5fa}{\index{Light\-Source@{Light\-Source}!Light\-Source@{Light\-Source}}
+\index{Light\-Source@{Light\-Source}!LightSource@{Light\-Source}}
+\subsubsection[{Light\-Source}]{\setlength{\rightskip}{0pt plus 5cm}Light\-Source\-::\-Light\-Source (
+\begin{DoxyParamCaption}
+\item[{int}]{radius, }
+\item[{{\bf Color}}]{color}
+\end{DoxyParamCaption}
+)}}\label{classLightSource_a11168d72f5e489b8d4b5c6056682e5fa}
+This constructor requires two parameters\-: radius and color) 
+\begin{DoxyParams}{Parameters}
+{\em radius} & the radius in pixels \\
+\hline
+{\em color} & a struct of float value 0 to 1 representing a hexedecimal color \\
+\hline
+\end{DoxyParams}
+\begin{DoxyParagraph}{Initialization}
+\hyperlink{classLightSource}{Light\-Source} is initialized with the following values\-: 
+\end{DoxyParagraph}
+
+
+Orientation\-: random 
+
+Speed\-: 0 
+
+Position\-: (loc.\-x, loc.\-y)   \hypertarget{classLightSource_aa13ee0c57818324958659a5a88bf4b1d}{\index{Light\-Source@{Light\-Source}!Light\-Source@{Light\-Source}}
+\index{Light\-Source@{Light\-Source}!LightSource@{Light\-Source}}
+\subsubsection[{Light\-Source}]{\setlength{\rightskip}{0pt plus 5cm}Light\-Source\-::\-Light\-Source (
+\begin{DoxyParamCaption}
+\item[{int}]{max\-Radius, }
+\item[{int}]{min\-Radius, }
+\item[{{\bf Color}}]{color}
+\end{DoxyParamCaption}
+)}}\label{classLightSource_aa13ee0c57818324958659a5a88bf4b1d}
+This constructor creates a light with a random radius 
+\begin{DoxyParams}{Parameters}
+{\em min\-Radius} & the minimum possible radius in pixels \\
+\hline
+{\em max\-Radius} & the maximum possible radius in pixels \\
+\hline
+{\em color} & a struct representing color \\
+\hline
+\end{DoxyParams}
+\begin{DoxyParagraph}{Initialization}
+\hyperlink{classLightSource}{Light\-Source} is initialized with the following values\-: 
+\end{DoxyParagraph}
+
+
+Orientation\-: random 
+
+Speed\-: 0 
+
+Position\-: (loc.\-x, loc.\-y)   \hypertarget{classLightSource_a953998d4d97c0efda733c208258e4a8b}{\index{Light\-Source@{Light\-Source}!Light\-Source@{Light\-Source}}
+\index{Light\-Source@{Light\-Source}!LightSource@{Light\-Source}}
+\subsubsection[{Light\-Source}]{\setlength{\rightskip}{0pt plus 5cm}Light\-Source\-::\-Light\-Source (
+\begin{DoxyParamCaption}
+\item[{int}]{radius, }
+\item[{{\bf Location}}]{loc, }
+\item[{{\bf Color}}]{color}
+\end{DoxyParamCaption}
+)}}\label{classLightSource_a953998d4d97c0efda733c208258e4a8b}
+This constructor requires four parameters\-: radius, color, start \hyperlink{structLocation}{Location} and Config\-Table value) 
+\begin{DoxyParams}{Parameters}
+{\em radius} & the radius in pixels \\
+\hline
+{\em color} & a struct of float value 0 to 1 representing a hexedecimal color \\
+\hline
+{\em loc} & a struct of the x,y start \hyperlink{structLocation}{Location} in pixels \\
+\hline
+{\em config} & a configuration table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyParagraph}{Initialization}
+\hyperlink{classLightSource}{Light\-Source} is initialized with the following values\-: 
+\end{DoxyParagraph}
+
+
+Orientation\-: 0 
+
+Speed\-: 0 
+
+Position\-: (loc.\-x, loc.\-y)   \hypertarget{classLightSource_a55e5876407fd4af9e9b4ede7ff46cc85}{\index{Light\-Source@{Light\-Source}!$\sim$\-Light\-Source@{$\sim$\-Light\-Source}}
+\index{$\sim$\-Light\-Source@{$\sim$\-Light\-Source}!LightSource@{Light\-Source}}
+\subsubsection[{$\sim$\-Light\-Source}]{\setlength{\rightskip}{0pt plus 5cm}Light\-Source\-::$\sim$\-Light\-Source (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classLightSource_a55e5876407fd4af9e9b4ede7ff46cc85}
+This is the class destructor. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classLightSource_a2148117298a6bb0d60dcfb3bd99700db}{\index{Light\-Source@{Light\-Source}!display@{display}}
+\index{display@{display}!LightSource@{Light\-Source}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void Light\-Source\-::display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLightSource_a2148117298a6bb0d60dcfb3bd99700db}
+This function displays the \hyperlink{classLightSource}{Light\-Source} in the graphics. 
+
+Reimplemented from \hyperlink{classPhysicalObject_a6a0326df3efc0a1ea23892e3fcd4b11e}{Physical\-Object}.
+
+\hypertarget{classLightSource_a6c0da63e11edd3f108c9fe8c2a9dfd52}{\index{Light\-Source@{Light\-Source}!handle\-Collision@{handle\-Collision}}
+\index{handle\-Collision@{handle\-Collision}!LightSource@{Light\-Source}}
+\subsubsection[{handle\-Collision}]{\setlength{\rightskip}{0pt plus 5cm}bool Light\-Source\-::handle\-Collision (
+\begin{DoxyParamCaption}
+\item[{int}]{other\-Id, }
+\item[{bool}]{was\-Hit}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classLightSource_a6c0da63e11edd3f108c9fe8c2a9dfd52}
+\begin{DoxyAuthor}{Author}
+Lucas Kramer This function gives \hyperlink{classLightSource}{Light\-Source} an appropriate reaction when a collision occurs. 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em other\-Id} & id of the object that it collides with \\
+\hline
+{\em was\-Hit} & tells if the object was hit previously \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classPhysicalObject_a400ba3545479ebbf8b1b4a046906e562}{Physical\-Object}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{LightSource_8h}{Light\-Source.\-h}\item 
+\hyperlink{LightSource_8cpp}{Light\-Source.\-cpp}\end{DoxyCompactItemize}

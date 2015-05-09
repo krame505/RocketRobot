@@ -1,0 +1,5 @@
+# This configuration file is for testing/debugging the configuration parser.  
+string test1 = "Hello, World!"  # this is a comment 
+boolean test2 = 1
+hex test3 = abc
+int test4 = 123

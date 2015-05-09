@@ -1,0 +1,428 @@
+\hypertarget{namespaceutil}{\section{util Namespace Reference}
+\label{namespaceutil}\index{util@{util}}
+}
+
+
+util namespace, contains helper functions to add and remove robots  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceutil_aba9dfe2df4467075a8bcbaccbbe65d55}{reset} ()
+\begin{DoxyCompactList}\small\item\em Removes all objects and resets to the initial state. \end{DoxyCompactList}\item 
+void \hyperlink{namespaceutil_a07ce92ef6b2053de6e300d9ae17fd9d6}{display} ()
+\begin{DoxyCompactList}\small\item\em Function to render all the objects.  This function is called repeatedly from the simulation, and iterates through the objects and calls their respective display functions. \end{DoxyCompactList}\item 
+void \hyperlink{namespaceutil_ab0e8cf018dc107d06862a57d79e80538}{advance} ()
+\begin{DoxyCompactList}\small\item\em Function to update the positions of all objects.  This function is called repeatedly from the simulation, and iterates through the objects and calls their respective update\-Position functions. \end{DoxyCompactList}\item 
+\hyperlink{structColor}{Color} \hyperlink{namespaceutil_a0f3ef8558c61f7969d479448b9c96c78}{new\-Color} ()
+\begin{DoxyCompactList}\small\item\em Gets a new, unused color. \end{DoxyCompactList}\item 
+int \hyperlink{namespaceutil_a16b3e2bc651bf6876b111d58ccddad3c}{get\-Num\-Robots\-Targets} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of robots/target pairs. \end{DoxyCompactList}\item 
+int \hyperlink{namespaceutil_aa562d1964b9fef18a6001d8fed63100d}{get\-Num\-Lights} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of lights. \end{DoxyCompactList}\item 
+int \hyperlink{namespaceutil_a63bc8a24e2203d0771fb75432296b06c}{get\-Num\-Obstacles} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of obstacles. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutil_ab3eebe9c6924888ecf5d29b2f871fbce}{add\-Robot\-Target} (int robot\-Type, int light\-Sensor\-Connection\-Pattern, int robot\-Sensor\-Connection\-Pattern, int obstacle\-Sensor\-Connection\-Pattern, int target\-Sensor\-Connection\-Pattern, float light\-Sensor\-Scale, float robot\-Sensor\-Scale, float obstacle\-Sensor\-Scale, float target\-Sensor\-Scale, int initial\-Speed, std\-::string neural\-Network\-File)
+\begin{DoxyCompactList}\small\item\em Adds a robot and paired target to the simulation. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutil_a22f8c077027e25734041006f8d94fd18}{add\-Robot} (int robot\-Type, int light\-Sensor\-Connection\-Pattern, int robot\-Sensor\-Connection\-Pattern, int obstacle\-Sensor\-Connection\-Pattern, int target\-Sensor\-Connection\-Pattern, float light\-Sensor\-Scale, float robot\-Sensor\-Scale, float obstacle\-Sensor\-Scale, float target\-Sensor\-Scale, int initial\-Speed, std\-::string neural\-Network\-File)
+\begin{DoxyCompactList}\small\item\em Adds a robot to the simulation. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutil_adecaea7e94744f17eb1000727b8c3e73}{add\-Neural\-Network\-Robot\-Target} (const \hyperlink{classNeuralNetwork}{Neural\-Network} \&network)
+\begin{DoxyCompactList}\small\item\em Adds a neural network robot and a paired target to the simulation. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutil_a4db9ace4269226be8f99f3718279dd51}{add\-Stationary\-Light\-Source} ()
+\begin{DoxyCompactList}\small\item\em Adds a light to the simulation. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutil_a2c7639eef5925d9a12a9663fcf09d090}{add\-Moving\-Light\-Source} ()
+\begin{DoxyCompactList}\small\item\em Adds a light to the simulation. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutil_a79d541c466cd33909ae7169988870aab}{add\-Obstacle} ()
+\begin{DoxyCompactList}\small\item\em Adds a obstacle to the simulation. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutil_a9d724ef3950b1c4f09591c45956215c3}{copy} (int id, \hyperlink{structLocation}{Location} loc)
+\begin{DoxyCompactList}\small\item\em Copies an object to a new \hyperlink{structLocation}{Location}. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutil_a8d9a09d5405e5cc87906edc59abbf181}{remove\-Robot\-Target} ()
+\begin{DoxyCompactList}\small\item\em Removes a robot from the simulation. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutil_a0847f03545c0a82374d35395471dd6c9}{remove\-Light\-Source} ()
+\begin{DoxyCompactList}\small\item\em Removes a light from the simulation. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutil_a6a1069f37e4e2f2acc661d44afd43739}{remove\-Obstacle} ()
+\begin{DoxyCompactList}\small\item\em Removes a obstacle from the simulation. \end{DoxyCompactList}\item 
+void \hyperlink{namespaceutil_a9d8909ba437d6f89c2876d197afc9074}{remove\-All\-Robot\-Target} ()
+\begin{DoxyCompactList}\small\item\em Removes all robots. \end{DoxyCompactList}\item 
+void \hyperlink{namespaceutil_a1782859440b46df8dd057a4eb7f98c48}{remove\-All\-Light\-Source} ()
+\begin{DoxyCompactList}\small\item\em Removes all lights. \end{DoxyCompactList}\item 
+void \hyperlink{namespaceutil_a132f470b2b1eedd9898a6084ca79f6b9}{remove\-All\-Obstacle} ()
+\begin{DoxyCompactList}\small\item\em Removes all obstacles. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutil_a236403e5af6e99e02323eb2dfb1cd88b}{open} (std\-::string filename)
+\begin{DoxyCompactList}\small\item\em Loads a simulation from a file. \end{DoxyCompactList}\item 
+bool \hyperlink{namespaceutil_a4d49c61ae370afdb9ea58b4f4316220b}{save} (std\-::string filename)
+\begin{DoxyCompactList}\small\item\em Saves the current state to a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+util namespace, contains helper functions to add and remove robots 
+
+\subsection{Function Documentation}
+\hypertarget{namespaceutil_a2c7639eef5925d9a12a9663fcf09d090}{\index{util@{util}!add\-Moving\-Light\-Source@{add\-Moving\-Light\-Source}}
+\index{add\-Moving\-Light\-Source@{add\-Moving\-Light\-Source}!util@{util}}
+\subsubsection[{add\-Moving\-Light\-Source}]{\setlength{\rightskip}{0pt plus 5cm}bool util\-::add\-Moving\-Light\-Source (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceutil_a2c7639eef5925d9a12a9663fcf09d090}
+
+
+Adds a light to the simulation. 
+
+\begin{DoxyReturn}{Returns}
+true if successful 
+\end{DoxyReturn}
+\hypertarget{namespaceutil_adecaea7e94744f17eb1000727b8c3e73}{\index{util@{util}!add\-Neural\-Network\-Robot\-Target@{add\-Neural\-Network\-Robot\-Target}}
+\index{add\-Neural\-Network\-Robot\-Target@{add\-Neural\-Network\-Robot\-Target}!util@{util}}
+\subsubsection[{add\-Neural\-Network\-Robot\-Target}]{\setlength{\rightskip}{0pt plus 5cm}bool util\-::add\-Neural\-Network\-Robot\-Target (
+\begin{DoxyParamCaption}
+\item[{const {\bf Neural\-Network} \&}]{network}
+\end{DoxyParamCaption}
+)}}\label{namespaceutil_adecaea7e94744f17eb1000727b8c3e73}
+
+
+Adds a neural network robot and a paired target to the simulation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em network} & the network to control the robot \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if successful 
+\end{DoxyReturn}
+\hypertarget{namespaceutil_a79d541c466cd33909ae7169988870aab}{\index{util@{util}!add\-Obstacle@{add\-Obstacle}}
+\index{add\-Obstacle@{add\-Obstacle}!util@{util}}
+\subsubsection[{add\-Obstacle}]{\setlength{\rightskip}{0pt plus 5cm}bool util\-::add\-Obstacle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceutil_a79d541c466cd33909ae7169988870aab}
+
+
+Adds a obstacle to the simulation. 
+
+\begin{DoxyReturn}{Returns}
+true if successful 
+\end{DoxyReturn}
+\hypertarget{namespaceutil_a22f8c077027e25734041006f8d94fd18}{\index{util@{util}!add\-Robot@{add\-Robot}}
+\index{add\-Robot@{add\-Robot}!util@{util}}
+\subsubsection[{add\-Robot}]{\setlength{\rightskip}{0pt plus 5cm}bool util\-::add\-Robot (
+\begin{DoxyParamCaption}
+\item[{int}]{robot\-Type, }
+\item[{int}]{light\-Sensor\-Connection\-Pattern, }
+\item[{int}]{robot\-Sensor\-Connection\-Pattern, }
+\item[{int}]{obstacle\-Sensor\-Connection\-Pattern, }
+\item[{int}]{target\-Sensor\-Connection\-Pattern, }
+\item[{float}]{light\-Sensor\-Scale, }
+\item[{float}]{robot\-Sensor\-Scale, }
+\item[{float}]{obstacle\-Sensor\-Scale, }
+\item[{float}]{target\-Sensor\-Scale, }
+\item[{int}]{initial\-Speed, }
+\item[{std\-::string}]{neural\-Network\-File}
+\end{DoxyParamCaption}
+)}}\label{namespaceutil_a22f8c077027e25734041006f8d94fd18}
+
+
+Adds a robot to the simulation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em robot\-Type} & The type of robot to add. 0 is \hyperlink{classSimpleRobot}{Simple\-Robot}, 1 is \hyperlink{classComplexRobot}{Complex\-Robot}, and 2 is \hyperlink{classNeuralNetworkRobot}{Neural\-Network\-Robot} \\
+\hline
+{\em light\-Sensor\-Connection\-Pattern} & Settings for \hyperlink{classComplexRobot}{Complex\-Robot} light sensor \\
+\hline
+{\em robot\-Sensor\-Connection\-Pattern} & Settings for \hyperlink{classComplexRobot}{Complex\-Robot} robot sensor \\
+\hline
+{\em obstacle\-Sensor\-Connection\-Pattern} & Settings for \hyperlink{classComplexRobot}{Complex\-Robot} obstacle sensor \\
+\hline
+{\em target\-Sensor\-Connection\-Pattern} & Settings for \hyperlink{classComplexRobot}{Complex\-Robot} target sensor \\
+\hline
+{\em light\-Sensor\-Scale} & Settings for \hyperlink{classComplexRobot}{Complex\-Robot} light sensor \\
+\hline
+{\em robot\-Sensor\-Scale} & Settings for \hyperlink{classComplexRobot}{Complex\-Robot} robot sensor \\
+\hline
+{\em obstacle\-Sensor\-Scale} & Settings for \hyperlink{classComplexRobot}{Complex\-Robot} obstacle sensor \\
+\hline
+{\em target\-Sensor\-Scale} & Settings for \hyperlink{classComplexRobot}{Complex\-Robot} target sensor \\
+\hline
+{\em inital\-Speed} & Default speed for \hyperlink{classComplexRobot}{Complex\-Robot} \\
+\hline
+{\em neural\-Network\-File} & File in which neural network is stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if successful 
+\end{DoxyReturn}
+\hypertarget{namespaceutil_ab3eebe9c6924888ecf5d29b2f871fbce}{\index{util@{util}!add\-Robot\-Target@{add\-Robot\-Target}}
+\index{add\-Robot\-Target@{add\-Robot\-Target}!util@{util}}
+\subsubsection[{add\-Robot\-Target}]{\setlength{\rightskip}{0pt plus 5cm}bool util\-::add\-Robot\-Target (
+\begin{DoxyParamCaption}
+\item[{int}]{robot\-Type, }
+\item[{int}]{light\-Sensor\-Connection\-Pattern, }
+\item[{int}]{robot\-Sensor\-Connection\-Pattern, }
+\item[{int}]{obstacle\-Sensor\-Connection\-Pattern, }
+\item[{int}]{target\-Sensor\-Connection\-Pattern, }
+\item[{float}]{light\-Sensor\-Scale, }
+\item[{float}]{robot\-Sensor\-Scale, }
+\item[{float}]{obstacle\-Sensor\-Scale, }
+\item[{float}]{target\-Sensor\-Scale, }
+\item[{int}]{initial\-Speed, }
+\item[{std\-::string}]{neural\-Network\-File}
+\end{DoxyParamCaption}
+)}}\label{namespaceutil_ab3eebe9c6924888ecf5d29b2f871fbce}
+
+
+Adds a robot and paired target to the simulation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em robot\-Type} & The type of robot to add. 0 is \hyperlink{classSimpleRobot}{Simple\-Robot}, 1 is \hyperlink{classComplexRobot}{Complex\-Robot}, and 2 is \hyperlink{classNeuralNetworkRobot}{Neural\-Network\-Robot} \\
+\hline
+{\em light\-Sensor\-Connection\-Pattern} & Settings for \hyperlink{classComplexRobot}{Complex\-Robot} light sensor \\
+\hline
+{\em robot\-Sensor\-Connection\-Pattern} & Settings for \hyperlink{classComplexRobot}{Complex\-Robot} robot sensor \\
+\hline
+{\em obstacle\-Sensor\-Connection\-Pattern} & Settings for \hyperlink{classComplexRobot}{Complex\-Robot} obstacle sensor \\
+\hline
+{\em target\-Sensor\-Connection\-Pattern} & Settings for \hyperlink{classComplexRobot}{Complex\-Robot} target sensor \\
+\hline
+{\em light\-Sensor\-Scale} & Settings for \hyperlink{classComplexRobot}{Complex\-Robot} light sensor \\
+\hline
+{\em robot\-Sensor\-Scale} & Settings for \hyperlink{classComplexRobot}{Complex\-Robot} robot sensor \\
+\hline
+{\em obstacle\-Sensor\-Scale} & Settings for \hyperlink{classComplexRobot}{Complex\-Robot} obstacle sensor \\
+\hline
+{\em target\-Sensor\-Scale} & Settings for \hyperlink{classComplexRobot}{Complex\-Robot} target sensor \\
+\hline
+{\em inital\-Speed} & Default speed for \hyperlink{classComplexRobot}{Complex\-Robot} \\
+\hline
+{\em neural\-Network\-File} & File in which neural network is stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if successful 
+\end{DoxyReturn}
+\hypertarget{namespaceutil_a4db9ace4269226be8f99f3718279dd51}{\index{util@{util}!add\-Stationary\-Light\-Source@{add\-Stationary\-Light\-Source}}
+\index{add\-Stationary\-Light\-Source@{add\-Stationary\-Light\-Source}!util@{util}}
+\subsubsection[{add\-Stationary\-Light\-Source}]{\setlength{\rightskip}{0pt plus 5cm}bool util\-::add\-Stationary\-Light\-Source (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceutil_a4db9ace4269226be8f99f3718279dd51}
+
+
+Adds a light to the simulation. 
+
+\begin{DoxyReturn}{Returns}
+true if successful 
+\end{DoxyReturn}
+\hypertarget{namespaceutil_ab0e8cf018dc107d06862a57d79e80538}{\index{util@{util}!advance@{advance}}
+\index{advance@{advance}!util@{util}}
+\subsubsection[{advance}]{\setlength{\rightskip}{0pt plus 5cm}void util\-::advance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceutil_ab0e8cf018dc107d06862a57d79e80538}
+
+
+Function to update the positions of all objects.  This function is called repeatedly from the simulation, and iterates through the objects and calls their respective update\-Position functions. 
+
+\hypertarget{namespaceutil_a9d724ef3950b1c4f09591c45956215c3}{\index{util@{util}!copy@{copy}}
+\index{copy@{copy}!util@{util}}
+\subsubsection[{copy}]{\setlength{\rightskip}{0pt plus 5cm}bool util\-::copy (
+\begin{DoxyParamCaption}
+\item[{int}]{id, }
+\item[{{\bf Location}}]{loc}
+\end{DoxyParamCaption}
+)}}\label{namespaceutil_a9d724ef3950b1c4f09591c45956215c3}
+
+
+Copies an object to a new \hyperlink{structLocation}{Location}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & the id of the object to copy \\
+\hline
+{\em loc} & the destination \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if successful 
+\end{DoxyReturn}
+\hypertarget{namespaceutil_a07ce92ef6b2053de6e300d9ae17fd9d6}{\index{util@{util}!display@{display}}
+\index{display@{display}!util@{util}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void util\-::display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceutil_a07ce92ef6b2053de6e300d9ae17fd9d6}
+
+
+Function to render all the objects.  This function is called repeatedly from the simulation, and iterates through the objects and calls their respective display functions. 
+
+\hypertarget{namespaceutil_aa562d1964b9fef18a6001d8fed63100d}{\index{util@{util}!get\-Num\-Lights@{get\-Num\-Lights}}
+\index{get\-Num\-Lights@{get\-Num\-Lights}!util@{util}}
+\subsubsection[{get\-Num\-Lights}]{\setlength{\rightskip}{0pt plus 5cm}int util\-::get\-Num\-Lights (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceutil_aa562d1964b9fef18a6001d8fed63100d}
+
+
+Gets the number of lights. 
+
+\begin{DoxyReturn}{Returns}
+The number of lights 
+\end{DoxyReturn}
+\hypertarget{namespaceutil_a63bc8a24e2203d0771fb75432296b06c}{\index{util@{util}!get\-Num\-Obstacles@{get\-Num\-Obstacles}}
+\index{get\-Num\-Obstacles@{get\-Num\-Obstacles}!util@{util}}
+\subsubsection[{get\-Num\-Obstacles}]{\setlength{\rightskip}{0pt plus 5cm}int util\-::get\-Num\-Obstacles (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceutil_a63bc8a24e2203d0771fb75432296b06c}
+
+
+Gets the number of obstacles. 
+
+\begin{DoxyReturn}{Returns}
+The number of obstacles 
+\end{DoxyReturn}
+\hypertarget{namespaceutil_a16b3e2bc651bf6876b111d58ccddad3c}{\index{util@{util}!get\-Num\-Robots\-Targets@{get\-Num\-Robots\-Targets}}
+\index{get\-Num\-Robots\-Targets@{get\-Num\-Robots\-Targets}!util@{util}}
+\subsubsection[{get\-Num\-Robots\-Targets}]{\setlength{\rightskip}{0pt plus 5cm}int util\-::get\-Num\-Robots\-Targets (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceutil_a16b3e2bc651bf6876b111d58ccddad3c}
+
+
+Gets the number of robots/target pairs. 
+
+\begin{DoxyReturn}{Returns}
+The number of robots/target pairs 
+\end{DoxyReturn}
+\hypertarget{namespaceutil_a0f3ef8558c61f7969d479448b9c96c78}{\index{util@{util}!new\-Color@{new\-Color}}
+\index{new\-Color@{new\-Color}!util@{util}}
+\subsubsection[{new\-Color}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Color} util\-::new\-Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceutil_a0f3ef8558c61f7969d479448b9c96c78}
+
+
+Gets a new, unused color. 
+
+\begin{DoxyReturn}{Returns}
+The new color 
+\end{DoxyReturn}
+\hypertarget{namespaceutil_a236403e5af6e99e02323eb2dfb1cd88b}{\index{util@{util}!open@{open}}
+\index{open@{open}!util@{util}}
+\subsubsection[{open}]{\setlength{\rightskip}{0pt plus 5cm}bool util\-::open (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{filename}
+\end{DoxyParamCaption}
+)}}\label{namespaceutil_a236403e5af6e99e02323eb2dfb1cd88b}
+
+
+Loads a simulation from a file. 
+
+\hypertarget{namespaceutil_a1782859440b46df8dd057a4eb7f98c48}{\index{util@{util}!remove\-All\-Light\-Source@{remove\-All\-Light\-Source}}
+\index{remove\-All\-Light\-Source@{remove\-All\-Light\-Source}!util@{util}}
+\subsubsection[{remove\-All\-Light\-Source}]{\setlength{\rightskip}{0pt plus 5cm}void util\-::remove\-All\-Light\-Source (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceutil_a1782859440b46df8dd057a4eb7f98c48}
+
+
+Removes all lights. 
+
+\hypertarget{namespaceutil_a132f470b2b1eedd9898a6084ca79f6b9}{\index{util@{util}!remove\-All\-Obstacle@{remove\-All\-Obstacle}}
+\index{remove\-All\-Obstacle@{remove\-All\-Obstacle}!util@{util}}
+\subsubsection[{remove\-All\-Obstacle}]{\setlength{\rightskip}{0pt plus 5cm}void util\-::remove\-All\-Obstacle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceutil_a132f470b2b1eedd9898a6084ca79f6b9}
+
+
+Removes all obstacles. 
+
+\hypertarget{namespaceutil_a9d8909ba437d6f89c2876d197afc9074}{\index{util@{util}!remove\-All\-Robot\-Target@{remove\-All\-Robot\-Target}}
+\index{remove\-All\-Robot\-Target@{remove\-All\-Robot\-Target}!util@{util}}
+\subsubsection[{remove\-All\-Robot\-Target}]{\setlength{\rightskip}{0pt plus 5cm}void util\-::remove\-All\-Robot\-Target (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceutil_a9d8909ba437d6f89c2876d197afc9074}
+
+
+Removes all robots. 
+
+\hypertarget{namespaceutil_a0847f03545c0a82374d35395471dd6c9}{\index{util@{util}!remove\-Light\-Source@{remove\-Light\-Source}}
+\index{remove\-Light\-Source@{remove\-Light\-Source}!util@{util}}
+\subsubsection[{remove\-Light\-Source}]{\setlength{\rightskip}{0pt plus 5cm}bool util\-::remove\-Light\-Source (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceutil_a0847f03545c0a82374d35395471dd6c9}
+
+
+Removes a light from the simulation. 
+
+\begin{DoxyReturn}{Returns}
+true if successful 
+\end{DoxyReturn}
+\hypertarget{namespaceutil_a6a1069f37e4e2f2acc661d44afd43739}{\index{util@{util}!remove\-Obstacle@{remove\-Obstacle}}
+\index{remove\-Obstacle@{remove\-Obstacle}!util@{util}}
+\subsubsection[{remove\-Obstacle}]{\setlength{\rightskip}{0pt plus 5cm}bool util\-::remove\-Obstacle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceutil_a6a1069f37e4e2f2acc661d44afd43739}
+
+
+Removes a obstacle from the simulation. 
+
+\begin{DoxyReturn}{Returns}
+true if successful 
+\end{DoxyReturn}
+\hypertarget{namespaceutil_a8d9a09d5405e5cc87906edc59abbf181}{\index{util@{util}!remove\-Robot\-Target@{remove\-Robot\-Target}}
+\index{remove\-Robot\-Target@{remove\-Robot\-Target}!util@{util}}
+\subsubsection[{remove\-Robot\-Target}]{\setlength{\rightskip}{0pt plus 5cm}bool util\-::remove\-Robot\-Target (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceutil_a8d9a09d5405e5cc87906edc59abbf181}
+
+
+Removes a robot from the simulation. 
+
+\begin{DoxyReturn}{Returns}
+true if successful 
+\end{DoxyReturn}
+\hypertarget{namespaceutil_aba9dfe2df4467075a8bcbaccbbe65d55}{\index{util@{util}!reset@{reset}}
+\index{reset@{reset}!util@{util}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void util\-::reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{namespaceutil_aba9dfe2df4467075a8bcbaccbbe65d55}
+
+
+Removes all objects and resets to the initial state. 
+
+\hypertarget{namespaceutil_a4d49c61ae370afdb9ea58b4f4316220b}{\index{util@{util}!save@{save}}
+\index{save@{save}!util@{util}}
+\subsubsection[{save}]{\setlength{\rightskip}{0pt plus 5cm}bool util\-::save (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{filename}
+\end{DoxyParamCaption}
+)}}\label{namespaceutil_a4d49c61ae370afdb9ea58b4f4316220b}
+
+
+Saves the current state to a file. 
+

@@ -1,0 +1,9 @@
+# Collision handling
+bool TRANSLATE_REORIENT  = true # Move after hitting something
+bool OPPOSITE_ANGLES     = true # Have the object and the thing it hit turn opposite directions
+
+float TOUCHING_DELTA     = 0.0001
+
+int REORIENT_ANGLE       = 91
+int REORIENT_DISTANCE    = 5
+int MAX_REORIENT_RETRIES = 100

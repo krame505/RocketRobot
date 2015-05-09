@@ -1,0 +1,93 @@
+\hypertarget{configuration_8h}{\section{configuration.\-h File Reference}
+\label{configuration_8h}\index{configuration.\-h@{configuration.\-h}}
+}
+
+
+Interface definitions for configuration file loader.  
+
+
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$unordered\-\_\-map$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structconfigValue}{config\-Value}
+\begin{DoxyCompactList}\small\item\em This struct holds a configuration value of any legal type. \end{DoxyCompactList}\item 
+class \hyperlink{classConfiguration}{Configuration}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{configuration_8h_ad074a97012cd402b5c71597589d1fcc2}{G\-E\-T\-\_\-\-I\-N\-T}(N\-A\-M\-E)~\hyperlink{classConfiguration_a215f1e8eb784f5842ab6282fccb6679d}{Configuration\-::get}()-\/$>$get\-Int\-Config(N\-A\-M\-E)
+\item 
+\#define \hyperlink{configuration_8h_a4a5591d453384563c85a1ee5ca94ec12}{G\-E\-T\-\_\-\-F\-L\-O\-A\-T}(N\-A\-M\-E)~\hyperlink{classConfiguration_a215f1e8eb784f5842ab6282fccb6679d}{Configuration\-::get}()-\/$>$get\-Float\-Config(N\-A\-M\-E)
+\item 
+\#define \hyperlink{configuration_8h_a9b28b0b1d1d7c5f1b1cfd5241f1d511e}{G\-E\-T\-\_\-\-B\-O\-O\-L}(N\-A\-M\-E)~\hyperlink{classConfiguration_a215f1e8eb784f5842ab6282fccb6679d}{Configuration\-::get}()-\/$>$get\-Bool\-Config(N\-A\-M\-E)
+\item 
+\#define \hyperlink{configuration_8h_ad309f6b5536d6eca848e3779c9515d1b}{G\-E\-T\-\_\-\-C\-H\-A\-R}(N\-A\-M\-E)~\hyperlink{classConfiguration_a215f1e8eb784f5842ab6282fccb6679d}{Configuration\-::get}()-\/$>$get\-Char\-Config(N\-A\-M\-E)
+\item 
+\#define \hyperlink{configuration_8h_ae7f5355b60ff97037b8008b7f6d6aa74}{G\-E\-T\-\_\-\-S\-T\-R\-I\-N\-G}(N\-A\-M\-E)~\hyperlink{classConfiguration_a215f1e8eb784f5842ab6282fccb6679d}{Configuration\-::get}()-\/$>$get\-String\-Config(N\-A\-M\-E)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface definitions for configuration file loader. \begin{DoxyAuthor}{Author}
+Lucas Kramer
+\end{DoxyAuthor}
+The format of the config file is a series of lines with the format\par
+ $<$type$>$ $<$name$>$ = $<$value$>$\par
+ Blank lines are allowed, and comments \# can occur at the end of a line. \par
+ Valid types are int, hex, octal, float, bool/boolean, char, and string. Note that int, hex, and octal all create a variable with type int, and only affect how the value is parsed. \par
+ Names can be \mbox{[}A-\/\-Za-\/z\mbox{]}\mbox{[}A-\/\-Za-\/z0-\/9\-\_\--\/\mbox{]}$\ast$, but the recommended usage is all upper case, seperated by underscores. \par
+ The following is a list of valid value formats\-: \begin{TabularC}{4}
+\hline
+{\bfseries Type name} &{\bfseries Format} &{\bfseries Examples} &{\bfseries Notes}  \\\cline{1-4}
+int &\mbox{[}0-\/9\mbox{]}+ &42  \\\cline{1-4}
+hex &(0x)?\mbox{[}0-\/9\-A-\/\-Fa-\/f\mbox{]}+ &0x3\-A\-F4, 0x3af4, 3\-A\-F4 &It is recommended to use the 0x prefix and upper case A-\/\-F  \\\cline{1-4}
+hex &\mbox{[}0-\/7\mbox{]}+ &0123, 123 &It is recommended to use the 0 prefix  \\\cline{1-4}
+float &\mbox{[}0-\/9\mbox{]}+(.\mbox{[}0-\/9\mbox{]}+)? &3, 3.\-14  \\\cline{1-4}
+bool/boolean &true$\vert$false &true, false &It is recommended to use the bool type name  \\\cline{1-4}
+string &"\mbox{[}$^\wedge$"\textbackslash{}n\mbox{]}$\ast$" &\char`\"{}\-Hello, World!  \char`\"{}, \char`\"{}\char`\"{}, \char`\"{}\$\-O\-T\-H\-E\-R\char`\"{} &\$ followed by a variable is expanded to that variable. An actual \$ must be escaped  \\\cline{1-4}
+char &'(\mbox{[}$^\wedge$\textbackslash{}n\textbackslash{}r\textbackslash{}t\mbox{]}$\vert$\textbackslash{}\textbackslash{}n$\vert$\textbackslash{}\textbackslash{}r$\vert$\textbackslash{}\textbackslash{}t)' &'a', 'A', '4', '\textbackslash{}n', '\textbackslash{}t'  \\\cline{1-4}
+\end{TabularC}
+\par
+ In addition to variable settings, it is possible to load other configuration files. This has the syntax\-:\par
+ use $<$filename$>$\par
+ where filename is a string. The path to $<$filename$>$ is with respect to the directory containing the current file -\/ absolute paths are not permitted. When an included file contains a variable with the same name as a value that is already defined, the current behavior is to overwrite the old value. Any value re-\/definition causes a warning. 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{configuration_8h_a9b28b0b1d1d7c5f1b1cfd5241f1d511e}{\index{configuration.\-h@{configuration.\-h}!G\-E\-T\-\_\-\-B\-O\-O\-L@{G\-E\-T\-\_\-\-B\-O\-O\-L}}
+\index{G\-E\-T\-\_\-\-B\-O\-O\-L@{G\-E\-T\-\_\-\-B\-O\-O\-L}!configuration.h@{configuration.\-h}}
+\subsubsection[{G\-E\-T\-\_\-\-B\-O\-O\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-E\-T\-\_\-\-B\-O\-O\-L(
+\begin{DoxyParamCaption}
+\item[{}]{N\-A\-M\-E}
+\end{DoxyParamCaption}
+)~{\bf Configuration\-::get}()-\/$>$get\-Bool\-Config(N\-A\-M\-E)}}\label{configuration_8h_a9b28b0b1d1d7c5f1b1cfd5241f1d511e}
+\hypertarget{configuration_8h_ad309f6b5536d6eca848e3779c9515d1b}{\index{configuration.\-h@{configuration.\-h}!G\-E\-T\-\_\-\-C\-H\-A\-R@{G\-E\-T\-\_\-\-C\-H\-A\-R}}
+\index{G\-E\-T\-\_\-\-C\-H\-A\-R@{G\-E\-T\-\_\-\-C\-H\-A\-R}!configuration.h@{configuration.\-h}}
+\subsubsection[{G\-E\-T\-\_\-\-C\-H\-A\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-E\-T\-\_\-\-C\-H\-A\-R(
+\begin{DoxyParamCaption}
+\item[{}]{N\-A\-M\-E}
+\end{DoxyParamCaption}
+)~{\bf Configuration\-::get}()-\/$>$get\-Char\-Config(N\-A\-M\-E)}}\label{configuration_8h_ad309f6b5536d6eca848e3779c9515d1b}
+\hypertarget{configuration_8h_a4a5591d453384563c85a1ee5ca94ec12}{\index{configuration.\-h@{configuration.\-h}!G\-E\-T\-\_\-\-F\-L\-O\-A\-T@{G\-E\-T\-\_\-\-F\-L\-O\-A\-T}}
+\index{G\-E\-T\-\_\-\-F\-L\-O\-A\-T@{G\-E\-T\-\_\-\-F\-L\-O\-A\-T}!configuration.h@{configuration.\-h}}
+\subsubsection[{G\-E\-T\-\_\-\-F\-L\-O\-A\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-E\-T\-\_\-\-F\-L\-O\-A\-T(
+\begin{DoxyParamCaption}
+\item[{}]{N\-A\-M\-E}
+\end{DoxyParamCaption}
+)~{\bf Configuration\-::get}()-\/$>$get\-Float\-Config(N\-A\-M\-E)}}\label{configuration_8h_a4a5591d453384563c85a1ee5ca94ec12}
+\hypertarget{configuration_8h_ad074a97012cd402b5c71597589d1fcc2}{\index{configuration.\-h@{configuration.\-h}!G\-E\-T\-\_\-\-I\-N\-T@{G\-E\-T\-\_\-\-I\-N\-T}}
+\index{G\-E\-T\-\_\-\-I\-N\-T@{G\-E\-T\-\_\-\-I\-N\-T}!configuration.h@{configuration.\-h}}
+\subsubsection[{G\-E\-T\-\_\-\-I\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-E\-T\-\_\-\-I\-N\-T(
+\begin{DoxyParamCaption}
+\item[{}]{N\-A\-M\-E}
+\end{DoxyParamCaption}
+)~{\bf Configuration\-::get}()-\/$>$get\-Int\-Config(N\-A\-M\-E)}}\label{configuration_8h_ad074a97012cd402b5c71597589d1fcc2}
+\hypertarget{configuration_8h_ae7f5355b60ff97037b8008b7f6d6aa74}{\index{configuration.\-h@{configuration.\-h}!G\-E\-T\-\_\-\-S\-T\-R\-I\-N\-G@{G\-E\-T\-\_\-\-S\-T\-R\-I\-N\-G}}
+\index{G\-E\-T\-\_\-\-S\-T\-R\-I\-N\-G@{G\-E\-T\-\_\-\-S\-T\-R\-I\-N\-G}!configuration.h@{configuration.\-h}}
+\subsubsection[{G\-E\-T\-\_\-\-S\-T\-R\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-E\-T\-\_\-\-S\-T\-R\-I\-N\-G(
+\begin{DoxyParamCaption}
+\item[{}]{N\-A\-M\-E}
+\end{DoxyParamCaption}
+)~{\bf Configuration\-::get}()-\/$>$get\-String\-Config(N\-A\-M\-E)}}\label{configuration_8h_ae7f5355b60ff97037b8008b7f6d6aa74}

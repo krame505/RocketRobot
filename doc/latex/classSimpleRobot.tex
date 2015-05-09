@@ -1,0 +1,111 @@
+\hypertarget{classSimpleRobot}{\section{Simple\-Robot Class Reference}
+\label{classSimpleRobot}\index{Simple\-Robot@{Simple\-Robot}}
+}
+
+
+A simple robot with uncrossed feedback.  
+
+
+
+
+{\ttfamily \#include $<$Simple\-Robot.\-h$>$}
+
+Inheritance diagram for Simple\-Robot\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classSimpleRobot}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSimpleRobot_a9ec65d80f5c030931fc07ab3ee5febb1}{Simple\-Robot} (int radius, \hyperlink{structColor}{Color} color, \hyperlink{structColor}{Color} line\-Color, int target\-Id=-\/1)
+\item 
+\hyperlink{classSimpleRobot_acad9f0762a53f5c294aff27ca2e433ce}{Simple\-Robot} (int radius, \hyperlink{structLocation}{Location} loc, \hyperlink{structColor}{Color} color, \hyperlink{structColor}{Color} line\-Color, int target\-Id=-\/1)
+\item 
+\hyperlink{classSimpleRobot_a3ef1551c84858e2b2c558d15380ced06}{$\sim$\-Simple\-Robot} ()
+\item 
+float \hyperlink{classSimpleRobot_a3dd2f39fc84a1d9fa4384c69255b3e79}{get\-Left\-Speed} (float left\-Light\-Sensor\-Val, float right\-Light\-Sensor\-Val, float left\-Robot\-Sensor\-Val, float right\-Robot\-Sensor\-Val, float left\-Obstacle\-Sensor\-Val, float right\-Obstacle\-Sensor\-Val, float left\-Target\-Sensor\-Val, float right\-Target\-Sensor\-Val)
+\item 
+float \hyperlink{classSimpleRobot_ae94b1dd9d31f2cbeb21fcbd5413a8a3a}{get\-Right\-Speed} (float left\-Light\-Sensor\-Val, float right\-Light\-Sensor\-Val, float left\-Robot\-Sensor\-Val, float right\-Robot\-Sensor\-Val, float left\-Obstacle\-Sensor\-Val, float right\-Obstacle\-Sensor\-Val, float left\-Target\-Sensor\-Val, float right\-Target\-Sensor\-Val)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A simple robot with uncrossed feedback. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classSimpleRobot_a9ec65d80f5c030931fc07ab3ee5febb1}{\index{Simple\-Robot@{Simple\-Robot}!Simple\-Robot@{Simple\-Robot}}
+\index{Simple\-Robot@{Simple\-Robot}!SimpleRobot@{Simple\-Robot}}
+\subsubsection[{Simple\-Robot}]{\setlength{\rightskip}{0pt plus 5cm}Simple\-Robot\-::\-Simple\-Robot (
+\begin{DoxyParamCaption}
+\item[{int}]{radius, }
+\item[{{\bf Color}}]{color, }
+\item[{{\bf Color}}]{line\-Color, }
+\item[{int}]{target\-Id = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}}\label{classSimpleRobot_a9ec65d80f5c030931fc07ab3ee5febb1}
+\hypertarget{classSimpleRobot_acad9f0762a53f5c294aff27ca2e433ce}{\index{Simple\-Robot@{Simple\-Robot}!Simple\-Robot@{Simple\-Robot}}
+\index{Simple\-Robot@{Simple\-Robot}!SimpleRobot@{Simple\-Robot}}
+\subsubsection[{Simple\-Robot}]{\setlength{\rightskip}{0pt plus 5cm}Simple\-Robot\-::\-Simple\-Robot (
+\begin{DoxyParamCaption}
+\item[{int}]{radius, }
+\item[{{\bf Location}}]{loc, }
+\item[{{\bf Color}}]{color, }
+\item[{{\bf Color}}]{line\-Color, }
+\item[{int}]{target\-Id = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}}\label{classSimpleRobot_acad9f0762a53f5c294aff27ca2e433ce}
+\hypertarget{classSimpleRobot_a3ef1551c84858e2b2c558d15380ced06}{\index{Simple\-Robot@{Simple\-Robot}!$\sim$\-Simple\-Robot@{$\sim$\-Simple\-Robot}}
+\index{$\sim$\-Simple\-Robot@{$\sim$\-Simple\-Robot}!SimpleRobot@{Simple\-Robot}}
+\subsubsection[{$\sim$\-Simple\-Robot}]{\setlength{\rightskip}{0pt plus 5cm}Simple\-Robot\-::$\sim$\-Simple\-Robot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSimpleRobot_a3ef1551c84858e2b2c558d15380ced06}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classSimpleRobot_a3dd2f39fc84a1d9fa4384c69255b3e79}{\index{Simple\-Robot@{Simple\-Robot}!get\-Left\-Speed@{get\-Left\-Speed}}
+\index{get\-Left\-Speed@{get\-Left\-Speed}!SimpleRobot@{Simple\-Robot}}
+\subsubsection[{get\-Left\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}float Simple\-Robot\-::get\-Left\-Speed (
+\begin{DoxyParamCaption}
+\item[{float}]{left\-Light\-Sensor\-Val, }
+\item[{float}]{right\-Light\-Sensor\-Val, }
+\item[{float}]{left\-Robot\-Sensor\-Val, }
+\item[{float}]{right\-Robot\-Sensor\-Val, }
+\item[{float}]{left\-Obstacle\-Sensor\-Val, }
+\item[{float}]{right\-Obstacle\-Sensor\-Val, }
+\item[{float}]{left\-Target\-Sensor\-Val, }
+\item[{float}]{right\-Target\-Sensor\-Val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classSimpleRobot_a3dd2f39fc84a1d9fa4384c69255b3e79}
+
+
+Implements \hyperlink{classRobot_a9c96f301ae826e7c535f6b705e44bcd6}{Robot}.
+
+\hypertarget{classSimpleRobot_ae94b1dd9d31f2cbeb21fcbd5413a8a3a}{\index{Simple\-Robot@{Simple\-Robot}!get\-Right\-Speed@{get\-Right\-Speed}}
+\index{get\-Right\-Speed@{get\-Right\-Speed}!SimpleRobot@{Simple\-Robot}}
+\subsubsection[{get\-Right\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}float Simple\-Robot\-::get\-Right\-Speed (
+\begin{DoxyParamCaption}
+\item[{float}]{left\-Light\-Sensor\-Val, }
+\item[{float}]{right\-Light\-Sensor\-Val, }
+\item[{float}]{left\-Robot\-Sensor\-Val, }
+\item[{float}]{right\-Robot\-Sensor\-Val, }
+\item[{float}]{left\-Obstacle\-Sensor\-Val, }
+\item[{float}]{right\-Obstacle\-Sensor\-Val, }
+\item[{float}]{left\-Target\-Sensor\-Val, }
+\item[{float}]{right\-Target\-Sensor\-Val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classSimpleRobot_ae94b1dd9d31f2cbeb21fcbd5413a8a3a}
+
+
+Implements \hyperlink{classRobot_a3289251979084c50b18a6006547d3f95}{Robot}.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{SimpleRobot_8h}{Simple\-Robot.\-h}\item 
+\hyperlink{SimpleRobot_8cpp}{Simple\-Robot.\-cpp}\end{DoxyCompactItemize}

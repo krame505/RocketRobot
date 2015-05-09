@@ -1,0 +1,501 @@
+\hypertarget{classPhysicalObject}{\section{Physical\-Object Class Reference}
+\label{classPhysicalObject}\index{Physical\-Object@{Physical\-Object}}
+}
+
+
+This is a common superclass for all objects.  
+
+
+
+
+{\ttfamily \#include $<$Physical\-Object.\-h$>$}
+
+Inheritance diagram for Physical\-Object\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classPhysicalObject}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPhysicalObject_a2fbf277629a4b9dec946be7241d034f4}{Physical\-Object} (\hyperlink{PhysicalObject_8h_a842c5e2e69277690b064bf363c017980}{Object\-Type} \hyperlink{classPhysicalObject_a59060233e54004b24fc03ed786b46dd3}{object\-Type}, int radius=\hyperlink{configuration_8h_ad074a97012cd402b5c71597589d1fcc2}{G\-E\-T\-\_\-\-I\-N\-T}(\char`\"{}D\-E\-F\-A\-U\-L\-T\-\_\-\-R\-A\-D\-I\-U\-S\char`\"{}), Color color=\hyperlink{structColor}{Color}('?'), bool \hyperlink{classPhysicalObject_a5afc803dac6415f86fcda81983b75e41}{is\-Hitable}=true)
+\item 
+\hyperlink{classPhysicalObject_a9a132760e19b893b51deb542dc53a859}{Physical\-Object} (\hyperlink{PhysicalObject_8h_a842c5e2e69277690b064bf363c017980}{Object\-Type} \hyperlink{classPhysicalObject_a59060233e54004b24fc03ed786b46dd3}{object\-Type}, int max\-Radius, int min\-Radius, \hyperlink{structColor}{Color} color=\hyperlink{structColor}{Color}('?'), bool \hyperlink{classPhysicalObject_a5afc803dac6415f86fcda81983b75e41}{is\-Hitable}=true)
+\item 
+\hyperlink{classPhysicalObject_afc9f843a4c6083587ce2e20a091d0a79}{Physical\-Object} (\hyperlink{PhysicalObject_8h_a842c5e2e69277690b064bf363c017980}{Object\-Type} \hyperlink{classPhysicalObject_a59060233e54004b24fc03ed786b46dd3}{object\-Type}, int radius, \hyperlink{structLocation}{Location} loc, \hyperlink{structColor}{Color} color=\hyperlink{structColor}{Color}('?'), bool \hyperlink{classPhysicalObject_a5afc803dac6415f86fcda81983b75e41}{is\-Hitable}=true)
+\item 
+virtual \hyperlink{classPhysicalObject_a473fb6a285d967b295e4c700c341afe4}{$\sim$\-Physical\-Object} ()
+\item 
+int \hyperlink{classPhysicalObject_a71514ab30d4543a2720fd4ac0f3f6401}{get\-Id} () const 
+\item 
+void \hyperlink{classPhysicalObject_ac130b3a86fa816eee60783e0120b7d98}{set\-Position} (float x, float y)
+\item 
+void \hyperlink{classPhysicalObject_a9c562fb0b7e468d4b6d9a1a429791236}{force\-Set\-Position} (float x, float y)
+\item 
+void \hyperlink{classPhysicalObject_a0ffd9a9890787fdcfe31ebbf2931aff5}{set\-Location} (\hyperlink{structLocation}{Location} loc)
+\item 
+void \hyperlink{classPhysicalObject_a6e580010f7b025beacdee13835c8a726}{reorient} (int angle, float distance)
+\item 
+bool \hyperlink{classPhysicalObject_a2246c1f65d47638f61c2996d477efc6f}{translate} (float distance)
+\item 
+void \hyperlink{classPhysicalObject_a7121bd6642a98adc38e8c3348c4a3e01}{force\-Translate} (float distance)
+\item 
+void \hyperlink{classPhysicalObject_ac78eb70d7b7d24a586e5eed347f3a8d2}{set\-Orientation} (int degrees)
+\item 
+void \hyperlink{classPhysicalObject_ae197cc719763a64d34fc9723458aab01}{set\-Speed} (int pps)
+\item 
+void \hyperlink{classPhysicalObject_a81be6f4317d6813ab0b73ccf00da181a}{set\-Radius} (int radius)
+\item 
+void \hyperlink{classPhysicalObject_a2f5bff48537b44f6f1abd4500c644bc8}{set\-Color} (\hyperlink{structColor}{Color} color)
+\item 
+float \hyperlink{classPhysicalObject_a37bacbedf0b90865403149a1396ee58f}{get\-X\-Position} () const 
+\item 
+float \hyperlink{classPhysicalObject_a95b02cbe019cc2f968eb482487b5db7e}{get\-Y\-Position} () const 
+\item 
+\hyperlink{structLocation}{Location} \hyperlink{classPhysicalObject_a92b2b2addc7f85396c19fc255393e558}{get\-Location} () const 
+\item 
+int \hyperlink{classPhysicalObject_ac6d9bb140bcf0e492a0792e3eadbb3a8}{get\-Orientation} () const 
+\item 
+int \hyperlink{classPhysicalObject_a1f687df65cf05bed55a43edfda87790d}{get\-Speed} () const 
+\item 
+int \hyperlink{classPhysicalObject_a311d08aaa4bc7c863d0349397b187e6c}{get\-Radius} () const 
+\item 
+\hyperlink{structColor}{Color} \hyperlink{classPhysicalObject_aad8e15d2bec5e7c4fd38c2a8335dc0a0}{get\-Color} () const 
+\item 
+void \hyperlink{classPhysicalObject_aa4e04a3becfa1be5b3fea856a2f0c3fb}{point\-To} (const \hyperlink{classPhysicalObject}{Physical\-Object} \&other)
+\item 
+void \hyperlink{classPhysicalObject_abb08525b7fa5fa7f3b936847c28bb630}{rotate} (int degrees)
+\item 
+bool \hyperlink{classPhysicalObject_a2bfa9e53acb308cdbfdda0945a8b1fe3}{has\-Equal\-Position} (const \hyperlink{classPhysicalObject}{Physical\-Object} \&other) const 
+\item 
+bool \hyperlink{classPhysicalObject_a5e2b241c127b7114693736f89cafc9fb}{update\-Position} ()
+\item 
+virtual void \hyperlink{classPhysicalObject_a3005ac0afce838049101db17525f6004}{update} ()
+\item 
+virtual void \hyperlink{classPhysicalObject_a4fc8c0c62b8e12a63ebdf13136d577ac}{update\-Members} ()
+\item 
+virtual void \hyperlink{classPhysicalObject_a6a0326df3efc0a1ea23892e3fcd4b11e}{display} ()
+\item 
+virtual bool \hyperlink{classPhysicalObject_a400ba3545479ebbf8b1b4a046906e562}{handle\-Collision} (int other\-Id, bool was\-Hit)=0
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{PhysicalObject_8h_a842c5e2e69277690b064bf363c017980}{Object\-Type} \hyperlink{classPhysicalObject_a59060233e54004b24fc03ed786b46dd3}{object\-Type}
+\item 
+const bool \hyperlink{classPhysicalObject_a5afc803dac6415f86fcda81983b75e41}{is\-Hitable}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{structLocation}{Location} \hyperlink{classPhysicalObject_ae184c1c797f3dd8786ca266019a6f283}{find\-Open\-Location} (int radius)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is a common superclass for all objects. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classPhysicalObject_a2fbf277629a4b9dec946be7241d034f4}{\index{Physical\-Object@{Physical\-Object}!Physical\-Object@{Physical\-Object}}
+\index{Physical\-Object@{Physical\-Object}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{Physical\-Object}]{\setlength{\rightskip}{0pt plus 5cm}Physical\-Object\-::\-Physical\-Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Object\-Type}}]{object\-Type, }
+\item[{int}]{radius = {\ttfamily {\bf G\-E\-T\-\_\-\-I\-N\-T}(\char`\"{}DEFAULT\-\_\-RADIUS\char`\"{})}, }
+\item[{{\bf Color}}]{color = {\ttfamily {\bf Color}('?')}, }
+\item[{bool}]{is\-Hitable = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{classPhysicalObject_a2fbf277629a4b9dec946be7241d034f4}
+\hypertarget{classPhysicalObject_a9a132760e19b893b51deb542dc53a859}{\index{Physical\-Object@{Physical\-Object}!Physical\-Object@{Physical\-Object}}
+\index{Physical\-Object@{Physical\-Object}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{Physical\-Object}]{\setlength{\rightskip}{0pt plus 5cm}Physical\-Object\-::\-Physical\-Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Object\-Type}}]{object\-Type, }
+\item[{int}]{max\-Radius, }
+\item[{int}]{min\-Radius, }
+\item[{{\bf Color}}]{color = {\ttfamily {\bf Color}('?')}, }
+\item[{bool}]{is\-Hitable = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{classPhysicalObject_a9a132760e19b893b51deb542dc53a859}
+\hypertarget{classPhysicalObject_afc9f843a4c6083587ce2e20a091d0a79}{\index{Physical\-Object@{Physical\-Object}!Physical\-Object@{Physical\-Object}}
+\index{Physical\-Object@{Physical\-Object}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{Physical\-Object}]{\setlength{\rightskip}{0pt plus 5cm}Physical\-Object\-::\-Physical\-Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Object\-Type}}]{object\-Type, }
+\item[{int}]{radius, }
+\item[{{\bf Location}}]{loc, }
+\item[{{\bf Color}}]{color = {\ttfamily {\bf Color}('?')}, }
+\item[{bool}]{is\-Hitable = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{classPhysicalObject_afc9f843a4c6083587ce2e20a091d0a79}
+\hypertarget{classPhysicalObject_a473fb6a285d967b295e4c700c341afe4}{\index{Physical\-Object@{Physical\-Object}!$\sim$\-Physical\-Object@{$\sim$\-Physical\-Object}}
+\index{$\sim$\-Physical\-Object@{$\sim$\-Physical\-Object}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{$\sim$\-Physical\-Object}]{\setlength{\rightskip}{0pt plus 5cm}Physical\-Object\-::$\sim$\-Physical\-Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classPhysicalObject_a473fb6a285d967b295e4c700c341afe4}
+This is the class destructor, it is implemented by all subclasses. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classPhysicalObject_a6a0326df3efc0a1ea23892e3fcd4b11e}{\index{Physical\-Object@{Physical\-Object}!display@{display}}
+\index{display@{display}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void Physical\-Object\-::display (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classPhysicalObject_a6a0326df3efc0a1ea23892e3fcd4b11e}
+This is implemented by each class, normally just calls display\-As\-Circle. \begin{DoxySeeAlso}{See Also}
+display\-As\-Circle() 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \hyperlink{classRobot_a079c44b63ede22b1b6be4297934886da}{Robot}, and \hyperlink{classLightSource_a2148117298a6bb0d60dcfb3bd99700db}{Light\-Source}.
+
+\hypertarget{classPhysicalObject_ae184c1c797f3dd8786ca266019a6f283}{\index{Physical\-Object@{Physical\-Object}!find\-Open\-Location@{find\-Open\-Location}}
+\index{find\-Open\-Location@{find\-Open\-Location}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{find\-Open\-Location}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Location} Physical\-Object\-::find\-Open\-Location (
+\begin{DoxyParamCaption}
+\item[{int}]{radius}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classPhysicalObject_ae184c1c797f3dd8786ca266019a6f283}
+This function finds an open \hyperlink{structLocation}{Location} to place the object 
+\begin{DoxyParams}{Parameters}
+{\em radius} & The radius of the object \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPhysicalObject_a9c562fb0b7e468d4b6d9a1a429791236}{\index{Physical\-Object@{Physical\-Object}!force\-Set\-Position@{force\-Set\-Position}}
+\index{force\-Set\-Position@{force\-Set\-Position}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{force\-Set\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void Physical\-Object\-::force\-Set\-Position (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y}
+\end{DoxyParamCaption}
+)}}\label{classPhysicalObject_a9c562fb0b7e468d4b6d9a1a429791236}
+Sets the position for the object. It does not throw an exception on invalid input. 
+\begin{DoxyParams}{Parameters}
+{\em x} & position in pixels \\
+\hline
+{\em y} & position in pixels \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPhysicalObject_a7121bd6642a98adc38e8c3348c4a3e01}{\index{Physical\-Object@{Physical\-Object}!force\-Translate@{force\-Translate}}
+\index{force\-Translate@{force\-Translate}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{force\-Translate}]{\setlength{\rightskip}{0pt plus 5cm}void Physical\-Object\-::force\-Translate (
+\begin{DoxyParamCaption}
+\item[{float}]{distance}
+\end{DoxyParamCaption}
+)}}\label{classPhysicalObject_a7121bd6642a98adc38e8c3348c4a3e01}
+Translates without calling handle\-Collision. This may cause objects to overlap 
+\begin{DoxyParams}{Parameters}
+{\em distance} & Distance to move in pixels \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPhysicalObject_aad8e15d2bec5e7c4fd38c2a8335dc0a0}{\index{Physical\-Object@{Physical\-Object}!get\-Color@{get\-Color}}
+\index{get\-Color@{get\-Color}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{get\-Color}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Color} Physical\-Object\-::get\-Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classPhysicalObject_aad8e15d2bec5e7c4fd38c2a8335dc0a0}
+Returns the color of the object \begin{DoxyReturn}{Returns}
+color 
+\end{DoxyReturn}
+\hypertarget{classPhysicalObject_a71514ab30d4543a2720fd4ac0f3f6401}{\index{Physical\-Object@{Physical\-Object}!get\-Id@{get\-Id}}
+\index{get\-Id@{get\-Id}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{get\-Id}]{\setlength{\rightskip}{0pt plus 5cm}int Physical\-Object\-::get\-Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classPhysicalObject_a71514ab30d4543a2720fd4ac0f3f6401}
+Getter function for the object's id. \begin{DoxyReturn}{Returns}
+The object's id 
+\end{DoxyReturn}
+\hypertarget{classPhysicalObject_a92b2b2addc7f85396c19fc255393e558}{\index{Physical\-Object@{Physical\-Object}!get\-Location@{get\-Location}}
+\index{get\-Location@{get\-Location}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{get\-Location}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Location} Physical\-Object\-::get\-Location (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classPhysicalObject_a92b2b2addc7f85396c19fc255393e558}
+Returns the x and y \hyperlink{structLocation}{Location} of the object in pixels in a struct \begin{DoxySeeAlso}{See Also}
+\hyperlink{structLocation}{Location} 
+\end{DoxySeeAlso}
+\hypertarget{classPhysicalObject_ac6d9bb140bcf0e492a0792e3eadbb3a8}{\index{Physical\-Object@{Physical\-Object}!get\-Orientation@{get\-Orientation}}
+\index{get\-Orientation@{get\-Orientation}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{get\-Orientation}]{\setlength{\rightskip}{0pt plus 5cm}int Physical\-Object\-::get\-Orientation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classPhysicalObject_ac6d9bb140bcf0e492a0792e3eadbb3a8}
+Returns the orientation of the object in degrees \begin{DoxyReturn}{Returns}
+orientation in degrees 
+\end{DoxyReturn}
+\hypertarget{classPhysicalObject_a311d08aaa4bc7c863d0349397b187e6c}{\index{Physical\-Object@{Physical\-Object}!get\-Radius@{get\-Radius}}
+\index{get\-Radius@{get\-Radius}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{get\-Radius}]{\setlength{\rightskip}{0pt plus 5cm}int Physical\-Object\-::get\-Radius (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classPhysicalObject_a311d08aaa4bc7c863d0349397b187e6c}
+Returns the radius of the object \begin{DoxyReturn}{Returns}
+radius 
+\end{DoxyReturn}
+\hypertarget{classPhysicalObject_a1f687df65cf05bed55a43edfda87790d}{\index{Physical\-Object@{Physical\-Object}!get\-Speed@{get\-Speed}}
+\index{get\-Speed@{get\-Speed}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{get\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}int Physical\-Object\-::get\-Speed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classPhysicalObject_a1f687df65cf05bed55a43edfda87790d}
+Returns the speed of the object \begin{DoxyReturn}{Returns}
+speed in pixels per second 
+\end{DoxyReturn}
+\hypertarget{classPhysicalObject_a37bacbedf0b90865403149a1396ee58f}{\index{Physical\-Object@{Physical\-Object}!get\-X\-Position@{get\-X\-Position}}
+\index{get\-X\-Position@{get\-X\-Position}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{get\-X\-Position}]{\setlength{\rightskip}{0pt plus 5cm}float Physical\-Object\-::get\-X\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classPhysicalObject_a37bacbedf0b90865403149a1396ee58f}
+Returns the x position in pixels of the object \begin{DoxyReturn}{Returns}
+x position, horizontal from left 
+\end{DoxyReturn}
+\hypertarget{classPhysicalObject_a95b02cbe019cc2f968eb482487b5db7e}{\index{Physical\-Object@{Physical\-Object}!get\-Y\-Position@{get\-Y\-Position}}
+\index{get\-Y\-Position@{get\-Y\-Position}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{get\-Y\-Position}]{\setlength{\rightskip}{0pt plus 5cm}float Physical\-Object\-::get\-Y\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classPhysicalObject_a95b02cbe019cc2f968eb482487b5db7e}
+Returns the y position in pixels of the object \begin{DoxyReturn}{Returns}
+y position, vertical from bottom 
+\end{DoxyReturn}
+\hypertarget{classPhysicalObject_a400ba3545479ebbf8b1b4a046906e562}{\index{Physical\-Object@{Physical\-Object}!handle\-Collision@{handle\-Collision}}
+\index{handle\-Collision@{handle\-Collision}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{handle\-Collision}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Physical\-Object\-::handle\-Collision (
+\begin{DoxyParamCaption}
+\item[{int}]{other\-Id, }
+\item[{bool}]{was\-Hit}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classPhysicalObject_a400ba3545479ebbf8b1b4a046906e562}
+This is implemented by each class. It controls the objects behavior on collision during translate, normally just calls reorient. 
+\begin{DoxyParams}{Parameters}
+{\em other\-Id} & The id of the object it hit, or -\/1 for a wall \\
+\hline
+{\em was\-Hit} & true if the object hit somthing, false if hit by somthing (see translate) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if objects were added or removed 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classPhysicalObject_a6e580010f7b025beacdee13835c8a726}{reorient()} 
+\end{DoxySeeAlso}
+
+
+Implemented in \hyperlink{classRobot_a94d8b5083b9426e3769a5f84f310093e}{Robot}, \hyperlink{classLightSource_a6c0da63e11edd3f108c9fe8c2a9dfd52}{Light\-Source}, \hyperlink{classObstacle_a6ea72857ac6d643be7bb3bd3a1a30995}{Obstacle}, and \hyperlink{classTarget_a04dcb816902d80f21c83ed65d44c7bed}{Target}.
+
+\hypertarget{classPhysicalObject_a2bfa9e53acb308cdbfdda0945a8b1fe3}{\index{Physical\-Object@{Physical\-Object}!has\-Equal\-Position@{has\-Equal\-Position}}
+\index{has\-Equal\-Position@{has\-Equal\-Position}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{has\-Equal\-Position}]{\setlength{\rightskip}{0pt plus 5cm}bool Physical\-Object\-::has\-Equal\-Position (
+\begin{DoxyParamCaption}
+\item[{const {\bf Physical\-Object} \&}]{other}
+\end{DoxyParamCaption}
+) const}}\label{classPhysicalObject_a2bfa9e53acb308cdbfdda0945a8b1fe3}
+This member function checks when two objects are at the same \hyperlink{structLocation}{Location}, it has one parameter 
+\begin{DoxyParams}{Parameters}
+{\em other} & The object to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean value that is true when objects are overlapping 
+\end{DoxyReturn}
+\hypertarget{classPhysicalObject_aa4e04a3becfa1be5b3fea856a2f0c3fb}{\index{Physical\-Object@{Physical\-Object}!point\-To@{point\-To}}
+\index{point\-To@{point\-To}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{point\-To}]{\setlength{\rightskip}{0pt plus 5cm}void Physical\-Object\-::point\-To (
+\begin{DoxyParamCaption}
+\item[{const {\bf Physical\-Object} \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{classPhysicalObject_aa4e04a3becfa1be5b3fea856a2f0c3fb}
+Calculates the direction of the object is facing towards the target object based on position of the two objects using the math function atan2 
+\begin{DoxyParams}{Parameters}
+{\em other} & A \hyperlink{classPhysicalObject}{Physical\-Object} class pointer \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPhysicalObject_a6e580010f7b025beacdee13835c8a726}{\index{Physical\-Object@{Physical\-Object}!reorient@{reorient}}
+\index{reorient@{reorient}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{reorient}]{\setlength{\rightskip}{0pt plus 5cm}void Physical\-Object\-::reorient (
+\begin{DoxyParamCaption}
+\item[{int}]{angle, }
+\item[{float}]{distance}
+\end{DoxyParamCaption}
+)}}\label{classPhysicalObject_a6e580010f7b025beacdee13835c8a726}
+This function can be called by subclasses when handleing a collision. This causes the robot to rotate by the specified amount, and then translate if that is enabled in the configuration. Since translating could cause another collision, this could call back to reorient, causing infinite recusion in some cases. To prevent this, the function ommits the translate if it is more than M\-A\-X\-\_\-\-R\-E\-O\-R\-I\-E\-N\-T\-\_\-\-R\-E\-T\-R\-I\-E\-S deep in recursive calls, set in the configuration 
+\begin{DoxyParams}{Parameters}
+{\em angle} & Angle to rotate in degrees \\
+\hline
+{\em distance} & Distance to move in pixels \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPhysicalObject_abb08525b7fa5fa7f3b936847c28bb630}{\index{Physical\-Object@{Physical\-Object}!rotate@{rotate}}
+\index{rotate@{rotate}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{rotate}]{\setlength{\rightskip}{0pt plus 5cm}void Physical\-Object\-::rotate (
+\begin{DoxyParamCaption}
+\item[{int}]{degrees}
+\end{DoxyParamCaption}
+)}}\label{classPhysicalObject_abb08525b7fa5fa7f3b936847c28bb630}
+This function increments the object's orientation 
+\begin{DoxyParams}{Parameters}
+{\em degrees} & Angle to be incremented clockwise. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Input} & must be within (-\/360,360) \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{classPhysicalObject_a2f5bff48537b44f6f1abd4500c644bc8}{\index{Physical\-Object@{Physical\-Object}!set\-Color@{set\-Color}}
+\index{set\-Color@{set\-Color}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{set\-Color}]{\setlength{\rightskip}{0pt plus 5cm}void Physical\-Object\-::set\-Color (
+\begin{DoxyParamCaption}
+\item[{{\bf Color}}]{color}
+\end{DoxyParamCaption}
+)}}\label{classPhysicalObject_a2f5bff48537b44f6f1abd4500c644bc8}
+Set a new color for the object. 
+\begin{DoxyParams}{Parameters}
+{\em color} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{structColor}{Color} 
+\end{DoxySeeAlso}
+\hypertarget{classPhysicalObject_a0ffd9a9890787fdcfe31ebbf2931aff5}{\index{Physical\-Object@{Physical\-Object}!set\-Location@{set\-Location}}
+\index{set\-Location@{set\-Location}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{set\-Location}]{\setlength{\rightskip}{0pt plus 5cm}void Physical\-Object\-::set\-Location (
+\begin{DoxyParamCaption}
+\item[{{\bf Location}}]{loc}
+\end{DoxyParamCaption}
+)}}\label{classPhysicalObject_a0ffd9a9890787fdcfe31ebbf2931aff5}
+Sets the position for the object for the object 
+\begin{DoxyParams}{Parameters}
+{\em loc} & A struct of the x,y \hyperlink{structLocation}{Location} in pixels \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{classPhysicalObject_ac130b3a86fa816eee60783e0120b7d98}{set\-Position} 
+\end{DoxySeeAlso}
+\hypertarget{classPhysicalObject_ac78eb70d7b7d24a586e5eed347f3a8d2}{\index{Physical\-Object@{Physical\-Object}!set\-Orientation@{set\-Orientation}}
+\index{set\-Orientation@{set\-Orientation}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{set\-Orientation}]{\setlength{\rightskip}{0pt plus 5cm}void Physical\-Object\-::set\-Orientation (
+\begin{DoxyParamCaption}
+\item[{int}]{degrees}
+\end{DoxyParamCaption}
+)}}\label{classPhysicalObject_ac78eb70d7b7d24a586e5eed347f3a8d2}
+Sets the absolute orientation for an object 
+\begin{DoxyParams}{Parameters}
+{\em degrees} & New angle for the object in degrees clockwise of North. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPhysicalObject_ac130b3a86fa816eee60783e0120b7d98}{\index{Physical\-Object@{Physical\-Object}!set\-Position@{set\-Position}}
+\index{set\-Position@{set\-Position}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{set\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void Physical\-Object\-::set\-Position (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y}
+\end{DoxyParamCaption}
+)}}\label{classPhysicalObject_ac130b3a86fa816eee60783e0120b7d98}
+Sets the position for the object 
+\begin{DoxyParams}{Parameters}
+{\em x} & x position in pixels \\
+\hline
+{\em y} & y position in pixels \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPhysicalObject_a81be6f4317d6813ab0b73ccf00da181a}{\index{Physical\-Object@{Physical\-Object}!set\-Radius@{set\-Radius}}
+\index{set\-Radius@{set\-Radius}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{set\-Radius}]{\setlength{\rightskip}{0pt plus 5cm}void Physical\-Object\-::set\-Radius (
+\begin{DoxyParamCaption}
+\item[{int}]{radius}
+\end{DoxyParamCaption}
+)}}\label{classPhysicalObject_a81be6f4317d6813ab0b73ccf00da181a}
+Set the radius of the object 
+\begin{DoxyParams}{Parameters}
+{\em radius} & the new radius in pixels \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPhysicalObject_ae197cc719763a64d34fc9723458aab01}{\index{Physical\-Object@{Physical\-Object}!set\-Speed@{set\-Speed}}
+\index{set\-Speed@{set\-Speed}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{set\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}void Physical\-Object\-::set\-Speed (
+\begin{DoxyParamCaption}
+\item[{int}]{pps}
+\end{DoxyParamCaption}
+)}}\label{classPhysicalObject_ae197cc719763a64d34fc9723458aab01}
+Sets the speed of an object 
+\begin{DoxyParams}{Parameters}
+{\em pps} & The new speed in pixels per second \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPhysicalObject_a2246c1f65d47638f61c2996d477efc6f}{\index{Physical\-Object@{Physical\-Object}!translate@{translate}}
+\index{translate@{translate}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{translate}]{\setlength{\rightskip}{0pt plus 5cm}bool Physical\-Object\-::translate (
+\begin{DoxyParamCaption}
+\item[{float}]{distance}
+\end{DoxyParamCaption}
+)}}\label{classPhysicalObject_a2246c1f65d47638f61c2996d477efc6f}
+Translates in the current direction, and calls handle\-Collision where needed 
+\begin{DoxyParams}{Parameters}
+{\em distance} & Distance to move in pixels \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if objects were added or removed when any collisions were handled. This is to allow the position update function to break out of the loop when objects are removed, to prevent trying to update objects that no longer exist 
+\end{DoxyReturn}
+\hypertarget{classPhysicalObject_a3005ac0afce838049101db17525f6004}{\index{Physical\-Object@{Physical\-Object}!update@{update}}
+\index{update@{update}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Physical\-Object\-::update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classPhysicalObject_a3005ac0afce838049101db17525f6004}
+This is implemented by each class, and performs random updates, e.\-g. point toward target 
+
+Reimplemented in \hyperlink{classRobot_adc34eec22821c2dce23904a5ea75cf13}{Robot}.
+
+\hypertarget{classPhysicalObject_a4fc8c0c62b8e12a63ebdf13136d577ac}{\index{Physical\-Object@{Physical\-Object}!update\-Members@{update\-Members}}
+\index{update\-Members@{update\-Members}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{update\-Members}]{\setlength{\rightskip}{0pt plus 5cm}void Physical\-Object\-::update\-Members (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classPhysicalObject_a4fc8c0c62b8e12a63ebdf13136d577ac}
+This is implemented by each class, and perfoms updates such as setting the position of sub-\/objects 
+
+Reimplemented in \hyperlink{classRobot_a6f8e6aaedcb7c130d37b5e653faea070}{Robot}.
+
+\hypertarget{classPhysicalObject_a5e2b241c127b7114693736f89cafc9fb}{\index{Physical\-Object@{Physical\-Object}!update\-Position@{update\-Position}}
+\index{update\-Position@{update\-Position}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{update\-Position}]{\setlength{\rightskip}{0pt plus 5cm}bool Physical\-Object\-::update\-Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPhysicalObject_a5e2b241c127b7114693736f89cafc9fb}
+This member function uses the speed and time to update the \hyperlink{structLocation}{Location} \begin{DoxyReturn}{Returns}
+true if objects were added or removed 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classPhysicalObject_a5afc803dac6415f86fcda81983b75e41}{\index{Physical\-Object@{Physical\-Object}!is\-Hitable@{is\-Hitable}}
+\index{is\-Hitable@{is\-Hitable}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{is\-Hitable}]{\setlength{\rightskip}{0pt plus 5cm}const bool Physical\-Object\-::is\-Hitable}}\label{classPhysicalObject_a5afc803dac6415f86fcda81983b75e41}
+\hypertarget{classPhysicalObject_a59060233e54004b24fc03ed786b46dd3}{\index{Physical\-Object@{Physical\-Object}!object\-Type@{object\-Type}}
+\index{object\-Type@{object\-Type}!PhysicalObject@{Physical\-Object}}
+\subsubsection[{object\-Type}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Object\-Type} Physical\-Object\-::object\-Type}}\label{classPhysicalObject_a59060233e54004b24fc03ed786b46dd3}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{PhysicalObject_8h}{Physical\-Object.\-h}\item 
+\hyperlink{PhysicalObject_8cpp}{Physical\-Object.\-cpp}\end{DoxyCompactItemize}

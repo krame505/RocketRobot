@@ -1,0 +1,3 @@
+#/bin/bash
+FLAGS="-DOPTIMIZE_SIMULATION bool true -DPRINT_POOL bool false -DPOST_COLLISION_PAUSE int 0 $@"
+../bin/gorobot $FLAGS
