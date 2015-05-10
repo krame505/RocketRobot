@@ -1,5 +1,5 @@
 # TODO items, by category
-## User interface / graphjcs
+## User interface / graphics
 * Reset button gets split into 'reset' and 'new random setup' buttons, add clear button
   * Need to start object panels collapsed to fit this
 * Fix window to be resizeable, work with full screen
