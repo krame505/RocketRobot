@@ -13,3 +13,5 @@
 
 ## Project/general
 * Fix documentation to include source for .cpp files
+* On-line documentation is really slow to load
+  * Create gh-pages branch instead of using htmlpreview
