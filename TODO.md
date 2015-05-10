@@ -10,3 +10,6 @@
 * Modify collisions behavior?
 * Possible bug in wall detection?
 * More advanced network support - maybe feed-back?
+
+## Project/general
+* Fix documentation to include source for .cpp files
