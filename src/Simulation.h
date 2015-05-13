@@ -18,21 +18,6 @@
 
 class Simulation : public BaseGfxApp {
 public:
-  enum UIControlType {
-    UI_QUIT = 0,
-    UI_START = 1,
-    UI_PAUSE = 2,
-    UI_RESUME = 3,
-    UI_RESET = 4,
-    UI_ADD_RT = 5,
-    UI_REMOVE_RT = 6,
-    UI_REMOVE_ALL_RT = 7,
-    UI_ADD_O = 8,
-    UI_REMOVE_O = 9,
-    UI_REMOVE_ALL_O = 10,
-    UI_REFRESH_SETTINGS_O = 11
-  };
-
   /**
    * \brief The constructor for the Simulation class
    * \param argc The number of command-line arguments
@@ -148,12 +133,16 @@ public:
   void start(int);
   void pause(int);
   void resume(int);
-  void reinit(int);
+  void reset(int);
+  void clear(int);
+  void random(int);
 
   static void s_start(int);
   static void s_pause(int);
   static void s_resume(int);
-  static void s_reinit(int);
+  static void s_reset(int);
+  static void s_clear(int);
+  static void s_random(int);
 
   static void s_addRobotTarget(int);
   static void s_addRobot(int);
@@ -197,6 +186,21 @@ private:
    */
   void showStats();
 
+  /**
+   * \brief Expands and collapses panels to fit the window
+   */
+  void updateUI();
+
+  /**
+   * \brief Organizes a vector of panels.  Helper for updateUI
+   * \param panels a vector of panels to organize
+   * \param panelsOpen a vector of bools of the previous state of the panels
+   * \param maxOpen the maximum number of panels that can be open together
+   */
+  void organizePanels(const std::vector<GLUI_Rollout*> &panels,
+                      std::vector<bool> &panelsOpen,
+                      int maxOpen);
+
   static Simulation* s_currentApp;
 
   bool isPaused;
@@ -220,9 +224,14 @@ private:
 
   GLUI_EditText *simulationFileBrowser;
   GLUI_EditText *neuralNetworkFileBrowser;
-  GLUI_Panel *messageBox;
+  GLUI_Rollout *messageBox;
   std::vector<GLUI_StaticText*> messages;
   GLUI_Panel *statsBox;
+  std::vector<GLUI_Rollout*> controls;
+  std::vector<GLUI_Rollout*> settings;
+  std::vector<bool> controlsOpen;
+  std::vector<bool> settingsOpen;
+
   GLUI_StaticText *radiusText;
   GLUI_StaticText *LocationText;
   GLUI_StaticText *orientationText;

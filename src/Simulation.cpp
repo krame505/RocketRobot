@@ -59,14 +59,17 @@ Simulation::Simulation(int argc, char* argv[]) :
 
   //creates a basic UI panel with quit button
   GLUI_Panel *toolPanel = new GLUI_Panel(m_glui, "Control Panel");
-  m_glui->add_button_to_panel(toolPanel, "Start", UI_START, (GLUI_Update_CB)s_start);
-  m_glui->add_button_to_panel(toolPanel, "Pause", UI_PAUSE, (GLUI_Update_CB)s_pause);
-  m_glui->add_button_to_panel(toolPanel, "Resume", UI_RESUME, (GLUI_Update_CB)s_resume);
-  m_glui->add_button_to_panel(toolPanel, "Reset", UI_RESET, (GLUI_Update_CB)s_reinit);
-  m_glui->add_button_to_panel(toolPanel, "Quit", UI_QUIT, (GLUI_Update_CB)exit);
-  m_glui->add_button_to_panel(toolPanel, "Refresh settings", UI_REFRESH_SETTINGS_O,
-                              (GLUI_Update_CB)s_refreshConfiguration);
-  GLUI_Panel *simulationFiles = new GLUI_Rollout(m_glui, "Open/save simulation");
+  m_glui->add_button_to_panel(toolPanel, "Start", 0, (GLUI_Update_CB)s_start);
+  m_glui->add_button_to_panel(toolPanel, "Pause", 0, (GLUI_Update_CB)s_pause);
+  m_glui->add_button_to_panel(toolPanel, "Resume", 0, (GLUI_Update_CB)s_resume);
+  m_glui->add_button_to_panel(toolPanel, "Reset", 0, (GLUI_Update_CB)s_reset);
+  m_glui->add_button_to_panel(toolPanel, "Clear", 0, (GLUI_Update_CB)s_clear);
+  m_glui->add_button_to_panel(toolPanel, "New random", 0, (GLUI_Update_CB)s_random);
+  m_glui->add_button_to_panel(toolPanel, "Quit", 0, (GLUI_Update_CB)exit);
+  m_glui->add_button_to_panel(toolPanel, "Refresh settings", 0, (GLUI_Update_CB)s_refreshConfiguration);
+  GLUI_Rollout *simulationFiles = new GLUI_Rollout(m_glui, "Open/save simulation");
+  controls.push_back(simulationFiles);
+  controlsOpen.push_back(true);
   char *oldSimulationFile = simulationFile;
   simulationFile = new char[PATH_MAX];
   if (oldSimulationFile != NULL)
@@ -75,19 +78,15 @@ Simulation::Simulation(int argc, char* argv[]) :
     m_glui->add_edittext_to_panel(simulationFiles, "File name");
   simulationFileBrowser->set_text(simulationFile);
   simulationFileBrowser->set_w(150);
-  m_glui->add_button_to_panel(simulationFiles, "Open", UI_RESET, (GLUI_Update_CB)s_open);
-  m_glui->add_button_to_panel(simulationFiles, "Save", UI_RESET, (GLUI_Update_CB)s_save);
-  GLUI_Panel *robots = new GLUI_Rollout(m_glui, GET_BOOL("ENABLE_TARGETS")?
-                                      "Number of robots/targets" : "Number of robots");
-  if (GET_BOOL("ENABLE_TARGETS")) {
-    m_glui->add_button_to_panel(robots, "+ With target", UI_ADD_RT, (GLUI_Update_CB)s_addRobotTarget);
-    m_glui->add_button_to_panel(robots, "+ No target", UI_ADD_RT, (GLUI_Update_CB)s_addRobot);
-  }
-  else {
-    m_glui->add_button_to_panel(robots, "+", UI_ADD_RT, (GLUI_Update_CB)s_addRobot);
-  }
-  m_glui->add_button_to_panel(robots, "-", UI_REMOVE_RT, (GLUI_Update_CB)s_removeRobotTarget);
-  m_glui->add_button_to_panel(robots, "Remove all", UI_REMOVE_ALL_RT, (GLUI_Update_CB)s_removeAllRobotTarget);
+  m_glui->add_button_to_panel(simulationFiles, "Open", 0, (GLUI_Update_CB)s_open);
+  m_glui->add_button_to_panel(simulationFiles, "Save", 0, (GLUI_Update_CB)s_save);
+  GLUI_Rollout *robots = new GLUI_Rollout(m_glui, "Number of robots/targets", true);
+  controls.push_back(robots);
+  controlsOpen.push_back(true);
+  m_glui->add_button_to_panel(robots, "+ With target", 0, (GLUI_Update_CB)s_addRobotTarget);
+  m_glui->add_button_to_panel(robots, "+ No target", 0, (GLUI_Update_CB)s_addRobot);
+  m_glui->add_button_to_panel(robots, "-", 0, (GLUI_Update_CB)s_removeRobotTarget);
+  m_glui->add_button_to_panel(robots, "Remove all", 0, (GLUI_Update_CB)s_removeAllRobotTarget);
   GLUI_Panel *robotTypePanel = new GLUI_Panel(robots, "New robot type");
   GLUI_RadioGroup *robotTypeRG =
     m_glui->add_radiogroup_to_panel(robotTypePanel, &robotType);
@@ -95,15 +94,19 @@ Simulation::Simulation(int argc, char* argv[]) :
   m_glui->add_radiobutton_to_group(robotTypeRG, "Complex");
   m_glui->add_radiobutton_to_group(robotTypeRG, "Neural network");
   robotTypeRG->set_int_val(GET_INT("DEFAULT_ROBOT_TYPE"));
-  GLUI_Panel *lights = new GLUI_Rollout(m_glui, "Number of light sources");
-  m_glui->add_button_to_panel(lights, "+ Stationary", UI_ADD_RT, (GLUI_Update_CB)s_addStationaryLightSource);
-  m_glui->add_button_to_panel(lights, "+ Moving", UI_ADD_RT, (GLUI_Update_CB)s_addMovingLightSource);
-  m_glui->add_button_to_panel(lights, "-", UI_REMOVE_RT, (GLUI_Update_CB)s_removeLightSource);
-  m_glui->add_button_to_panel(lights, "Remove all", UI_REMOVE_ALL_RT, (GLUI_Update_CB)s_removeAllLightSource);
-  GLUI_Panel *obstacles = new GLUI_Rollout(m_glui, "Number of obstacles");
-  m_glui->add_button_to_panel(obstacles, "+", UI_ADD_O, (GLUI_Update_CB)s_addObstacle);
-  m_glui->add_button_to_panel(obstacles, "-", UI_REMOVE_O, (GLUI_Update_CB)s_removeObstacle);
-  m_glui->add_button_to_panel(obstacles, "Remove all", UI_REMOVE_ALL_O, (GLUI_Update_CB)s_removeAllObstacle);
+  GLUI_Rollout *lights = new GLUI_Rollout(m_glui, "Number of light sources ", false);
+  controls.push_back(lights);
+  controlsOpen.push_back(false);
+  m_glui->add_button_to_panel(lights, "+ Stationary", 0, (GLUI_Update_CB)s_addStationaryLightSource);
+  m_glui->add_button_to_panel(lights, "+ Moving", 0, (GLUI_Update_CB)s_addMovingLightSource);
+  m_glui->add_button_to_panel(lights, "-", 0, (GLUI_Update_CB)s_removeLightSource);
+  m_glui->add_button_to_panel(lights, "Remove all", 0, (GLUI_Update_CB)s_removeAllLightSource);
+  GLUI_Rollout *obstacles = new GLUI_Rollout(m_glui, "Number of obstacles     ", false);
+  controls.push_back(obstacles);
+  controlsOpen.push_back(false);
+  m_glui->add_button_to_panel(obstacles, "+", 0, (GLUI_Update_CB)s_addObstacle);
+  m_glui->add_button_to_panel(obstacles, "-", 0, (GLUI_Update_CB)s_removeObstacle);
+  m_glui->add_button_to_panel(obstacles, "Remove all", 0, (GLUI_Update_CB)s_removeAllObstacle);
   m_glui->add_column(true);
   string statInitText(GET_INT("MAX_STAT_LENGTH"), ' ');
   statsBox = new GLUI_Rollout(m_glui, "Selected object details", true);
@@ -114,9 +117,27 @@ Simulation::Simulation(int argc, char* argv[]) :
   speedText = new GLUI_StaticText(statsBox, statInitText.c_str());
   string messageInitText(GET_INT("MAX_MESSAGE_LENGTH"), ' ');
   messageBox = new GLUI_Rollout(m_glui, "Messages");
+  settings.push_back(messageBox); // settings is about page layout, even though messages isn't really settings
+  settingsOpen.push_back(true);
   for (int i = 0; i < GET_INT("MAX_MESSAGES"); i++)
     messages.push_back(new GLUI_StaticText(messageBox, messageInitText.c_str()));
-  GLUI_Panel *complexRobotSettings = new GLUI_Rollout(m_glui, "New complex robot settings         ", false);
+  neuralNetworkFile = new char[PATH_MAX];
+  strcpy(neuralNetworkFile, GET_STRING("DEFAULT_NEURAL_NETWORK_FILE").c_str());
+  /*  neuralNetworkFileBrowser =
+      new GLUI_FileBrowser(m_glui, "Neural network specification file");
+      neuralNetworkFileBrowser->fbreaddir("../..");*/
+  GLUI_Rollout *neuralNetworkRobotSettings = new GLUI_Rollout(m_glui, "New neural network robot settings", false);
+  settings.push_back(neuralNetworkRobotSettings);
+  settingsOpen.push_back(false);
+  neuralNetworkFileBrowser =
+    m_glui->add_edittext_to_panel(neuralNetworkRobotSettings, "Weight file");
+  neuralNetworkFileBrowser->set_text(string(neuralNetworkFile));
+  neuralNetworkFileBrowser->set_w(330);
+  m_glui->add_button_to_panel(neuralNetworkRobotSettings, "Select",
+    -1, (GLUI_Update_CB)s_neuralNetworkFileChanged);
+  GLUI_Rollout *complexRobotSettings = new GLUI_Rollout(m_glui, "New complex robot settings         ", false);
+  settings.push_back(complexRobotSettings);
+  settingsOpen.push_back(false);
   GLUI_Panel *lightConnectionPanel =  new GLUI_Panel(complexRobotSettings, "Light sensor connections");
   GLUI_RadioGroup *lightConnections =
     m_glui->add_radiogroup_to_panel(lightConnectionPanel, &lightSensorConnectionPattern);
@@ -139,15 +160,13 @@ Simulation::Simulation(int argc, char* argv[]) :
   m_glui->add_radiobutton_to_group(obstacleConnections, "Uncrossed");
   m_glui->add_radiobutton_to_group(obstacleConnections, "Dissabled");
   obstacleConnections->set_int_val(GET_INT("ROBOT_INITIAL_OBSTACLE_SENSOR_CONNECTION_PATTERN"));
-  if (GET_BOOL("ENABLE_TARGETS")) {
-    GLUI_Panel *targetConnectionPanel =  new GLUI_Panel(complexRobotSettings, "Target sensor connections");
-    GLUI_RadioGroup *targetConnections =
-      m_glui->add_radiogroup_to_panel(targetConnectionPanel, &targetSensorConnectionPattern);
-    m_glui->add_radiobutton_to_group(targetConnections, "Crossed");
-    m_glui->add_radiobutton_to_group(targetConnections, "Uncrossed");
-    m_glui->add_radiobutton_to_group(targetConnections, "Dissabled");
-    targetConnections->set_int_val(GET_INT("ROBOT_INITIAL_TARGET_SENSOR_CONNECTION_PATTERN"));
-  }
+  GLUI_Panel *targetConnectionPanel =  new GLUI_Panel(complexRobotSettings, "Target sensor connections");
+  GLUI_RadioGroup *targetConnections =
+    m_glui->add_radiogroup_to_panel(targetConnectionPanel, &targetSensorConnectionPattern);
+  m_glui->add_radiobutton_to_group(targetConnections, "Crossed");
+  m_glui->add_radiobutton_to_group(targetConnections, "Uncrossed");
+  m_glui->add_radiobutton_to_group(targetConnections, "Dissabled");
+  targetConnections->set_int_val(GET_INT("ROBOT_INITIAL_TARGET_SENSOR_CONNECTION_PATTERN"));
   m_glui->add_column_to_panel(complexRobotSettings, true);
   initialSpeed = GET_INT("ROBOT_INITIAL_SPEED");
   GLUI_Spinner *initialSpeed =
@@ -173,25 +192,11 @@ Simulation::Simulation(int argc, char* argv[]) :
   obstacleSensorScale->set_float_limits(GET_FLOAT("ROBOT_MIN_SENSOR_SCALE"),
                                      GET_FLOAT("ROBOT_MAX_SENSOR_SCALE"));
   targetSensorScale = GET_FLOAT("ROBOT_INITIAL_TARGET_SENSOR_SCALE");
-  if (GET_BOOL("ENABLE_TARGETS")) {
-    GLUI_Spinner *targetSensorScale =
-      m_glui->add_spinner_to_panel(complexRobotSettings, "Target scale    ",
-                                    GLUI_SPINNER_FLOAT, &this->targetSensorScale);
-    targetSensorScale->set_float_limits(GET_FLOAT("ROBOT_MIN_SENSOR_SCALE"),
-                                        GET_FLOAT("ROBOT_MAX_SENSOR_SCALE"));
-  }
-  neuralNetworkFile = new char[PATH_MAX];
-  strcpy(neuralNetworkFile, GET_STRING("DEFAULT_NEURAL_NETWORK_FILE").c_str());
-  /*  neuralNetworkFileBrowser =
-      new GLUI_FileBrowser(m_glui, "Neural network specification file");
-      neuralNetworkFileBrowser->fbreaddir("../..");*/
-  GLUI_Panel *neuralNetworkRobotSettings = new GLUI_Rollout(m_glui, "New neural network robot settings", false);
-  neuralNetworkFileBrowser =
-    m_glui->add_edittext_to_panel(neuralNetworkRobotSettings, "Weight file");
-  neuralNetworkFileBrowser->set_text(string(neuralNetworkFile));
-  neuralNetworkFileBrowser->set_w(330);
-  m_glui->add_button_to_panel(neuralNetworkRobotSettings, "Select",
-    -1, (GLUI_Update_CB)s_neuralNetworkFileChanged);
+  GLUI_Spinner *targetSensorScale =
+    m_glui->add_spinner_to_panel(complexRobotSettings, "Target scale    ",
+                                 GLUI_SPINNER_FLOAT, &this->targetSensorScale);
+  targetSensorScale->set_float_limits(GET_FLOAT("ROBOT_MIN_SENSOR_SCALE"),
+                                      GET_FLOAT("ROBOT_MAX_SENSOR_SCALE"));
   
   // Initialize OpenGL
   glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
@@ -233,14 +238,11 @@ void Simulation::showStartup() {
   showMessage("radius, and the +/- keys change the speed.  The below");
   showMessage("panels contain controls for settings for different types of");
   showMessage("robots. These apply only to new robots; existing ones remain");
-  showMessage("unchanged. The control panel allows you to start and stop");
-  showMessage("the simulation. The reset button resets to the most recent");
-  showMessage("starting setup, or, if it was random, generates a new random");
-  showMessage("setup. The `Refresh settings' button reloads the configuration");
-  showMessage("files. The open/save panel allows you to save the current");
-  showMessage("state, or open a saved simulation.  The other panels control");
-  showMessage("adding/removing objects in different variations.");
-  for (int i = 0; i < GET_INT("MAX_MESSAGES") - 15; i++) {
+  showMessage("unchanged. The control panels allow you to start, stop,");
+  showMessage("pause, reset to the last start configuration, clear, open, save,");
+  showMessage("and generate new random simulations.  The other panels");
+  showMessage("control adding/removing objects in different variations.");
+  for (int i = 0; i < GET_INT("MAX_MESSAGES") - 12; i++) {
     showMessage("");
   }
 }
@@ -284,30 +286,17 @@ void Simulation::initObjects() {
       success &= addMovingLightSource();
     }
     for (int i = 0; i < GET_INT("NUM_ROBOTS_TARGETS"); i++) {
-      if (GET_BOOL("ENABLE_TARGETS"))
-        success &= addRobotTarget(robotType,
-                                  lightSensorConnectionPattern,
-                                  robotSensorConnectionPattern,
-                                  obstacleSensorConnectionPattern,
-                                  targetSensorConnectionPattern,
-                                  lightSensorScale,
-                                  robotSensorScale,
-                                  obstacleSensorScale,
-                                  targetSensorScale,
-                                  initialSpeed,
-                                  string(neuralNetworkFile));
-      else
-        success &= addRobot(robotType,
-                            lightSensorConnectionPattern,
-                            robotSensorConnectionPattern,
-                            obstacleSensorConnectionPattern,
-                            targetSensorConnectionPattern,
-                            lightSensorScale,
-                            robotSensorScale,
-                            obstacleSensorScale,
-                            targetSensorScale,
-                            initialSpeed,
-                            string(neuralNetworkFile));
+      success &= addRobotTarget(robotType,
+                                lightSensorConnectionPattern,
+                                robotSensorConnectionPattern,
+                                obstacleSensorConnectionPattern,
+                                targetSensorConnectionPattern,
+                                lightSensorScale,
+                                robotSensorScale,
+                                obstacleSensorScale,
+                                targetSensorScale,
+                                initialSpeed,
+                                string(neuralNetworkFile));
     }
     for (int i = 0; i < GET_INT("NUM_OBSTACLES"); i++) {
       success &= addObstacle();
@@ -323,6 +312,7 @@ void Simulation::initObjects() {
 
 void Simulation::display() {
   util::display();
+  updateUI();
 }
 
 void Simulation::advance() {
@@ -439,14 +429,19 @@ void Simulation::resume(int) {
   isPaused = false;
 }
 
-void Simulation::reinit(int) {
+void Simulation::reset(int) {
   isStarted = GET_BOOL("START_IMMEDIATE");
-  if (openedFile)
-    open(GET_STRING("INITIAL_SIMULATION_FILE"));
-  else {
-    util::reset();
-    initObjects();
-  }
+  open(GET_STRING("INITIAL_SIMULATION_FILE"));
+}
+
+void Simulation::clear(int) {
+  util::reset();
+}
+
+void Simulation::random(int) {
+  isStarted = GET_BOOL("START_IMMEDIATE");
+  util::reset();
+  initObjects();
 }
 
 void Simulation::gluiControl(int controlID) {
@@ -603,8 +598,16 @@ void Simulation::s_resume(int a) {
   s_currentApp->resume(a);
 }
 
-void Simulation::s_reinit(int a) {
-  s_currentApp->reinit(a);
+void Simulation::s_reset(int a) {
+  s_currentApp->reset(a);
+}
+
+void Simulation::s_clear(int a) {
+  s_currentApp->clear(a);
+}
+
+void Simulation::s_random(int a) {
+  s_currentApp->random(a);
 }
 
 void Simulation::s_addRobotTarget(int a) {
@@ -718,5 +721,28 @@ void Simulation::showStats() {
     LocationText->set_text(statInitText.c_str());
     orientationText->set_text(statInitText.c_str());
     speedText->set_text(statInitText.c_str());
+  }
+}
+
+void Simulation::updateUI() {
+  organizePanels(controls, controlsOpen, GET_INT("MAX_CONTROLS_OPEN"));
+  organizePanels(settings, settingsOpen, GET_INT("MAX_SETTINGS_OPEN"));
+}
+
+void Simulation::organizePanels(const vector<GLUI_Rollout*> &panels, std::vector<bool> &panelsOpen, int maxOpen) {
+  int numOpen = 0;
+  for (unsigned i = 0; i < panels.size(); i++) {
+    numOpen += panels[i]->is_open;
+  }
+
+  for (unsigned i = panels.size() - 1; numOpen > maxOpen && i >= 0; i--) {
+    if (panels[i]->is_open && panelsOpen[i]) {
+      panels[i]->close();
+      numOpen--;
+    }
+  }
+
+  for (unsigned i = 0; i < panels.size(); i++) {
+    panelsOpen[i] = panels[i]->is_open;
   }
 }
