@@ -156,6 +156,7 @@
     \subitem {config\discretionary {-}{}{}Value}, \hyperpage{40}
   \item {clear}
     \subitem {environment}, \hyperpage{16}
+    \subitem {Simulation}, \hyperpage{71}
   \item {Color}, \hyperpage{33}
     \subitem {blue}, \hyperpage{35}
     \subitem {Color}, \hyperpage{33, 34}
@@ -480,7 +481,7 @@
   \item {init\discretionary {-}{}{}Config}
     \subitem {Configuration}, \hyperpage{39}
   \item {init\discretionary {-}{}{}Objects}
-    \subitem {Simulation}, \hyperpage{72}
+    \subitem {Simulation}, \hyperpage{71}
   \item {int\discretionary {-}{}{}Val}
     \subitem {config\discretionary {-}{}{}Value}, \hyperpage{40}
   \item {is\discretionary {-}{}{}All\discretionary {-}{}{}Whitespace}
@@ -507,11 +508,11 @@
   \item {keyboard}
     \subitem {Base\discretionary {-}{}{}Gfx\discretionary {-}{}{}App}, 
 		\hyperpage{31}
-    \subitem {Simulation}, \hyperpage{72}
+    \subitem {Simulation}, \hyperpage{71}
   \item {keyboard\discretionary {-}{}{}Special}
     \subitem {Base\discretionary {-}{}{}Gfx\discretionary {-}{}{}App}, 
 		\hyperpage{31}
-    \subitem {Simulation}, \hyperpage{72}
+    \subitem {Simulation}, \hyperpage{71}
   \item {keyboard\discretionary {-}{}{}Special\discretionary {-}{}{}Up}
     \subitem {Base\discretionary {-}{}{}Gfx\discretionary {-}{}{}App}, 
 		\hyperpage{31}
@@ -785,12 +786,12 @@
 
   \item {R\-O\-B\-O\-T}
     \subitem {Physical\-Object.\-h}, \hyperpage{92}
+  \item {random}
+    \subitem {Simulation}, \hyperpage{72}
   \item {red}
     \subitem {Color}, \hyperpage{35}
   \item {refresh}
     \subitem {Configuration}, \hyperpage{39}
-  \item {reinit}
-    \subitem {Simulation}, \hyperpage{72}
   \item {remove\discretionary {-}{}{}All\discretionary {-}{}{}Light\discretionary {-}{}{}Source}
     \subitem {util}, \hyperpage{26}
   \item {remove\discretionary {-}{}{}All\discretionary {-}{}{}Obstacle}
@@ -808,6 +809,7 @@
   \item {reorient}
     \subitem {Physical\discretionary {-}{}{}Object}, \hyperpage{58}
   \item {reset}
+    \subitem {Simulation}, \hyperpage{72}
     \subitem {util}, \hyperpage{27}
   \item {reshape}
     \subitem {Base\discretionary {-}{}{}Gfx\discretionary {-}{}{}App}, 
@@ -874,9 +876,11 @@
   \item {s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Robot}
     \subitem {Simulation}, \hyperpage{72}
   \item {s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Robot\discretionary {-}{}{}Target}
-    \subitem {Simulation}, \hyperpage{73}
+    \subitem {Simulation}, \hyperpage{72}
   \item {s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Stationary\discretionary {-}{}{}Light\discretionary {-}{}{}Source}
-    \subitem {Simulation}, \hyperpage{73}
+    \subitem {Simulation}, \hyperpage{72}
+  \item {s\discretionary {-}{}{}\_\discretionary {-}{}{}clear}
+    \subitem {Simulation}, \hyperpage{72}
   \item {s\discretionary {-}{}{}\_\discretionary {-}{}{}current\discretionary {-}{}{}App}
     \subitem {Base\discretionary {-}{}{}Gfx\discretionary {-}{}{}App}, 
 		\hyperpage{32}
@@ -908,14 +912,14 @@
     \subitem {Base\discretionary {-}{}{}Gfx\discretionary {-}{}{}App}, 
 		\hyperpage{32}
   \item {s\discretionary {-}{}{}\_\discretionary {-}{}{}neural\discretionary {-}{}{}Network\discretionary {-}{}{}File\discretionary {-}{}{}Changed}
-    \subitem {Simulation}, \hyperpage{73}
+    \subitem {Simulation}, \hyperpage{72}
   \item {s\discretionary {-}{}{}\_\discretionary {-}{}{}open}
-    \subitem {Simulation}, \hyperpage{73}
+    \subitem {Simulation}, \hyperpage{72}
   \item {s\discretionary {-}{}{}\_\discretionary {-}{}{}pause}
-    \subitem {Simulation}, \hyperpage{73}
+    \subitem {Simulation}, \hyperpage{72}
+  \item {s\discretionary {-}{}{}\_\discretionary {-}{}{}random}
+    \subitem {Simulation}, \hyperpage{72}
   \item {s\discretionary {-}{}{}\_\discretionary {-}{}{}refresh\discretionary {-}{}{}Configuration}
-    \subitem {Simulation}, \hyperpage{73}
-  \item {s\discretionary {-}{}{}\_\discretionary {-}{}{}reinit}
     \subitem {Simulation}, \hyperpage{73}
   \item {s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}All\discretionary {-}{}{}Light\discretionary {-}{}{}Source}
     \subitem {Simulation}, \hyperpage{73}
@@ -928,6 +932,8 @@
   \item {s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}Obstacle}
     \subitem {Simulation}, \hyperpage{73}
   \item {s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}Robot\discretionary {-}{}{}Target}
+    \subitem {Simulation}, \hyperpage{73}
+  \item {s\discretionary {-}{}{}\_\discretionary {-}{}{}reset}
     \subitem {Simulation}, \hyperpage{73}
   \item {s\discretionary {-}{}{}\_\discretionary {-}{}{}reshape}
     \subitem {Base\discretionary {-}{}{}Gfx\discretionary {-}{}{}App}, 
@@ -1008,11 +1014,12 @@
   \item {Simulation}, \hyperpage{69}
     \subitem {$\sim $\discretionary {-}{}{}Simulation}, \hyperpage{71}
     \subitem {advance}, \hyperpage{71}
+    \subitem {clear}, \hyperpage{71}
     \subitem {display}, \hyperpage{71}
     \subitem {glui\discretionary {-}{}{}Control}, \hyperpage{71}
-    \subitem {init\discretionary {-}{}{}Objects}, \hyperpage{72}
-    \subitem {keyboard}, \hyperpage{72}
-    \subitem {keyboard\discretionary {-}{}{}Special}, \hyperpage{72}
+    \subitem {init\discretionary {-}{}{}Objects}, \hyperpage{71}
+    \subitem {keyboard}, \hyperpage{71}
+    \subitem {keyboard\discretionary {-}{}{}Special}, \hyperpage{71}
     \subitem {left\discretionary {-}{}{}Mouse\discretionary {-}{}{}Down}, 
 		\hyperpage{72}
     \subitem {left\discretionary {-}{}{}Mouse\discretionary {-}{}{}Up}, 
@@ -1021,7 +1028,8 @@
 		\hyperpage{72}
     \subitem {mouse\discretionary {-}{}{}Dragged}, \hyperpage{72}
     \subitem {pause}, \hyperpage{72}
-    \subitem {reinit}, \hyperpage{72}
+    \subitem {random}, \hyperpage{72}
+    \subitem {reset}, \hyperpage{72}
     \subitem {resume}, \hyperpage{72}
     \subitem {s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Moving\discretionary {-}{}{}Light\discretionary {-}{}{}Source}, 
 		\hyperpage{72}
@@ -1030,18 +1038,20 @@
     \subitem {s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Robot}, 
 		\hyperpage{72}
     \subitem {s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Robot\discretionary {-}{}{}Target}, 
-		\hyperpage{73}
+		\hyperpage{72}
     \subitem {s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Stationary\discretionary {-}{}{}Light\discretionary {-}{}{}Source}, 
-		\hyperpage{73}
+		\hyperpage{72}
+    \subitem {s\discretionary {-}{}{}\_\discretionary {-}{}{}clear}, 
+		\hyperpage{72}
     \subitem {s\discretionary {-}{}{}\_\discretionary {-}{}{}neural\discretionary {-}{}{}Network\discretionary {-}{}{}File\discretionary {-}{}{}Changed}, 
-		\hyperpage{73}
+		\hyperpage{72}
     \subitem {s\discretionary {-}{}{}\_\discretionary {-}{}{}open}, 
-		\hyperpage{73}
+		\hyperpage{72}
     \subitem {s\discretionary {-}{}{}\_\discretionary {-}{}{}pause}, 
-		\hyperpage{73}
+		\hyperpage{72}
+    \subitem {s\discretionary {-}{}{}\_\discretionary {-}{}{}random}, 
+		\hyperpage{72}
     \subitem {s\discretionary {-}{}{}\_\discretionary {-}{}{}refresh\discretionary {-}{}{}Configuration}, 
-		\hyperpage{73}
-    \subitem {s\discretionary {-}{}{}\_\discretionary {-}{}{}reinit}, 
 		\hyperpage{73}
     \subitem {s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}All\discretionary {-}{}{}Light\discretionary {-}{}{}Source}, 
 		\hyperpage{73}
@@ -1054,6 +1064,8 @@
     \subitem {s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}Obstacle}, 
 		\hyperpage{73}
     \subitem {s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}Robot\discretionary {-}{}{}Target}, 
+		\hyperpage{73}
+    \subitem {s\discretionary {-}{}{}\_\discretionary {-}{}{}reset}, 
 		\hyperpage{73}
     \subitem {s\discretionary {-}{}{}\_\discretionary {-}{}{}resume}, 
 		\hyperpage{73}
@@ -1073,31 +1085,14 @@
 		\hyperpage{73}
     \subitem {try\discretionary {-}{}{}Add\discretionary {-}{}{}Stationary\discretionary {-}{}{}Light\discretionary {-}{}{}Source}, 
 		\hyperpage{73}
-    \subitem {try\discretionary {-}{}{}Open}, \hyperpage{74}
+    \subitem {try\discretionary {-}{}{}Open}, \hyperpage{73}
     \subitem {try\discretionary {-}{}{}Remove\discretionary {-}{}{}Light\discretionary {-}{}{}Source}, 
-		\hyperpage{74}
+		\hyperpage{73}
     \subitem {try\discretionary {-}{}{}Remove\discretionary {-}{}{}Obstacle}, 
-		\hyperpage{74}
+		\hyperpage{73}
     \subitem {try\discretionary {-}{}{}Remove\discretionary {-}{}{}Robot\discretionary {-}{}{}Target}, 
 		\hyperpage{74}
     \subitem {try\discretionary {-}{}{}Save}, \hyperpage{74}
-    \subitem {U\-I\-\_\-\-A\-D\-D\-\_\-\-O}, \hyperpage{71}
-    \subitem {U\-I\-\_\-\-A\-D\-D\-\_\-\-R\-T}, \hyperpage{71}
-    \subitem {U\-I\-\_\-\-P\-A\-U\-S\-E}, \hyperpage{71}
-    \subitem {U\-I\-\_\-\-Q\-U\-I\-T}, \hyperpage{71}
-    \subitem {U\-I\-\_\-\-R\-E\-F\-R\-E\-S\-H\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-O}, 
-		\hyperpage{71}
-    \subitem {U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-A\-L\-L\-\_\-\-O}, 
-		\hyperpage{71}
-    \subitem {U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-A\-L\-L\-\_\-\-R\-T}, 
-		\hyperpage{71}
-    \subitem {U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-O}, \hyperpage{71}
-    \subitem {U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-R\-T}, \hyperpage{71}
-    \subitem {U\-I\-\_\-\-R\-E\-S\-E\-T}, \hyperpage{71}
-    \subitem {U\-I\-\_\-\-R\-E\-S\-U\-M\-E}, \hyperpage{71}
-    \subitem {U\-I\-\_\-\-S\-T\-A\-R\-T}, \hyperpage{71}
-    \subitem {U\discretionary {-}{}{}I\discretionary {-}{}{}Control\discretionary {-}{}{}Type}, 
-		\hyperpage{71}
   \item {Simulation.\discretionary {-}{}{}cpp}, \hyperpage{95}
     \subitem {ftos}, \hyperpage{96}
   \item {Simulation.\discretionary {-}{}{}h}, \hyperpage{96}
@@ -1113,7 +1108,7 @@
   \item {Target}, \hyperpage{74}
     \subitem {$\sim $\discretionary {-}{}{}Target}, \hyperpage{75}
     \subitem {handle\discretionary {-}{}{}Collision}, \hyperpage{75}
-    \subitem {Target}, \hyperpage{75}
+    \subitem {Target}, \hyperpage{74, 75}
   \item {Target.\discretionary {-}{}{}cpp}, \hyperpage{96}
   \item {Target.\discretionary {-}{}{}h}, \hyperpage{97}
   \item {target\discretionary {-}{}{}Sensor\discretionary {-}{}{}Scale}
@@ -1135,11 +1130,11 @@
   \item {try\discretionary {-}{}{}Add\discretionary {-}{}{}Stationary\discretionary {-}{}{}Light\discretionary {-}{}{}Source}
     \subitem {Simulation}, \hyperpage{73}
   \item {try\discretionary {-}{}{}Open}
-    \subitem {Simulation}, \hyperpage{74}
+    \subitem {Simulation}, \hyperpage{73}
   \item {try\discretionary {-}{}{}Remove\discretionary {-}{}{}Light\discretionary {-}{}{}Source}
-    \subitem {Simulation}, \hyperpage{74}
+    \subitem {Simulation}, \hyperpage{73}
   \item {try\discretionary {-}{}{}Remove\discretionary {-}{}{}Obstacle}
-    \subitem {Simulation}, \hyperpage{74}
+    \subitem {Simulation}, \hyperpage{73}
   \item {try\discretionary {-}{}{}Remove\discretionary {-}{}{}Robot\discretionary {-}{}{}Target}
     \subitem {Simulation}, \hyperpage{74}
   \item {try\discretionary {-}{}{}Save}
@@ -1149,32 +1144,6 @@
 
   \indexspace
 
-  \item {U\-I\-\_\-\-A\-D\-D\-\_\-\-O}
-    \subitem {Simulation}, \hyperpage{71}
-  \item {U\-I\-\_\-\-A\-D\-D\-\_\-\-R\-T}
-    \subitem {Simulation}, \hyperpage{71}
-  \item {U\-I\-\_\-\-P\-A\-U\-S\-E}
-    \subitem {Simulation}, \hyperpage{71}
-  \item {U\-I\-\_\-\-Q\-U\-I\-T}
-    \subitem {Simulation}, \hyperpage{71}
-  \item {U\-I\-\_\-\-R\-E\-F\-R\-E\-S\-H\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-O}
-    \subitem {Simulation}, \hyperpage{71}
-  \item {U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-A\-L\-L\-\_\-\-O}
-    \subitem {Simulation}, \hyperpage{71}
-  \item {U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-A\-L\-L\-\_\-\-R\-T}
-    \subitem {Simulation}, \hyperpage{71}
-  \item {U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-O}
-    \subitem {Simulation}, \hyperpage{71}
-  \item {U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-R\-T}
-    \subitem {Simulation}, \hyperpage{71}
-  \item {U\-I\-\_\-\-R\-E\-S\-E\-T}
-    \subitem {Simulation}, \hyperpage{71}
-  \item {U\-I\-\_\-\-R\-E\-S\-U\-M\-E}
-    \subitem {Simulation}, \hyperpage{71}
-  \item {U\-I\-\_\-\-S\-T\-A\-R\-T}
-    \subitem {Simulation}, \hyperpage{71}
-  \item {U\discretionary {-}{}{}I\discretionary {-}{}{}Control\discretionary {-}{}{}Type}
-    \subitem {Simulation}, \hyperpage{71}
   \item {update}
     \subitem {Physical\discretionary {-}{}{}Object}, \hyperpage{59}
     \subitem {Robot}, \hyperpage{63}

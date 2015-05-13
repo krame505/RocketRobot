@@ -1,124 +1,124 @@
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/environment.cpp:4: warning: the name `Environment.h' supplied as the second argument in the \file statement is not an input file
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/environment.h:6: warning: the name `Environment.h' supplied as the second argument in the \file statement is not an input file
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/configuration.cpp:183: warning: no matching class member found for 
+/media/shared/lrk/rocketrobot/src/environment.cpp:4: warning: the name `Environment.h' supplied as the second argument in the \file statement is not an input file
+/media/shared/lrk/rocketrobot/src/environment.h:6: warning: the name `Environment.h' supplied as the second argument in the \file statement is not an input file
+/media/shared/lrk/rocketrobot/src/configuration.cpp:183: warning: no matching class member found for 
   void Configuration::initConfig(int argc, char *[] argv[], const string &defaultFilename)
 Possible candidates:
   static void Configuration::initConfig(const std::string &filename)
   static void Configuration::initConfig(int argc, char *argv[], const std::string &defaultFilename)
 
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/configuration.cpp:225: warning: no matching class member found for 
+/media/shared/lrk/rocketrobot/src/configuration.cpp:225: warning: no matching class member found for 
   void Configuration::initConfig(const string &filename)
 Possible candidates:
   static void Configuration::initConfig(const std::string &filename)
   static void Configuration::initConfig(int argc, char *argv[], const std::string &defaultFilename)
 
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/NeuralNetwork.cpp:28: warning: no matching class member found for 
+/media/shared/lrk/rocketrobot/src/NeuralNetwork.cpp:28: warning: no matching class member found for 
   NeuralNetwork::NeuralNetwork(const vector< int > &inputs, const vector< int > &outputs, const vector< Node * > &nodes)
 Possible candidates:
   NeuralNetwork::NeuralNetwork(const NeuralNetwork &other)
   NeuralNetwork::NeuralNetwork(const std::string &filename)
   NeuralNetwork::NeuralNetwork(const std::vector< int > &inputs, const std::vector< int > &outputs, const std::vector< Node * > &nodes)
 
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/NeuralNetwork.cpp:42: warning: no matching class member found for 
+/media/shared/lrk/rocketrobot/src/NeuralNetwork.cpp:42: warning: no matching class member found for 
   NeuralNetwork::NeuralNetwork(const string &filename)
 Possible candidates:
   NeuralNetwork::NeuralNetwork(const NeuralNetwork &other)
   NeuralNetwork::NeuralNetwork(const std::string &filename)
   NeuralNetwork::NeuralNetwork(const std::vector< int > &inputs, const std::vector< int > &outputs, const std::vector< Node * > &nodes)
 
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/NeuralNetworkRobot.cpp:26: warning: no matching class member found for 
+/media/shared/lrk/rocketrobot/src/NeuralNetworkRobot.cpp:26: warning: no matching class member found for 
   NeuralNetworkRobot::NeuralNetworkRobot(int radius, Color color, Color lineColor, NeuralNetwork network, int targetId, string filename)
 Possible candidates:
   NeuralNetworkRobot::NeuralNetworkRobot(int radius, Color color, Color lineColor, NeuralNetwork network, int targetId=-1, std::string filename=GET_STRING("DEFAULT_NEURAL_NETWORK_FILE"))
   NeuralNetworkRobot::NeuralNetworkRobot(int radius, Location loc, Color color, Color lineColor, NeuralNetwork network, int targetId=-1, std::string filename=GET_STRING("DEFAULT_NEURAL_NETWORK_FILE"))
 
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/NeuralNetworkRobot.cpp:36: warning: no matching class member found for 
+/media/shared/lrk/rocketrobot/src/NeuralNetworkRobot.cpp:36: warning: no matching class member found for 
   NeuralNetworkRobot::NeuralNetworkRobot(int radius, Location loc, Color color, Color lineColor, NeuralNetwork network, int targetId, string filename)
 Possible candidates:
   NeuralNetworkRobot::NeuralNetworkRobot(int radius, Color color, Color lineColor, NeuralNetwork network, int targetId=-1, std::string filename=GET_STRING("DEFAULT_NEURAL_NETWORK_FILE"))
   NeuralNetworkRobot::NeuralNetworkRobot(int radius, Location loc, Color color, Color lineColor, NeuralNetwork network, int targetId=-1, std::string filename=GET_STRING("DEFAULT_NEURAL_NETWORK_FILE"))
 
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/util.cpp:138: warning: no matching file member found for 
+/media/shared/lrk/rocketrobot/src/util.cpp:138: warning: no matching file member found for 
 bool util::addRobotTarget(int robotType, int lightSensorConnectionPattern, int robotSensorConnectionPattern, int obstacleSensorConnectionPattern, int targetSensorConnectionPattern, float lightSensorScale, float robotSensorScale, float obstacleSensorScale, float targetSensorScale, int initialSpeed, string neuralNetworkFile)
 Possible candidates:
- 'bool addRobotTarget(int robotType, int lightSensorConnectionPattern, int robotSensorConnectionPattern, int obstacleSensorConnectionPattern, int targetSensorConnectionPattern, float lightSensorScale, float robotSensorScale, float obstacleSensorScale, float targetSensorScale, int initialSpeed, std::string neuralNetworkFile)' at line 72 of file/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/util.h
+ 'bool addRobotTarget(int robotType, int lightSensorConnectionPattern, int robotSensorConnectionPattern, int obstacleSensorConnectionPattern, int targetSensorConnectionPattern, float lightSensorScale, float robotSensorScale, float obstacleSensorScale, float targetSensorScale, int initialSpeed, std::string neuralNetworkFile)' at line 72 of file/media/shared/lrk/rocketrobot/src/util.h
 
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/util.cpp:215: warning: no matching file member found for 
+/media/shared/lrk/rocketrobot/src/util.cpp:215: warning: no matching file member found for 
 bool util::addRobot(int robotType, int lightSensorConnectionPattern, int robotSensorConnectionPattern, int obstacleSensorConnectionPattern, int targetSensorConnectionPattern, float lightSensorScale, float robotSensorScale, float obstacleSensorScale, float targetSensorScale, int initialSpeed, string neuralNetworkFile)
 Possible candidates:
- 'bool addRobot(int robotType, int lightSensorConnectionPattern, int robotSensorConnectionPattern, int obstacleSensorConnectionPattern, int targetSensorConnectionPattern, float lightSensorScale, float robotSensorScale, float obstacleSensorScale, float targetSensorScale, int initialSpeed, std::string neuralNetworkFile)' at line 100 of file/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/util.h
+ 'bool addRobot(int robotType, int lightSensorConnectionPattern, int robotSensorConnectionPattern, int obstacleSensorConnectionPattern, int targetSensorConnectionPattern, float lightSensorScale, float robotSensorScale, float obstacleSensorScale, float targetSensorScale, int initialSpeed, std::string neuralNetworkFile)' at line 100 of file/media/shared/lrk/rocketrobot/src/util.h
 
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/util.cpp:602: warning: no matching file member found for 
+/media/shared/lrk/rocketrobot/src/util.cpp:602: warning: no matching file member found for 
 bool util::open(string filename)
 Possible candidates:
- 'bool open(std::string filename)' at line 181 of file/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/util.h
+ 'bool open(std::string filename)' at line 181 of file/media/shared/lrk/rocketrobot/src/util.h
 
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/util.cpp:751: warning: no matching file member found for 
+/media/shared/lrk/rocketrobot/src/util.cpp:751: warning: no matching file member found for 
 bool util::save(string filename)
 Possible candidates:
- 'bool save(std::string filename)' at line 186 of file/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/util.h
+ 'bool save(std::string filename)' at line 186 of file/media/shared/lrk/rocketrobot/src/util.h
 
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/Simulation.h:101: warning: Found unknown command `\detail'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/Simulation.h:108: warning: Found unknown command `\detail'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/util.h:27: warning: Found unknown command `\detail'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/util.h:20: warning: Found unknown command `\detail'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/artist.cpp:3: warning: Found unknown command `\editor'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/BaseGfxApp.cpp:3: warning: Found unknown command `\editor'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/BaseGfxApp.h:5: warning: Found unknown command `\editor'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/Color.cpp:3: warning: Found unknown command `\editor'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/configuration.cpp:3: warning: Found unknown command `\editor'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/configuration.h:69: warning: Unsupported xml/html tag <filename> found
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/LightSource.cpp:4: warning: Found unknown command `\editor'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/LightSource.h:5: warning: Found unknown command `\editor'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/Obstacle.cpp:3: warning: Found unknown command `\editor'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/Obstacle.h:5: warning: Found unknown command `\editor'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/PhysicalObject.cpp:3: warning: Found unknown command `\editor'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/PhysicalObject.h:5: warning: Found unknown command `\editor'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/Robot.cpp:3: warning: Found unknown command `\editor'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/Robot.h:5: warning: Found unknown command `\editor'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/Sensor.cpp:3: warning: Found unknown command `\editor'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/Simulation.cpp:5: warning: Found unknown command `\editor'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/Simulation.h:4: warning: Found unknown command `\editor'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/Target.cpp:4: warning: Found unknown command `\editor'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/Target.h:5: warning: Found unknown command `\editor'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/util.h:20: warning: Found unknown command `\detail'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/util.h:27: warning: Found unknown command `\detail'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/Color.h:38: warning: Found unknown command `\detail'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/Color.h:93: warning: Found unknown command `\detail'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/Color.h:38: warning: Found unknown command `\detail'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/Color.h:93: warning: Found unknown command `\detail'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/Color.h:91: warning: Found unknown command `\editor'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/configuration.h:130: warning: argument 'table' of command @param is not found in the argument list of Configuration::getBoolConfig(const std::string &name)
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/configuration.h:138: warning: argument 'table' of command @param is not found in the argument list of Configuration::getCharConfig(const std::string &name)
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/configuration.h:122: warning: argument 'table' of command @param is not found in the argument list of Configuration::getFloatConfig(const std::string &name)
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/configuration.h:114: warning: argument 'table' of command @param is not found in the argument list of Configuration::getIntConfig(const std::string &name)
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/configuration.h:146: warning: argument 'table' of command @param is not found in the argument list of Configuration::getStringConfig(const std::string &name)
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/LightSource.h:47: warning: argument 'config' of command @param is not found in the argument list of LightSource::LightSource(int radius, Location loc, Color color)
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/Obstacle.h:18: warning: argument 'config' of command @param is not found in the argument list of Obstacle::Obstacle(int radius, Color color)
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/Robot.h:21: warning: The following parameters of Robot::Robot(RobotType robotType, int radius, Color color, Color lineColor, int targetId=-1) are not documented:
+/media/shared/lrk/rocketrobot/src/Simulation.h:86: warning: Found unknown command `\detail'
+/media/shared/lrk/rocketrobot/src/Simulation.h:93: warning: Found unknown command `\detail'
+/media/shared/lrk/rocketrobot/src/util.h:27: warning: Found unknown command `\detail'
+/media/shared/lrk/rocketrobot/src/util.h:20: warning: Found unknown command `\detail'
+/media/shared/lrk/rocketrobot/src/artist.cpp:3: warning: Found unknown command `\editor'
+/media/shared/lrk/rocketrobot/src/BaseGfxApp.cpp:3: warning: Found unknown command `\editor'
+/media/shared/lrk/rocketrobot/src/BaseGfxApp.h:5: warning: Found unknown command `\editor'
+/media/shared/lrk/rocketrobot/src/Color.cpp:3: warning: Found unknown command `\editor'
+/media/shared/lrk/rocketrobot/src/configuration.cpp:3: warning: Found unknown command `\editor'
+/media/shared/lrk/rocketrobot/src/configuration.h:69: warning: Unsupported xml/html tag <filename> found
+/media/shared/lrk/rocketrobot/src/LightSource.cpp:4: warning: Found unknown command `\editor'
+/media/shared/lrk/rocketrobot/src/LightSource.h:5: warning: Found unknown command `\editor'
+/media/shared/lrk/rocketrobot/src/Obstacle.cpp:3: warning: Found unknown command `\editor'
+/media/shared/lrk/rocketrobot/src/Obstacle.h:5: warning: Found unknown command `\editor'
+/media/shared/lrk/rocketrobot/src/PhysicalObject.cpp:3: warning: Found unknown command `\editor'
+/media/shared/lrk/rocketrobot/src/PhysicalObject.h:5: warning: Found unknown command `\editor'
+/media/shared/lrk/rocketrobot/src/Robot.cpp:3: warning: Found unknown command `\editor'
+/media/shared/lrk/rocketrobot/src/Robot.h:5: warning: Found unknown command `\editor'
+/media/shared/lrk/rocketrobot/src/Sensor.cpp:3: warning: Found unknown command `\editor'
+/media/shared/lrk/rocketrobot/src/Simulation.cpp:5: warning: Found unknown command `\editor'
+/media/shared/lrk/rocketrobot/src/Simulation.h:4: warning: Found unknown command `\editor'
+/media/shared/lrk/rocketrobot/src/Target.cpp:4: warning: Found unknown command `\editor'
+/media/shared/lrk/rocketrobot/src/Target.h:5: warning: Found unknown command `\editor'
+/media/shared/lrk/rocketrobot/src/util.h:20: warning: Found unknown command `\detail'
+/media/shared/lrk/rocketrobot/src/util.h:27: warning: Found unknown command `\detail'
+/media/shared/lrk/rocketrobot/src/Color.h:38: warning: Found unknown command `\detail'
+/media/shared/lrk/rocketrobot/src/Color.h:93: warning: Found unknown command `\detail'
+/media/shared/lrk/rocketrobot/src/Color.h:38: warning: Found unknown command `\detail'
+/media/shared/lrk/rocketrobot/src/Color.h:93: warning: Found unknown command `\detail'
+/media/shared/lrk/rocketrobot/src/Color.h:91: warning: Found unknown command `\editor'
+/media/shared/lrk/rocketrobot/src/configuration.h:130: warning: argument 'table' of command @param is not found in the argument list of Configuration::getBoolConfig(const std::string &name)
+/media/shared/lrk/rocketrobot/src/configuration.h:138: warning: argument 'table' of command @param is not found in the argument list of Configuration::getCharConfig(const std::string &name)
+/media/shared/lrk/rocketrobot/src/configuration.h:122: warning: argument 'table' of command @param is not found in the argument list of Configuration::getFloatConfig(const std::string &name)
+/media/shared/lrk/rocketrobot/src/configuration.h:114: warning: argument 'table' of command @param is not found in the argument list of Configuration::getIntConfig(const std::string &name)
+/media/shared/lrk/rocketrobot/src/configuration.h:146: warning: argument 'table' of command @param is not found in the argument list of Configuration::getStringConfig(const std::string &name)
+/media/shared/lrk/rocketrobot/src/LightSource.h:47: warning: argument 'config' of command @param is not found in the argument list of LightSource::LightSource(int radius, Location loc, Color color)
+/media/shared/lrk/rocketrobot/src/Obstacle.h:18: warning: argument 'config' of command @param is not found in the argument list of Obstacle::Obstacle(int radius, Color color)
+/media/shared/lrk/rocketrobot/src/Robot.h:21: warning: The following parameters of Robot::Robot(RobotType robotType, int radius, Color color, Color lineColor, int targetId=-1) are not documented:
   parameter 'targetId'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/Robot.h:35: warning: argument 'linecolor' of command @param is not found in the argument list of Robot::Robot(RobotType robotType, int radius, Location loc, Color color, Color lineColor, int targetId=-1)
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/Robot.h:35: warning: The following parameters of Robot::Robot(RobotType robotType, int radius, Location loc, Color color, Color lineColor, int targetId=-1) are not documented:
+/media/shared/lrk/rocketrobot/src/Robot.h:35: warning: argument 'linecolor' of command @param is not found in the argument list of Robot::Robot(RobotType robotType, int radius, Location loc, Color color, Color lineColor, int targetId=-1)
+/media/shared/lrk/rocketrobot/src/Robot.h:35: warning: The following parameters of Robot::Robot(RobotType robotType, int radius, Location loc, Color color, Color lineColor, int targetId=-1) are not documented:
   parameter 'lineColor'
   parameter 'targetId'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/Robot.h:56: warning: argument 'id' of command @param is not found in the argument list of Robot::getTarget() const
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/Simulation.h:101: warning: Found unknown command `\detail'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/Simulation.h:108: warning: Found unknown command `\detail'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/Simulation.h:108: warning: Found unknown command `\detail'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/Simulation.h:101: warning: Found unknown command `\detail'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/artist.h:31: warning: The following parameters of artist::drawLight(Location loc, int radius, Color color) are not documented:
+/media/shared/lrk/rocketrobot/src/Robot.h:56: warning: argument 'id' of command @param is not found in the argument list of Robot::getTarget() const
+/media/shared/lrk/rocketrobot/src/Simulation.h:86: warning: Found unknown command `\detail'
+/media/shared/lrk/rocketrobot/src/Simulation.h:93: warning: Found unknown command `\detail'
+/media/shared/lrk/rocketrobot/src/Simulation.h:93: warning: Found unknown command `\detail'
+/media/shared/lrk/rocketrobot/src/Simulation.h:86: warning: Found unknown command `\detail'
+/media/shared/lrk/rocketrobot/src/artist.h:31: warning: The following parameters of artist::drawLight(Location loc, int radius, Color color) are not documented:
   parameter 'color'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/artist.h:54: warning: The following parameters of artist::drawRobot(Location loc, int radius, int orientation, Color color, Color lineColor) are not documented:
+/media/shared/lrk/rocketrobot/src/artist.h:54: warning: The following parameters of artist::drawRobot(Location loc, int radius, int orientation, Color color, Color lineColor) are not documented:
   parameter 'radius'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/util.h:20: warning: Found unknown command `\detail'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/util.h:27: warning: Found unknown command `\detail'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/util.h:85: warning: argument 'initalSpeed' of command @param is not found in the argument list of util::addRobot(int robotType, int lightSensorConnectionPattern, int robotSensorConnectionPattern, int obstacleSensorConnectionPattern, int targetSensorConnectionPattern, float lightSensorScale, float robotSensorScale, float obstacleSensorScale, float targetSensorScale, int initialSpeed, std::string neuralNetworkFile)
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/util.h:85: warning: The following parameters of util::addRobot(int robotType, int lightSensorConnectionPattern, int robotSensorConnectionPattern, int obstacleSensorConnectionPattern, int targetSensorConnectionPattern, float lightSensorScale, float robotSensorScale, float obstacleSensorScale, float targetSensorScale, int initialSpeed, std::string neuralNetworkFile) are not documented:
+/media/shared/lrk/rocketrobot/src/util.h:20: warning: Found unknown command `\detail'
+/media/shared/lrk/rocketrobot/src/util.h:27: warning: Found unknown command `\detail'
+/media/shared/lrk/rocketrobot/src/util.h:85: warning: argument 'initalSpeed' of command @param is not found in the argument list of util::addRobot(int robotType, int lightSensorConnectionPattern, int robotSensorConnectionPattern, int obstacleSensorConnectionPattern, int targetSensorConnectionPattern, float lightSensorScale, float robotSensorScale, float obstacleSensorScale, float targetSensorScale, int initialSpeed, std::string neuralNetworkFile)
+/media/shared/lrk/rocketrobot/src/util.h:85: warning: The following parameters of util::addRobot(int robotType, int lightSensorConnectionPattern, int robotSensorConnectionPattern, int obstacleSensorConnectionPattern, int targetSensorConnectionPattern, float lightSensorScale, float robotSensorScale, float obstacleSensorScale, float targetSensorScale, int initialSpeed, std::string neuralNetworkFile) are not documented:
   parameter 'initialSpeed'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/util.h:57: warning: argument 'initalSpeed' of command @param is not found in the argument list of util::addRobotTarget(int robotType, int lightSensorConnectionPattern, int robotSensorConnectionPattern, int obstacleSensorConnectionPattern, int targetSensorConnectionPattern, float lightSensorScale, float robotSensorScale, float obstacleSensorScale, float targetSensorScale, int initialSpeed, std::string neuralNetworkFile)
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/util.h:57: warning: The following parameters of util::addRobotTarget(int robotType, int lightSensorConnectionPattern, int robotSensorConnectionPattern, int obstacleSensorConnectionPattern, int targetSensorConnectionPattern, float lightSensorScale, float robotSensorScale, float obstacleSensorScale, float targetSensorScale, int initialSpeed, std::string neuralNetworkFile) are not documented:
+/media/shared/lrk/rocketrobot/src/util.h:57: warning: argument 'initalSpeed' of command @param is not found in the argument list of util::addRobotTarget(int robotType, int lightSensorConnectionPattern, int robotSensorConnectionPattern, int obstacleSensorConnectionPattern, int targetSensorConnectionPattern, float lightSensorScale, float robotSensorScale, float obstacleSensorScale, float targetSensorScale, int initialSpeed, std::string neuralNetworkFile)
+/media/shared/lrk/rocketrobot/src/util.h:57: warning: The following parameters of util::addRobotTarget(int robotType, int lightSensorConnectionPattern, int robotSensorConnectionPattern, int obstacleSensorConnectionPattern, int targetSensorConnectionPattern, float lightSensorScale, float robotSensorScale, float obstacleSensorScale, float targetSensorScale, int initialSpeed, std::string neuralNetworkFile) are not documented:
   parameter 'initialSpeed'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/util.h:27: warning: Found unknown command `\detail'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/util.h:20: warning: Found unknown command `\detail'
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/mainpage.h:21: warning: Unsupported xml/html tag <optional> found
-/media/shared/lrk/U_of_M/Classes/Spring_2015/CSCI_3081/individual/repo-krame505/project/src/mainpage.h:21: warning: Unsupported xml/html tag <optional> found
+/media/shared/lrk/rocketrobot/src/util.h:27: warning: Found unknown command `\detail'
+/media/shared/lrk/rocketrobot/src/util.h:20: warning: Found unknown command `\detail'
+/media/shared/lrk/rocketrobot/src/mainpage.h:21: warning: Unsupported xml/html tag <optional> found
+/media/shared/lrk/rocketrobot/src/mainpage.h:21: warning: Unsupported xml/html tag <optional> found

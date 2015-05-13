@@ -535,48 +535,24 @@
 \indexentry{Simple\discretionary {-}{}{}Robot@{Simple\discretionary {-}{}{}Robot}!get\discretionary {-}{}{}Right\discretionary {-}{}{}Speed@{get\discretionary {-}{}{}Right\discretionary {-}{}{}Speed}|hyperpage}{68}
 \indexentry{get\discretionary {-}{}{}Right\discretionary {-}{}{}Speed@{get\discretionary {-}{}{}Right\discretionary {-}{}{}Speed}!SimpleRobot@{Simple\discretionary {-}{}{}Robot}|hyperpage}{68}
 \indexentry{Simulation@{Simulation}|hyperpage}{69}
-\indexentry{Simulation@{Simulation}!U\discretionary {-}{}{}I\discretionary {-}{}{}Control\discretionary {-}{}{}Type@{U\discretionary {-}{}{}I\discretionary {-}{}{}Control\discretionary {-}{}{}Type}|hyperpage}{71}
-\indexentry{U\discretionary {-}{}{}I\discretionary {-}{}{}Control\discretionary {-}{}{}Type@{U\discretionary {-}{}{}I\discretionary {-}{}{}Control\discretionary {-}{}{}Type}!Simulation@{Simulation}|hyperpage}{71}
-\indexentry{U\-I\-\_\-\-Q\-U\-I\-T@{U\-I\-\_\-\-Q\-U\-I\-T}!Simulation@{Simulation}|hyperpage}{71}
-\indexentry{Simulation@{Simulation}!U\-I\-\_\-\-Q\-U\-I\-T@{U\-I\-\_\-\-Q\-U\-I\-T}|hyperpage}{71}
-\indexentry{U\-I\-\_\-\-S\-T\-A\-R\-T@{U\-I\-\_\-\-S\-T\-A\-R\-T}!Simulation@{Simulation}|hyperpage}{71}
-\indexentry{Simulation@{Simulation}!U\-I\-\_\-\-S\-T\-A\-R\-T@{U\-I\-\_\-\-S\-T\-A\-R\-T}|hyperpage}{71}
-\indexentry{U\-I\-\_\-\-P\-A\-U\-S\-E@{U\-I\-\_\-\-P\-A\-U\-S\-E}!Simulation@{Simulation}|hyperpage}{71}
-\indexentry{Simulation@{Simulation}!U\-I\-\_\-\-P\-A\-U\-S\-E@{U\-I\-\_\-\-P\-A\-U\-S\-E}|hyperpage}{71}
-\indexentry{U\-I\-\_\-\-R\-E\-S\-U\-M\-E@{U\-I\-\_\-\-R\-E\-S\-U\-M\-E}!Simulation@{Simulation}|hyperpage}{71}
-\indexentry{Simulation@{Simulation}!U\-I\-\_\-\-R\-E\-S\-U\-M\-E@{U\-I\-\_\-\-R\-E\-S\-U\-M\-E}|hyperpage}{71}
-\indexentry{U\-I\-\_\-\-R\-E\-S\-E\-T@{U\-I\-\_\-\-R\-E\-S\-E\-T}!Simulation@{Simulation}|hyperpage}{71}
-\indexentry{Simulation@{Simulation}!U\-I\-\_\-\-R\-E\-S\-E\-T@{U\-I\-\_\-\-R\-E\-S\-E\-T}|hyperpage}{71}
-\indexentry{U\-I\-\_\-\-A\-D\-D\-\_\-\-R\-T@{U\-I\-\_\-\-A\-D\-D\-\_\-\-R\-T}!Simulation@{Simulation}|hyperpage}{71}
-\indexentry{Simulation@{Simulation}!U\-I\-\_\-\-A\-D\-D\-\_\-\-R\-T@{U\-I\-\_\-\-A\-D\-D\-\_\-\-R\-T}|hyperpage}{71}
-\indexentry{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-R\-T@{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-R\-T}!Simulation@{Simulation}|hyperpage}{71}
-\indexentry{Simulation@{Simulation}!U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-R\-T@{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-R\-T}|hyperpage}{71}
-\indexentry{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-A\-L\-L\-\_\-\-R\-T@{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-A\-L\-L\-\_\-\-R\-T}!Simulation@{Simulation}|hyperpage}{71}
-\indexentry{Simulation@{Simulation}!U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-A\-L\-L\-\_\-\-R\-T@{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-A\-L\-L\-\_\-\-R\-T}|hyperpage}{71}
-\indexentry{U\-I\-\_\-\-A\-D\-D\-\_\-\-O@{U\-I\-\_\-\-A\-D\-D\-\_\-\-O}!Simulation@{Simulation}|hyperpage}{71}
-\indexentry{Simulation@{Simulation}!U\-I\-\_\-\-A\-D\-D\-\_\-\-O@{U\-I\-\_\-\-A\-D\-D\-\_\-\-O}|hyperpage}{71}
-\indexentry{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-O@{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-O}!Simulation@{Simulation}|hyperpage}{71}
-\indexentry{Simulation@{Simulation}!U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-O@{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-O}|hyperpage}{71}
-\indexentry{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-A\-L\-L\-\_\-\-O@{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-A\-L\-L\-\_\-\-O}!Simulation@{Simulation}|hyperpage}{71}
-\indexentry{Simulation@{Simulation}!U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-A\-L\-L\-\_\-\-O@{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-A\-L\-L\-\_\-\-O}|hyperpage}{71}
-\indexentry{U\-I\-\_\-\-R\-E\-F\-R\-E\-S\-H\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-O@{U\-I\-\_\-\-R\-E\-F\-R\-E\-S\-H\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-O}!Simulation@{Simulation}|hyperpage}{71}
-\indexentry{Simulation@{Simulation}!U\-I\-\_\-\-R\-E\-F\-R\-E\-S\-H\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-O@{U\-I\-\_\-\-R\-E\-F\-R\-E\-S\-H\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-O}|hyperpage}{71}
 \indexentry{Simulation@{Simulation}!Simulation@{Simulation}|hyperpage}{71}
 \indexentry{Simulation@{Simulation}!Simulation@{Simulation}|hyperpage}{71}
 \indexentry{Simulation@{Simulation}!$\sim $\discretionary {-}{}{}Simulation@{$\sim $\discretionary {-}{}{}Simulation}|hyperpage}{71}
 \indexentry{$\sim $\discretionary {-}{}{}Simulation@{$\sim $\discretionary {-}{}{}Simulation}!Simulation@{Simulation}|hyperpage}{71}
 \indexentry{Simulation@{Simulation}!advance@{advance}|hyperpage}{71}
 \indexentry{advance@{advance}!Simulation@{Simulation}|hyperpage}{71}
+\indexentry{Simulation@{Simulation}!clear@{clear}|hyperpage}{71}
+\indexentry{clear@{clear}!Simulation@{Simulation}|hyperpage}{71}
 \indexentry{Simulation@{Simulation}!display@{display}|hyperpage}{71}
 \indexentry{display@{display}!Simulation@{Simulation}|hyperpage}{71}
 \indexentry{Simulation@{Simulation}!glui\discretionary {-}{}{}Control@{glui\discretionary {-}{}{}Control}|hyperpage}{71}
 \indexentry{glui\discretionary {-}{}{}Control@{glui\discretionary {-}{}{}Control}!Simulation@{Simulation}|hyperpage}{71}
-\indexentry{Simulation@{Simulation}!init\discretionary {-}{}{}Objects@{init\discretionary {-}{}{}Objects}|hyperpage}{72}
-\indexentry{init\discretionary {-}{}{}Objects@{init\discretionary {-}{}{}Objects}!Simulation@{Simulation}|hyperpage}{72}
-\indexentry{Simulation@{Simulation}!keyboard@{keyboard}|hyperpage}{72}
-\indexentry{keyboard@{keyboard}!Simulation@{Simulation}|hyperpage}{72}
-\indexentry{Simulation@{Simulation}!keyboard\discretionary {-}{}{}Special@{keyboard\discretionary {-}{}{}Special}|hyperpage}{72}
-\indexentry{keyboard\discretionary {-}{}{}Special@{keyboard\discretionary {-}{}{}Special}!Simulation@{Simulation}|hyperpage}{72}
+\indexentry{Simulation@{Simulation}!init\discretionary {-}{}{}Objects@{init\discretionary {-}{}{}Objects}|hyperpage}{71}
+\indexentry{init\discretionary {-}{}{}Objects@{init\discretionary {-}{}{}Objects}!Simulation@{Simulation}|hyperpage}{71}
+\indexentry{Simulation@{Simulation}!keyboard@{keyboard}|hyperpage}{71}
+\indexentry{keyboard@{keyboard}!Simulation@{Simulation}|hyperpage}{71}
+\indexentry{Simulation@{Simulation}!keyboard\discretionary {-}{}{}Special@{keyboard\discretionary {-}{}{}Special}|hyperpage}{71}
+\indexentry{keyboard\discretionary {-}{}{}Special@{keyboard\discretionary {-}{}{}Special}!Simulation@{Simulation}|hyperpage}{71}
 \indexentry{Simulation@{Simulation}!left\discretionary {-}{}{}Mouse\discretionary {-}{}{}Down@{left\discretionary {-}{}{}Mouse\discretionary {-}{}{}Down}|hyperpage}{72}
 \indexentry{left\discretionary {-}{}{}Mouse\discretionary {-}{}{}Down@{left\discretionary {-}{}{}Mouse\discretionary {-}{}{}Down}!Simulation@{Simulation}|hyperpage}{72}
 \indexentry{Simulation@{Simulation}!left\discretionary {-}{}{}Mouse\discretionary {-}{}{}Up@{left\discretionary {-}{}{}Mouse\discretionary {-}{}{}Up}|hyperpage}{72}
@@ -587,8 +563,10 @@
 \indexentry{mouse\discretionary {-}{}{}Dragged@{mouse\discretionary {-}{}{}Dragged}!Simulation@{Simulation}|hyperpage}{72}
 \indexentry{Simulation@{Simulation}!pause@{pause}|hyperpage}{72}
 \indexentry{pause@{pause}!Simulation@{Simulation}|hyperpage}{72}
-\indexentry{Simulation@{Simulation}!reinit@{reinit}|hyperpage}{72}
-\indexentry{reinit@{reinit}!Simulation@{Simulation}|hyperpage}{72}
+\indexentry{Simulation@{Simulation}!random@{random}|hyperpage}{72}
+\indexentry{random@{random}!Simulation@{Simulation}|hyperpage}{72}
+\indexentry{Simulation@{Simulation}!reset@{reset}|hyperpage}{72}
+\indexentry{reset@{reset}!Simulation@{Simulation}|hyperpage}{72}
 \indexentry{Simulation@{Simulation}!resume@{resume}|hyperpage}{72}
 \indexentry{resume@{resume}!Simulation@{Simulation}|hyperpage}{72}
 \indexentry{Simulation@{Simulation}!s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Moving\discretionary {-}{}{}Light\discretionary {-}{}{}Source@{s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Moving\discretionary {-}{}{}Light\discretionary {-}{}{}Source}|hyperpage}{72}
@@ -597,20 +575,22 @@
 \indexentry{s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Obstacle@{s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Obstacle}!Simulation@{Simulation}|hyperpage}{72}
 \indexentry{Simulation@{Simulation}!s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Robot@{s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Robot}|hyperpage}{72}
 \indexentry{s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Robot@{s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Robot}!Simulation@{Simulation}|hyperpage}{72}
-\indexentry{Simulation@{Simulation}!s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Robot\discretionary {-}{}{}Target@{s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Robot\discretionary {-}{}{}Target}|hyperpage}{73}
-\indexentry{s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Robot\discretionary {-}{}{}Target@{s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Robot\discretionary {-}{}{}Target}!Simulation@{Simulation}|hyperpage}{73}
-\indexentry{Simulation@{Simulation}!s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Stationary\discretionary {-}{}{}Light\discretionary {-}{}{}Source@{s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Stationary\discretionary {-}{}{}Light\discretionary {-}{}{}Source}|hyperpage}{73}
-\indexentry{s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Stationary\discretionary {-}{}{}Light\discretionary {-}{}{}Source@{s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Stationary\discretionary {-}{}{}Light\discretionary {-}{}{}Source}!Simulation@{Simulation}|hyperpage}{73}
-\indexentry{Simulation@{Simulation}!s\discretionary {-}{}{}\_\discretionary {-}{}{}neural\discretionary {-}{}{}Network\discretionary {-}{}{}File\discretionary {-}{}{}Changed@{s\discretionary {-}{}{}\_\discretionary {-}{}{}neural\discretionary {-}{}{}Network\discretionary {-}{}{}File\discretionary {-}{}{}Changed}|hyperpage}{73}
-\indexentry{s\discretionary {-}{}{}\_\discretionary {-}{}{}neural\discretionary {-}{}{}Network\discretionary {-}{}{}File\discretionary {-}{}{}Changed@{s\discretionary {-}{}{}\_\discretionary {-}{}{}neural\discretionary {-}{}{}Network\discretionary {-}{}{}File\discretionary {-}{}{}Changed}!Simulation@{Simulation}|hyperpage}{73}
-\indexentry{Simulation@{Simulation}!s\discretionary {-}{}{}\_\discretionary {-}{}{}open@{s\discretionary {-}{}{}\_\discretionary {-}{}{}open}|hyperpage}{73}
-\indexentry{s\discretionary {-}{}{}\_\discretionary {-}{}{}open@{s\discretionary {-}{}{}\_\discretionary {-}{}{}open}!Simulation@{Simulation}|hyperpage}{73}
-\indexentry{Simulation@{Simulation}!s\discretionary {-}{}{}\_\discretionary {-}{}{}pause@{s\discretionary {-}{}{}\_\discretionary {-}{}{}pause}|hyperpage}{73}
-\indexentry{s\discretionary {-}{}{}\_\discretionary {-}{}{}pause@{s\discretionary {-}{}{}\_\discretionary {-}{}{}pause}!Simulation@{Simulation}|hyperpage}{73}
+\indexentry{Simulation@{Simulation}!s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Robot\discretionary {-}{}{}Target@{s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Robot\discretionary {-}{}{}Target}|hyperpage}{72}
+\indexentry{s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Robot\discretionary {-}{}{}Target@{s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Robot\discretionary {-}{}{}Target}!Simulation@{Simulation}|hyperpage}{72}
+\indexentry{Simulation@{Simulation}!s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Stationary\discretionary {-}{}{}Light\discretionary {-}{}{}Source@{s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Stationary\discretionary {-}{}{}Light\discretionary {-}{}{}Source}|hyperpage}{72}
+\indexentry{s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Stationary\discretionary {-}{}{}Light\discretionary {-}{}{}Source@{s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Stationary\discretionary {-}{}{}Light\discretionary {-}{}{}Source}!Simulation@{Simulation}|hyperpage}{72}
+\indexentry{Simulation@{Simulation}!s\discretionary {-}{}{}\_\discretionary {-}{}{}clear@{s\discretionary {-}{}{}\_\discretionary {-}{}{}clear}|hyperpage}{72}
+\indexentry{s\discretionary {-}{}{}\_\discretionary {-}{}{}clear@{s\discretionary {-}{}{}\_\discretionary {-}{}{}clear}!Simulation@{Simulation}|hyperpage}{72}
+\indexentry{Simulation@{Simulation}!s\discretionary {-}{}{}\_\discretionary {-}{}{}neural\discretionary {-}{}{}Network\discretionary {-}{}{}File\discretionary {-}{}{}Changed@{s\discretionary {-}{}{}\_\discretionary {-}{}{}neural\discretionary {-}{}{}Network\discretionary {-}{}{}File\discretionary {-}{}{}Changed}|hyperpage}{72}
+\indexentry{s\discretionary {-}{}{}\_\discretionary {-}{}{}neural\discretionary {-}{}{}Network\discretionary {-}{}{}File\discretionary {-}{}{}Changed@{s\discretionary {-}{}{}\_\discretionary {-}{}{}neural\discretionary {-}{}{}Network\discretionary {-}{}{}File\discretionary {-}{}{}Changed}!Simulation@{Simulation}|hyperpage}{72}
+\indexentry{Simulation@{Simulation}!s\discretionary {-}{}{}\_\discretionary {-}{}{}open@{s\discretionary {-}{}{}\_\discretionary {-}{}{}open}|hyperpage}{72}
+\indexentry{s\discretionary {-}{}{}\_\discretionary {-}{}{}open@{s\discretionary {-}{}{}\_\discretionary {-}{}{}open}!Simulation@{Simulation}|hyperpage}{72}
+\indexentry{Simulation@{Simulation}!s\discretionary {-}{}{}\_\discretionary {-}{}{}pause@{s\discretionary {-}{}{}\_\discretionary {-}{}{}pause}|hyperpage}{72}
+\indexentry{s\discretionary {-}{}{}\_\discretionary {-}{}{}pause@{s\discretionary {-}{}{}\_\discretionary {-}{}{}pause}!Simulation@{Simulation}|hyperpage}{72}
+\indexentry{Simulation@{Simulation}!s\discretionary {-}{}{}\_\discretionary {-}{}{}random@{s\discretionary {-}{}{}\_\discretionary {-}{}{}random}|hyperpage}{72}
+\indexentry{s\discretionary {-}{}{}\_\discretionary {-}{}{}random@{s\discretionary {-}{}{}\_\discretionary {-}{}{}random}!Simulation@{Simulation}|hyperpage}{72}
 \indexentry{Simulation@{Simulation}!s\discretionary {-}{}{}\_\discretionary {-}{}{}refresh\discretionary {-}{}{}Configuration@{s\discretionary {-}{}{}\_\discretionary {-}{}{}refresh\discretionary {-}{}{}Configuration}|hyperpage}{73}
 \indexentry{s\discretionary {-}{}{}\_\discretionary {-}{}{}refresh\discretionary {-}{}{}Configuration@{s\discretionary {-}{}{}\_\discretionary {-}{}{}refresh\discretionary {-}{}{}Configuration}!Simulation@{Simulation}|hyperpage}{73}
-\indexentry{Simulation@{Simulation}!s\discretionary {-}{}{}\_\discretionary {-}{}{}reinit@{s\discretionary {-}{}{}\_\discretionary {-}{}{}reinit}|hyperpage}{73}
-\indexentry{s\discretionary {-}{}{}\_\discretionary {-}{}{}reinit@{s\discretionary {-}{}{}\_\discretionary {-}{}{}reinit}!Simulation@{Simulation}|hyperpage}{73}
 \indexentry{Simulation@{Simulation}!s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}All\discretionary {-}{}{}Light\discretionary {-}{}{}Source@{s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}All\discretionary {-}{}{}Light\discretionary {-}{}{}Source}|hyperpage}{73}
 \indexentry{s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}All\discretionary {-}{}{}Light\discretionary {-}{}{}Source@{s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}All\discretionary {-}{}{}Light\discretionary {-}{}{}Source}!Simulation@{Simulation}|hyperpage}{73}
 \indexentry{Simulation@{Simulation}!s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}All\discretionary {-}{}{}Obstacle@{s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}All\discretionary {-}{}{}Obstacle}|hyperpage}{73}
@@ -623,6 +603,8 @@
 \indexentry{s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}Obstacle@{s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}Obstacle}!Simulation@{Simulation}|hyperpage}{73}
 \indexentry{Simulation@{Simulation}!s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}Robot\discretionary {-}{}{}Target@{s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}Robot\discretionary {-}{}{}Target}|hyperpage}{73}
 \indexentry{s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}Robot\discretionary {-}{}{}Target@{s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}Robot\discretionary {-}{}{}Target}!Simulation@{Simulation}|hyperpage}{73}
+\indexentry{Simulation@{Simulation}!s\discretionary {-}{}{}\_\discretionary {-}{}{}reset@{s\discretionary {-}{}{}\_\discretionary {-}{}{}reset}|hyperpage}{73}
+\indexentry{s\discretionary {-}{}{}\_\discretionary {-}{}{}reset@{s\discretionary {-}{}{}\_\discretionary {-}{}{}reset}!Simulation@{Simulation}|hyperpage}{73}
 \indexentry{Simulation@{Simulation}!s\discretionary {-}{}{}\_\discretionary {-}{}{}resume@{s\discretionary {-}{}{}\_\discretionary {-}{}{}resume}|hyperpage}{73}
 \indexentry{s\discretionary {-}{}{}\_\discretionary {-}{}{}resume@{s\discretionary {-}{}{}\_\discretionary {-}{}{}resume}!Simulation@{Simulation}|hyperpage}{73}
 \indexentry{Simulation@{Simulation}!s\discretionary {-}{}{}\_\discretionary {-}{}{}save@{s\discretionary {-}{}{}\_\discretionary {-}{}{}save}|hyperpage}{73}
@@ -641,23 +623,23 @@
 \indexentry{try\discretionary {-}{}{}Add\discretionary {-}{}{}Robot\discretionary {-}{}{}Target@{try\discretionary {-}{}{}Add\discretionary {-}{}{}Robot\discretionary {-}{}{}Target}!Simulation@{Simulation}|hyperpage}{73}
 \indexentry{Simulation@{Simulation}!try\discretionary {-}{}{}Add\discretionary {-}{}{}Stationary\discretionary {-}{}{}Light\discretionary {-}{}{}Source@{try\discretionary {-}{}{}Add\discretionary {-}{}{}Stationary\discretionary {-}{}{}Light\discretionary {-}{}{}Source}|hyperpage}{73}
 \indexentry{try\discretionary {-}{}{}Add\discretionary {-}{}{}Stationary\discretionary {-}{}{}Light\discretionary {-}{}{}Source@{try\discretionary {-}{}{}Add\discretionary {-}{}{}Stationary\discretionary {-}{}{}Light\discretionary {-}{}{}Source}!Simulation@{Simulation}|hyperpage}{73}
-\indexentry{Simulation@{Simulation}!try\discretionary {-}{}{}Open@{try\discretionary {-}{}{}Open}|hyperpage}{74}
-\indexentry{try\discretionary {-}{}{}Open@{try\discretionary {-}{}{}Open}!Simulation@{Simulation}|hyperpage}{74}
-\indexentry{Simulation@{Simulation}!try\discretionary {-}{}{}Remove\discretionary {-}{}{}Light\discretionary {-}{}{}Source@{try\discretionary {-}{}{}Remove\discretionary {-}{}{}Light\discretionary {-}{}{}Source}|hyperpage}{74}
-\indexentry{try\discretionary {-}{}{}Remove\discretionary {-}{}{}Light\discretionary {-}{}{}Source@{try\discretionary {-}{}{}Remove\discretionary {-}{}{}Light\discretionary {-}{}{}Source}!Simulation@{Simulation}|hyperpage}{74}
-\indexentry{Simulation@{Simulation}!try\discretionary {-}{}{}Remove\discretionary {-}{}{}Obstacle@{try\discretionary {-}{}{}Remove\discretionary {-}{}{}Obstacle}|hyperpage}{74}
-\indexentry{try\discretionary {-}{}{}Remove\discretionary {-}{}{}Obstacle@{try\discretionary {-}{}{}Remove\discretionary {-}{}{}Obstacle}!Simulation@{Simulation}|hyperpage}{74}
+\indexentry{Simulation@{Simulation}!try\discretionary {-}{}{}Open@{try\discretionary {-}{}{}Open}|hyperpage}{73}
+\indexentry{try\discretionary {-}{}{}Open@{try\discretionary {-}{}{}Open}!Simulation@{Simulation}|hyperpage}{73}
+\indexentry{Simulation@{Simulation}!try\discretionary {-}{}{}Remove\discretionary {-}{}{}Light\discretionary {-}{}{}Source@{try\discretionary {-}{}{}Remove\discretionary {-}{}{}Light\discretionary {-}{}{}Source}|hyperpage}{73}
+\indexentry{try\discretionary {-}{}{}Remove\discretionary {-}{}{}Light\discretionary {-}{}{}Source@{try\discretionary {-}{}{}Remove\discretionary {-}{}{}Light\discretionary {-}{}{}Source}!Simulation@{Simulation}|hyperpage}{73}
+\indexentry{Simulation@{Simulation}!try\discretionary {-}{}{}Remove\discretionary {-}{}{}Obstacle@{try\discretionary {-}{}{}Remove\discretionary {-}{}{}Obstacle}|hyperpage}{73}
+\indexentry{try\discretionary {-}{}{}Remove\discretionary {-}{}{}Obstacle@{try\discretionary {-}{}{}Remove\discretionary {-}{}{}Obstacle}!Simulation@{Simulation}|hyperpage}{73}
 \indexentry{Simulation@{Simulation}!try\discretionary {-}{}{}Remove\discretionary {-}{}{}Robot\discretionary {-}{}{}Target@{try\discretionary {-}{}{}Remove\discretionary {-}{}{}Robot\discretionary {-}{}{}Target}|hyperpage}{74}
 \indexentry{try\discretionary {-}{}{}Remove\discretionary {-}{}{}Robot\discretionary {-}{}{}Target@{try\discretionary {-}{}{}Remove\discretionary {-}{}{}Robot\discretionary {-}{}{}Target}!Simulation@{Simulation}|hyperpage}{74}
 \indexentry{Simulation@{Simulation}!try\discretionary {-}{}{}Save@{try\discretionary {-}{}{}Save}|hyperpage}{74}
 \indexentry{try\discretionary {-}{}{}Save@{try\discretionary {-}{}{}Save}!Simulation@{Simulation}|hyperpage}{74}
 \indexentry{Target@{Target}|hyperpage}{74}
-\indexentry{Target@{Target}!Target@{Target}|hyperpage}{75}
-\indexentry{Target@{Target}!Target@{Target}|hyperpage}{75}
-\indexentry{Target@{Target}!Target@{Target}|hyperpage}{75}
-\indexentry{Target@{Target}!Target@{Target}|hyperpage}{75}
-\indexentry{Target@{Target}!Target@{Target}|hyperpage}{75}
-\indexentry{Target@{Target}!Target@{Target}|hyperpage}{75}
+\indexentry{Target@{Target}!Target@{Target}|hyperpage}{74}
+\indexentry{Target@{Target}!Target@{Target}|hyperpage}{74}
+\indexentry{Target@{Target}!Target@{Target}|hyperpage}{74}
+\indexentry{Target@{Target}!Target@{Target}|hyperpage}{74}
+\indexentry{Target@{Target}!Target@{Target}|hyperpage}{74}
+\indexentry{Target@{Target}!Target@{Target}|hyperpage}{74}
 \indexentry{Target@{Target}!Target@{Target}|hyperpage}{75}
 \indexentry{Target@{Target}!Target@{Target}|hyperpage}{75}
 \indexentry{Target@{Target}!$\sim $\discretionary {-}{}{}Target@{$\sim $\discretionary {-}{}{}Target}|hyperpage}{75}
