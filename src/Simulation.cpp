@@ -94,6 +94,12 @@ Simulation::Simulation(int argc, char* argv[]) :
   m_glui->add_radiobutton_to_group(robotTypeRG, "Complex");
   m_glui->add_radiobutton_to_group(robotTypeRG, "Neural network");
   robotTypeRG->set_int_val(GET_INT("DEFAULT_ROBOT_TYPE"));
+  GLUI_Rollout *obstacles = new GLUI_Rollout(m_glui, "Number of obstacles     ", false);
+  controls.push_back(obstacles);
+  controlsOpen.push_back(false);
+  m_glui->add_button_to_panel(obstacles, "+", 0, (GLUI_Update_CB)s_addObstacle);
+  m_glui->add_button_to_panel(obstacles, "-", 0, (GLUI_Update_CB)s_removeObstacle);
+  m_glui->add_button_to_panel(obstacles, "Remove all", 0, (GLUI_Update_CB)s_removeAllObstacle);
   GLUI_Rollout *lights = new GLUI_Rollout(m_glui, "Number of light sources ", false);
   controls.push_back(lights);
   controlsOpen.push_back(false);
@@ -101,15 +107,11 @@ Simulation::Simulation(int argc, char* argv[]) :
   m_glui->add_button_to_panel(lights, "+ Moving", 0, (GLUI_Update_CB)s_addMovingLightSource);
   m_glui->add_button_to_panel(lights, "-", 0, (GLUI_Update_CB)s_removeLightSource);
   m_glui->add_button_to_panel(lights, "Remove all", 0, (GLUI_Update_CB)s_removeAllLightSource);
-  GLUI_Rollout *obstacles = new GLUI_Rollout(m_glui, "Number of obstacles     ", false);
-  controls.push_back(obstacles);
-  controlsOpen.push_back(false);
-  m_glui->add_button_to_panel(obstacles, "+", 0, (GLUI_Update_CB)s_addObstacle);
-  m_glui->add_button_to_panel(obstacles, "-", 0, (GLUI_Update_CB)s_removeObstacle);
-  m_glui->add_button_to_panel(obstacles, "Remove all", 0, (GLUI_Update_CB)s_removeAllObstacle);
   m_glui->add_column(true);
   string statInitText(GET_INT("MAX_STAT_LENGTH"), ' ');
   statsBox = new GLUI_Rollout(m_glui, "Selected object details", true);
+  settings.push_back(statsBox);
+  settingsOpen.push_back(true);
   radiusText = new GLUI_StaticText(statsBox, statInitText.c_str());
   LocationText = new GLUI_StaticText(statsBox, statInitText.c_str());
   m_glui->add_column_to_panel(statsBox, false);
@@ -117,7 +119,7 @@ Simulation::Simulation(int argc, char* argv[]) :
   speedText = new GLUI_StaticText(statsBox, statInitText.c_str());
   string messageInitText(GET_INT("MAX_MESSAGE_LENGTH"), ' ');
   messageBox = new GLUI_Rollout(m_glui, "Messages");
-  settings.push_back(messageBox); // settings is about page layout, even though messages isn't really settings
+  settings.push_back(messageBox);
   settingsOpen.push_back(true);
   for (int i = 0; i < GET_INT("MAX_MESSAGES"); i++)
     messages.push_back(new GLUI_StaticText(messageBox, messageInitText.c_str()));
@@ -126,7 +128,7 @@ Simulation::Simulation(int argc, char* argv[]) :
   /*  neuralNetworkFileBrowser =
       new GLUI_FileBrowser(m_glui, "Neural network specification file");
       neuralNetworkFileBrowser->fbreaddir("../..");*/
-  GLUI_Rollout *neuralNetworkRobotSettings = new GLUI_Rollout(m_glui, "New neural network robot settings", false);
+  GLUI_Rollout *neuralNetworkRobotSettings = new GLUI_Rollout(m_glui, "New neural network robot settings                                  ", false);
   settings.push_back(neuralNetworkRobotSettings);
   settingsOpen.push_back(false);
   neuralNetworkFileBrowser =
@@ -135,7 +137,7 @@ Simulation::Simulation(int argc, char* argv[]) :
   neuralNetworkFileBrowser->set_w(330);
   m_glui->add_button_to_panel(neuralNetworkRobotSettings, "Select",
     -1, (GLUI_Update_CB)s_neuralNetworkFileChanged);
-  GLUI_Rollout *complexRobotSettings = new GLUI_Rollout(m_glui, "New complex robot settings         ", false);
+  GLUI_Rollout *complexRobotSettings = new GLUI_Rollout(m_glui, "New complex robot settings                                           ", false);
   settings.push_back(complexRobotSettings);
   settingsOpen.push_back(false);
   GLUI_Panel *lightConnectionPanel =  new GLUI_Panel(complexRobotSettings, "Light sensor connections");

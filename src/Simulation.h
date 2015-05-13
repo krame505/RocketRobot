@@ -226,7 +226,7 @@ private:
   GLUI_EditText *neuralNetworkFileBrowser;
   GLUI_Rollout *messageBox;
   std::vector<GLUI_StaticText*> messages;
-  GLUI_Panel *statsBox;
+  GLUI_Rollout *statsBox;
   std::vector<GLUI_Rollout*> controls;
   std::vector<GLUI_Rollout*> settings;
   std::vector<bool> controlsOpen;
