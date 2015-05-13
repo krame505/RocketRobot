@@ -9,9 +9,9 @@
 ## Object behavior
 * Modify collisions behavior?
 * Possible bug in wall detection?
-* More advanced network support - maybe feed-back?
+* More advanced neural network support - maybe feed-back?
 
 ## Project/general
 * Fix documentation to include source for .cpp files
-* On-line documentation is really slow to load
+* Online documentation is really slow to load
   * Create gh-pages branch instead of using htmlpreview
