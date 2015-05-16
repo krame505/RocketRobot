@@ -16,6 +16,7 @@
 #include <fstream>
 #include <iostream>
 #include <climits>
+#include <csignal>
 #include <sys/stat.h>
 #include <boost/interprocess/sync/named_upgradable_mutex.hpp>
 using namespace std;
@@ -37,10 +38,14 @@ using namespace boost::interprocess;
 using namespace environment;
 using namespace util;
 
+OptimizeSimulation *OptimizeSimulation::s_currentInstance;
+
 OptimizeSimulation::OptimizeSimulation(int argc, char* argv[]) :
   lock(open_or_create, GET_STRING("NEURAL_NETWORK_LOCK_NAME").c_str()) {
-  sigemptyset(&blocked);
-  sigaddset(&blocked, SIGINT);
+  s_currentInstance = this;
+  //sigemptyset(&sigint);
+  //sigaddset(&sigint, SIGINT);
+  signal(SIGINT, stopHandler);
   lock.lock_sharable();
   reload();
   lock.unlock_sharable();
@@ -59,7 +64,7 @@ OptimizeSimulation::~OptimizeSimulation() {
 void OptimizeSimulation::runMainLoop() {
   int lastUpdateTime = getFileTimestamp(GET_STRING("BEST_PERFORMANCE_FILE"));
 
-  while (true) {
+  while (!stopRequest) {
     int netId1 = rand() % (pool.size() > (unsigned)GET_INT("SUB_POOL_SIZE")?
                            GET_INT("SUB_POOL_SIZE") : pool.size());
     int netId2 = rand() % pool.size();
@@ -121,7 +126,7 @@ void OptimizeSimulation::runMainLoop() {
     }
 
     if (poolChanged) {
-      sigprocmask(SIG_BLOCK, &blocked, NULL);
+      //sigprocmask(SIG_BLOCK, &sigint, NULL);
       lock.unlock_upgradable_and_lock();
 
       bool clearPerformances =
@@ -140,12 +145,16 @@ void OptimizeSimulation::runMainLoop() {
 
       lastUpdateTime = getFileTimestamp(GET_STRING("BEST_PERFORMANCE_FILE"));
 
-      sigprocmask(SIG_UNBLOCK, &blocked, NULL);
+      //sigprocmask(SIG_UNBLOCK, &sigint, NULL);
       lock.unlock();
     }
     else 
       lock.unlock_upgradable();
   }
+}
+
+void OptimizeSimulation::stop() {
+  stopRequest = true;
 }
 
 int OptimizeSimulation::getFileTimestamp(string filename) {
@@ -253,4 +262,8 @@ int OptimizeSimulation::getPerformanceObstacles(const NeuralNetwork &network) {
     }
   }
   return result;
+}
+
+void OptimizeSimulation::stopHandler(int) {
+  s_currentInstance->stop();
 }

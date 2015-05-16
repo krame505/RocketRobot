@@ -5,8 +5,7 @@
   * Scale everything?  
 
 ## Optimization simulation
-* Graceful exit when stopping optimization, would fix problems with terminating while the mutex is locked
-  * Use a signal handler and set a flag
+
 
 ## Object behavior
 * Modify collisions behavior?

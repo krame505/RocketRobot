@@ -136,7 +136,7 @@ Simulation::Simulation(int argc, char* argv[]) :
   neuralNetworkFileBrowser->set_text(string(neuralNetworkFile));
   neuralNetworkFileBrowser->set_w(330);
   m_glui->add_button_to_panel(neuralNetworkRobotSettings, "Select",
-    -1, (GLUI_Update_CB)s_neuralNetworkFileChanged);
+                              -1, (GLUI_Update_CB)s_neuralNetworkFileChanged);
   GLUI_Rollout *complexRobotSettings = new GLUI_Rollout(m_glui, "New complex robot settings                                           ", false);
   settings.push_back(complexRobotSettings);
   settingsOpen.push_back(false);
@@ -687,6 +687,8 @@ void Simulation::showMessage(string message) {
   if (messageBox == NULL)
     messageBox = GLUI_Master.create_glui_subwindow(m_glutWindowHandle, GLUI_SUBWINDOW_BOTTOM);
   */
+  messageBox->open();
+
   static deque<string> message_queue;
   message_queue.push_back(message);
   if ((int)message_queue.size() > GET_INT("MAX_MESSAGES"))
