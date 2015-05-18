@@ -10,10 +10,10 @@ Scanning input file refman.idx....
 !! Input index error (file = refman.idx, line = 354):
    -- Extra `!' at position 24 of first argument.
 
-!! Input index error (file = refman.idx, line = 729):
+!! Input index error (file = refman.idx, line = 711):
    -- First argument too long (max 1024).
-done (774 entries accepted, 5 rejected).
-Sorting entries.........done (8186 comparisons).
-Generating output file refman.ind....done (1249 lines written, 0 warnings).
+done (756 entries accepted, 5 rejected).
+Sorting entries.........done (7754 comparisons).
+Generating output file refman.ind....done (1218 lines written, 0 warnings).
 Output written in refman.ind.
 Transcript written in refman.ilg.

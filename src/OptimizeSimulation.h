@@ -29,13 +29,20 @@ public:
   virtual ~OptimizeSimulation();
 
   void runMainLoop();
+  void stop();
+
   int getPerformance(const NeuralNetwork &network);
   int getPerformanceRandomRepeated(const NeuralNetwork &network);
   int getPerformanceMaze(const NeuralNetwork &network);
   int getPerformanceObstacles(const NeuralNetwork &network);
 
 private:
+  static OptimizeSimulation *s_currentInstance;
+
   boost::interprocess::named_upgradable_mutex lock;
+
+  bool stopRequest = false;
+  static void stopHandler(int);
 
   std::vector<NeuralNetwork*> pool;
   std::vector<int> poolPerformance;
@@ -44,5 +51,5 @@ private:
   std::string getPoolFile(int i);
   void reload();
 
-  sigset_t blocked;
+  sigset_t sigint;
 };

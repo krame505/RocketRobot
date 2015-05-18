@@ -16,10 +16,12 @@ int START_DELAY       = 10
 int FRAMES_PER_SECOND = 30
 int SLICES_PER_CIRCLE = 29
 
-# Control window
-int MAX_MESSAGES = 16
+# User interface
+int MAX_MESSAGES = 15
 int MAX_MESSAGE_LENGTH = 85
 int MAX_STAT_LENGTH = 42
+int MAX_CONTROLS_OPEN = 3
+int MAX_SETTINGS_OPEN = 3
 
 # Colors
 bool USE_HEX_COLORS = true
@@ -31,8 +33,6 @@ int NUM_LIGHT_SOURCES  = 10
 int NUM_OBSTACLES      = 6
 
 int DEFAULT_ROBOT_TYPE = 2 # Neural network
-
-bool ENABLE_TARGETS = true
 
 string INITIAL_SIMULATION_FILE = "$INSTALL_DIR/runtime/temp_initial.rsim"
 string INSTALL_DIR             = ".."

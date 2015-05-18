@@ -1,7 +1,7 @@
 var searchData=
 [
   ['charval',['charVal',['../structconfigValue.html#a21dd817d08a5648100732180b81f714e',1,'configValue']]],
-  ['clear',['clear',['../namespaceenvironment.html#a883864c5c3c7f8ca4954781dae04bc11',1,'environment']]],
+  ['clear',['clear',['../classSimulation.html#ae47fcb172ad1e42adeb91c0a9bc8e1cd',1,'Simulation::clear()'],['../namespaceenvironment.html#a883864c5c3c7f8ca4954781dae04bc11',1,'environment::clear()']]],
   ['color',['Color',['../structColor.html',1,'Color'],['../structColor.html#a9a742cbe9f9f4037f5d9f4e81a9b2428',1,'Color::Color()'],['../structColor.html#a373c542c99fb83ce9c7c08aae76b2718',1,'Color::Color(float r, float g, float b)'],['../structColor.html#ade5cd4cc07dfaf745089dce14e47c31b',1,'Color::Color(char c)'],['../structColor.html#a2023dcb2762807f60730e0787abc4788',1,'Color::Color(int c)'],['../Color_8h.html#a0af5129fc90cfaec2f17f58fb0fb9686',1,'Color():&#160;Color.h']]],
   ['color_2ecpp',['Color.cpp',['../Color_8cpp.html',1,'']]],
   ['color_2eh',['Color.h',['../Color_8h.html',1,'']]],

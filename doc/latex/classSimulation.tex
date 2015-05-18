@@ -16,26 +16,6 @@ Inheritance diagram for Simulation\-:\begin{figure}[H]
 \includegraphics[height=2.000000cm]{classSimulation}
 \end{center}
 \end{figure}
-\subsection*{Public Types}
-\begin{DoxyCompactItemize}
-\item 
-enum \hyperlink{classSimulation_a0fd1c91d4e7699e893929d56b60a60bf}{U\-I\-Control\-Type} \{ \\*
-\hyperlink{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfa51f628c4a96a151830bd4a541dc42a5f}{U\-I\-\_\-\-Q\-U\-I\-T} = 0, 
-\hyperlink{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfae4ec551adee29b6e2329929952c10ce5}{U\-I\-\_\-\-S\-T\-A\-R\-T} = 1, 
-\hyperlink{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfa6eb81d656b8ff64239548e4195560ef0}{U\-I\-\_\-\-P\-A\-U\-S\-E} = 2, 
-\hyperlink{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfae8829fdccf0a3a28e0b0bf8dc47bf26e}{U\-I\-\_\-\-R\-E\-S\-U\-M\-E} = 3, 
-\\*
-\hyperlink{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfac225a254f31158303679980967981bc9}{U\-I\-\_\-\-R\-E\-S\-E\-T} = 4, 
-\hyperlink{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfa6317cb77470cc56fe70b691f52955c4c}{U\-I\-\_\-\-A\-D\-D\-\_\-\-R\-T} = 5, 
-\hyperlink{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfa14c1d37382b9ca020c6bf6b3836243c0}{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-R\-T} = 6, 
-\hyperlink{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfab36c850d499ed9f99cacfe96ff2117e7}{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-A\-L\-L\-\_\-\-R\-T} = 7, 
-\\*
-\hyperlink{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfa45b5ff750112baeaff08b7ee6d5acd33}{U\-I\-\_\-\-A\-D\-D\-\_\-\-O} = 8, 
-\hyperlink{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfa5b0105b011629753dc0427a2413e1d09}{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-O} = 9, 
-\hyperlink{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfac5f95e9ad964238fbd90c32b4ef6b6c2}{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-A\-L\-L\-\_\-\-O} = 10, 
-\hyperlink{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfa05cb386b777ad1565ab96f328811d39b}{U\-I\-\_\-\-R\-E\-F\-R\-E\-S\-H\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-O} = 11
- \}
-\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -89,7 +69,11 @@ void \hyperlink{classSimulation_a72676ce712a367d4124bf88f4165b7b7}{pause} (int)
 \item 
 void \hyperlink{classSimulation_aecfee72e6cd12d7b2a847a9c9b0634ec}{resume} (int)
 \item 
-void \hyperlink{classSimulation_a1e61cb809f6d69ea98b6b5296e95036b}{reinit} (int)
+void \hyperlink{classSimulation_aa35f76e4125149c4bd71b2d870eaa70d}{reset} (int)
+\item 
+void \hyperlink{classSimulation_ae47fcb172ad1e42adeb91c0a9bc8e1cd}{clear} (int)
+\item 
+void \hyperlink{classSimulation_a71222e784171f690ec3953de65c4a84c}{random} (int)
 \end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -100,7 +84,11 @@ static void \hyperlink{classSimulation_a5f23f02ab2ff4908179428b679cd35e0}{s\-\_\
 \item 
 static void \hyperlink{classSimulation_a488913a8c9940626ae33fbb46fcaa3ba}{s\-\_\-resume} (int)
 \item 
-static void \hyperlink{classSimulation_a410d482c16331e1e6de5ba3543ccedf1}{s\-\_\-reinit} (int)
+static void \hyperlink{classSimulation_a126696e55171934239ad04f8967868a7}{s\-\_\-reset} (int)
+\item 
+static void \hyperlink{classSimulation_a8155c197bab91873c70265d50e257108}{s\-\_\-clear} (int)
+\item 
+static void \hyperlink{classSimulation_abaa6fb8813325571348d49ff8f7d63d1}{s\-\_\-random} (int)
 \item 
 static void \hyperlink{classSimulation_a8809bedf93cf98b14595606702dac2ea}{s\-\_\-add\-Robot\-Target} (int)
 \item 
@@ -137,41 +125,6 @@ static void \hyperlink{classSimulation_aa517549d904986ed7862125ce22385c1}{s\-\_\
 
 \subsection{Detailed Description}
 \hyperlink{classSimulation}{Simulation} class, sets up the G\-U\-I and the drawing environment. 
-
-\subsection{Member Enumeration Documentation}
-\hypertarget{classSimulation_a0fd1c91d4e7699e893929d56b60a60bf}{\index{Simulation@{Simulation}!U\-I\-Control\-Type@{U\-I\-Control\-Type}}
-\index{U\-I\-Control\-Type@{U\-I\-Control\-Type}!Simulation@{Simulation}}
-\subsubsection[{U\-I\-Control\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Simulation\-::\-U\-I\-Control\-Type}}}\label{classSimulation_a0fd1c91d4e7699e893929d56b60a60bf}
-\begin{Desc}
-\item[Enumerator]\par
-\begin{description}
-\index{U\-I\-\_\-\-Q\-U\-I\-T@{U\-I\-\_\-\-Q\-U\-I\-T}!Simulation@{Simulation}}\index{Simulation@{Simulation}!U\-I\-\_\-\-Q\-U\-I\-T@{U\-I\-\_\-\-Q\-U\-I\-T}}\item[{\em 
-\hypertarget{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfa51f628c4a96a151830bd4a541dc42a5f}{U\-I\-\_\-\-Q\-U\-I\-T}\label{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfa51f628c4a96a151830bd4a541dc42a5f}
-}]\index{U\-I\-\_\-\-S\-T\-A\-R\-T@{U\-I\-\_\-\-S\-T\-A\-R\-T}!Simulation@{Simulation}}\index{Simulation@{Simulation}!U\-I\-\_\-\-S\-T\-A\-R\-T@{U\-I\-\_\-\-S\-T\-A\-R\-T}}\item[{\em 
-\hypertarget{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfae4ec551adee29b6e2329929952c10ce5}{U\-I\-\_\-\-S\-T\-A\-R\-T}\label{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfae4ec551adee29b6e2329929952c10ce5}
-}]\index{U\-I\-\_\-\-P\-A\-U\-S\-E@{U\-I\-\_\-\-P\-A\-U\-S\-E}!Simulation@{Simulation}}\index{Simulation@{Simulation}!U\-I\-\_\-\-P\-A\-U\-S\-E@{U\-I\-\_\-\-P\-A\-U\-S\-E}}\item[{\em 
-\hypertarget{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfa6eb81d656b8ff64239548e4195560ef0}{U\-I\-\_\-\-P\-A\-U\-S\-E}\label{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfa6eb81d656b8ff64239548e4195560ef0}
-}]\index{U\-I\-\_\-\-R\-E\-S\-U\-M\-E@{U\-I\-\_\-\-R\-E\-S\-U\-M\-E}!Simulation@{Simulation}}\index{Simulation@{Simulation}!U\-I\-\_\-\-R\-E\-S\-U\-M\-E@{U\-I\-\_\-\-R\-E\-S\-U\-M\-E}}\item[{\em 
-\hypertarget{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfae8829fdccf0a3a28e0b0bf8dc47bf26e}{U\-I\-\_\-\-R\-E\-S\-U\-M\-E}\label{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfae8829fdccf0a3a28e0b0bf8dc47bf26e}
-}]\index{U\-I\-\_\-\-R\-E\-S\-E\-T@{U\-I\-\_\-\-R\-E\-S\-E\-T}!Simulation@{Simulation}}\index{Simulation@{Simulation}!U\-I\-\_\-\-R\-E\-S\-E\-T@{U\-I\-\_\-\-R\-E\-S\-E\-T}}\item[{\em 
-\hypertarget{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfac225a254f31158303679980967981bc9}{U\-I\-\_\-\-R\-E\-S\-E\-T}\label{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfac225a254f31158303679980967981bc9}
-}]\index{U\-I\-\_\-\-A\-D\-D\-\_\-\-R\-T@{U\-I\-\_\-\-A\-D\-D\-\_\-\-R\-T}!Simulation@{Simulation}}\index{Simulation@{Simulation}!U\-I\-\_\-\-A\-D\-D\-\_\-\-R\-T@{U\-I\-\_\-\-A\-D\-D\-\_\-\-R\-T}}\item[{\em 
-\hypertarget{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfa6317cb77470cc56fe70b691f52955c4c}{U\-I\-\_\-\-A\-D\-D\-\_\-\-R\-T}\label{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfa6317cb77470cc56fe70b691f52955c4c}
-}]\index{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-R\-T@{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-R\-T}!Simulation@{Simulation}}\index{Simulation@{Simulation}!U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-R\-T@{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-R\-T}}\item[{\em 
-\hypertarget{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfa14c1d37382b9ca020c6bf6b3836243c0}{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-R\-T}\label{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfa14c1d37382b9ca020c6bf6b3836243c0}
-}]\index{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-A\-L\-L\-\_\-\-R\-T@{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-A\-L\-L\-\_\-\-R\-T}!Simulation@{Simulation}}\index{Simulation@{Simulation}!U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-A\-L\-L\-\_\-\-R\-T@{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-A\-L\-L\-\_\-\-R\-T}}\item[{\em 
-\hypertarget{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfab36c850d499ed9f99cacfe96ff2117e7}{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-A\-L\-L\-\_\-\-R\-T}\label{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfab36c850d499ed9f99cacfe96ff2117e7}
-}]\index{U\-I\-\_\-\-A\-D\-D\-\_\-\-O@{U\-I\-\_\-\-A\-D\-D\-\_\-\-O}!Simulation@{Simulation}}\index{Simulation@{Simulation}!U\-I\-\_\-\-A\-D\-D\-\_\-\-O@{U\-I\-\_\-\-A\-D\-D\-\_\-\-O}}\item[{\em 
-\hypertarget{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfa45b5ff750112baeaff08b7ee6d5acd33}{U\-I\-\_\-\-A\-D\-D\-\_\-\-O}\label{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfa45b5ff750112baeaff08b7ee6d5acd33}
-}]\index{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-O@{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-O}!Simulation@{Simulation}}\index{Simulation@{Simulation}!U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-O@{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-O}}\item[{\em 
-\hypertarget{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfa5b0105b011629753dc0427a2413e1d09}{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-O}\label{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfa5b0105b011629753dc0427a2413e1d09}
-}]\index{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-A\-L\-L\-\_\-\-O@{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-A\-L\-L\-\_\-\-O}!Simulation@{Simulation}}\index{Simulation@{Simulation}!U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-A\-L\-L\-\_\-\-O@{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-A\-L\-L\-\_\-\-O}}\item[{\em 
-\hypertarget{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfac5f95e9ad964238fbd90c32b4ef6b6c2}{U\-I\-\_\-\-R\-E\-M\-O\-V\-E\-\_\-\-A\-L\-L\-\_\-\-O}\label{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfac5f95e9ad964238fbd90c32b4ef6b6c2}
-}]\index{U\-I\-\_\-\-R\-E\-F\-R\-E\-S\-H\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-O@{U\-I\-\_\-\-R\-E\-F\-R\-E\-S\-H\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-O}!Simulation@{Simulation}}\index{Simulation@{Simulation}!U\-I\-\_\-\-R\-E\-F\-R\-E\-S\-H\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-O@{U\-I\-\_\-\-R\-E\-F\-R\-E\-S\-H\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-O}}\item[{\em 
-\hypertarget{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfa05cb386b777ad1565ab96f328811d39b}{U\-I\-\_\-\-R\-E\-F\-R\-E\-S\-H\-\_\-\-S\-E\-T\-T\-I\-N\-G\-S\-\_\-\-O}\label{classSimulation_a0fd1c91d4e7699e893929d56b60a60bfa05cb386b777ad1565ab96f328811d39b}
-}]\end{description}
-\end{Desc}
-
 
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{classSimulation_adcfdbfb67f658534437a17d157099db9}{\index{Simulation@{Simulation}!Simulation@{Simulation}}
@@ -218,6 +171,13 @@ Call-\/back function to update the positions of all objects.  This function is c
 
 Reimplemented from \hyperlink{classBaseGfxApp_a432317fc7c028b2c6702eb2232e85425}{Base\-Gfx\-App}.
 
+\hypertarget{classSimulation_ae47fcb172ad1e42adeb91c0a9bc8e1cd}{\index{Simulation@{Simulation}!clear@{clear}}
+\index{clear@{clear}!Simulation@{Simulation}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\-::clear (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}}\label{classSimulation_ae47fcb172ad1e42adeb91c0a9bc8e1cd}
 \hypertarget{classSimulation_a449dcb7d97dfba99efe770de2f399c31}{\index{Simulation@{Simulation}!display@{display}}
 \index{display@{display}!Simulation@{Simulation}}
 \subsubsection[{display}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\-::display (
@@ -364,13 +324,20 @@ Reimplemented from \hyperlink{classBaseGfxApp_abb23f716dd6612b3a72938e41525d338}
 \item[{int}]{}
 \end{DoxyParamCaption}
 )}}\label{classSimulation_a72676ce712a367d4124bf88f4165b7b7}
-\hypertarget{classSimulation_a1e61cb809f6d69ea98b6b5296e95036b}{\index{Simulation@{Simulation}!reinit@{reinit}}
-\index{reinit@{reinit}!Simulation@{Simulation}}
-\subsubsection[{reinit}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\-::reinit (
+\hypertarget{classSimulation_a71222e784171f690ec3953de65c4a84c}{\index{Simulation@{Simulation}!random@{random}}
+\index{random@{random}!Simulation@{Simulation}}
+\subsubsection[{random}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\-::random (
 \begin{DoxyParamCaption}
 \item[{int}]{}
 \end{DoxyParamCaption}
-)}}\label{classSimulation_a1e61cb809f6d69ea98b6b5296e95036b}
+)}}\label{classSimulation_a71222e784171f690ec3953de65c4a84c}
+\hypertarget{classSimulation_aa35f76e4125149c4bd71b2d870eaa70d}{\index{Simulation@{Simulation}!reset@{reset}}
+\index{reset@{reset}!Simulation@{Simulation}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\-::reset (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}}\label{classSimulation_aa35f76e4125149c4bd71b2d870eaa70d}
 \hypertarget{classSimulation_aecfee72e6cd12d7b2a847a9c9b0634ec}{\index{Simulation@{Simulation}!resume@{resume}}
 \index{resume@{resume}!Simulation@{Simulation}}
 \subsubsection[{resume}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\-::resume (
@@ -413,6 +380,13 @@ Reimplemented from \hyperlink{classBaseGfxApp_abb23f716dd6612b3a72938e41525d338}
 \item[{int}]{a}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}}\label{classSimulation_a81fd62337fe6091c4a10277f24d3283e}
+\hypertarget{classSimulation_a8155c197bab91873c70265d50e257108}{\index{Simulation@{Simulation}!s\-\_\-clear@{s\-\_\-clear}}
+\index{s\-\_\-clear@{s\-\_\-clear}!Simulation@{Simulation}}
+\subsubsection[{s\-\_\-clear}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\-::s\-\_\-clear (
+\begin{DoxyParamCaption}
+\item[{int}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classSimulation_a8155c197bab91873c70265d50e257108}
 \hypertarget{classSimulation_aa517549d904986ed7862125ce22385c1}{\index{Simulation@{Simulation}!s\-\_\-neural\-Network\-File\-Changed@{s\-\_\-neural\-Network\-File\-Changed}}
 \index{s\-\_\-neural\-Network\-File\-Changed@{s\-\_\-neural\-Network\-File\-Changed}!Simulation@{Simulation}}
 \subsubsection[{s\-\_\-neural\-Network\-File\-Changed}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\-::s\-\_\-neural\-Network\-File\-Changed (
@@ -434,6 +408,13 @@ Reimplemented from \hyperlink{classBaseGfxApp_abb23f716dd6612b3a72938e41525d338}
 \item[{int}]{a}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}}\label{classSimulation_a5f23f02ab2ff4908179428b679cd35e0}
+\hypertarget{classSimulation_abaa6fb8813325571348d49ff8f7d63d1}{\index{Simulation@{Simulation}!s\-\_\-random@{s\-\_\-random}}
+\index{s\-\_\-random@{s\-\_\-random}!Simulation@{Simulation}}
+\subsubsection[{s\-\_\-random}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\-::s\-\_\-random (
+\begin{DoxyParamCaption}
+\item[{int}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classSimulation_abaa6fb8813325571348d49ff8f7d63d1}
 \hypertarget{classSimulation_a8f8588b5f9f96ab590e89f5635413b09}{\index{Simulation@{Simulation}!s\-\_\-refresh\-Configuration@{s\-\_\-refresh\-Configuration}}
 \index{s\-\_\-refresh\-Configuration@{s\-\_\-refresh\-Configuration}!Simulation@{Simulation}}
 \subsubsection[{s\-\_\-refresh\-Configuration}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\-::s\-\_\-refresh\-Configuration (
@@ -441,13 +422,6 @@ Reimplemented from \hyperlink{classBaseGfxApp_abb23f716dd6612b3a72938e41525d338}
 \item[{int}]{a}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}}\label{classSimulation_a8f8588b5f9f96ab590e89f5635413b09}
-\hypertarget{classSimulation_a410d482c16331e1e6de5ba3543ccedf1}{\index{Simulation@{Simulation}!s\-\_\-reinit@{s\-\_\-reinit}}
-\index{s\-\_\-reinit@{s\-\_\-reinit}!Simulation@{Simulation}}
-\subsubsection[{s\-\_\-reinit}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\-::s\-\_\-reinit (
-\begin{DoxyParamCaption}
-\item[{int}]{a}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}}\label{classSimulation_a410d482c16331e1e6de5ba3543ccedf1}
 \hypertarget{classSimulation_a4a93430b4e38ab42ad0484068aa8c7ef}{\index{Simulation@{Simulation}!s\-\_\-remove\-All\-Light\-Source@{s\-\_\-remove\-All\-Light\-Source}}
 \index{s\-\_\-remove\-All\-Light\-Source@{s\-\_\-remove\-All\-Light\-Source}!Simulation@{Simulation}}
 \subsubsection[{s\-\_\-remove\-All\-Light\-Source}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\-::s\-\_\-remove\-All\-Light\-Source (
@@ -490,6 +464,13 @@ Reimplemented from \hyperlink{classBaseGfxApp_abb23f716dd6612b3a72938e41525d338}
 \item[{int}]{a}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}}\label{classSimulation_a2eac6140af57c80832b96f7baeaa1541}
+\hypertarget{classSimulation_a126696e55171934239ad04f8967868a7}{\index{Simulation@{Simulation}!s\-\_\-reset@{s\-\_\-reset}}
+\index{s\-\_\-reset@{s\-\_\-reset}!Simulation@{Simulation}}
+\subsubsection[{s\-\_\-reset}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\-::s\-\_\-reset (
+\begin{DoxyParamCaption}
+\item[{int}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classSimulation_a126696e55171934239ad04f8967868a7}
 \hypertarget{classSimulation_a488913a8c9940626ae33fbb46fcaa3ba}{\index{Simulation@{Simulation}!s\-\_\-resume@{s\-\_\-resume}}
 \index{s\-\_\-resume@{s\-\_\-resume}!Simulation@{Simulation}}
 \subsubsection[{s\-\_\-resume}]{\setlength{\rightskip}{0pt plus 5cm}void Simulation\-::s\-\_\-resume (
