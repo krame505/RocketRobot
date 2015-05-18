@@ -5,7 +5,7 @@
   * Scale everything?  
 
 ## Optimization simulation
-
+* Optimization processes seem to be dying after a while with no error
 
 ## Object behavior
 * Modify collisions behavior?
