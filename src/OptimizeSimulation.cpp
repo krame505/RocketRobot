@@ -65,58 +65,121 @@ void OptimizeSimulation::runMainLoop() {
   int lastUpdateTime = getFileTimestamp(GET_STRING("BEST_PERFORMANCE_FILE"));
 
   while (!stopRequest) {
-    int netId1 = rand() % (pool.size() > (unsigned)GET_INT("SUB_POOL_SIZE")?
-                           GET_INT("SUB_POOL_SIZE") : pool.size());
-    int netId2 = rand() % pool.size();
-    if (GET_BOOL("OPTIMIZE_VERBOSE"))
-      cout << "Combining network " << netId1 << " with " << netId2 << endl;
-    NeuralNetwork *newNetwork =
-      new NeuralNetwork(pool[netId1]->
-                        combine(*pool[netId2]).
-                        mutate(GET_INT("NUM_CONNECTIONS_MUTATED"),
-                               GET_FLOAT("MUTATION_AMOUNT")));
-    newNetwork->write(GET_STRING("TEMP_NEURAL_NETWORK_FILE"));
-    int newPerformance = getPerformance(*newNetwork);
-    
-    lock.lock_upgradable();
-    int newUpdateTime = getFileTimestamp(GET_STRING("BEST_PERFORMANCE_FILE"));
-    if (lastUpdateTime != newUpdateTime) {
+    bool poolChanged = false;
+    int oldOptimalPerformance;
+    if (poolPerformance.size() > 0)
+      oldOptimalPerformance = poolPerformance[0];
+    else
+      oldOptimalPerformance = -1;
+
+    if (((float)rand()) / ((float)RAND_MAX) < GET_FLOAT("COMBINE_FREQUENCY")) {
+      int netId1 = rand() % (pool.size() > (unsigned)GET_INT("SUB_POOL_SIZE")?
+                             GET_INT("SUB_POOL_SIZE") : pool.size());
+      int netId2 = rand() % pool.size();
       if (GET_BOOL("OPTIMIZE_VERBOSE"))
-        cout << "Refreshing..." << endl;
-      lastUpdateTime = newUpdateTime;
-      reload();
+        cout << "Combining network " << netId1 << " with " << netId2 << endl;
+      NeuralNetwork *newNetwork =
+        new NeuralNetwork(pool[netId1]->
+                          combine(*pool[netId2]).
+                          mutate(GET_INT("COMBINE_NUM_CONNECTIONS_MUTATED"),
+                                 GET_FLOAT("COMBINE_MUTATION_AMOUNT")));
+      newNetwork->write(GET_STRING("TEMP_NEURAL_NETWORK_FILE"));
+      int newPerformance = getPerformance(*newNetwork);
+    
+      lock.lock_upgradable();
+      int newUpdateTime = getFileTimestamp(GET_STRING("BEST_PERFORMANCE_FILE"));
+      if (lastUpdateTime != newUpdateTime) {
+        if (GET_BOOL("OPTIMIZE_VERBOSE"))
+          cout << "Refreshing..." << endl;
+        lastUpdateTime = newUpdateTime;
+        reload();
+      }
+
+      if (find(poolPerformance.begin(), poolPerformance.end(), newPerformance) == poolPerformance.end()) {
+        int oldOptimalPerformance;
+        if (poolPerformance.size() > 0)
+          oldOptimalPerformance = poolPerformance[0];
+        else
+          oldOptimalPerformance = -1;
+        pool.push_back(newNetwork);
+        poolPerformance.push_back(newPerformance);
+        unsigned i;
+        for (i = pool.size() - 1; i > 0; i--) {
+          if (poolPerformance[i] < poolPerformance[i - 1]) {
+            NeuralNetwork *temp = pool[i];
+            pool[i] = pool[i - 1];
+            pool[i - 1] = temp;
+            int tempP = poolPerformance[i];
+            poolPerformance[i] = poolPerformance[i - 1];
+            poolPerformance[i - 1] = tempP;
+            poolChanged = true;
+          }
+          else break;
+        }
+
+        if (newPerformance < oldOptimalPerformance || oldOptimalPerformance == -1)
+          cout << "Found optimal network with performance " << newPerformance << endl;
+        else if (i != pool.size() - 1 && GET_BOOL("POOL_FOUND_VERBOSE"))
+          cout << "Found pool network with performance " << newPerformance << endl;
+      }
+    }
+    else {
+      int netId = rand() % pool.size();
+      if (GET_BOOL("OPTIMIZE_VERBOSE"))
+        cout << "Mutating network " << netId << endl;
+      NeuralNetwork *newNetwork =
+        new NeuralNetwork(pool[netId]->
+                          mutate(GET_INT("NUM_CONNECTIONS_MUTATED"),
+                                 GET_FLOAT("MUTATION_AMOUNT")));
+      newNetwork->write(GET_STRING("TEMP_NEURAL_NETWORK_FILE"));
+      int oldPerformance = poolPerformance[netId];
+      int newPerformance = getPerformance(*newNetwork);
+    
+      lock.lock_upgradable();
+      if (newPerformance < oldPerformance) {
+        int newUpdateTime = getFileTimestamp(GET_STRING("BEST_PERFORMANCE_FILE"));
+        if (lastUpdateTime != newUpdateTime) {
+          if (GET_BOOL("OPTIMIZE_VERBOSE"))
+            cout << "Refreshing..." << endl;
+          lastUpdateTime = newUpdateTime;
+          reload();
+          
+          vector<int>::iterator loc = find(poolPerformance.begin(), poolPerformance.end(), oldPerformance);
+          if (loc != poolPerformance.end()) {
+            netId = loc - poolPerformance.begin();
+            pool[netId] = newNetwork;
+            poolPerformance[netId] = newPerformance;
+          }
+          else {
+            netId = poolPerformance.size();
+            pool.push_back(newNetwork);
+            poolPerformance.push_back(newPerformance);
+          }
+        }
+
+        for (; netId > 0; netId--) {
+          if (poolPerformance[netId] < poolPerformance[netId - 1]) {
+            NeuralNetwork *temp = pool[netId];
+            pool[netId] = pool[netId - 1];
+            pool[netId - 1] = temp;
+            int tempP = poolPerformance[netId];
+            poolPerformance[netId] = poolPerformance[netId - 1];
+            poolPerformance[netId - 1] = tempP;
+            poolChanged = true;
+          }
+          else break;
+        }
+
+        if (newPerformance < oldOptimalPerformance || oldOptimalPerformance == -1)
+          cout << "Found optimal network by improvment with performance " << newPerformance << endl;
+        else if ((unsigned)netId != pool.size() - 1 && GET_BOOL("POOL_FOUND_VERBOSE"))
+          cout << "Improved pool network with performance " << newPerformance << endl;
+      }
     }
 
-    bool poolChanged = false;
-    if (find(poolPerformance.begin(), poolPerformance.end(), newPerformance) == poolPerformance.end()) {
-      int oldOptimalPerformance;
-      if (poolPerformance.size() > 0)
-        oldOptimalPerformance = poolPerformance[0];
-      else
-        oldOptimalPerformance = -1;
-      pool.push_back(newNetwork);
-      poolPerformance.push_back(newPerformance);
-      unsigned i;
-      for (i = pool.size() - 1; i > 0; i--) {
-        if (poolPerformance[i] < poolPerformance[i - 1]) {
-          NeuralNetwork *temp = pool[i];
-          pool[i] = pool[i - 1];
-          pool[i - 1] = temp;
-          int tempP = poolPerformance[i];
-          poolPerformance[i] = poolPerformance[i - 1];
-          poolPerformance[i - 1] = tempP;
-          poolChanged = true;
-        }
-        else break;
-      }
-      if (newPerformance < oldOptimalPerformance || oldOptimalPerformance == -1)
-        cout << "Found optimal network with performance " << newPerformance << endl;
-      else if (i != pool.size() - 1 && GET_BOOL("POOL_FOUND_VERBOSE"))
-        cout << "Found pool network with performance " << newPerformance << endl;
-      if (pool.size() > (unsigned)GET_INT("MAX_POOL_SIZE")) {
-        pool.pop_back();
-        poolPerformance.pop_back();
-      }
+    if (pool.size() > (unsigned)GET_INT("MAX_POOL_SIZE")) {
+      pool.pop_back();
+      poolPerformance.pop_back();
     }
     
     if (GET_BOOL("PRINT_POOL")) {

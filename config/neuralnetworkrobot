@@ -13,18 +13,23 @@ string TEMP_NEURAL_NETWORK_FILE      = "$INSTALL_DIR/runtime/neuralnetwork/optim
 string OPTIMAL_NEURAL_NETWORK_FILE   = "$INSTALL_DIR/runtime/neuralnetwork/optimized"
 string POOL_NEURAL_NETWORK_BASE_FILE = "$INSTALL_DIR/runtime/neuralnetwork/optimized_pool_"
 string BEST_PERFORMANCE_FILE         = "$INSTALL_DIR/runtime/neuralnetwork/performances"
-string NEURAL_NETWORK_LOCK_NAME      = "optimized_lock28" # For now, increment this every time it hangs on startup
+string NEURAL_NETWORK_LOCK_NAME      = "optimized_lock30" # For now, increment this every time it hangs on startup
 
 int NUM_OPTIMIZE_TRIALS = 20
 int STEP_LIMIT = 100000
 
-int MAX_POOL_SIZE           = 100
-int SUB_POOL_SIZE           = 50
-int MIN_DIVERSITY           = 700
-int NUM_CONNECTIONS_MUTATED = 3
-float MUTATION_AMOUNT       = 2
+int MAX_POOL_SIZE                   = 100
+int SUB_POOL_SIZE                   = 50
+int MIN_DIVERSITY                   = 700
 
-float TARGET_SENSOR_SCALE = 1 # Scale before passing to the network
+int NUM_CONNECTIONS_MUTATED         = 1
+float MUTATION_AMOUNT               = 0.1 
+
+float COMBINE_FREQUENCY             = 0.2
+int COMBINE_NUM_CONNECTIONS_MUTATED = 1
+float COMBINE_MUTATION_AMOUNT       = 0.2 # Enough to create diversity after bottleneck
+
+float TARGET_SENSOR_SCALE = 1 # Scale before passing to the network, TODO remove this
 
 int NUM_OPTIMIZE_ROBOTS_TARGETS = 2
 int NUM_OPTIMIZE_OBSTACLES      = 6
