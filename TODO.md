@@ -5,7 +5,10 @@
   * Scale everything?  
 
 ## Optimization simulation
-* Optimization processes seem to be dying after a while with no error
+* Optimization processes seem to be dying after a while with no error?
+* Modify algorithim to be more like a true gentic algorithim
+  * Single-network optimizations update pool networks
+  * Very small tweak when merging networks
 
 ## Object behavior
 * Modify collisions behavior?
