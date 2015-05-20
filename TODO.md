@@ -6,9 +6,11 @@
 
 ## Optimization simulation
 * Optimization processes seem to be dying after a while with no error?
-* Modify algorithim to be more like a true gentic algorithim
+* Modify algorithim to be more like a true genetic algorithim
   * Single-network optimizations update pool networks
   * Very small tweak when merging networks
+* Seperate scripts to clear pool and hard reset 
+  * Run git checkout for reset?
 
 ## Object behavior
 * Modify collisions behavior?
