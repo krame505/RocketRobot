@@ -118,7 +118,7 @@ void OptimizeSimulation::runMainLoop() {
         }
 
         if (newPerformance < oldOptimalPerformance || oldOptimalPerformance == -1)
-          cout << "Found optimal network with performance " << newPerformance << endl;
+          cout << "\033[1;31mFound optimal network with performance " << newPerformance << "\033[0m" << endl;
         else if (i != pool.size() - 1 && GET_BOOL("POOL_FOUND_VERBOSE"))
           cout << "Found pool network with performance " << newPerformance << endl;
       }
@@ -149,12 +149,18 @@ void OptimizeSimulation::runMainLoop() {
             netId = loc - poolPerformance.begin();
             pool[netId] = newNetwork;
             poolPerformance[netId] = newPerformance;
+            poolChanged = true;
           }
           else {
             netId = poolPerformance.size();
             pool.push_back(newNetwork);
             poolPerformance.push_back(newPerformance);
           }
+        }
+        else {
+          pool[netId] = newNetwork;
+          poolPerformance[netId] = newPerformance;
+          poolChanged = true;
         }
 
         for (; netId > 0; netId--) {
@@ -171,9 +177,9 @@ void OptimizeSimulation::runMainLoop() {
         }
 
         if (newPerformance < oldOptimalPerformance || oldOptimalPerformance == -1)
-          cout << "Found optimal network by improvment with performance " << newPerformance << endl;
+          cout << "\033[1;31mFound optimal network by improvment with performance " << newPerformance << "\033[0m" << endl;
         else if ((unsigned)netId != pool.size() - 1 && GET_BOOL("POOL_FOUND_VERBOSE"))
-          cout << "Improved pool network with performance " << newPerformance << endl;
+          cout << "Improved pool network with performance " << oldPerformance << " to " << newPerformance << endl;
       }
     }
 
