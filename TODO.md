@@ -3,6 +3,7 @@
 * Fix window to be resizeable, work with full screen
   * Need to figure out how to handle different dimentions with opening simulations
   * Scale everything?  
+* Color of selected object gets messed up when reseting
 
 ## Optimization simulation
 * Optimization processes seem to be dying after a while with no error?
