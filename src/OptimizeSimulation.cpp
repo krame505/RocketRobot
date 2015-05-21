@@ -49,7 +49,9 @@ OptimizeSimulation::OptimizeSimulation(int argc, char* argv[]) :
   lock.lock_sharable();
   reload();
   lock.unlock_sharable();
+  startedEmpty = false;
   if (pool.size() == 0) {
+    startedEmpty = true;
     pool.push_back(new NeuralNetwork(GET_STRING("OPTIMAL_NEURAL_NETWORK_FILE")));
     poolPerformance.push_back(getPerformance(*pool[0]));
   }
@@ -63,9 +65,9 @@ OptimizeSimulation::~OptimizeSimulation() {
 
 void OptimizeSimulation::runMainLoop() {
   int lastUpdateTime = getFileTimestamp(GET_STRING("BEST_PERFORMANCE_FILE"));
+  bool poolChanged = startedEmpty;
 
   while (!stopRequest) {
-    bool poolChanged = false;
     int oldOptimalPerformance;
     if (poolPerformance.size() > 0)
       oldOptimalPerformance = poolPerformance[0];

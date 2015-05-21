@@ -41,6 +41,8 @@ private:
 
   boost::interprocess::named_upgradable_mutex lock;
 
+  bool startedEmpty;
+
   bool stopRequest = false;
   static void stopHandler(int);
 
@@ -51,5 +53,5 @@ private:
   std::string getPoolFile(int i);
   void reload();
 
-  sigset_t sigint;
+  //sigset_t sigint;
 };
