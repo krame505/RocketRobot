@@ -13,14 +13,14 @@ string TEMP_NEURAL_NETWORK_FILE      = "$INSTALL_DIR/runtime/neuralnetwork/optim
 string OPTIMAL_NEURAL_NETWORK_FILE   = "$INSTALL_DIR/runtime/neuralnetwork/optimized"
 string POOL_NEURAL_NETWORK_BASE_FILE = "$INSTALL_DIR/runtime/neuralnetwork/optimized_pool_"
 string BEST_PERFORMANCE_FILE         = "$INSTALL_DIR/runtime/neuralnetwork/performances"
-string NEURAL_NETWORK_LOCK_NAME      = "optimized_lock31" # For now, increment this every time it hangs on startup
+string NEURAL_NETWORK_LOCK_NAME      = "optimized_lock43" # For now, increment this every time it hangs on startup
 
 int NUM_OPTIMIZE_TRIALS = 20
 int STEP_LIMIT = 100000
 
 int MAX_POOL_SIZE                   = 100
 int SUB_POOL_SIZE                   = 50
-int MIN_DIVERSITY                   = 700
+int MIN_DIVERSITY                   = 200
 
 int NUM_CONNECTIONS_MUTATED         = 1
 float MUTATION_AMOUNT               = 0.1 
