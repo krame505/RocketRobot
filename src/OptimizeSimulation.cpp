@@ -197,6 +197,7 @@ void OptimizeSimulation::runMainLoop() {
     }
 
     if (poolChanged) {
+      poolChanged = false;
       //sigprocmask(SIG_BLOCK, &sigint, NULL);
       lock.unlock_upgradable_and_lock();
 
