@@ -6,8 +6,6 @@
 
 ## Optimization simulation
 * Optimization processes seem to be dying after a while with no error?
-* Seperate scripts to clear pool and hard reset 
-  * Run git checkout for reset?
 
 ## Object behavior
 * Modify collisions behavior?

@@ -1,0 +1,3 @@
+#/bin/sh
+bash clear_pool
+git checkout ../runtime/neuralnetwork/optimized

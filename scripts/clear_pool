@@ -2,4 +2,3 @@
 rm -f ../runtime/neuralnetwork/performances
 rm -f ../runtime/neuralnetwork/optimized_pool_*
 touch ../runtime/neuralnetwork/performances
-#cp ../runtime/neuralnetwork/initial ../runtime/neuralnetwork/optimized
