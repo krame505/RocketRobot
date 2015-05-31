@@ -18,8 +18,9 @@
 * More advanced neural network support - maybe feed-back?
 
 ## Project/general
+* Move configuration stuff to lib, build .a and link with -lconfiguration
 * Fix makefile so everything gets rebuilt properly
-  * Use automake?  
-* Fix documentation to include source for .cpp files
+  * Use automake?
+* Fix documentation to include source for .cpp files?
 * Online documentation is really slow to load
   * Create gh-pages branch instead of using htmlpreview
