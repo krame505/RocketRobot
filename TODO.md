@@ -7,6 +7,7 @@
 
 ## Optimization simulation
 * Optimization processes seem to be dying after a while with no error?
+* Occasional hang-ups after finding new optimal weights
 
 ## Object behavior
 * Modify collisions behavior?
