@@ -47,7 +47,7 @@ void NeuralNetwork::Node::attatch() {
 
 void NeuralNetwork::Node::detatch() {
   numReferences--;
-  if (numReferences == 0)
+  if (numReferences <= 0)
     delete this;
 }
 
