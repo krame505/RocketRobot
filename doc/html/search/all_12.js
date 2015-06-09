@@ -16,6 +16,5 @@ var searchData=
   ['tryremovelightsource',['tryRemoveLightSource',['../classSimulation.html#a3ea83c539222757b77094aba6a7b92f4',1,'Simulation']]],
   ['tryremoveobstacle',['tryRemoveObstacle',['../classSimulation.html#a9c9922c4e4c4e9a9ceb6ab58adf007ae',1,'Simulation']]],
   ['tryremoverobottarget',['tryRemoveRobotTarget',['../classSimulation.html#ae5d3e5de317edd69474681812601b2b4',1,'Simulation']]],
-  ['trysave',['trySave',['../classSimulation.html#a46b400f0753d2e434bc82e3824f2d308',1,'Simulation']]],
-  ['type',['type',['../structconfigValue.html#a2557316e4aad2ae77db15e19422e8aae',1,'configValue']]]
+  ['trysave',['trySave',['../classSimulation.html#a46b400f0753d2e434bc82e3824f2d308',1,'Simulation']]]
 ];

@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['main',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
-  ['mergeconfigtables',['mergeConfigTables',['../configuration_8cpp.html#a042a39348bc5fc668e1f53897c73c9fa',1,'configuration.cpp']]],
-  ['middlemousedown',['middleMouseDown',['../classBaseGfxApp.html#a2c98cae9bb5ad1fb1832a6d4812670f8',1,'BaseGfxApp::middleMouseDown()'],['../classSimulation.html#a4a8fb0f5c7cff8e747ae11d46653d18b',1,'Simulation::middleMouseDown()']]],
-  ['middlemouseup',['middleMouseUp',['../classBaseGfxApp.html#a00fc05e8d9629b72302b5adf014bdb0c',1,'BaseGfxApp']]],
-  ['mousedragged',['mouseDragged',['../classBaseGfxApp.html#abb23f716dd6612b3a72938e41525d338',1,'BaseGfxApp::mouseDragged()'],['../classSimulation.html#af942a4554aa7a45b468ea7e5bc2e0c4b',1,'Simulation::mouseDragged()']]],
-  ['mousemoved',['mouseMoved',['../classBaseGfxApp.html#a0956b82d7fa58b623c498aea7073dbba',1,'BaseGfxApp']]],
-  ['mutate',['mutate',['../classNeuralNetwork.html#a28d9213fcff2a94a4d26b11354d248c8',1,'NeuralNetwork']]]
+  ['neuralnetwork',['NeuralNetwork',['../classNeuralNetwork.html#a993f0131fa3470bd936f205a1de97346',1,'NeuralNetwork::NeuralNetwork(const NeuralNetwork &amp;other)'],['../classNeuralNetwork.html#a1a07b6aec54c5890b2a8d612fd684289',1,'NeuralNetwork::NeuralNetwork(const std::string &amp;filename)']]],
+  ['neuralnetworkrobot',['NeuralNetworkRobot',['../classNeuralNetworkRobot.html#adee0b00b83cd1f9269efd5178f4320b3',1,'NeuralNetworkRobot::NeuralNetworkRobot(int radius, Color color, Color lineColor, NeuralNetwork network, int targetId=-1, std::string filename=GET_STRING(&quot;DEFAULT_NEURAL_NETWORK_FILE&quot;))'],['../classNeuralNetworkRobot.html#a016aaca79a56d7cd2b04583188541359',1,'NeuralNetworkRobot::NeuralNetworkRobot(int radius, Location loc, Color color, Color lineColor, NeuralNetwork network, int targetId=-1, std::string filename=GET_STRING(&quot;DEFAULT_NEURAL_NETWORK_FILE&quot;))']]],
+  ['newcolor',['newColor',['../namespaceutil.html#a0f3ef8558c61f7969d479448b9c96c78',1,'util']]],
+  ['noopenlocationexception',['NoOpenLocationException',['../classNoOpenLocationException.html#afc4a5c1c30c5cd67d2e26832d2eb3738',1,'NoOpenLocationException']]]
 ];

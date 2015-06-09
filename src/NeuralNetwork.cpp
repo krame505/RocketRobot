@@ -23,7 +23,33 @@ using namespace boost;
 NeuralNetwork::Node::Node(int id, bool isInput, bool isOutput, float baseline,
                           const vector<Node*> &inputs,
                           const vector<float> &weights) : 
-  id(id), isInput(isInput), isOutput(isOutput), baseline(baseline), inputs(inputs), weights(weights) {}
+  id(id),
+  isInput(isInput),
+  isOutput(isOutput),
+  baseline(baseline),
+  inputs(inputs),
+  weights(weights),
+  numReferences(0) {
+  for (Node *n : inputs) {
+    n->attatch();
+  }
+}
+
+NeuralNetwork::Node::~Node() {
+  for (Node *n : inputs) {
+    n->detatch();
+  }
+}
+
+void NeuralNetwork::Node::attatch() {
+  numReferences++;
+}
+
+void NeuralNetwork::Node::detatch() {
+  numReferences--;
+  if (numReferences == 0)
+    delete this;
+}
 
 NeuralNetwork::NeuralNetwork(const vector<int> &inputs,
                              const vector<int> &outputs,
@@ -36,6 +62,9 @@ NeuralNetwork::NeuralNetwork(const vector<int> &inputs,
   inputIndex(inputs.size()) {
   for (unsigned i = 0; i < inputs.size(); i++) {
     inputIndex[nodes[inputs[i]]->id] = i;
+  }
+  for (Node *n : nodes) {
+    n->attatch();
   }
 }
 
@@ -50,10 +79,19 @@ NeuralNetwork::NeuralNetwork(const string &filename) {
   for (unsigned i = 0; i < inputs.size(); i++) {
     inputIndex[nodes[inputs[i]]->id] = i;
   }
+  for (Node *n : nodes) {
+    n->attatch();
+  }
 }
 
 NeuralNetwork::NeuralNetwork(const NeuralNetwork &other) :
   NeuralNetwork(other.inputs, other.outputs, other.nodes) {}
+
+NeuralNetwork::~NeuralNetwork() {
+  for (Node *n : nodes) {
+    n->detatch();
+  }
+}
 
 vector<float> NeuralNetwork::compute(const vector<float> &inputs) {
   if (inputs.size() != this->inputs.size())

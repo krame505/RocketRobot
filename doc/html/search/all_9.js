@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['initconfig',['initConfig',['../classConfiguration.html#a2154289ac66647b5a5ff82fd1b49d6da',1,'Configuration::initConfig(const std::string &amp;filename)'],['../classConfiguration.html#af31ba8bee2f9faf4566e08f642a7c049',1,'Configuration::initConfig(int argc, char *argv[], const std::string &amp;defaultFilename)']]],
   ['initobjects',['initObjects',['../classSimulation.html#a52eb5c1e4b471bcc38dd71b9432e1840',1,'Simulation']]],
-  ['intval',['intVal',['../structconfigValue.html#a85f3ab82fc453795a31914bec4bfa877',1,'configValue']]],
-  ['isallwhitespace',['isAllWhitespace',['../configuration_8cpp.html#adfc080710e52f47a97bead1bd594febc',1,'configuration.cpp']]],
   ['iscolliding',['isColliding',['../namespaceenvironment.html#a73988f1cc00df0e77d67cd306469168b',1,'environment::isColliding(Location l, int r)'],['../namespaceenvironment.html#a636bf120445810e363d967fee72cc4f9',1,'environment::isColliding(int id)']]],
   ['iscollidingwithhitable',['isCollidingWithHitable',['../namespaceenvironment.html#a0dbd900478d4838132395dcf881e9b19',1,'environment::isCollidingWithHitable(Location l, int r)'],['../namespaceenvironment.html#a6957694956f081e560b07d91734598ed',1,'environment::isCollidingWithHitable(int id)']]],
   ['ishitable',['isHitable',['../classPhysicalObject.html#a5afc803dac6415f86fcda81983b75e41',1,'PhysicalObject']]],

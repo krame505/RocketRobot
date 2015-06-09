@@ -12,18 +12,19 @@ endif
 EXECUTABLE      = ../bin/gorobot
 TEST_EXECUTABLE = ../bin/testrobot
 
-CPPC       = g++
-CC         = gcc
-CPPFLAGS   = -Wall -g -O3 -std=c++0x
-CFLAGS 	   = -Wall -g -O3
-GLUI 	   = glui
+CPPC          = g++
+CC            = gcc
+CPPFLAGS      = -Wall -g -O3 -std=c++0x
+CFLAGS 	      = -Wall -g -O3
+GLUI 	      = glui
+CONFIGURATION = configuration
 
 #Every class to be included
 CPPFILES += BaseGfxApp Simulation OptimizeSimulation
 CPPFILES += PhysicalObject
 CPPFILES += Robot Target Obstacle LightSource
 CPPFILES += SimpleRobot ComplexRobot NeuralNetworkRobot NeuralNetwork
-CPPFILES += environment util configuration Color
+CPPFILES += environment util Color
 CPPFILES += Sensor
 CPPFILES += main
 CPPFILES += artist
@@ -35,7 +36,9 @@ SOURCES = $(addprefix ../src/,  $(CPPFILES:=.cpp))
 OBJECTS = $(addprefix ../bin/,  $(CPPFILES:=.o))
 
 #Libraries to include
-LINK_LIBS += -L../lib/$(GLUI)/lib/ -lglui -lpthread -lglut -lGL -lGLU
+LINK_LIBS += -L../lib/$(GLUI)/lib/ -L../lib/$(CONFIGURATION)/lib/ 
+LINK_LIBS += -lglui -lconfiguration
+LINK_LIBS += -lpthread -lglut -lGL -lGLU
 LINK_LIBS += -lboost_regex -lrt
 
 ############################## Rules
@@ -56,7 +59,7 @@ clean:
 	rm -f $(OBJECTS) $(EXECUTABLE) $(TEST_EXECUTABLE) ../bin/test.cpp .doc
 
 full-clean: clean
-	rm -rf .glui
+	rm -rf .glui .configuration
 	$(MAKE) -C ../lib/$(GLUI) clean
 	$(MAKE) -C ../doc clean
 
@@ -68,7 +71,7 @@ full-clean: clean
 ############################## Compiling Robot
 gorobot: $(EXECUTABLE)
 
-$(EXECUTABLE): .glui $(OBJECTS) 
+$(EXECUTABLE): .glui .configuration $(OBJECTS) 
 	$(CPPC) $(OBJECTS) $(LINK_LIBS) -o $@
 
 ## makefile note
@@ -77,7 +80,7 @@ $(EXECUTABLE): .glui $(OBJECTS)
 ##	$< means the first file to the right of : which is "file1"
 
 # places to look for included files
-INCLUDE = -I../lib/$(GLUI)/include
+INCLUDE = -I../lib/$(GLUI)/include -I../lib/$(CONFIGURATION)/include
 
 # compile all objects
 ../bin/%.o: ../src/%.cpp ../src/%.h
@@ -102,9 +105,16 @@ INCLUDE = -I../lib/$(GLUI)/include
 .glui: $(GLUI)
 	touch .glui
 
+.configuration: $(CONFIGURATION)
+	touch .configuration
+
 # this goes to ../lib/glui and does "make all"
 $(GLUI):
 	$(MAKE) -C ../lib/$(GLUI) all
+
+# this goes to ../lib/configuration and does "make all"
+$(CONFIGURATION):
+	$(MAKE) -C ../lib/$(CONFIGURATION) all
 
 ############################## Doxygen
 documentation: .doc

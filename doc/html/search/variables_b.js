@@ -1,6 +1,5 @@
 var searchData=
 [
   ['s_5fcurrentapp',['s_currentApp',['../classBaseGfxApp.html#a65ba89b98af31e2649a0546631931000',1,'BaseGfxApp']]],
-  ['s_5fglutinitialized',['s_glutInitialized',['../classBaseGfxApp.html#afa4690383ea27713016ef75b9fb1e42f',1,'BaseGfxApp']]],
-  ['stringval',['stringVal',['../structconfigValue.html#ab7bde03d2ca73f84b5da8fd21b479790',1,'configValue']]]
+  ['s_5fglutinitialized',['s_glutInitialized',['../classBaseGfxApp.html#afa4690383ea27713016ef75b9fb1e42f',1,'BaseGfxApp']]]
 ];

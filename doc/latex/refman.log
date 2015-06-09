@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.1)  13 MAY 2015 15:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.1)  31 MAY 2015 17:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1031,11 +1031,13 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <7> not available
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 6.29996pt on input line 70.
  [4] [5] [6]
-[7] [8] [9] [10] [11] [12] [13] [14] [15])
+[7] [8] [9] [10] [11] [12] [13] [14])
 \tf@toc=\write5
 \openout5 = `refman.toc'.
 
- [16]
+ [15] [16
+
+]
 Package hyperref Info: Option `pageanchor' set `true' on input line 130.
 
 Chapter 1.
@@ -1061,7 +1063,6 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
 (Font)              scaled to size 10.79993pt on input line 2.
  [1
-
 
 ] [2]
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 26.
@@ -1349,7 +1350,7 @@ Underfull \hbox (badness 10000) detected at line 404
 
 ]
 Chapter 7.
-(./classBaseGfxApp.tex <classBaseGfxApp.pdf, id=3335, 501.875pt x 446.10666pt>
+(./classBaseGfxApp.tex <classBaseGfxApp.pdf, id=3129, 501.875pt x 446.10666pt>
 File: classBaseGfxApp.pdf Graphic file (type pdf)
 
 <use classBaseGfxApp.pdf>
@@ -1442,7 +1443,7 @@ Underfull \hbox (badness 10000) detected at line 180
  []
 
 ) (./classComplexRobot.tex
-<classComplexRobot.pdf, id=3513, 501.875pt x 573.57286pt>
+<classComplexRobot.pdf, id=3307, 501.875pt x 573.57286pt>
 File: classComplexRobot.pdf Graphic file (type pdf)
 
 <use classComplexRobot.pdf>
@@ -1465,49 +1466,24 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 130.
 
-[36]) (./classConfiguration.tex [37]
-Underfull \hbox (badness 10000) detected at line 60
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 81
-[][][]
- []
-
-[38]
-Underfull \hbox (badness 10000) detected at line 102
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 123
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 144
-[][][]
- []
-
-) (./structconfigValue.tex [39]) (./classLightSource.tex
-<classLightSource.pdf, id=3652, 501.875pt x 382.37857pt>
+[36]) (./classLightSource.tex
+<classLightSource.pdf, id=3401, 501.875pt x 382.37857pt>
 File: classLightSource.pdf Graphic file (type pdf)
 
 <use classLightSource.pdf>
 Package pdftex.def Info: classLightSource.pdf used on input line 16.
 (pdftex.def)             Requested size: 74.68832pt x 56.9055pt.
- [40]
+ [37]
 Underfull \hbox (badness 10000) detected at line 56
 [][][]
  []
 
-
+[38 <./classLightSource.pdf>]
 Underfull \hbox (badness 10000) detected at line 83
 [][][]
  []
 
-[41 <./classLightSource.pdf>]
+
 Underfull \hbox (badness 10000) detected at line 112
 [][][]
  []
@@ -1529,17 +1505,17 @@ Underfull \hbox (badness 10000) detected at line 150
 [][][]
  []
 
-) (./structLocation.tex [42]) (./classNeuralNetwork.tex [43]
+[39]) (./structLocation.tex) (./classNeuralNetwork.tex [40]
 Underfull \hbox (badness 10000) detected at line 73
 [][][]
  []
 
-
+[41] [42]
 Underfull \hbox (badness 10000) detected at line 88
 [][][]
  []
 
-[44] [45]
+
 Underfull \hbox (badness 10000) detected at line 103
 [][][]
  []
@@ -1550,13 +1526,13 @@ Underfull \hbox (badness 10000) detected at line 121
  []
 
 ) (./classNeuralNetworkRobot.tex
-<classNeuralNetworkRobot.pdf, id=3762, 501.875pt x 442.83441pt>
+<classNeuralNetworkRobot.pdf, id=3505, 501.875pt x 442.83441pt>
 File: classNeuralNetworkRobot.pdf Graphic file (type pdf)
 
 <use classNeuralNetworkRobot.pdf>
 Package pdftex.def Info: classNeuralNetworkRobot.pdf used on input line 16.
 (pdftex.def)             Requested size: 96.73567pt x 85.35826pt.
- [46 <./classNeuralNetworkRobot.pdf>]
+ [43]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 75.
@@ -1569,15 +1545,15 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 75.
 
-) (./classNoOpenLocationException.tex [47]
-<classNoOpenLocationException.pdf, id=3808, 501.875pt x 236.17233pt>
+[44 <./classNeuralNetworkRobot.pdf>]) (./classNoOpenLocationException.tex
+<classNoOpenLocationException.pdf, id=3548, 501.875pt x 236.17233pt>
 File: classNoOpenLocationException.pdf Graphic file (type pdf)
 
 <use classNoOpenLocationException.pdf>
 Package pdftex.def Info: classNoOpenLocationException.pdf used on input line 16
 .
 (pdftex.def)             Requested size: 120.92725pt x 56.9055pt.
-) (./classObjectIterator.tex [48 <./classNoOpenLocationException.pdf>]
+) (./classObjectIterator.tex [45 <./classNoOpenLocationException.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 82.
@@ -1610,6 +1586,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 124.
 
+[46]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 138.
@@ -1618,18 +1595,18 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 138.
 
-) (./classObstacle.tex [49]
-<classObstacle.pdf, id=3867, 501.875pt x 382.37857pt>
+) (./classObstacle.tex <classObstacle.pdf, id=3608, 501.875pt x 382.37857pt>
 File: classObstacle.pdf Graphic file (type pdf)
- <use classObstacle.pdf>
+
+<use classObstacle.pdf>
 Package pdftex.def Info: classObstacle.pdf used on input line 16.
 (pdftex.def)             Requested size: 74.68832pt x 56.9055pt.
-
+ [47 <./classObstacle.pdf>]
 Underfull \hbox (badness 10000) detected at line 56
 [][][]
  []
 
-[50 <./classObstacle.pdf>]
+
 Underfull \hbox (badness 10000) detected at line 85
 [][][]
  []
@@ -1651,32 +1628,32 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 127.
 
-
+[48]
 Underfull \hbox (badness 10000) detected at line 139
 [][][]
  []
 
-) (./classOptimizeSimulation.tex [51]
+) (./classOptimizeSimulation.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 61.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\sim' on input line 61.
+(hyperref)                removing `math shift' on input line 63.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 61.
+(hyperref)                removing `\sim' on input line 63.
 
-) (./classPhysicalObject.tex [52]
-<classPhysicalObject.pdf, id=3936, 501.875pt x 110.70358pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 63.
+
+[49]) (./classPhysicalObject.tex
+<classPhysicalObject.pdf, id=3678, 501.875pt x 110.70358pt>
 File: classPhysicalObject.pdf Graphic file (type pdf)
 
 <use classPhysicalObject.pdf>
 Package pdftex.def Info: classPhysicalObject.pdf used on input line 16.
 (pdftex.def)             Requested size: 386.96568pt x 85.35826pt.
- [53 <./classPhysicalObject.pdf>]
+ [50 <./classPhysicalObject.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 138.
@@ -1694,7 +1671,7 @@ Underfull \hbox (badness 10000) detected at line 149
 [][][]
  []
 
-[54] [55]
+[51] [52]
 Underfull \hbox (badness 10000) detected at line 202
 [][][]
  []
@@ -1714,7 +1691,7 @@ Underfull \hbox (badness 10000) detected at line 232
 [][][]
  []
 
-
+[53]
 Underfull \hbox (badness 10000) detected at line 242
 [][][]
  []
@@ -1724,7 +1701,7 @@ Underfull \hbox (badness 10000) detected at line 252
 [][][]
  []
 
-[56]
+
 Underfull \hbox (badness 10000) detected at line 262
 [][][]
  []
@@ -1744,43 +1721,43 @@ Underfull \hbox (badness 10000) detected at line 293
 [][][]
  []
 
-
+[54]
 Underfull \hbox (badness 10000) detected at line 312
 [][][]
  []
 
-[57]
+
 Underfull \hbox (badness 10000) detected at line 371
 [][][]
  []
 
-
+[55]
 Underfull \hbox (badness 10000) detected at line 386
 [][][]
  []
 
-[58]
+
 Underfull \hbox (badness 10000) detected at line 452
 [][][]
  []
 
-[59]
+[56]
 Underfull \hbox (badness 10000) detected at line 484
 [][][]
  []
 
-) (./classRobot.tex <classRobot.pdf, id=4091, 501.875pt x 147.61147pt>
+) (./classRobot.tex <classRobot.pdf, id=3829, 501.875pt x 147.61147pt>
 File: classRobot.pdf Graphic file (type pdf)
 
 <use classRobot.pdf>
 Package pdftex.def Info: classRobot.pdf used on input line 16.
 (pdftex.def)             Requested size: 290.21469pt x 85.35826pt.
- [60 <./classRobot.pdf>]
+ [57 <./classRobot.pdf>]
 Underfull \hbox (badness 10000) detected at line 85
 [][][]
  []
 
-
+[58]
 Underfull \hbox (badness 10000) detected at line 119
 [][][]
  []
@@ -1797,7 +1774,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 134.
 
-[61]
+
 Underfull \hbox (badness 10000) detected at line 145
 [][][]
  []
@@ -1807,7 +1784,7 @@ Underfull \hbox (badness 10000) detected at line 202
 [][][]
  []
 
-
+[59]
 Underfull \hbox (badness 10000) detected at line 218
 [][][]
  []
@@ -1817,7 +1794,7 @@ Underfull \hbox (badness 10000) detected at line 239
 [][][]
  []
 
-[62]
+
 Underfull \hbox (badness 10000) detected at line 254
 [][][]
  []
@@ -1837,7 +1814,7 @@ Underfull \hbox (badness 10000) detected at line 281
 [][][]
  []
 
-) (./classSensor.tex [63]
+[60]) (./classSensor.tex [61]
 Underfull \hbox (badness 10000) detected at line 95
 [][][]
  []
@@ -1847,7 +1824,7 @@ Underfull \hbox (badness 10000) detected at line 105
 [][][]
  []
 
-[64]
+
 Underfull \hbox (badness 10000) detected at line 115
 [][][]
  []
@@ -1867,7 +1844,7 @@ Underfull \hbox (badness 10000) detected at line 138
 [][][]
  []
 
-
+[62]
 Underfull \hbox (badness 10000) detected at line 148
 [][][]
  []
@@ -1887,7 +1864,7 @@ Underfull \hbox (badness 10000) detected at line 171
 [][][]
  []
 
-[65] [66]
+[63]
 Underfull \hbox (badness 10000) detected at line 220
 [][][]
  []
@@ -1897,14 +1874,14 @@ Underfull \hbox (badness 10000) detected at line 248
 [][][]
  []
 
-) (./classSimpleRobot.tex [67]
-<classSimpleRobot.pdf, id=4241, 501.875pt x 573.57286pt>
+) (./classSimpleRobot.tex
+<classSimpleRobot.pdf, id=3978, 501.875pt x 573.57286pt>
 File: classSimpleRobot.pdf Graphic file (type pdf)
 
 <use classSimpleRobot.pdf>
 Package pdftex.def Info: classSimpleRobot.pdf used on input line 16.
 (pdftex.def)             Requested size: 74.68832pt x 85.35826pt.
-
+ [64 <./classSimpleRobot.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 66.
@@ -1917,14 +1894,14 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 66.
 
-[68 <./classSimpleRobot.pdf>]) (./classSimulation.tex
-<classSimulation.pdf, id=4271, 501.875pt x 446.10666pt>
+) (./classSimulation.tex
+<classSimulation.pdf, id=4003, 501.875pt x 446.10666pt>
 File: classSimulation.pdf Graphic file (type pdf)
 
 <use classSimulation.pdf>
 Package pdftex.def Info: classSimulation.pdf used on input line 16.
 (pdftex.def)             Requested size: 64.01309pt x 56.9055pt.
- [69 <./classSimulation.pdf>] [70]
+ [65] [66 <./classSimulation.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 155.
@@ -1937,14 +1914,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 155.
 
-[71] [72] [73]) (./classTarget.tex
-<classTarget.pdf, id=4405, 501.875pt x 382.37857pt>
+[67] [68] [69]) (./classTarget.tex [70]
+<classTarget.pdf, id=4146, 501.875pt x 382.37857pt>
 File: classTarget.pdf Graphic file (type pdf)
  <use classTarget.pdf>
 Package pdftex.def Info: classTarget.pdf used on input line 16.
 (pdftex.def)             Requested size: 74.68832pt x 56.9055pt.
 
-[74 <./classTarget.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 83.
@@ -1962,9 +1938,7 @@ Underfull \hbox (badness 10000) detected at line 95
 [][][]
  []
 
-) [75] [76
-
-]
+[71 <./classTarget.pdf>]) [72]
 Chapter 8.
 (./artist_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--10
@@ -1976,7 +1950,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--11
 
  []
 
-[77]
+[73
+
+]
 Underfull \hbox (badness 10000) detected at line 34
 [][][]
  []
@@ -1996,7 +1972,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--13
 
  []
 
-[78]
+[74]
 Underfull \hbox (badness 10000) detected at line 21
 [][][]
  []
@@ -2016,7 +1992,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
-[79]
+[75]
 Underfull \hbox (badness 10000) detected at line 28
 [][][]
  []
@@ -2038,28 +2014,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--13
 
  []
 
-[80]
+[76]
 Underfull \hbox (badness 10000) detected at line 21
-[][][]
- []
-
-) (./configuration_8cpp.tex
-Underfull \hbox (badness 10000) in paragraph at lines 9--19
-
- []
-
-[81]
-Underfull \hbox (badness 10000) detected at line 41
-[][][]
- []
-
-) (./configuration_8h.tex
-Underfull \hbox (badness 10000) in paragraph at lines 9--11
-
- []
-
-[82]
-Underfull \hbox (badness 10000) detected at line 34
 [][][]
  []
 
@@ -2069,9 +2025,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--9
  []
 
 
-Underfull \vbox (badness 5726) has occurred while \output is active []
-
- [83]
 Underfull \hbox (badness 10000) detected at line 27
 [][][]
  []
@@ -2081,7 +2034,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--10
 
  []
 
-[84]) (./LightSource_8cpp.tex
+[77]) (./LightSource_8cpp.tex [78]
 Underfull \hbox (badness 10000) in paragraph at lines 9--15
 
  []
@@ -2091,7 +2044,7 @@ Underfull \hbox (badness 10000) detected at line 18
 [][][]
  []
 
-) (./LightSource_8h.tex [85]
+) (./LightSource_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 9--11
 
  []
@@ -2101,12 +2054,12 @@ Underfull \hbox (badness 10000) detected at line 19
 [][][]
  []
 
-) (./Location_8h.tex) (./main_8cpp.tex
+) (./Location_8h.tex [79]) (./main_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 9--14
 
  []
 
-[86]
+
 Underfull \hbox (badness 10000) detected at line 27
 [][][]
  []
@@ -2116,7 +2069,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--21
 
  []
 
-[87]
+[80]
 Underfull \hbox (badness 10000) detected at line 24
 [][][]
  []
@@ -2136,7 +2089,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--17
 
  []
 
-
+[81]
 Underfull \hbox (badness 10000) detected at line 20
 [][][]
  []
@@ -2146,7 +2099,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--14
 
  []
 
-[88]
+
 Underfull \hbox (badness 10000) detected at line 22
 [][][]
  []
@@ -2161,22 +2114,22 @@ Underfull \hbox (badness 10000) detected at line 18
 [][][]
  []
 
-) (./Obstacle_8h.tex
+) (./Obstacle_8h.tex [82]
 Underfull \hbox (badness 10000) in paragraph at lines 9--11
 
  []
 
-[89]
+
 Underfull \hbox (badness 10000) detected at line 19
 [][][]
  []
 
-) (./OptimizeSimulation_8cpp.tex) (./OptimizeSimulation_8h.tex
+) (./OptimizeSimulation_8cpp.tex) (./OptimizeSimulation_8h.tex [83]
 Underfull \hbox (badness 10000) in paragraph at lines 9--18
 
  []
 
-[90]
+
 Underfull \hbox (badness 10000) detected at line 26
 [][][]
  []
@@ -2191,12 +2144,12 @@ Underfull \hbox (badness 10000) detected at line 27
 [][][]
  []
 
-) (./PhysicalObject_8h.tex
+[84]) (./PhysicalObject_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 9--12
 
  []
 
-[91]
+
 Underfull \hbox (badness 10000) detected at line 32
 [][][]
  []
@@ -2217,7 +2170,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--15
 
  []
 
-
+[85]
 Underfull \hbox (badness 10000) detected at line 18
 [][][]
  []
@@ -2227,7 +2180,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--12
 
  []
 
-[92]
+
 Underfull \hbox (badness 10000) detected at line 28
 [][][]
  []
@@ -2242,7 +2195,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--17
 
  []
 
-[93]
+[86]
 Underfull \hbox (badness 10000) detected at line 25
 [][][]
  []
@@ -2262,12 +2215,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--16
 
  []
 
-
+[87]
 Underfull \hbox (badness 10000) detected at line 19
 [][][]
  []
 
-) (./SimpleRobot_8h.tex [94]
+) (./SimpleRobot_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 9--13
 
  []
@@ -2282,7 +2235,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--32
 
  []
 
-[95]
+
+Underfull \vbox (badness 2837) has occurred while \output is active []
+
+ [88]
 Underfull \hbox (badness 10000) detected at line 40
 [][][]
  []
@@ -2292,7 +2248,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--16
 
  []
 
-
+[89]
 Underfull \hbox (badness 10000) detected at line 24
 [][][]
  []
@@ -2302,7 +2258,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--14
 
  []
 
-[96]
+
 Underfull \hbox (badness 10000) detected at line 17
 [][][]
  []
@@ -2312,7 +2268,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
-
+[90]
 Underfull \hbox (badness 10000) detected at line 18
 [][][]
  []
@@ -2322,54 +2278,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--31
 
  []
 
-[97]
+
 Underfull \hbox (badness 10000) detected at line 49
 [][][]
  []
 
-) (./util_8h.tex
+[91]) (./util_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
-[98]
+
 Underfull \hbox (badness 808) in paragraph at lines 32--33
 []\T1/phv/m/n/10 bool [][]util-::add-Robot-Target[][] (int robot-Type, int ligh
 t-Sensor-Connection-Pattern, int robot-Sensor-Connection-
  []
 
-
+[92]
 Underfull \hbox (badness 10000) detected at line 65
 [][][]
  []
 
-) [99] (./refman.ind [100
+) [93] (./refman.ind [94
 
-] [101] [102] [103] [104] [105] [106] [107] [108
-
-])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 215.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 215.
-
-(./refman.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 215.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 215.
+] [95] [96] [97] [98] [99] [100] [101])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 211.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 211.
+ (./refman.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 211.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 211.
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 767D69AF2B3E14D7E304356A2EDE6989;83391.
+(rerunfilecheck)             Checksum: DC9EDC1BB6B33D2D08F732AB59A576B2;77850.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 215.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 211.
  ) 
 Here is how much of TeX's memory you used:
- 14431 strings out of 495032
- 231405 string characters out of 6181719
- 276472 words of memory out of 5000000
- 16142 multiletter control sequences out of 15000+600000
- 87428 words of font info for 121 fonts, out of 8000000 for 9000
+ 14263 strings out of 495032
+ 226575 string characters out of 6181719
+ 276759 words of memory out of 5000000
+ 16068 multiletter control sequences out of 15000+600000
+ 85598 words of font info for 117 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 48i,13n,43p,1516b,585s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,13n,43p,1516b,547s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
@@ -2379,9 +2332,9 @@ urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic
 b></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8ac.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (124 pages, 1147984 bytes).
+Output written on refman.pdf (117 pages, 1077626 bytes).
 PDF statistics:
- 5811 PDF objects out of 6186 (max. 8388607)
- 1163 named destinations out of 1200 (max. 500000)
- 4392 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 5427 PDF objects out of 6186 (max. 8388607)
+ 1081 named destinations out of 1200 (max. 500000)
+ 4088 words of extra memory for PDF output out of 10000 (max. 10000000)
 

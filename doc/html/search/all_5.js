@@ -7,7 +7,6 @@ var searchData=
   ['environment',['environment',['../namespaceenvironment.html',1,'']]],
   ['environment_2ecpp',['environment.cpp',['../environment_8cpp.html',1,'']]],
   ['environment_2eh',['environment.h',['../environment_8h.html',1,'']]],
-  ['expandvar',['expandVar',['../configuration_8cpp.html#a52feea78ac78a345798c27f56edc4d15',1,'configuration.cpp']]],
   ['getobjectsbegin',['getObjectsBegin',['../classObjectIterator.html#a90638e8c73155e7113b6c4d3fdb54c57',1,'ObjectIterator']]],
   ['getobjectsend',['getObjectsEnd',['../classObjectIterator.html#aede0069c558675c8d0c64d3662a42d62',1,'ObjectIterator']]]
 ];

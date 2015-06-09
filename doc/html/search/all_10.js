@@ -2,7 +2,6 @@ var searchData=
 [
   ['random',['random',['../classSimulation.html#a71222e784171f690ec3953de65c4a84c',1,'Simulation']]],
   ['red',['red',['../structColor.html#aa897fe858468c4bff0f286d0dfd43178',1,'Color']]],
-  ['refresh',['refresh',['../classConfiguration.html#a2954eb51f0dd39126e1ea47a3114c33a',1,'Configuration']]],
   ['removealllightsource',['removeAllLightSource',['../namespaceutil.html#a1782859440b46df8dd057a4eb7f98c48',1,'util']]],
   ['removeallobstacle',['removeAllObstacle',['../namespaceutil.html#a132f470b2b1eedd9898a6084ca79f6b9',1,'util']]],
   ['removeallrobottarget',['removeAllRobotTarget',['../namespaceutil.html#a9d8909ba437d6f89c2876d197afc9074',1,'util']]],

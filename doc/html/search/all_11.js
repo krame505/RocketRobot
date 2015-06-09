@@ -57,5 +57,5 @@ var searchData=
   ['simulation_2ecpp',['Simulation.cpp',['../Simulation_8cpp.html',1,'']]],
   ['simulation_2eh',['Simulation.h',['../Simulation_8h.html',1,'']]],
   ['start',['start',['../classSimulation.html#adaf59b9b5a544f6214d636632a16d6d4',1,'Simulation']]],
-  ['stringval',['stringVal',['../structconfigValue.html#ab7bde03d2ca73f84b5da8fd21b479790',1,'configValue']]]
+  ['stop',['stop',['../classOptimizeSimulation.html#a0216d870b6d411e771424be041658d36',1,'OptimizeSimulation']]]
 ];

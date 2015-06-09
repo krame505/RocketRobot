@@ -169,374 +169,336 @@
 \contentsline {subsubsection}{\numberline {7.3.4.11}robot\discretionary {-}{}{}Sensors\discretionary {-}{}{}Crossed}{37}{subsubsection.7.3.4.11}
 \contentsline {subsubsection}{\numberline {7.3.4.12}target\discretionary {-}{}{}Sensor\discretionary {-}{}{}Scale}{37}{subsubsection.7.3.4.12}
 \contentsline {subsubsection}{\numberline {7.3.4.13}target\discretionary {-}{}{}Sensors\discretionary {-}{}{}Crossed}{37}{subsubsection.7.3.4.13}
-\contentsline {section}{\numberline {7.4}Configuration Class Reference}{37}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}Member Function Documentation}{38}{subsection.7.4.1}
-\contentsline {subsubsection}{\numberline {7.4.1.1}get}{38}{subsubsection.7.4.1.1}
-\contentsline {subsubsection}{\numberline {7.4.1.2}get\discretionary {-}{}{}Bool\discretionary {-}{}{}Config}{38}{subsubsection.7.4.1.2}
-\contentsline {subsubsection}{\numberline {7.4.1.3}get\discretionary {-}{}{}Char\discretionary {-}{}{}Config}{38}{subsubsection.7.4.1.3}
-\contentsline {subsubsection}{\numberline {7.4.1.4}get\discretionary {-}{}{}Float\discretionary {-}{}{}Config}{38}{subsubsection.7.4.1.4}
-\contentsline {subsubsection}{\numberline {7.4.1.5}get\discretionary {-}{}{}Int\discretionary {-}{}{}Config}{39}{subsubsection.7.4.1.5}
-\contentsline {subsubsection}{\numberline {7.4.1.6}get\discretionary {-}{}{}String\discretionary {-}{}{}Config}{39}{subsubsection.7.4.1.6}
-\contentsline {subsubsection}{\numberline {7.4.1.7}init\discretionary {-}{}{}Config}{39}{subsubsection.7.4.1.7}
-\contentsline {subsubsection}{\numberline {7.4.1.8}init\discretionary {-}{}{}Config}{39}{subsubsection.7.4.1.8}
-\contentsline {subsubsection}{\numberline {7.4.1.9}refresh}{39}{subsubsection.7.4.1.9}
-\contentsline {section}{\numberline {7.5}config\discretionary {-}{}{}Value Struct Reference}{39}{section.7.5}
+\contentsline {section}{\numberline {7.4}Light\discretionary {-}{}{}Source Class Reference}{37}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Detailed Description}{38}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Constructor \& Destructor Documentation}{38}{subsection.7.4.2}
+\contentsline {subsubsection}{\numberline {7.4.2.1}Light\discretionary {-}{}{}Source}{38}{subsubsection.7.4.2.1}
+\contentsline {subsubsection}{\numberline {7.4.2.2}Light\discretionary {-}{}{}Source}{38}{subsubsection.7.4.2.2}
+\contentsline {subsubsection}{\numberline {7.4.2.3}Light\discretionary {-}{}{}Source}{39}{subsubsection.7.4.2.3}
+\contentsline {subsubsection}{\numberline {7.4.2.4}$\sim $\discretionary {-}{}{}Light\discretionary {-}{}{}Source}{39}{subsubsection.7.4.2.4}
+\contentsline {subsection}{\numberline {7.4.3}Member Function Documentation}{39}{subsection.7.4.3}
+\contentsline {subsubsection}{\numberline {7.4.3.1}display}{39}{subsubsection.7.4.3.1}
+\contentsline {subsubsection}{\numberline {7.4.3.2}handle\discretionary {-}{}{}Collision}{39}{subsubsection.7.4.3.2}
+\contentsline {section}{\numberline {7.5}Location Struct Reference}{40}{section.7.5}
 \contentsline {subsection}{\numberline {7.5.1}Detailed Description}{40}{subsection.7.5.1}
-\contentsline {subsection}{\numberline {7.5.2}Member Data Documentation}{40}{subsection.7.5.2}
-\contentsline {subsubsection}{\numberline {7.5.2.1}"@1}{40}{subsubsection.7.5.2.1}
-\contentsline {subsubsection}{\numberline {7.5.2.2}bool\discretionary {-}{}{}Val}{40}{subsubsection.7.5.2.2}
-\contentsline {subsubsection}{\numberline {7.5.2.3}char\discretionary {-}{}{}Val}{40}{subsubsection.7.5.2.3}
-\contentsline {subsubsection}{\numberline {7.5.2.4}float\discretionary {-}{}{}Val}{40}{subsubsection.7.5.2.4}
-\contentsline {subsubsection}{\numberline {7.5.2.5}int\discretionary {-}{}{}Val}{40}{subsubsection.7.5.2.5}
-\contentsline {subsubsection}{\numberline {7.5.2.6}string\discretionary {-}{}{}Val}{40}{subsubsection.7.5.2.6}
-\contentsline {subsubsection}{\numberline {7.5.2.7}type}{40}{subsubsection.7.5.2.7}
-\contentsline {section}{\numberline {7.6}Light\discretionary {-}{}{}Source Class Reference}{40}{section.7.6}
+\contentsline {subsection}{\numberline {7.5.2}Constructor \& Destructor Documentation}{40}{subsection.7.5.2}
+\contentsline {subsubsection}{\numberline {7.5.2.1}Location}{40}{subsubsection.7.5.2.1}
+\contentsline {subsubsection}{\numberline {7.5.2.2}Location}{40}{subsubsection.7.5.2.2}
+\contentsline {subsection}{\numberline {7.5.3}Member Function Documentation}{40}{subsection.7.5.3}
+\contentsline {subsubsection}{\numberline {7.5.3.1}operator==}{40}{subsubsection.7.5.3.1}
+\contentsline {subsection}{\numberline {7.5.4}Member Data Documentation}{40}{subsection.7.5.4}
+\contentsline {subsubsection}{\numberline {7.5.4.1}x}{40}{subsubsection.7.5.4.1}
+\contentsline {subsubsection}{\numberline {7.5.4.2}y}{40}{subsubsection.7.5.4.2}
+\contentsline {section}{\numberline {7.6}Neural\discretionary {-}{}{}Network Class Reference}{41}{section.7.6}
 \contentsline {subsection}{\numberline {7.6.1}Detailed Description}{41}{subsection.7.6.1}
 \contentsline {subsection}{\numberline {7.6.2}Constructor \& Destructor Documentation}{41}{subsection.7.6.2}
-\contentsline {subsubsection}{\numberline {7.6.2.1}Light\discretionary {-}{}{}Source}{41}{subsubsection.7.6.2.1}
-\contentsline {subsubsection}{\numberline {7.6.2.2}Light\discretionary {-}{}{}Source}{41}{subsubsection.7.6.2.2}
-\contentsline {subsubsection}{\numberline {7.6.2.3}Light\discretionary {-}{}{}Source}{42}{subsubsection.7.6.2.3}
-\contentsline {subsubsection}{\numberline {7.6.2.4}$\sim $\discretionary {-}{}{}Light\discretionary {-}{}{}Source}{42}{subsubsection.7.6.2.4}
-\contentsline {subsection}{\numberline {7.6.3}Member Function Documentation}{42}{subsection.7.6.3}
-\contentsline {subsubsection}{\numberline {7.6.3.1}display}{42}{subsubsection.7.6.3.1}
-\contentsline {subsubsection}{\numberline {7.6.3.2}handle\discretionary {-}{}{}Collision}{42}{subsubsection.7.6.3.2}
-\contentsline {section}{\numberline {7.7}Location Struct Reference}{43}{section.7.7}
-\contentsline {subsection}{\numberline {7.7.1}Detailed Description}{43}{subsection.7.7.1}
-\contentsline {subsection}{\numberline {7.7.2}Constructor \& Destructor Documentation}{43}{subsection.7.7.2}
-\contentsline {subsubsection}{\numberline {7.7.2.1}Location}{43}{subsubsection.7.7.2.1}
-\contentsline {subsubsection}{\numberline {7.7.2.2}Location}{43}{subsubsection.7.7.2.2}
-\contentsline {subsection}{\numberline {7.7.3}Member Function Documentation}{43}{subsection.7.7.3}
-\contentsline {subsubsection}{\numberline {7.7.3.1}operator==}{43}{subsubsection.7.7.3.1}
-\contentsline {subsection}{\numberline {7.7.4}Member Data Documentation}{43}{subsection.7.7.4}
-\contentsline {subsubsection}{\numberline {7.7.4.1}x}{43}{subsubsection.7.7.4.1}
-\contentsline {subsubsection}{\numberline {7.7.4.2}y}{43}{subsubsection.7.7.4.2}
-\contentsline {section}{\numberline {7.8}Neural\discretionary {-}{}{}Network Class Reference}{43}{section.7.8}
-\contentsline {subsection}{\numberline {7.8.1}Detailed Description}{44}{subsection.7.8.1}
-\contentsline {subsection}{\numberline {7.8.2}Constructor \& Destructor Documentation}{44}{subsection.7.8.2}
-\contentsline {subsubsection}{\numberline {7.8.2.1}Neural\discretionary {-}{}{}Network}{44}{subsubsection.7.8.2.1}
-\contentsline {subsubsection}{\numberline {7.8.2.2}Neural\discretionary {-}{}{}Network}{44}{subsubsection.7.8.2.2}
-\contentsline {subsection}{\numberline {7.8.3}Member Function Documentation}{44}{subsection.7.8.3}
-\contentsline {subsubsection}{\numberline {7.8.3.1}combine}{44}{subsubsection.7.8.3.1}
-\contentsline {subsubsection}{\numberline {7.8.3.2}compute}{44}{subsubsection.7.8.3.2}
-\contentsline {subsubsection}{\numberline {7.8.3.3}load}{45}{subsubsection.7.8.3.3}
-\contentsline {subsubsection}{\numberline {7.8.3.4}mutate}{46}{subsubsection.7.8.3.4}
-\contentsline {subsubsection}{\numberline {7.8.3.5}write}{46}{subsubsection.7.8.3.5}
-\contentsline {section}{\numberline {7.9}Neural\discretionary {-}{}{}Network\discretionary {-}{}{}Robot Class Reference}{46}{section.7.9}
-\contentsline {subsection}{\numberline {7.9.1}Detailed Description}{47}{subsection.7.9.1}
-\contentsline {subsection}{\numberline {7.9.2}Constructor \& Destructor Documentation}{47}{subsection.7.9.2}
-\contentsline {subsubsection}{\numberline {7.9.2.1}Neural\discretionary {-}{}{}Network\discretionary {-}{}{}Robot}{47}{subsubsection.7.9.2.1}
-\contentsline {subsubsection}{\numberline {7.9.2.2}Neural\discretionary {-}{}{}Network\discretionary {-}{}{}Robot}{47}{subsubsection.7.9.2.2}
-\contentsline {subsubsection}{\numberline {7.9.2.3}$\sim $\discretionary {-}{}{}Neural\discretionary {-}{}{}Network\discretionary {-}{}{}Robot}{47}{subsubsection.7.9.2.3}
-\contentsline {subsection}{\numberline {7.9.3}Member Function Documentation}{47}{subsection.7.9.3}
-\contentsline {subsubsection}{\numberline {7.9.3.1}get\discretionary {-}{}{}Left\discretionary {-}{}{}Speed}{47}{subsubsection.7.9.3.1}
-\contentsline {subsubsection}{\numberline {7.9.3.2}get\discretionary {-}{}{}Right\discretionary {-}{}{}Speed}{47}{subsubsection.7.9.3.2}
-\contentsline {subsection}{\numberline {7.9.4}Member Data Documentation}{47}{subsection.7.9.4}
-\contentsline {subsubsection}{\numberline {7.9.4.1}filename}{47}{subsubsection.7.9.4.1}
-\contentsline {section}{\numberline {7.10}No\discretionary {-}{}{}Open\discretionary {-}{}{}Location\discretionary {-}{}{}Exception Class Reference}{48}{section.7.10}
-\contentsline {subsection}{\numberline {7.10.1}Detailed Description}{48}{subsection.7.10.1}
-\contentsline {subsection}{\numberline {7.10.2}Constructor \& Destructor Documentation}{48}{subsection.7.10.2}
-\contentsline {subsubsection}{\numberline {7.10.2.1}No\discretionary {-}{}{}Open\discretionary {-}{}{}Location\discretionary {-}{}{}Exception}{48}{subsubsection.7.10.2.1}
-\contentsline {section}{\numberline {7.11}Object\discretionary {-}{}{}Iterator Class Reference}{48}{section.7.11}
+\contentsline {subsubsection}{\numberline {7.6.2.1}Neural\discretionary {-}{}{}Network}{41}{subsubsection.7.6.2.1}
+\contentsline {subsubsection}{\numberline {7.6.2.2}Neural\discretionary {-}{}{}Network}{41}{subsubsection.7.6.2.2}
+\contentsline {subsection}{\numberline {7.6.3}Member Function Documentation}{41}{subsection.7.6.3}
+\contentsline {subsubsection}{\numberline {7.6.3.1}combine}{41}{subsubsection.7.6.3.1}
+\contentsline {subsubsection}{\numberline {7.6.3.2}compute}{42}{subsubsection.7.6.3.2}
+\contentsline {subsubsection}{\numberline {7.6.3.3}load}{43}{subsubsection.7.6.3.3}
+\contentsline {subsubsection}{\numberline {7.6.3.4}mutate}{43}{subsubsection.7.6.3.4}
+\contentsline {subsubsection}{\numberline {7.6.3.5}write}{43}{subsubsection.7.6.3.5}
+\contentsline {section}{\numberline {7.7}Neural\discretionary {-}{}{}Network\discretionary {-}{}{}Robot Class Reference}{43}{section.7.7}
+\contentsline {subsection}{\numberline {7.7.1}Detailed Description}{44}{subsection.7.7.1}
+\contentsline {subsection}{\numberline {7.7.2}Constructor \& Destructor Documentation}{44}{subsection.7.7.2}
+\contentsline {subsubsection}{\numberline {7.7.2.1}Neural\discretionary {-}{}{}Network\discretionary {-}{}{}Robot}{44}{subsubsection.7.7.2.1}
+\contentsline {subsubsection}{\numberline {7.7.2.2}Neural\discretionary {-}{}{}Network\discretionary {-}{}{}Robot}{44}{subsubsection.7.7.2.2}
+\contentsline {subsubsection}{\numberline {7.7.2.3}$\sim $\discretionary {-}{}{}Neural\discretionary {-}{}{}Network\discretionary {-}{}{}Robot}{44}{subsubsection.7.7.2.3}
+\contentsline {subsection}{\numberline {7.7.3}Member Function Documentation}{44}{subsection.7.7.3}
+\contentsline {subsubsection}{\numberline {7.7.3.1}get\discretionary {-}{}{}Left\discretionary {-}{}{}Speed}{44}{subsubsection.7.7.3.1}
+\contentsline {subsubsection}{\numberline {7.7.3.2}get\discretionary {-}{}{}Right\discretionary {-}{}{}Speed}{45}{subsubsection.7.7.3.2}
+\contentsline {subsection}{\numberline {7.7.4}Member Data Documentation}{45}{subsection.7.7.4}
+\contentsline {subsubsection}{\numberline {7.7.4.1}filename}{45}{subsubsection.7.7.4.1}
+\contentsline {section}{\numberline {7.8}No\discretionary {-}{}{}Open\discretionary {-}{}{}Location\discretionary {-}{}{}Exception Class Reference}{45}{section.7.8}
+\contentsline {subsection}{\numberline {7.8.1}Detailed Description}{45}{subsection.7.8.1}
+\contentsline {subsection}{\numberline {7.8.2}Constructor \& Destructor Documentation}{45}{subsection.7.8.2}
+\contentsline {subsubsection}{\numberline {7.8.2.1}No\discretionary {-}{}{}Open\discretionary {-}{}{}Location\discretionary {-}{}{}Exception}{45}{subsubsection.7.8.2.1}
+\contentsline {section}{\numberline {7.9}Object\discretionary {-}{}{}Iterator Class Reference}{45}{section.7.9}
+\contentsline {subsection}{\numberline {7.9.1}Detailed Description}{46}{subsection.7.9.1}
+\contentsline {subsection}{\numberline {7.9.2}Constructor \& Destructor Documentation}{46}{subsection.7.9.2}
+\contentsline {subsubsection}{\numberline {7.9.2.1}Object\discretionary {-}{}{}Iterator}{46}{subsubsection.7.9.2.1}
+\contentsline {subsubsection}{\numberline {7.9.2.2}Object\discretionary {-}{}{}Iterator}{46}{subsubsection.7.9.2.2}
+\contentsline {subsubsection}{\numberline {7.9.2.3}$\sim $\discretionary {-}{}{}Object\discretionary {-}{}{}Iterator}{46}{subsubsection.7.9.2.3}
+\contentsline {subsection}{\numberline {7.9.3}Member Function Documentation}{46}{subsection.7.9.3}
+\contentsline {subsubsection}{\numberline {7.9.3.1}operator!=}{46}{subsubsection.7.9.3.1}
+\contentsline {subsubsection}{\numberline {7.9.3.2}operator$\ast $}{46}{subsubsection.7.9.3.2}
+\contentsline {subsubsection}{\numberline {7.9.3.3}operator++}{46}{subsubsection.7.9.3.3}
+\contentsline {subsubsection}{\numberline {7.9.3.4}operator++}{47}{subsubsection.7.9.3.4}
+\contentsline {subsubsection}{\numberline {7.9.3.5}operator$<$}{47}{subsubsection.7.9.3.5}
+\contentsline {subsubsection}{\numberline {7.9.3.6}operator==}{47}{subsubsection.7.9.3.6}
+\contentsline {subsubsection}{\numberline {7.9.3.7}operator$>$}{47}{subsubsection.7.9.3.7}
+\contentsline {subsection}{\numberline {7.9.4}Friends And Related Function Documentation}{47}{subsection.7.9.4}
+\contentsline {subsubsection}{\numberline {7.9.4.1}environment\discretionary {-}{}{}::get\discretionary {-}{}{}Objects\discretionary {-}{}{}Begin}{47}{subsubsection.7.9.4.1}
+\contentsline {subsubsection}{\numberline {7.9.4.2}environment\discretionary {-}{}{}::get\discretionary {-}{}{}Objects\discretionary {-}{}{}End}{47}{subsubsection.7.9.4.2}
+\contentsline {section}{\numberline {7.10}Obstacle Class Reference}{47}{section.7.10}
+\contentsline {subsection}{\numberline {7.10.1}Detailed Description}{47}{subsection.7.10.1}
+\contentsline {subsection}{\numberline {7.10.2}Constructor \& Destructor Documentation}{47}{subsection.7.10.2}
+\contentsline {subsubsection}{\numberline {7.10.2.1}Obstacle}{47}{subsubsection.7.10.2.1}
+\contentsline {subsubsection}{\numberline {7.10.2.2}Obstacle}{48}{subsubsection.7.10.2.2}
+\contentsline {subsubsection}{\numberline {7.10.2.3}Obstacle}{48}{subsubsection.7.10.2.3}
+\contentsline {subsubsection}{\numberline {7.10.2.4}$\sim $\discretionary {-}{}{}Obstacle}{48}{subsubsection.7.10.2.4}
+\contentsline {subsection}{\numberline {7.10.3}Member Function Documentation}{48}{subsection.7.10.3}
+\contentsline {subsubsection}{\numberline {7.10.3.1}handle\discretionary {-}{}{}Collision}{48}{subsubsection.7.10.3.1}
+\contentsline {section}{\numberline {7.11}Optimize\discretionary {-}{}{}Simulation Class Reference}{49}{section.7.11}
 \contentsline {subsection}{\numberline {7.11.1}Detailed Description}{49}{subsection.7.11.1}
 \contentsline {subsection}{\numberline {7.11.2}Constructor \& Destructor Documentation}{49}{subsection.7.11.2}
-\contentsline {subsubsection}{\numberline {7.11.2.1}Object\discretionary {-}{}{}Iterator}{49}{subsubsection.7.11.2.1}
-\contentsline {subsubsection}{\numberline {7.11.2.2}Object\discretionary {-}{}{}Iterator}{49}{subsubsection.7.11.2.2}
-\contentsline {subsubsection}{\numberline {7.11.2.3}$\sim $\discretionary {-}{}{}Object\discretionary {-}{}{}Iterator}{49}{subsubsection.7.11.2.3}
+\contentsline {subsubsection}{\numberline {7.11.2.1}Optimize\discretionary {-}{}{}Simulation}{49}{subsubsection.7.11.2.1}
+\contentsline {subsubsection}{\numberline {7.11.2.2}$\sim $\discretionary {-}{}{}Optimize\discretionary {-}{}{}Simulation}{49}{subsubsection.7.11.2.2}
 \contentsline {subsection}{\numberline {7.11.3}Member Function Documentation}{49}{subsection.7.11.3}
-\contentsline {subsubsection}{\numberline {7.11.3.1}operator!=}{49}{subsubsection.7.11.3.1}
-\contentsline {subsubsection}{\numberline {7.11.3.2}operator$\ast $}{49}{subsubsection.7.11.3.2}
-\contentsline {subsubsection}{\numberline {7.11.3.3}operator++}{49}{subsubsection.7.11.3.3}
-\contentsline {subsubsection}{\numberline {7.11.3.4}operator++}{49}{subsubsection.7.11.3.4}
-\contentsline {subsubsection}{\numberline {7.11.3.5}operator$<$}{49}{subsubsection.7.11.3.5}
-\contentsline {subsubsection}{\numberline {7.11.3.6}operator==}{49}{subsubsection.7.11.3.6}
-\contentsline {subsubsection}{\numberline {7.11.3.7}operator$>$}{49}{subsubsection.7.11.3.7}
-\contentsline {subsection}{\numberline {7.11.4}Friends And Related Function Documentation}{49}{subsection.7.11.4}
-\contentsline {subsubsection}{\numberline {7.11.4.1}environment\discretionary {-}{}{}::get\discretionary {-}{}{}Objects\discretionary {-}{}{}Begin}{49}{subsubsection.7.11.4.1}
-\contentsline {subsubsection}{\numberline {7.11.4.2}environment\discretionary {-}{}{}::get\discretionary {-}{}{}Objects\discretionary {-}{}{}End}{49}{subsubsection.7.11.4.2}
-\contentsline {section}{\numberline {7.12}Obstacle Class Reference}{50}{section.7.12}
-\contentsline {subsection}{\numberline {7.12.1}Detailed Description}{50}{subsection.7.12.1}
-\contentsline {subsection}{\numberline {7.12.2}Constructor \& Destructor Documentation}{50}{subsection.7.12.2}
-\contentsline {subsubsection}{\numberline {7.12.2.1}Obstacle}{50}{subsubsection.7.12.2.1}
-\contentsline {subsubsection}{\numberline {7.12.2.2}Obstacle}{50}{subsubsection.7.12.2.2}
-\contentsline {subsubsection}{\numberline {7.12.2.3}Obstacle}{51}{subsubsection.7.12.2.3}
-\contentsline {subsubsection}{\numberline {7.12.2.4}$\sim $\discretionary {-}{}{}Obstacle}{51}{subsubsection.7.12.2.4}
+\contentsline {subsubsection}{\numberline {7.11.3.1}get\discretionary {-}{}{}Performance}{50}{subsubsection.7.11.3.1}
+\contentsline {subsubsection}{\numberline {7.11.3.2}get\discretionary {-}{}{}Performance\discretionary {-}{}{}Maze}{50}{subsubsection.7.11.3.2}
+\contentsline {subsubsection}{\numberline {7.11.3.3}get\discretionary {-}{}{}Performance\discretionary {-}{}{}Obstacles}{50}{subsubsection.7.11.3.3}
+\contentsline {subsubsection}{\numberline {7.11.3.4}get\discretionary {-}{}{}Performance\discretionary {-}{}{}Random\discretionary {-}{}{}Repeated}{50}{subsubsection.7.11.3.4}
+\contentsline {subsubsection}{\numberline {7.11.3.5}run\discretionary {-}{}{}Main\discretionary {-}{}{}Loop}{50}{subsubsection.7.11.3.5}
+\contentsline {subsubsection}{\numberline {7.11.3.6}stop}{50}{subsubsection.7.11.3.6}
+\contentsline {section}{\numberline {7.12}Physical\discretionary {-}{}{}Object Class Reference}{50}{section.7.12}
+\contentsline {subsection}{\numberline {7.12.1}Detailed Description}{51}{subsection.7.12.1}
+\contentsline {subsection}{\numberline {7.12.2}Constructor \& Destructor Documentation}{51}{subsection.7.12.2}
+\contentsline {subsubsection}{\numberline {7.12.2.1}Physical\discretionary {-}{}{}Object}{51}{subsubsection.7.12.2.1}
+\contentsline {subsubsection}{\numberline {7.12.2.2}Physical\discretionary {-}{}{}Object}{51}{subsubsection.7.12.2.2}
+\contentsline {subsubsection}{\numberline {7.12.2.3}Physical\discretionary {-}{}{}Object}{51}{subsubsection.7.12.2.3}
+\contentsline {subsubsection}{\numberline {7.12.2.4}$\sim $\discretionary {-}{}{}Physical\discretionary {-}{}{}Object}{51}{subsubsection.7.12.2.4}
 \contentsline {subsection}{\numberline {7.12.3}Member Function Documentation}{51}{subsection.7.12.3}
-\contentsline {subsubsection}{\numberline {7.12.3.1}handle\discretionary {-}{}{}Collision}{51}{subsubsection.7.12.3.1}
-\contentsline {section}{\numberline {7.13}Optimize\discretionary {-}{}{}Simulation Class Reference}{52}{section.7.13}
-\contentsline {subsection}{\numberline {7.13.1}Detailed Description}{52}{subsection.7.13.1}
-\contentsline {subsection}{\numberline {7.13.2}Constructor \& Destructor Documentation}{52}{subsection.7.13.2}
-\contentsline {subsubsection}{\numberline {7.13.2.1}Optimize\discretionary {-}{}{}Simulation}{52}{subsubsection.7.13.2.1}
-\contentsline {subsubsection}{\numberline {7.13.2.2}$\sim $\discretionary {-}{}{}Optimize\discretionary {-}{}{}Simulation}{52}{subsubsection.7.13.2.2}
-\contentsline {subsection}{\numberline {7.13.3}Member Function Documentation}{52}{subsection.7.13.3}
-\contentsline {subsubsection}{\numberline {7.13.3.1}get\discretionary {-}{}{}Performance}{52}{subsubsection.7.13.3.1}
-\contentsline {subsubsection}{\numberline {7.13.3.2}get\discretionary {-}{}{}Performance\discretionary {-}{}{}Maze}{52}{subsubsection.7.13.3.2}
-\contentsline {subsubsection}{\numberline {7.13.3.3}get\discretionary {-}{}{}Performance\discretionary {-}{}{}Obstacles}{52}{subsubsection.7.13.3.3}
-\contentsline {subsubsection}{\numberline {7.13.3.4}get\discretionary {-}{}{}Performance\discretionary {-}{}{}Random\discretionary {-}{}{}Repeated}{52}{subsubsection.7.13.3.4}
-\contentsline {subsubsection}{\numberline {7.13.3.5}run\discretionary {-}{}{}Main\discretionary {-}{}{}Loop}{52}{subsubsection.7.13.3.5}
-\contentsline {section}{\numberline {7.14}Physical\discretionary {-}{}{}Object Class Reference}{53}{section.7.14}
-\contentsline {subsection}{\numberline {7.14.1}Detailed Description}{54}{subsection.7.14.1}
-\contentsline {subsection}{\numberline {7.14.2}Constructor \& Destructor Documentation}{54}{subsection.7.14.2}
-\contentsline {subsubsection}{\numberline {7.14.2.1}Physical\discretionary {-}{}{}Object}{54}{subsubsection.7.14.2.1}
-\contentsline {subsubsection}{\numberline {7.14.2.2}Physical\discretionary {-}{}{}Object}{54}{subsubsection.7.14.2.2}
-\contentsline {subsubsection}{\numberline {7.14.2.3}Physical\discretionary {-}{}{}Object}{54}{subsubsection.7.14.2.3}
-\contentsline {subsubsection}{\numberline {7.14.2.4}$\sim $\discretionary {-}{}{}Physical\discretionary {-}{}{}Object}{54}{subsubsection.7.14.2.4}
-\contentsline {subsection}{\numberline {7.14.3}Member Function Documentation}{54}{subsection.7.14.3}
-\contentsline {subsubsection}{\numberline {7.14.3.1}display}{54}{subsubsection.7.14.3.1}
-\contentsline {subsubsection}{\numberline {7.14.3.2}find\discretionary {-}{}{}Open\discretionary {-}{}{}Location}{54}{subsubsection.7.14.3.2}
-\contentsline {subsubsection}{\numberline {7.14.3.3}force\discretionary {-}{}{}Set\discretionary {-}{}{}Position}{54}{subsubsection.7.14.3.3}
-\contentsline {subsubsection}{\numberline {7.14.3.4}force\discretionary {-}{}{}Translate}{55}{subsubsection.7.14.3.4}
-\contentsline {subsubsection}{\numberline {7.14.3.5}get\discretionary {-}{}{}Color}{56}{subsubsection.7.14.3.5}
-\contentsline {subsubsection}{\numberline {7.14.3.6}get\discretionary {-}{}{}Id}{56}{subsubsection.7.14.3.6}
-\contentsline {subsubsection}{\numberline {7.14.3.7}get\discretionary {-}{}{}Location}{56}{subsubsection.7.14.3.7}
-\contentsline {subsubsection}{\numberline {7.14.3.8}get\discretionary {-}{}{}Orientation}{56}{subsubsection.7.14.3.8}
-\contentsline {subsubsection}{\numberline {7.14.3.9}get\discretionary {-}{}{}Radius}{56}{subsubsection.7.14.3.9}
-\contentsline {subsubsection}{\numberline {7.14.3.10}get\discretionary {-}{}{}Speed}{56}{subsubsection.7.14.3.10}
-\contentsline {subsubsection}{\numberline {7.14.3.11}get\discretionary {-}{}{}X\discretionary {-}{}{}Position}{57}{subsubsection.7.14.3.11}
-\contentsline {subsubsection}{\numberline {7.14.3.12}get\discretionary {-}{}{}Y\discretionary {-}{}{}Position}{57}{subsubsection.7.14.3.12}
-\contentsline {subsubsection}{\numberline {7.14.3.13}handle\discretionary {-}{}{}Collision}{57}{subsubsection.7.14.3.13}
-\contentsline {subsubsection}{\numberline {7.14.3.14}has\discretionary {-}{}{}Equal\discretionary {-}{}{}Position}{57}{subsubsection.7.14.3.14}
-\contentsline {subsubsection}{\numberline {7.14.3.15}point\discretionary {-}{}{}To}{57}{subsubsection.7.14.3.15}
-\contentsline {subsubsection}{\numberline {7.14.3.16}reorient}{58}{subsubsection.7.14.3.16}
-\contentsline {subsubsection}{\numberline {7.14.3.17}rotate}{58}{subsubsection.7.14.3.17}
-\contentsline {subsubsection}{\numberline {7.14.3.18}set\discretionary {-}{}{}Color}{58}{subsubsection.7.14.3.18}
-\contentsline {subsubsection}{\numberline {7.14.3.19}set\discretionary {-}{}{}Location}{58}{subsubsection.7.14.3.19}
-\contentsline {subsubsection}{\numberline {7.14.3.20}set\discretionary {-}{}{}Orientation}{58}{subsubsection.7.14.3.20}
-\contentsline {subsubsection}{\numberline {7.14.3.21}set\discretionary {-}{}{}Position}{59}{subsubsection.7.14.3.21}
-\contentsline {subsubsection}{\numberline {7.14.3.22}set\discretionary {-}{}{}Radius}{59}{subsubsection.7.14.3.22}
-\contentsline {subsubsection}{\numberline {7.14.3.23}set\discretionary {-}{}{}Speed}{59}{subsubsection.7.14.3.23}
-\contentsline {subsubsection}{\numberline {7.14.3.24}translate}{59}{subsubsection.7.14.3.24}
-\contentsline {subsubsection}{\numberline {7.14.3.25}update}{59}{subsubsection.7.14.3.25}
-\contentsline {subsubsection}{\numberline {7.14.3.26}update\discretionary {-}{}{}Members}{59}{subsubsection.7.14.3.26}
-\contentsline {subsubsection}{\numberline {7.14.3.27}update\discretionary {-}{}{}Position}{60}{subsubsection.7.14.3.27}
-\contentsline {subsection}{\numberline {7.14.4}Member Data Documentation}{60}{subsection.7.14.4}
-\contentsline {subsubsection}{\numberline {7.14.4.1}is\discretionary {-}{}{}Hitable}{60}{subsubsection.7.14.4.1}
-\contentsline {subsubsection}{\numberline {7.14.4.2}object\discretionary {-}{}{}Type}{60}{subsubsection.7.14.4.2}
-\contentsline {section}{\numberline {7.15}Robot Class Reference}{60}{section.7.15}
-\contentsline {subsection}{\numberline {7.15.1}Detailed Description}{61}{subsection.7.15.1}
-\contentsline {subsection}{\numberline {7.15.2}Constructor \& Destructor Documentation}{61}{subsection.7.15.2}
-\contentsline {subsubsection}{\numberline {7.15.2.1}Robot}{61}{subsubsection.7.15.2.1}
-\contentsline {subsubsection}{\numberline {7.15.2.2}Robot}{61}{subsubsection.7.15.2.2}
-\contentsline {subsubsection}{\numberline {7.15.2.3}$\sim $\discretionary {-}{}{}Robot}{61}{subsubsection.7.15.2.3}
-\contentsline {subsection}{\numberline {7.15.3}Member Function Documentation}{62}{subsection.7.15.3}
-\contentsline {subsubsection}{\numberline {7.15.3.1}display}{62}{subsubsection.7.15.3.1}
-\contentsline {subsubsection}{\numberline {7.15.3.2}get\discretionary {-}{}{}Left\discretionary {-}{}{}Speed}{62}{subsubsection.7.15.3.2}
-\contentsline {subsubsection}{\numberline {7.15.3.3}get\discretionary {-}{}{}Line\discretionary {-}{}{}Color}{62}{subsubsection.7.15.3.3}
-\contentsline {subsubsection}{\numberline {7.15.3.4}get\discretionary {-}{}{}Right\discretionary {-}{}{}Speed}{62}{subsubsection.7.15.3.4}
-\contentsline {subsubsection}{\numberline {7.15.3.5}get\discretionary {-}{}{}Target}{62}{subsubsection.7.15.3.5}
-\contentsline {subsubsection}{\numberline {7.15.3.6}handle\discretionary {-}{}{}Collision}{62}{subsubsection.7.15.3.6}
-\contentsline {subsubsection}{\numberline {7.15.3.7}set\discretionary {-}{}{}Line\discretionary {-}{}{}Color}{62}{subsubsection.7.15.3.7}
-\contentsline {subsubsection}{\numberline {7.15.3.8}set\discretionary {-}{}{}Target}{63}{subsubsection.7.15.3.8}
-\contentsline {subsubsection}{\numberline {7.15.3.9}update}{63}{subsubsection.7.15.3.9}
-\contentsline {subsubsection}{\numberline {7.15.3.10}update\discretionary {-}{}{}Members}{63}{subsubsection.7.15.3.10}
-\contentsline {subsection}{\numberline {7.15.4}Member Data Documentation}{63}{subsection.7.15.4}
-\contentsline {subsubsection}{\numberline {7.15.4.1}robot\discretionary {-}{}{}Type}{63}{subsubsection.7.15.4.1}
-\contentsline {section}{\numberline {7.16}Sensor Class Reference}{63}{section.7.16}
-\contentsline {subsection}{\numberline {7.16.1}Constructor \& Destructor Documentation}{64}{subsection.7.16.1}
-\contentsline {subsubsection}{\numberline {7.16.1.1}Sensor}{64}{subsubsection.7.16.1.1}
-\contentsline {subsubsection}{\numberline {7.16.1.2}Sensor}{64}{subsubsection.7.16.1.2}
-\contentsline {subsection}{\numberline {7.16.2}Member Function Documentation}{64}{subsection.7.16.2}
-\contentsline {subsubsection}{\numberline {7.16.2.1}display}{64}{subsubsection.7.16.2.1}
-\contentsline {subsubsection}{\numberline {7.16.2.2}get\discretionary {-}{}{}Orientation}{64}{subsubsection.7.16.2.2}
-\contentsline {subsubsection}{\numberline {7.16.2.3}get\discretionary {-}{}{}Position}{65}{subsubsection.7.16.2.3}
-\contentsline {subsubsection}{\numberline {7.16.2.4}get\discretionary {-}{}{}Type\discretionary {-}{}{}Detected}{65}{subsubsection.7.16.2.4}
-\contentsline {subsubsection}{\numberline {7.16.2.5}get\discretionary {-}{}{}View\discretionary {-}{}{}Angle}{65}{subsubsection.7.16.2.5}
-\contentsline {subsubsection}{\numberline {7.16.2.6}get\discretionary {-}{}{}X\discretionary {-}{}{}Position}{65}{subsubsection.7.16.2.6}
-\contentsline {subsubsection}{\numberline {7.16.2.7}get\discretionary {-}{}{}Y\discretionary {-}{}{}Position}{65}{subsubsection.7.16.2.7}
-\contentsline {subsubsection}{\numberline {7.16.2.8}sense}{65}{subsubsection.7.16.2.8}
-\contentsline {subsubsection}{\numberline {7.16.2.9}set\discretionary {-}{}{}Orientation}{66}{subsubsection.7.16.2.9}
-\contentsline {subsubsection}{\numberline {7.16.2.10}set\discretionary {-}{}{}Position}{67}{subsubsection.7.16.2.10}
-\contentsline {subsubsection}{\numberline {7.16.2.11}set\discretionary {-}{}{}Position}{67}{subsubsection.7.16.2.11}
-\contentsline {subsubsection}{\numberline {7.16.2.12}set\discretionary {-}{}{}Type\discretionary {-}{}{}Detected}{67}{subsubsection.7.16.2.12}
-\contentsline {subsubsection}{\numberline {7.16.2.13}set\discretionary {-}{}{}View\discretionary {-}{}{}Angle}{67}{subsubsection.7.16.2.13}
-\contentsline {subsubsection}{\numberline {7.16.2.14}update\discretionary {-}{}{}Position}{67}{subsubsection.7.16.2.14}
-\contentsline {section}{\numberline {7.17}Simple\discretionary {-}{}{}Robot Class Reference}{68}{section.7.17}
-\contentsline {subsection}{\numberline {7.17.1}Detailed Description}{68}{subsection.7.17.1}
-\contentsline {subsection}{\numberline {7.17.2}Constructor \& Destructor Documentation}{68}{subsection.7.17.2}
-\contentsline {subsubsection}{\numberline {7.17.2.1}Simple\discretionary {-}{}{}Robot}{68}{subsubsection.7.17.2.1}
-\contentsline {subsubsection}{\numberline {7.17.2.2}Simple\discretionary {-}{}{}Robot}{68}{subsubsection.7.17.2.2}
-\contentsline {subsubsection}{\numberline {7.17.2.3}$\sim $\discretionary {-}{}{}Simple\discretionary {-}{}{}Robot}{68}{subsubsection.7.17.2.3}
-\contentsline {subsection}{\numberline {7.17.3}Member Function Documentation}{68}{subsection.7.17.3}
-\contentsline {subsubsection}{\numberline {7.17.3.1}get\discretionary {-}{}{}Left\discretionary {-}{}{}Speed}{68}{subsubsection.7.17.3.1}
-\contentsline {subsubsection}{\numberline {7.17.3.2}get\discretionary {-}{}{}Right\discretionary {-}{}{}Speed}{69}{subsubsection.7.17.3.2}
-\contentsline {section}{\numberline {7.18}Simulation Class Reference}{69}{section.7.18}
-\contentsline {subsection}{\numberline {7.18.1}Detailed Description}{71}{subsection.7.18.1}
-\contentsline {subsection}{\numberline {7.18.2}Constructor \& Destructor Documentation}{71}{subsection.7.18.2}
-\contentsline {subsubsection}{\numberline {7.18.2.1}Simulation}{71}{subsubsection.7.18.2.1}
-\contentsline {subsubsection}{\numberline {7.18.2.2}$\sim $\discretionary {-}{}{}Simulation}{71}{subsubsection.7.18.2.2}
-\contentsline {subsection}{\numberline {7.18.3}Member Function Documentation}{71}{subsection.7.18.3}
-\contentsline {subsubsection}{\numberline {7.18.3.1}advance}{71}{subsubsection.7.18.3.1}
-\contentsline {subsubsection}{\numberline {7.18.3.2}clear}{71}{subsubsection.7.18.3.2}
-\contentsline {subsubsection}{\numberline {7.18.3.3}display}{71}{subsubsection.7.18.3.3}
-\contentsline {subsubsection}{\numberline {7.18.3.4}glui\discretionary {-}{}{}Control}{71}{subsubsection.7.18.3.4}
-\contentsline {subsubsection}{\numberline {7.18.3.5}init\discretionary {-}{}{}Objects}{71}{subsubsection.7.18.3.5}
-\contentsline {subsubsection}{\numberline {7.18.3.6}keyboard}{71}{subsubsection.7.18.3.6}
-\contentsline {subsubsection}{\numberline {7.18.3.7}keyboard\discretionary {-}{}{}Special}{72}{subsubsection.7.18.3.7}
-\contentsline {subsubsection}{\numberline {7.18.3.8}left\discretionary {-}{}{}Mouse\discretionary {-}{}{}Down}{72}{subsubsection.7.18.3.8}
-\contentsline {subsubsection}{\numberline {7.18.3.9}left\discretionary {-}{}{}Mouse\discretionary {-}{}{}Up}{72}{subsubsection.7.18.3.9}
-\contentsline {subsubsection}{\numberline {7.18.3.10}middle\discretionary {-}{}{}Mouse\discretionary {-}{}{}Down}{72}{subsubsection.7.18.3.10}
-\contentsline {subsubsection}{\numberline {7.18.3.11}mouse\discretionary {-}{}{}Dragged}{72}{subsubsection.7.18.3.11}
-\contentsline {subsubsection}{\numberline {7.18.3.12}pause}{72}{subsubsection.7.18.3.12}
-\contentsline {subsubsection}{\numberline {7.18.3.13}random}{72}{subsubsection.7.18.3.13}
-\contentsline {subsubsection}{\numberline {7.18.3.14}reset}{72}{subsubsection.7.18.3.14}
-\contentsline {subsubsection}{\numberline {7.18.3.15}resume}{72}{subsubsection.7.18.3.15}
-\contentsline {subsubsection}{\numberline {7.18.3.16}s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Moving\discretionary {-}{}{}Light\discretionary {-}{}{}Source}{72}{subsubsection.7.18.3.16}
-\contentsline {subsubsection}{\numberline {7.18.3.17}s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Obstacle}{72}{subsubsection.7.18.3.17}
-\contentsline {subsubsection}{\numberline {7.18.3.18}s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Robot}{72}{subsubsection.7.18.3.18}
-\contentsline {subsubsection}{\numberline {7.18.3.19}s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Robot\discretionary {-}{}{}Target}{72}{subsubsection.7.18.3.19}
-\contentsline {subsubsection}{\numberline {7.18.3.20}s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Stationary\discretionary {-}{}{}Light\discretionary {-}{}{}Source}{72}{subsubsection.7.18.3.20}
-\contentsline {subsubsection}{\numberline {7.18.3.21}s\discretionary {-}{}{}\_\discretionary {-}{}{}clear}{72}{subsubsection.7.18.3.21}
-\contentsline {subsubsection}{\numberline {7.18.3.22}s\discretionary {-}{}{}\_\discretionary {-}{}{}neural\discretionary {-}{}{}Network\discretionary {-}{}{}File\discretionary {-}{}{}Changed}{72}{subsubsection.7.18.3.22}
-\contentsline {subsubsection}{\numberline {7.18.3.23}s\discretionary {-}{}{}\_\discretionary {-}{}{}open}{72}{subsubsection.7.18.3.23}
-\contentsline {subsubsection}{\numberline {7.18.3.24}s\discretionary {-}{}{}\_\discretionary {-}{}{}pause}{72}{subsubsection.7.18.3.24}
-\contentsline {subsubsection}{\numberline {7.18.3.25}s\discretionary {-}{}{}\_\discretionary {-}{}{}random}{73}{subsubsection.7.18.3.25}
-\contentsline {subsubsection}{\numberline {7.18.3.26}s\discretionary {-}{}{}\_\discretionary {-}{}{}refresh\discretionary {-}{}{}Configuration}{73}{subsubsection.7.18.3.26}
-\contentsline {subsubsection}{\numberline {7.18.3.27}s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}All\discretionary {-}{}{}Light\discretionary {-}{}{}Source}{73}{subsubsection.7.18.3.27}
-\contentsline {subsubsection}{\numberline {7.18.3.28}s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}All\discretionary {-}{}{}Obstacle}{73}{subsubsection.7.18.3.28}
-\contentsline {subsubsection}{\numberline {7.18.3.29}s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}All\discretionary {-}{}{}Robot\discretionary {-}{}{}Target}{73}{subsubsection.7.18.3.29}
-\contentsline {subsubsection}{\numberline {7.18.3.30}s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}Light\discretionary {-}{}{}Source}{73}{subsubsection.7.18.3.30}
-\contentsline {subsubsection}{\numberline {7.18.3.31}s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}Obstacle}{73}{subsubsection.7.18.3.31}
-\contentsline {subsubsection}{\numberline {7.18.3.32}s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}Robot\discretionary {-}{}{}Target}{73}{subsubsection.7.18.3.32}
-\contentsline {subsubsection}{\numberline {7.18.3.33}s\discretionary {-}{}{}\_\discretionary {-}{}{}reset}{73}{subsubsection.7.18.3.33}
-\contentsline {subsubsection}{\numberline {7.18.3.34}s\discretionary {-}{}{}\_\discretionary {-}{}{}resume}{73}{subsubsection.7.18.3.34}
-\contentsline {subsubsection}{\numberline {7.18.3.35}s\discretionary {-}{}{}\_\discretionary {-}{}{}save}{73}{subsubsection.7.18.3.35}
-\contentsline {subsubsection}{\numberline {7.18.3.36}s\discretionary {-}{}{}\_\discretionary {-}{}{}start}{73}{subsubsection.7.18.3.36}
-\contentsline {subsubsection}{\numberline {7.18.3.37}start}{73}{subsubsection.7.18.3.37}
-\contentsline {subsubsection}{\numberline {7.18.3.38}try\discretionary {-}{}{}Add\discretionary {-}{}{}Moving\discretionary {-}{}{}Light\discretionary {-}{}{}Source}{73}{subsubsection.7.18.3.38}
-\contentsline {subsubsection}{\numberline {7.18.3.39}try\discretionary {-}{}{}Add\discretionary {-}{}{}Obstacle}{73}{subsubsection.7.18.3.39}
-\contentsline {subsubsection}{\numberline {7.18.3.40}try\discretionary {-}{}{}Add\discretionary {-}{}{}Robot}{73}{subsubsection.7.18.3.40}
-\contentsline {subsubsection}{\numberline {7.18.3.41}try\discretionary {-}{}{}Add\discretionary {-}{}{}Robot\discretionary {-}{}{}Target}{73}{subsubsection.7.18.3.41}
-\contentsline {subsubsection}{\numberline {7.18.3.42}try\discretionary {-}{}{}Add\discretionary {-}{}{}Stationary\discretionary {-}{}{}Light\discretionary {-}{}{}Source}{73}{subsubsection.7.18.3.42}
-\contentsline {subsubsection}{\numberline {7.18.3.43}try\discretionary {-}{}{}Open}{73}{subsubsection.7.18.3.43}
-\contentsline {subsubsection}{\numberline {7.18.3.44}try\discretionary {-}{}{}Remove\discretionary {-}{}{}Light\discretionary {-}{}{}Source}{73}{subsubsection.7.18.3.44}
-\contentsline {subsubsection}{\numberline {7.18.3.45}try\discretionary {-}{}{}Remove\discretionary {-}{}{}Obstacle}{74}{subsubsection.7.18.3.45}
-\contentsline {subsubsection}{\numberline {7.18.3.46}try\discretionary {-}{}{}Remove\discretionary {-}{}{}Robot\discretionary {-}{}{}Target}{74}{subsubsection.7.18.3.46}
-\contentsline {subsubsection}{\numberline {7.18.3.47}try\discretionary {-}{}{}Save}{74}{subsubsection.7.18.3.47}
-\contentsline {section}{\numberline {7.19}Target Class Reference}{74}{section.7.19}
-\contentsline {subsection}{\numberline {7.19.1}Detailed Description}{74}{subsection.7.19.1}
-\contentsline {subsection}{\numberline {7.19.2}Constructor \& Destructor Documentation}{74}{subsection.7.19.2}
-\contentsline {subsubsection}{\numberline {7.19.2.1}Target}{74}{subsubsection.7.19.2.1}
-\contentsline {subsubsection}{\numberline {7.19.2.2}Target}{74}{subsubsection.7.19.2.2}
-\contentsline {subsubsection}{\numberline {7.19.2.3}Target}{75}{subsubsection.7.19.2.3}
-\contentsline {subsubsection}{\numberline {7.19.2.4}Target}{75}{subsubsection.7.19.2.4}
-\contentsline {subsubsection}{\numberline {7.19.2.5}$\sim $\discretionary {-}{}{}Target}{75}{subsubsection.7.19.2.5}
-\contentsline {subsection}{\numberline {7.19.3}Member Function Documentation}{75}{subsection.7.19.3}
-\contentsline {subsubsection}{\numberline {7.19.3.1}handle\discretionary {-}{}{}Collision}{75}{subsubsection.7.19.3.1}
-\contentsline {chapter}{\numberline {8}File Documentation}{77}{chapter.8}
-\contentsline {section}{\numberline {8.1}artist.\discretionary {-}{}{}cpp File Reference}{77}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}Macro Definition Documentation}{77}{subsection.8.1.1}
-\contentsline {subsubsection}{\numberline {8.1.1.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}U\discretionary {-}{}{}S\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}M\discretionary {-}{}{}A\discretionary {-}{}{}T\discretionary {-}{}{}H\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}D\discretionary {-}{}{}E\discretionary {-}{}{}F\discretionary {-}{}{}I\discretionary {-}{}{}N\discretionary {-}{}{}E\discretionary {-}{}{}S}{77}{subsubsection.8.1.1.1}
-\contentsline {section}{\numberline {8.2}artist.\discretionary {-}{}{}h File Reference}{77}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}Detailed Description}{78}{subsection.8.2.1}
-\contentsline {section}{\numberline {8.3}Base\discretionary {-}{}{}Gfx\discretionary {-}{}{}App.\discretionary {-}{}{}cpp File Reference}{78}{section.8.3}
-\contentsline {subsection}{\numberline {8.3.1}Detailed Description}{78}{subsection.8.3.1}
-\contentsline {section}{\numberline {8.4}Base\discretionary {-}{}{}Gfx\discretionary {-}{}{}App.\discretionary {-}{}{}h File Reference}{78}{section.8.4}
-\contentsline {subsection}{\numberline {8.4.1}Detailed Description}{79}{subsection.8.4.1}
-\contentsline {section}{\numberline {8.5}Color.\discretionary {-}{}{}cpp File Reference}{79}{section.8.5}
-\contentsline {subsection}{\numberline {8.5.1}Detailed Description}{79}{subsection.8.5.1}
-\contentsline {section}{\numberline {8.6}Color.\discretionary {-}{}{}h File Reference}{79}{section.8.6}
-\contentsline {subsection}{\numberline {8.6.1}Detailed Description}{80}{subsection.8.6.1}
-\contentsline {subsection}{\numberline {8.6.2}Macro Definition Documentation}{80}{subsection.8.6.2}
-\contentsline {subsubsection}{\numberline {8.6.2.1}G\discretionary {-}{}{}E\discretionary {-}{}{}T\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}C\discretionary {-}{}{}O\discretionary {-}{}{}L\discretionary {-}{}{}O\discretionary {-}{}{}R}{80}{subsubsection.8.6.2.1}
-\contentsline {subsection}{\numberline {8.6.3}Typedef Documentation}{80}{subsection.8.6.3}
-\contentsline {subsubsection}{\numberline {8.6.3.1}Color}{80}{subsubsection.8.6.3.1}
-\contentsline {section}{\numberline {8.7}Complex\discretionary {-}{}{}Robot.\discretionary {-}{}{}cpp File Reference}{80}{section.8.7}
-\contentsline {subsection}{\numberline {8.7.1}Detailed Description}{80}{subsection.8.7.1}
-\contentsline {section}{\numberline {8.8}Complex\discretionary {-}{}{}Robot.\discretionary {-}{}{}h File Reference}{80}{section.8.8}
-\contentsline {subsection}{\numberline {8.8.1}Detailed Description}{81}{subsection.8.8.1}
-\contentsline {section}{\numberline {8.9}configuration.\discretionary {-}{}{}cpp File Reference}{81}{section.8.9}
-\contentsline {subsection}{\numberline {8.9.1}Detailed Description}{82}{subsection.8.9.1}
-\contentsline {subsection}{\numberline {8.9.2}Typedef Documentation}{82}{subsection.8.9.2}
-\contentsline {subsubsection}{\numberline {8.9.2.1}Config\discretionary {-}{}{}Table}{82}{subsubsection.8.9.2.1}
-\contentsline {subsection}{\numberline {8.9.3}Function Documentation}{82}{subsection.8.9.3}
-\contentsline {subsubsection}{\numberline {8.9.3.1}expand\discretionary {-}{}{}Var}{82}{subsubsection.8.9.3.1}
-\contentsline {subsubsection}{\numberline {8.9.3.2}is\discretionary {-}{}{}All\discretionary {-}{}{}Whitespace}{82}{subsubsection.8.9.3.2}
-\contentsline {subsubsection}{\numberline {8.9.3.3}load\discretionary {-}{}{}Config}{82}{subsubsection.8.9.3.3}
-\contentsline {subsubsection}{\numberline {8.9.3.4}merge\discretionary {-}{}{}Config\discretionary {-}{}{}Tables}{82}{subsubsection.8.9.3.4}
-\contentsline {subsubsection}{\numberline {8.9.3.5}parse\discretionary {-}{}{}Value}{82}{subsubsection.8.9.3.5}
-\contentsline {section}{\numberline {8.10}configuration.\discretionary {-}{}{}h File Reference}{82}{section.8.10}
-\contentsline {subsection}{\numberline {8.10.1}Detailed Description}{83}{subsection.8.10.1}
-\contentsline {subsection}{\numberline {8.10.2}Macro Definition Documentation}{83}{subsection.8.10.2}
-\contentsline {subsubsection}{\numberline {8.10.2.1}G\discretionary {-}{}{}E\discretionary {-}{}{}T\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}B\discretionary {-}{}{}O\discretionary {-}{}{}O\discretionary {-}{}{}L}{83}{subsubsection.8.10.2.1}
-\contentsline {subsubsection}{\numberline {8.10.2.2}G\discretionary {-}{}{}E\discretionary {-}{}{}T\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}C\discretionary {-}{}{}H\discretionary {-}{}{}A\discretionary {-}{}{}R}{83}{subsubsection.8.10.2.2}
-\contentsline {subsubsection}{\numberline {8.10.2.3}G\discretionary {-}{}{}E\discretionary {-}{}{}T\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}F\discretionary {-}{}{}L\discretionary {-}{}{}O\discretionary {-}{}{}A\discretionary {-}{}{}T}{83}{subsubsection.8.10.2.3}
-\contentsline {subsubsection}{\numberline {8.10.2.4}G\discretionary {-}{}{}E\discretionary {-}{}{}T\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}I\discretionary {-}{}{}N\discretionary {-}{}{}T}{83}{subsubsection.8.10.2.4}
-\contentsline {subsubsection}{\numberline {8.10.2.5}G\discretionary {-}{}{}E\discretionary {-}{}{}T\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}S\discretionary {-}{}{}T\discretionary {-}{}{}R\discretionary {-}{}{}I\discretionary {-}{}{}N\discretionary {-}{}{}G}{83}{subsubsection.8.10.2.5}
-\contentsline {section}{\numberline {8.11}environment.\discretionary {-}{}{}cpp File Reference}{84}{section.8.11}
-\contentsline {subsection}{\numberline {8.11.1}Function Documentation}{84}{subsection.8.11.1}
-\contentsline {subsubsection}{\numberline {8.11.1.1}is\discretionary {-}{}{}Touching}{84}{subsubsection.8.11.1.1}
-\contentsline {section}{\numberline {8.12}environment.\discretionary {-}{}{}h File Reference}{84}{section.8.12}
-\contentsline {section}{\numberline {8.13}Light\discretionary {-}{}{}Source.\discretionary {-}{}{}cpp File Reference}{85}{section.8.13}
-\contentsline {subsection}{\numberline {8.13.1}Detailed Description}{85}{subsection.8.13.1}
-\contentsline {section}{\numberline {8.14}Light\discretionary {-}{}{}Source.\discretionary {-}{}{}h File Reference}{86}{section.8.14}
-\contentsline {subsection}{\numberline {8.14.1}Detailed Description}{86}{subsection.8.14.1}
-\contentsline {section}{\numberline {8.15}Location.\discretionary {-}{}{}h File Reference}{86}{section.8.15}
-\contentsline {subsection}{\numberline {8.15.1}Typedef Documentation}{86}{subsection.8.15.1}
-\contentsline {subsubsection}{\numberline {8.15.1.1}Location}{86}{subsubsection.8.15.1.1}
-\contentsline {section}{\numberline {8.16}main.\discretionary {-}{}{}cpp File Reference}{86}{section.8.16}
-\contentsline {subsection}{\numberline {8.16.1}Detailed Description}{87}{subsection.8.16.1}
-\contentsline {subsection}{\numberline {8.16.2}Macro Definition Documentation}{87}{subsection.8.16.2}
-\contentsline {subsubsection}{\numberline {8.16.2.1}D\discretionary {-}{}{}E\discretionary {-}{}{}F\discretionary {-}{}{}A\discretionary {-}{}{}U\discretionary {-}{}{}L\discretionary {-}{}{}T\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}C\discretionary {-}{}{}O\discretionary {-}{}{}N\discretionary {-}{}{}F\discretionary {-}{}{}I\discretionary {-}{}{}G}{87}{subsubsection.8.16.2.1}
-\contentsline {subsection}{\numberline {8.16.3}Function Documentation}{87}{subsection.8.16.3}
-\contentsline {subsubsection}{\numberline {8.16.3.1}main}{87}{subsubsection.8.16.3.1}
-\contentsline {section}{\numberline {8.17}mainpage.\discretionary {-}{}{}h File Reference}{87}{section.8.17}
-\contentsline {section}{\numberline {8.18}Neural\discretionary {-}{}{}Network.\discretionary {-}{}{}cpp File Reference}{87}{section.8.18}
-\contentsline {subsection}{\numberline {8.18.1}Detailed Description}{87}{subsection.8.18.1}
-\contentsline {section}{\numberline {8.19}Neural\discretionary {-}{}{}Network.\discretionary {-}{}{}h File Reference}{88}{section.8.19}
-\contentsline {subsection}{\numberline {8.19.1}Detailed Description}{88}{subsection.8.19.1}
-\contentsline {section}{\numberline {8.20}Neural\discretionary {-}{}{}Network\discretionary {-}{}{}Robot.\discretionary {-}{}{}cpp File Reference}{88}{section.8.20}
-\contentsline {subsection}{\numberline {8.20.1}Detailed Description}{88}{subsection.8.20.1}
-\contentsline {section}{\numberline {8.21}Neural\discretionary {-}{}{}Network\discretionary {-}{}{}Robot.\discretionary {-}{}{}h File Reference}{88}{section.8.21}
-\contentsline {subsection}{\numberline {8.21.1}Detailed Description}{89}{subsection.8.21.1}
-\contentsline {section}{\numberline {8.22}Obstacle.\discretionary {-}{}{}cpp File Reference}{89}{section.8.22}
-\contentsline {subsection}{\numberline {8.22.1}Detailed Description}{89}{subsection.8.22.1}
-\contentsline {section}{\numberline {8.23}Obstacle.\discretionary {-}{}{}h File Reference}{89}{section.8.23}
-\contentsline {subsection}{\numberline {8.23.1}Detailed Description}{90}{subsection.8.23.1}
-\contentsline {section}{\numberline {8.24}Optimize\discretionary {-}{}{}Simulation.\discretionary {-}{}{}cpp File Reference}{90}{section.8.24}
-\contentsline {section}{\numberline {8.25}Optimize\discretionary {-}{}{}Simulation.\discretionary {-}{}{}h File Reference}{90}{section.8.25}
-\contentsline {subsection}{\numberline {8.25.1}Detailed Description}{91}{subsection.8.25.1}
-\contentsline {section}{\numberline {8.26}Physical\discretionary {-}{}{}Object.\discretionary {-}{}{}cpp File Reference}{91}{section.8.26}
-\contentsline {subsection}{\numberline {8.26.1}Detailed Description}{91}{subsection.8.26.1}
-\contentsline {subsection}{\numberline {8.26.2}Macro Definition Documentation}{91}{subsection.8.26.2}
-\contentsline {subsubsection}{\numberline {8.26.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}U\discretionary {-}{}{}S\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}M\discretionary {-}{}{}A\discretionary {-}{}{}T\discretionary {-}{}{}H\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}D\discretionary {-}{}{}E\discretionary {-}{}{}F\discretionary {-}{}{}I\discretionary {-}{}{}N\discretionary {-}{}{}E\discretionary {-}{}{}S}{91}{subsubsection.8.26.2.1}
-\contentsline {section}{\numberline {8.27}Physical\discretionary {-}{}{}Object.\discretionary {-}{}{}h File Reference}{91}{section.8.27}
-\contentsline {subsection}{\numberline {8.27.1}Detailed Description}{92}{subsection.8.27.1}
-\contentsline {subsection}{\numberline {8.27.2}Enumeration Type Documentation}{92}{subsection.8.27.2}
-\contentsline {subsubsection}{\numberline {8.27.2.1}Object\discretionary {-}{}{}Type}{92}{subsubsection.8.27.2.1}
-\contentsline {section}{\numberline {8.28}Robot.\discretionary {-}{}{}cpp File Reference}{92}{section.8.28}
-\contentsline {subsection}{\numberline {8.28.1}Detailed Description}{92}{subsection.8.28.1}
-\contentsline {section}{\numberline {8.29}Robot.\discretionary {-}{}{}h File Reference}{93}{section.8.29}
-\contentsline {subsection}{\numberline {8.29.1}Detailed Description}{93}{subsection.8.29.1}
-\contentsline {subsection}{\numberline {8.29.2}Enumeration Type Documentation}{93}{subsection.8.29.2}
-\contentsline {subsubsection}{\numberline {8.29.2.1}Robot\discretionary {-}{}{}Type}{93}{subsubsection.8.29.2.1}
-\contentsline {section}{\numberline {8.30}Sensor.\discretionary {-}{}{}cpp File Reference}{93}{section.8.30}
-\contentsline {subsection}{\numberline {8.30.1}Detailed Description}{94}{subsection.8.30.1}
-\contentsline {subsection}{\numberline {8.30.2}Macro Definition Documentation}{94}{subsection.8.30.2}
-\contentsline {subsubsection}{\numberline {8.30.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}U\discretionary {-}{}{}S\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}M\discretionary {-}{}{}A\discretionary {-}{}{}T\discretionary {-}{}{}H\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}D\discretionary {-}{}{}E\discretionary {-}{}{}F\discretionary {-}{}{}I\discretionary {-}{}{}N\discretionary {-}{}{}E\discretionary {-}{}{}S}{94}{subsubsection.8.30.2.1}
-\contentsline {section}{\numberline {8.31}Sensor.\discretionary {-}{}{}h File Reference}{94}{section.8.31}
-\contentsline {subsection}{\numberline {8.31.1}Detailed Description}{94}{subsection.8.31.1}
-\contentsline {section}{\numberline {8.32}Simple\discretionary {-}{}{}Robot.\discretionary {-}{}{}cpp File Reference}{94}{section.8.32}
-\contentsline {subsection}{\numberline {8.32.1}Detailed Description}{94}{subsection.8.32.1}
-\contentsline {section}{\numberline {8.33}Simple\discretionary {-}{}{}Robot.\discretionary {-}{}{}h File Reference}{95}{section.8.33}
-\contentsline {subsection}{\numberline {8.33.1}Detailed Description}{95}{subsection.8.33.1}
-\contentsline {section}{\numberline {8.34}Simulation.\discretionary {-}{}{}cpp File Reference}{95}{section.8.34}
-\contentsline {subsection}{\numberline {8.34.1}Detailed Description}{96}{subsection.8.34.1}
-\contentsline {subsection}{\numberline {8.34.2}Function Documentation}{96}{subsection.8.34.2}
-\contentsline {subsubsection}{\numberline {8.34.2.1}ftos}{96}{subsubsection.8.34.2.1}
-\contentsline {section}{\numberline {8.35}Simulation.\discretionary {-}{}{}h File Reference}{96}{section.8.35}
-\contentsline {subsection}{\numberline {8.35.1}Detailed Description}{96}{subsection.8.35.1}
-\contentsline {section}{\numberline {8.36}Target.\discretionary {-}{}{}cpp File Reference}{96}{section.8.36}
-\contentsline {subsection}{\numberline {8.36.1}Detailed Description}{96}{subsection.8.36.1}
-\contentsline {section}{\numberline {8.37}Target.\discretionary {-}{}{}h File Reference}{97}{section.8.37}
-\contentsline {subsection}{\numberline {8.37.1}Detailed Description}{97}{subsection.8.37.1}
-\contentsline {section}{\numberline {8.38}util.\discretionary {-}{}{}cpp File Reference}{97}{section.8.38}
-\contentsline {subsection}{\numberline {8.38.1}Detailed Description}{98}{subsection.8.38.1}
-\contentsline {subsection}{\numberline {8.38.2}Variable Documentation}{98}{subsection.8.38.2}
-\contentsline {subsubsection}{\numberline {8.38.2.1}color\discretionary {-}{}{}Num}{98}{subsubsection.8.38.2.1}
-\contentsline {subsubsection}{\numberline {8.38.2.2}lights}{98}{subsubsection.8.38.2.2}
-\contentsline {subsubsection}{\numberline {8.38.2.3}objects\discretionary {-}{}{}Mutex}{98}{subsubsection.8.38.2.3}
-\contentsline {subsubsection}{\numberline {8.38.2.4}obstacles}{98}{subsubsection.8.38.2.4}
-\contentsline {subsubsection}{\numberline {8.38.2.5}robots}{98}{subsubsection.8.38.2.5}
-\contentsline {subsubsection}{\numberline {8.38.2.6}targets}{98}{subsubsection.8.38.2.6}
-\contentsline {section}{\numberline {8.39}util.\discretionary {-}{}{}h File Reference}{98}{section.8.39}
-\contentsline {subsection}{\numberline {8.39.1}Detailed Description}{99}{subsection.8.39.1}
-\contentsline {chapter}{Index}{100}{section*.91}
+\contentsline {subsubsection}{\numberline {7.12.3.1}display}{51}{subsubsection.7.12.3.1}
+\contentsline {subsubsection}{\numberline {7.12.3.2}find\discretionary {-}{}{}Open\discretionary {-}{}{}Location}{52}{subsubsection.7.12.3.2}
+\contentsline {subsubsection}{\numberline {7.12.3.3}force\discretionary {-}{}{}Set\discretionary {-}{}{}Position}{53}{subsubsection.7.12.3.3}
+\contentsline {subsubsection}{\numberline {7.12.3.4}force\discretionary {-}{}{}Translate}{53}{subsubsection.7.12.3.4}
+\contentsline {subsubsection}{\numberline {7.12.3.5}get\discretionary {-}{}{}Color}{53}{subsubsection.7.12.3.5}
+\contentsline {subsubsection}{\numberline {7.12.3.6}get\discretionary {-}{}{}Id}{53}{subsubsection.7.12.3.6}
+\contentsline {subsubsection}{\numberline {7.12.3.7}get\discretionary {-}{}{}Location}{53}{subsubsection.7.12.3.7}
+\contentsline {subsubsection}{\numberline {7.12.3.8}get\discretionary {-}{}{}Orientation}{53}{subsubsection.7.12.3.8}
+\contentsline {subsubsection}{\numberline {7.12.3.9}get\discretionary {-}{}{}Radius}{54}{subsubsection.7.12.3.9}
+\contentsline {subsubsection}{\numberline {7.12.3.10}get\discretionary {-}{}{}Speed}{54}{subsubsection.7.12.3.10}
+\contentsline {subsubsection}{\numberline {7.12.3.11}get\discretionary {-}{}{}X\discretionary {-}{}{}Position}{54}{subsubsection.7.12.3.11}
+\contentsline {subsubsection}{\numberline {7.12.3.12}get\discretionary {-}{}{}Y\discretionary {-}{}{}Position}{54}{subsubsection.7.12.3.12}
+\contentsline {subsubsection}{\numberline {7.12.3.13}handle\discretionary {-}{}{}Collision}{54}{subsubsection.7.12.3.13}
+\contentsline {subsubsection}{\numberline {7.12.3.14}has\discretionary {-}{}{}Equal\discretionary {-}{}{}Position}{54}{subsubsection.7.12.3.14}
+\contentsline {subsubsection}{\numberline {7.12.3.15}point\discretionary {-}{}{}To}{55}{subsubsection.7.12.3.15}
+\contentsline {subsubsection}{\numberline {7.12.3.16}reorient}{55}{subsubsection.7.12.3.16}
+\contentsline {subsubsection}{\numberline {7.12.3.17}rotate}{55}{subsubsection.7.12.3.17}
+\contentsline {subsubsection}{\numberline {7.12.3.18}set\discretionary {-}{}{}Color}{55}{subsubsection.7.12.3.18}
+\contentsline {subsubsection}{\numberline {7.12.3.19}set\discretionary {-}{}{}Location}{55}{subsubsection.7.12.3.19}
+\contentsline {subsubsection}{\numberline {7.12.3.20}set\discretionary {-}{}{}Orientation}{56}{subsubsection.7.12.3.20}
+\contentsline {subsubsection}{\numberline {7.12.3.21}set\discretionary {-}{}{}Position}{56}{subsubsection.7.12.3.21}
+\contentsline {subsubsection}{\numberline {7.12.3.22}set\discretionary {-}{}{}Radius}{56}{subsubsection.7.12.3.22}
+\contentsline {subsubsection}{\numberline {7.12.3.23}set\discretionary {-}{}{}Speed}{56}{subsubsection.7.12.3.23}
+\contentsline {subsubsection}{\numberline {7.12.3.24}translate}{56}{subsubsection.7.12.3.24}
+\contentsline {subsubsection}{\numberline {7.12.3.25}update}{57}{subsubsection.7.12.3.25}
+\contentsline {subsubsection}{\numberline {7.12.3.26}update\discretionary {-}{}{}Members}{57}{subsubsection.7.12.3.26}
+\contentsline {subsubsection}{\numberline {7.12.3.27}update\discretionary {-}{}{}Position}{57}{subsubsection.7.12.3.27}
+\contentsline {subsection}{\numberline {7.12.4}Member Data Documentation}{57}{subsection.7.12.4}
+\contentsline {subsubsection}{\numberline {7.12.4.1}is\discretionary {-}{}{}Hitable}{57}{subsubsection.7.12.4.1}
+\contentsline {subsubsection}{\numberline {7.12.4.2}object\discretionary {-}{}{}Type}{57}{subsubsection.7.12.4.2}
+\contentsline {section}{\numberline {7.13}Robot Class Reference}{57}{section.7.13}
+\contentsline {subsection}{\numberline {7.13.1}Detailed Description}{58}{subsection.7.13.1}
+\contentsline {subsection}{\numberline {7.13.2}Constructor \& Destructor Documentation}{58}{subsection.7.13.2}
+\contentsline {subsubsection}{\numberline {7.13.2.1}Robot}{58}{subsubsection.7.13.2.1}
+\contentsline {subsubsection}{\numberline {7.13.2.2}Robot}{58}{subsubsection.7.13.2.2}
+\contentsline {subsubsection}{\numberline {7.13.2.3}$\sim $\discretionary {-}{}{}Robot}{59}{subsubsection.7.13.2.3}
+\contentsline {subsection}{\numberline {7.13.3}Member Function Documentation}{59}{subsection.7.13.3}
+\contentsline {subsubsection}{\numberline {7.13.3.1}display}{59}{subsubsection.7.13.3.1}
+\contentsline {subsubsection}{\numberline {7.13.3.2}get\discretionary {-}{}{}Left\discretionary {-}{}{}Speed}{59}{subsubsection.7.13.3.2}
+\contentsline {subsubsection}{\numberline {7.13.3.3}get\discretionary {-}{}{}Line\discretionary {-}{}{}Color}{59}{subsubsection.7.13.3.3}
+\contentsline {subsubsection}{\numberline {7.13.3.4}get\discretionary {-}{}{}Right\discretionary {-}{}{}Speed}{59}{subsubsection.7.13.3.4}
+\contentsline {subsubsection}{\numberline {7.13.3.5}get\discretionary {-}{}{}Target}{59}{subsubsection.7.13.3.5}
+\contentsline {subsubsection}{\numberline {7.13.3.6}handle\discretionary {-}{}{}Collision}{60}{subsubsection.7.13.3.6}
+\contentsline {subsubsection}{\numberline {7.13.3.7}set\discretionary {-}{}{}Line\discretionary {-}{}{}Color}{60}{subsubsection.7.13.3.7}
+\contentsline {subsubsection}{\numberline {7.13.3.8}set\discretionary {-}{}{}Target}{60}{subsubsection.7.13.3.8}
+\contentsline {subsubsection}{\numberline {7.13.3.9}update}{60}{subsubsection.7.13.3.9}
+\contentsline {subsubsection}{\numberline {7.13.3.10}update\discretionary {-}{}{}Members}{60}{subsubsection.7.13.3.10}
+\contentsline {subsection}{\numberline {7.13.4}Member Data Documentation}{61}{subsection.7.13.4}
+\contentsline {subsubsection}{\numberline {7.13.4.1}robot\discretionary {-}{}{}Type}{61}{subsubsection.7.13.4.1}
+\contentsline {section}{\numberline {7.14}Sensor Class Reference}{61}{section.7.14}
+\contentsline {subsection}{\numberline {7.14.1}Constructor \& Destructor Documentation}{61}{subsection.7.14.1}
+\contentsline {subsubsection}{\numberline {7.14.1.1}Sensor}{61}{subsubsection.7.14.1.1}
+\contentsline {subsubsection}{\numberline {7.14.1.2}Sensor}{61}{subsubsection.7.14.1.2}
+\contentsline {subsection}{\numberline {7.14.2}Member Function Documentation}{62}{subsection.7.14.2}
+\contentsline {subsubsection}{\numberline {7.14.2.1}display}{62}{subsubsection.7.14.2.1}
+\contentsline {subsubsection}{\numberline {7.14.2.2}get\discretionary {-}{}{}Orientation}{62}{subsubsection.7.14.2.2}
+\contentsline {subsubsection}{\numberline {7.14.2.3}get\discretionary {-}{}{}Position}{62}{subsubsection.7.14.2.3}
+\contentsline {subsubsection}{\numberline {7.14.2.4}get\discretionary {-}{}{}Type\discretionary {-}{}{}Detected}{62}{subsubsection.7.14.2.4}
+\contentsline {subsubsection}{\numberline {7.14.2.5}get\discretionary {-}{}{}View\discretionary {-}{}{}Angle}{62}{subsubsection.7.14.2.5}
+\contentsline {subsubsection}{\numberline {7.14.2.6}get\discretionary {-}{}{}X\discretionary {-}{}{}Position}{63}{subsubsection.7.14.2.6}
+\contentsline {subsubsection}{\numberline {7.14.2.7}get\discretionary {-}{}{}Y\discretionary {-}{}{}Position}{63}{subsubsection.7.14.2.7}
+\contentsline {subsubsection}{\numberline {7.14.2.8}sense}{63}{subsubsection.7.14.2.8}
+\contentsline {subsubsection}{\numberline {7.14.2.9}set\discretionary {-}{}{}Orientation}{63}{subsubsection.7.14.2.9}
+\contentsline {subsubsection}{\numberline {7.14.2.10}set\discretionary {-}{}{}Position}{63}{subsubsection.7.14.2.10}
+\contentsline {subsubsection}{\numberline {7.14.2.11}set\discretionary {-}{}{}Position}{63}{subsubsection.7.14.2.11}
+\contentsline {subsubsection}{\numberline {7.14.2.12}set\discretionary {-}{}{}Type\discretionary {-}{}{}Detected}{64}{subsubsection.7.14.2.12}
+\contentsline {subsubsection}{\numberline {7.14.2.13}set\discretionary {-}{}{}View\discretionary {-}{}{}Angle}{64}{subsubsection.7.14.2.13}
+\contentsline {subsubsection}{\numberline {7.14.2.14}update\discretionary {-}{}{}Position}{64}{subsubsection.7.14.2.14}
+\contentsline {section}{\numberline {7.15}Simple\discretionary {-}{}{}Robot Class Reference}{64}{section.7.15}
+\contentsline {subsection}{\numberline {7.15.1}Detailed Description}{65}{subsection.7.15.1}
+\contentsline {subsection}{\numberline {7.15.2}Constructor \& Destructor Documentation}{65}{subsection.7.15.2}
+\contentsline {subsubsection}{\numberline {7.15.2.1}Simple\discretionary {-}{}{}Robot}{65}{subsubsection.7.15.2.1}
+\contentsline {subsubsection}{\numberline {7.15.2.2}Simple\discretionary {-}{}{}Robot}{65}{subsubsection.7.15.2.2}
+\contentsline {subsubsection}{\numberline {7.15.2.3}$\sim $\discretionary {-}{}{}Simple\discretionary {-}{}{}Robot}{65}{subsubsection.7.15.2.3}
+\contentsline {subsection}{\numberline {7.15.3}Member Function Documentation}{65}{subsection.7.15.3}
+\contentsline {subsubsection}{\numberline {7.15.3.1}get\discretionary {-}{}{}Left\discretionary {-}{}{}Speed}{65}{subsubsection.7.15.3.1}
+\contentsline {subsubsection}{\numberline {7.15.3.2}get\discretionary {-}{}{}Right\discretionary {-}{}{}Speed}{65}{subsubsection.7.15.3.2}
+\contentsline {section}{\numberline {7.16}Simulation Class Reference}{65}{section.7.16}
+\contentsline {subsection}{\numberline {7.16.1}Detailed Description}{67}{subsection.7.16.1}
+\contentsline {subsection}{\numberline {7.16.2}Constructor \& Destructor Documentation}{67}{subsection.7.16.2}
+\contentsline {subsubsection}{\numberline {7.16.2.1}Simulation}{67}{subsubsection.7.16.2.1}
+\contentsline {subsubsection}{\numberline {7.16.2.2}$\sim $\discretionary {-}{}{}Simulation}{68}{subsubsection.7.16.2.2}
+\contentsline {subsection}{\numberline {7.16.3}Member Function Documentation}{68}{subsection.7.16.3}
+\contentsline {subsubsection}{\numberline {7.16.3.1}advance}{68}{subsubsection.7.16.3.1}
+\contentsline {subsubsection}{\numberline {7.16.3.2}clear}{68}{subsubsection.7.16.3.2}
+\contentsline {subsubsection}{\numberline {7.16.3.3}display}{68}{subsubsection.7.16.3.3}
+\contentsline {subsubsection}{\numberline {7.16.3.4}glui\discretionary {-}{}{}Control}{68}{subsubsection.7.16.3.4}
+\contentsline {subsubsection}{\numberline {7.16.3.5}init\discretionary {-}{}{}Objects}{68}{subsubsection.7.16.3.5}
+\contentsline {subsubsection}{\numberline {7.16.3.6}keyboard}{68}{subsubsection.7.16.3.6}
+\contentsline {subsubsection}{\numberline {7.16.3.7}keyboard\discretionary {-}{}{}Special}{68}{subsubsection.7.16.3.7}
+\contentsline {subsubsection}{\numberline {7.16.3.8}left\discretionary {-}{}{}Mouse\discretionary {-}{}{}Down}{68}{subsubsection.7.16.3.8}
+\contentsline {subsubsection}{\numberline {7.16.3.9}left\discretionary {-}{}{}Mouse\discretionary {-}{}{}Up}{68}{subsubsection.7.16.3.9}
+\contentsline {subsubsection}{\numberline {7.16.3.10}middle\discretionary {-}{}{}Mouse\discretionary {-}{}{}Down}{69}{subsubsection.7.16.3.10}
+\contentsline {subsubsection}{\numberline {7.16.3.11}mouse\discretionary {-}{}{}Dragged}{69}{subsubsection.7.16.3.11}
+\contentsline {subsubsection}{\numberline {7.16.3.12}pause}{69}{subsubsection.7.16.3.12}
+\contentsline {subsubsection}{\numberline {7.16.3.13}random}{69}{subsubsection.7.16.3.13}
+\contentsline {subsubsection}{\numberline {7.16.3.14}reset}{69}{subsubsection.7.16.3.14}
+\contentsline {subsubsection}{\numberline {7.16.3.15}resume}{69}{subsubsection.7.16.3.15}
+\contentsline {subsubsection}{\numberline {7.16.3.16}s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Moving\discretionary {-}{}{}Light\discretionary {-}{}{}Source}{69}{subsubsection.7.16.3.16}
+\contentsline {subsubsection}{\numberline {7.16.3.17}s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Obstacle}{69}{subsubsection.7.16.3.17}
+\contentsline {subsubsection}{\numberline {7.16.3.18}s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Robot}{69}{subsubsection.7.16.3.18}
+\contentsline {subsubsection}{\numberline {7.16.3.19}s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Robot\discretionary {-}{}{}Target}{69}{subsubsection.7.16.3.19}
+\contentsline {subsubsection}{\numberline {7.16.3.20}s\discretionary {-}{}{}\_\discretionary {-}{}{}add\discretionary {-}{}{}Stationary\discretionary {-}{}{}Light\discretionary {-}{}{}Source}{69}{subsubsection.7.16.3.20}
+\contentsline {subsubsection}{\numberline {7.16.3.21}s\discretionary {-}{}{}\_\discretionary {-}{}{}clear}{69}{subsubsection.7.16.3.21}
+\contentsline {subsubsection}{\numberline {7.16.3.22}s\discretionary {-}{}{}\_\discretionary {-}{}{}neural\discretionary {-}{}{}Network\discretionary {-}{}{}File\discretionary {-}{}{}Changed}{69}{subsubsection.7.16.3.22}
+\contentsline {subsubsection}{\numberline {7.16.3.23}s\discretionary {-}{}{}\_\discretionary {-}{}{}open}{69}{subsubsection.7.16.3.23}
+\contentsline {subsubsection}{\numberline {7.16.3.24}s\discretionary {-}{}{}\_\discretionary {-}{}{}pause}{69}{subsubsection.7.16.3.24}
+\contentsline {subsubsection}{\numberline {7.16.3.25}s\discretionary {-}{}{}\_\discretionary {-}{}{}random}{69}{subsubsection.7.16.3.25}
+\contentsline {subsubsection}{\numberline {7.16.3.26}s\discretionary {-}{}{}\_\discretionary {-}{}{}refresh\discretionary {-}{}{}Configuration}{69}{subsubsection.7.16.3.26}
+\contentsline {subsubsection}{\numberline {7.16.3.27}s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}All\discretionary {-}{}{}Light\discretionary {-}{}{}Source}{69}{subsubsection.7.16.3.27}
+\contentsline {subsubsection}{\numberline {7.16.3.28}s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}All\discretionary {-}{}{}Obstacle}{69}{subsubsection.7.16.3.28}
+\contentsline {subsubsection}{\numberline {7.16.3.29}s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}All\discretionary {-}{}{}Robot\discretionary {-}{}{}Target}{69}{subsubsection.7.16.3.29}
+\contentsline {subsubsection}{\numberline {7.16.3.30}s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}Light\discretionary {-}{}{}Source}{69}{subsubsection.7.16.3.30}
+\contentsline {subsubsection}{\numberline {7.16.3.31}s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}Obstacle}{69}{subsubsection.7.16.3.31}
+\contentsline {subsubsection}{\numberline {7.16.3.32}s\discretionary {-}{}{}\_\discretionary {-}{}{}remove\discretionary {-}{}{}Robot\discretionary {-}{}{}Target}{69}{subsubsection.7.16.3.32}
+\contentsline {subsubsection}{\numberline {7.16.3.33}s\discretionary {-}{}{}\_\discretionary {-}{}{}reset}{69}{subsubsection.7.16.3.33}
+\contentsline {subsubsection}{\numberline {7.16.3.34}s\discretionary {-}{}{}\_\discretionary {-}{}{}resume}{70}{subsubsection.7.16.3.34}
+\contentsline {subsubsection}{\numberline {7.16.3.35}s\discretionary {-}{}{}\_\discretionary {-}{}{}save}{70}{subsubsection.7.16.3.35}
+\contentsline {subsubsection}{\numberline {7.16.3.36}s\discretionary {-}{}{}\_\discretionary {-}{}{}start}{70}{subsubsection.7.16.3.36}
+\contentsline {subsubsection}{\numberline {7.16.3.37}start}{70}{subsubsection.7.16.3.37}
+\contentsline {subsubsection}{\numberline {7.16.3.38}try\discretionary {-}{}{}Add\discretionary {-}{}{}Moving\discretionary {-}{}{}Light\discretionary {-}{}{}Source}{70}{subsubsection.7.16.3.38}
+\contentsline {subsubsection}{\numberline {7.16.3.39}try\discretionary {-}{}{}Add\discretionary {-}{}{}Obstacle}{70}{subsubsection.7.16.3.39}
+\contentsline {subsubsection}{\numberline {7.16.3.40}try\discretionary {-}{}{}Add\discretionary {-}{}{}Robot}{70}{subsubsection.7.16.3.40}
+\contentsline {subsubsection}{\numberline {7.16.3.41}try\discretionary {-}{}{}Add\discretionary {-}{}{}Robot\discretionary {-}{}{}Target}{70}{subsubsection.7.16.3.41}
+\contentsline {subsubsection}{\numberline {7.16.3.42}try\discretionary {-}{}{}Add\discretionary {-}{}{}Stationary\discretionary {-}{}{}Light\discretionary {-}{}{}Source}{70}{subsubsection.7.16.3.42}
+\contentsline {subsubsection}{\numberline {7.16.3.43}try\discretionary {-}{}{}Open}{70}{subsubsection.7.16.3.43}
+\contentsline {subsubsection}{\numberline {7.16.3.44}try\discretionary {-}{}{}Remove\discretionary {-}{}{}Light\discretionary {-}{}{}Source}{70}{subsubsection.7.16.3.44}
+\contentsline {subsubsection}{\numberline {7.16.3.45}try\discretionary {-}{}{}Remove\discretionary {-}{}{}Obstacle}{70}{subsubsection.7.16.3.45}
+\contentsline {subsubsection}{\numberline {7.16.3.46}try\discretionary {-}{}{}Remove\discretionary {-}{}{}Robot\discretionary {-}{}{}Target}{70}{subsubsection.7.16.3.46}
+\contentsline {subsubsection}{\numberline {7.16.3.47}try\discretionary {-}{}{}Save}{70}{subsubsection.7.16.3.47}
+\contentsline {section}{\numberline {7.17}Target Class Reference}{71}{section.7.17}
+\contentsline {subsection}{\numberline {7.17.1}Detailed Description}{71}{subsection.7.17.1}
+\contentsline {subsection}{\numberline {7.17.2}Constructor \& Destructor Documentation}{71}{subsection.7.17.2}
+\contentsline {subsubsection}{\numberline {7.17.2.1}Target}{71}{subsubsection.7.17.2.1}
+\contentsline {subsubsection}{\numberline {7.17.2.2}Target}{71}{subsubsection.7.17.2.2}
+\contentsline {subsubsection}{\numberline {7.17.2.3}Target}{71}{subsubsection.7.17.2.3}
+\contentsline {subsubsection}{\numberline {7.17.2.4}Target}{71}{subsubsection.7.17.2.4}
+\contentsline {subsubsection}{\numberline {7.17.2.5}$\sim $\discretionary {-}{}{}Target}{71}{subsubsection.7.17.2.5}
+\contentsline {subsection}{\numberline {7.17.3}Member Function Documentation}{71}{subsection.7.17.3}
+\contentsline {subsubsection}{\numberline {7.17.3.1}handle\discretionary {-}{}{}Collision}{71}{subsubsection.7.17.3.1}
+\contentsline {chapter}{\numberline {8}File Documentation}{73}{chapter.8}
+\contentsline {section}{\numberline {8.1}artist.\discretionary {-}{}{}cpp File Reference}{73}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Macro Definition Documentation}{73}{subsection.8.1.1}
+\contentsline {subsubsection}{\numberline {8.1.1.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}U\discretionary {-}{}{}S\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}M\discretionary {-}{}{}A\discretionary {-}{}{}T\discretionary {-}{}{}H\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}D\discretionary {-}{}{}E\discretionary {-}{}{}F\discretionary {-}{}{}I\discretionary {-}{}{}N\discretionary {-}{}{}E\discretionary {-}{}{}S}{73}{subsubsection.8.1.1.1}
+\contentsline {section}{\numberline {8.2}artist.\discretionary {-}{}{}h File Reference}{73}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Detailed Description}{74}{subsection.8.2.1}
+\contentsline {section}{\numberline {8.3}Base\discretionary {-}{}{}Gfx\discretionary {-}{}{}App.\discretionary {-}{}{}cpp File Reference}{74}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Detailed Description}{74}{subsection.8.3.1}
+\contentsline {section}{\numberline {8.4}Base\discretionary {-}{}{}Gfx\discretionary {-}{}{}App.\discretionary {-}{}{}h File Reference}{74}{section.8.4}
+\contentsline {subsection}{\numberline {8.4.1}Detailed Description}{75}{subsection.8.4.1}
+\contentsline {section}{\numberline {8.5}Color.\discretionary {-}{}{}cpp File Reference}{75}{section.8.5}
+\contentsline {subsection}{\numberline {8.5.1}Detailed Description}{75}{subsection.8.5.1}
+\contentsline {section}{\numberline {8.6}Color.\discretionary {-}{}{}h File Reference}{75}{section.8.6}
+\contentsline {subsection}{\numberline {8.6.1}Detailed Description}{76}{subsection.8.6.1}
+\contentsline {subsection}{\numberline {8.6.2}Macro Definition Documentation}{76}{subsection.8.6.2}
+\contentsline {subsubsection}{\numberline {8.6.2.1}G\discretionary {-}{}{}E\discretionary {-}{}{}T\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}C\discretionary {-}{}{}O\discretionary {-}{}{}L\discretionary {-}{}{}O\discretionary {-}{}{}R}{76}{subsubsection.8.6.2.1}
+\contentsline {subsection}{\numberline {8.6.3}Typedef Documentation}{76}{subsection.8.6.3}
+\contentsline {subsubsection}{\numberline {8.6.3.1}Color}{76}{subsubsection.8.6.3.1}
+\contentsline {section}{\numberline {8.7}Complex\discretionary {-}{}{}Robot.\discretionary {-}{}{}cpp File Reference}{76}{section.8.7}
+\contentsline {subsection}{\numberline {8.7.1}Detailed Description}{76}{subsection.8.7.1}
+\contentsline {section}{\numberline {8.8}Complex\discretionary {-}{}{}Robot.\discretionary {-}{}{}h File Reference}{76}{section.8.8}
+\contentsline {subsection}{\numberline {8.8.1}Detailed Description}{77}{subsection.8.8.1}
+\contentsline {section}{\numberline {8.9}environment.\discretionary {-}{}{}cpp File Reference}{77}{section.8.9}
+\contentsline {subsection}{\numberline {8.9.1}Function Documentation}{77}{subsection.8.9.1}
+\contentsline {subsubsection}{\numberline {8.9.1.1}is\discretionary {-}{}{}Touching}{77}{subsubsection.8.9.1.1}
+\contentsline {section}{\numberline {8.10}environment.\discretionary {-}{}{}h File Reference}{77}{section.8.10}
+\contentsline {section}{\numberline {8.11}Light\discretionary {-}{}{}Source.\discretionary {-}{}{}cpp File Reference}{79}{section.8.11}
+\contentsline {subsection}{\numberline {8.11.1}Detailed Description}{79}{subsection.8.11.1}
+\contentsline {section}{\numberline {8.12}Light\discretionary {-}{}{}Source.\discretionary {-}{}{}h File Reference}{79}{section.8.12}
+\contentsline {subsection}{\numberline {8.12.1}Detailed Description}{79}{subsection.8.12.1}
+\contentsline {section}{\numberline {8.13}Location.\discretionary {-}{}{}h File Reference}{79}{section.8.13}
+\contentsline {subsection}{\numberline {8.13.1}Typedef Documentation}{80}{subsection.8.13.1}
+\contentsline {subsubsection}{\numberline {8.13.1.1}Location}{80}{subsubsection.8.13.1.1}
+\contentsline {section}{\numberline {8.14}main.\discretionary {-}{}{}cpp File Reference}{80}{section.8.14}
+\contentsline {subsection}{\numberline {8.14.1}Detailed Description}{80}{subsection.8.14.1}
+\contentsline {subsection}{\numberline {8.14.2}Macro Definition Documentation}{80}{subsection.8.14.2}
+\contentsline {subsubsection}{\numberline {8.14.2.1}D\discretionary {-}{}{}E\discretionary {-}{}{}F\discretionary {-}{}{}A\discretionary {-}{}{}U\discretionary {-}{}{}L\discretionary {-}{}{}T\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}C\discretionary {-}{}{}O\discretionary {-}{}{}N\discretionary {-}{}{}F\discretionary {-}{}{}I\discretionary {-}{}{}G}{80}{subsubsection.8.14.2.1}
+\contentsline {subsection}{\numberline {8.14.3}Function Documentation}{80}{subsection.8.14.3}
+\contentsline {subsubsection}{\numberline {8.14.3.1}main}{80}{subsubsection.8.14.3.1}
+\contentsline {section}{\numberline {8.15}mainpage.\discretionary {-}{}{}h File Reference}{80}{section.8.15}
+\contentsline {section}{\numberline {8.16}Neural\discretionary {-}{}{}Network.\discretionary {-}{}{}cpp File Reference}{80}{section.8.16}
+\contentsline {subsection}{\numberline {8.16.1}Detailed Description}{81}{subsection.8.16.1}
+\contentsline {section}{\numberline {8.17}Neural\discretionary {-}{}{}Network.\discretionary {-}{}{}h File Reference}{81}{section.8.17}
+\contentsline {subsection}{\numberline {8.17.1}Detailed Description}{81}{subsection.8.17.1}
+\contentsline {section}{\numberline {8.18}Neural\discretionary {-}{}{}Network\discretionary {-}{}{}Robot.\discretionary {-}{}{}cpp File Reference}{81}{section.8.18}
+\contentsline {subsection}{\numberline {8.18.1}Detailed Description}{82}{subsection.8.18.1}
+\contentsline {section}{\numberline {8.19}Neural\discretionary {-}{}{}Network\discretionary {-}{}{}Robot.\discretionary {-}{}{}h File Reference}{82}{section.8.19}
+\contentsline {subsection}{\numberline {8.19.1}Detailed Description}{82}{subsection.8.19.1}
+\contentsline {section}{\numberline {8.20}Obstacle.\discretionary {-}{}{}cpp File Reference}{82}{section.8.20}
+\contentsline {subsection}{\numberline {8.20.1}Detailed Description}{82}{subsection.8.20.1}
+\contentsline {section}{\numberline {8.21}Obstacle.\discretionary {-}{}{}h File Reference}{83}{section.8.21}
+\contentsline {subsection}{\numberline {8.21.1}Detailed Description}{83}{subsection.8.21.1}
+\contentsline {section}{\numberline {8.22}Optimize\discretionary {-}{}{}Simulation.\discretionary {-}{}{}cpp File Reference}{83}{section.8.22}
+\contentsline {section}{\numberline {8.23}Optimize\discretionary {-}{}{}Simulation.\discretionary {-}{}{}h File Reference}{84}{section.8.23}
+\contentsline {subsection}{\numberline {8.23.1}Detailed Description}{84}{subsection.8.23.1}
+\contentsline {section}{\numberline {8.24}Physical\discretionary {-}{}{}Object.\discretionary {-}{}{}cpp File Reference}{84}{section.8.24}
+\contentsline {subsection}{\numberline {8.24.1}Detailed Description}{84}{subsection.8.24.1}
+\contentsline {subsection}{\numberline {8.24.2}Macro Definition Documentation}{85}{subsection.8.24.2}
+\contentsline {subsubsection}{\numberline {8.24.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}U\discretionary {-}{}{}S\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}M\discretionary {-}{}{}A\discretionary {-}{}{}T\discretionary {-}{}{}H\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}D\discretionary {-}{}{}E\discretionary {-}{}{}F\discretionary {-}{}{}I\discretionary {-}{}{}N\discretionary {-}{}{}E\discretionary {-}{}{}S}{85}{subsubsection.8.24.2.1}
+\contentsline {section}{\numberline {8.25}Physical\discretionary {-}{}{}Object.\discretionary {-}{}{}h File Reference}{85}{section.8.25}
+\contentsline {subsection}{\numberline {8.25.1}Detailed Description}{85}{subsection.8.25.1}
+\contentsline {subsection}{\numberline {8.25.2}Enumeration Type Documentation}{85}{subsection.8.25.2}
+\contentsline {subsubsection}{\numberline {8.25.2.1}Object\discretionary {-}{}{}Type}{85}{subsubsection.8.25.2.1}
+\contentsline {section}{\numberline {8.26}Robot.\discretionary {-}{}{}cpp File Reference}{85}{section.8.26}
+\contentsline {subsection}{\numberline {8.26.1}Detailed Description}{86}{subsection.8.26.1}
+\contentsline {section}{\numberline {8.27}Robot.\discretionary {-}{}{}h File Reference}{86}{section.8.27}
+\contentsline {subsection}{\numberline {8.27.1}Detailed Description}{86}{subsection.8.27.1}
+\contentsline {subsection}{\numberline {8.27.2}Enumeration Type Documentation}{86}{subsection.8.27.2}
+\contentsline {subsubsection}{\numberline {8.27.2.1}Robot\discretionary {-}{}{}Type}{86}{subsubsection.8.27.2.1}
+\contentsline {section}{\numberline {8.28}Sensor.\discretionary {-}{}{}cpp File Reference}{86}{section.8.28}
+\contentsline {subsection}{\numberline {8.28.1}Detailed Description}{87}{subsection.8.28.1}
+\contentsline {subsection}{\numberline {8.28.2}Macro Definition Documentation}{87}{subsection.8.28.2}
+\contentsline {subsubsection}{\numberline {8.28.2.1}\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}U\discretionary {-}{}{}S\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}M\discretionary {-}{}{}A\discretionary {-}{}{}T\discretionary {-}{}{}H\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}D\discretionary {-}{}{}E\discretionary {-}{}{}F\discretionary {-}{}{}I\discretionary {-}{}{}N\discretionary {-}{}{}E\discretionary {-}{}{}S}{87}{subsubsection.8.28.2.1}
+\contentsline {section}{\numberline {8.29}Sensor.\discretionary {-}{}{}h File Reference}{87}{section.8.29}
+\contentsline {subsection}{\numberline {8.29.1}Detailed Description}{87}{subsection.8.29.1}
+\contentsline {section}{\numberline {8.30}Simple\discretionary {-}{}{}Robot.\discretionary {-}{}{}cpp File Reference}{87}{section.8.30}
+\contentsline {subsection}{\numberline {8.30.1}Detailed Description}{88}{subsection.8.30.1}
+\contentsline {section}{\numberline {8.31}Simple\discretionary {-}{}{}Robot.\discretionary {-}{}{}h File Reference}{88}{section.8.31}
+\contentsline {subsection}{\numberline {8.31.1}Detailed Description}{88}{subsection.8.31.1}
+\contentsline {section}{\numberline {8.32}Simulation.\discretionary {-}{}{}cpp File Reference}{89}{section.8.32}
+\contentsline {subsection}{\numberline {8.32.1}Detailed Description}{89}{subsection.8.32.1}
+\contentsline {subsection}{\numberline {8.32.2}Function Documentation}{89}{subsection.8.32.2}
+\contentsline {subsubsection}{\numberline {8.32.2.1}ftos}{89}{subsubsection.8.32.2.1}
+\contentsline {section}{\numberline {8.33}Simulation.\discretionary {-}{}{}h File Reference}{89}{section.8.33}
+\contentsline {subsection}{\numberline {8.33.1}Detailed Description}{90}{subsection.8.33.1}
+\contentsline {section}{\numberline {8.34}Target.\discretionary {-}{}{}cpp File Reference}{90}{section.8.34}
+\contentsline {subsection}{\numberline {8.34.1}Detailed Description}{90}{subsection.8.34.1}
+\contentsline {section}{\numberline {8.35}Target.\discretionary {-}{}{}h File Reference}{90}{section.8.35}
+\contentsline {subsection}{\numberline {8.35.1}Detailed Description}{91}{subsection.8.35.1}
+\contentsline {section}{\numberline {8.36}util.\discretionary {-}{}{}cpp File Reference}{91}{section.8.36}
+\contentsline {subsection}{\numberline {8.36.1}Detailed Description}{91}{subsection.8.36.1}
+\contentsline {subsection}{\numberline {8.36.2}Variable Documentation}{92}{subsection.8.36.2}
+\contentsline {subsubsection}{\numberline {8.36.2.1}color\discretionary {-}{}{}Num}{92}{subsubsection.8.36.2.1}
+\contentsline {subsubsection}{\numberline {8.36.2.2}lights}{92}{subsubsection.8.36.2.2}
+\contentsline {subsubsection}{\numberline {8.36.2.3}objects\discretionary {-}{}{}Mutex}{92}{subsubsection.8.36.2.3}
+\contentsline {subsubsection}{\numberline {8.36.2.4}obstacles}{92}{subsubsection.8.36.2.4}
+\contentsline {subsubsection}{\numberline {8.36.2.5}robots}{92}{subsubsection.8.36.2.5}
+\contentsline {subsubsection}{\numberline {8.36.2.6}targets}{92}{subsubsection.8.36.2.6}
+\contentsline {section}{\numberline {8.37}util.\discretionary {-}{}{}h File Reference}{92}{section.8.37}
+\contentsline {subsection}{\numberline {8.37.1}Detailed Description}{93}{subsection.8.37.1}
+\contentsline {chapter}{Index}{94}{section*.84}

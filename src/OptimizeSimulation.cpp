@@ -53,7 +53,7 @@ OptimizeSimulation::OptimizeSimulation(int argc, char* argv[]) :
   if (pool.size() == 0) {
     startedEmpty = true;
     pool.push_back(new NeuralNetwork(GET_STRING("OPTIMAL_NEURAL_NETWORK_FILE")));
-    poolPerformance.push_back(getPerformance(*pool[0]));
+    poolPerformance.push_back(getPerformance(*pool.back()));
   }
 }
 
@@ -70,7 +70,7 @@ void OptimizeSimulation::runMainLoop() {
   while (!stopRequest) {
     int oldOptimalPerformance;
     if (poolPerformance.size() > 0)
-      oldOptimalPerformance = poolPerformance[0];
+      oldOptimalPerformance = poolPerformance.front();
     else
       oldOptimalPerformance = -1;
 
@@ -100,7 +100,7 @@ void OptimizeSimulation::runMainLoop() {
       if (find(poolPerformance.begin(), poolPerformance.end(), newPerformance) == poolPerformance.end()) {
         int oldOptimalPerformance;
         if (poolPerformance.size() > 0)
-          oldOptimalPerformance = poolPerformance[0];
+          oldOptimalPerformance = poolPerformance.front();
         else
           oldOptimalPerformance = -1;
         pool.push_back(newNetwork);
@@ -138,6 +138,8 @@ void OptimizeSimulation::runMainLoop() {
       int newPerformance = getPerformance(*newNetwork);
     
       lock.lock_upgradable();
+      // This may cause duplicate performances, but they will have different structures
+      // because it is unlikley that one network is mutated into a copy of another
       if (newPerformance < oldPerformance) {
         int newUpdateTime = getFileTimestamp(GET_STRING("BEST_PERFORMANCE_FILE"));
         if (lastUpdateTime != newUpdateTime) {
@@ -186,6 +188,7 @@ void OptimizeSimulation::runMainLoop() {
     }
 
     if (pool.size() > (unsigned)GET_INT("MAX_POOL_SIZE")) {
+      delete pool.back();
       pool.pop_back();
       poolPerformance.pop_back();
     }
@@ -203,7 +206,7 @@ void OptimizeSimulation::runMainLoop() {
 
       bool clearPerformances =
         pool.size() == (unsigned)GET_INT("MAX_POOL_SIZE") &&
-        poolPerformance[poolPerformance.size() - 1] - poolPerformance[0] < GET_INT("MIN_DIVERSITY");
+        poolPerformance.back() - poolPerformance.front() < GET_INT("MIN_DIVERSITY");
       if (clearPerformances)
         cout << "Found low performance diversity, performing bottleneck" << endl;
       ofstream performanceOut(GET_STRING("BEST_PERFORMANCE_FILE"));
@@ -213,7 +216,7 @@ void OptimizeSimulation::runMainLoop() {
           performanceOut << poolPerformance[i] << endl;
       }
       performanceOut.close();
-      pool[0]->write(GET_STRING("OPTIMAL_NEURAL_NETWORK_FILE"));
+      pool.front()->write(GET_STRING("OPTIMAL_NEURAL_NETWORK_FILE"));
 
       lastUpdateTime = getFileTimestamp(GET_STRING("BEST_PERFORMANCE_FILE"));
 

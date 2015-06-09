@@ -11,7 +11,6 @@ var searchData=
   ['lightsource_2ecpp',['LightSource.cpp',['../LightSource_8cpp.html',1,'']]],
   ['lightsource_2eh',['LightSource.h',['../LightSource_8h.html',1,'']]],
   ['load',['load',['../classNeuralNetwork.html#a079b5b4583999d6b35b4b8bb23a68fb7',1,'NeuralNetwork']]],
-  ['loadconfig',['loadConfig',['../configuration_8cpp.html#a893534e92420ccfb1187ee67533e9661',1,'configuration.cpp']]],
   ['location',['Location',['../structLocation.html',1,'Location'],['../structLocation.html#a87790c14997fd8cdd12080c78c9794bb',1,'Location::Location()'],['../structLocation.html#aa2fa660a7d06ac9860f22901e10377ba',1,'Location::Location(float x, float y)'],['../Location_8h.html#ac7104dcbf658884aaffee28cb372294c',1,'Location():&#160;Location.h']]],
   ['location_2eh',['Location.h',['../Location_8h.html',1,'']]]
 ];

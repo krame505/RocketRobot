@@ -31,6 +31,26 @@ class NeuralNetwork {
     Node(int id, bool isInput, bool isOutput, float baseline,
          const std::vector<Node*> &inputs,
          const std::vector<float> &weights);
+
+    /**
+     * The node destructor
+     */
+    ~Node();
+    
+    /**
+     * Notify the node that a reference to it has been added,
+     * used for node garbage collection
+     */
+    void attatch();
+
+    /**
+     * Notify the node that a reference to it has been removed,
+     * used for node garbage collection
+     */
+    void detatch();
+
+  private:
+    int numReferences;
   };
 
 public:
@@ -45,6 +65,11 @@ public:
    * \param filename the description filename
    */
   NeuralNetwork(const std::string &filename);
+
+  /**
+   * The NeuralNetwork destructor
+   */
+  ~NeuralNetwork();
 
   /**
    * Computes the output values of a network for a vector of inputs.  

@@ -20,7 +20,7 @@ bool ENABLE_SENSORS = true
 
 bool ROBOTS_HITABLE = true
 
-int POST_COLLISION_PAUSE = 0 # Frames
+int POST_COLLISION_PAUSE = 5 # Frames
 
 # These settings apply to all types of sensors
 float SENSOR_POSITION_X  = 25

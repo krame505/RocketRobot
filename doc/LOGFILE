@@ -1,17 +1,5 @@
 /media/shared/lrk/rocketrobot/src/environment.cpp:4: warning: the name `Environment.h' supplied as the second argument in the \file statement is not an input file
 /media/shared/lrk/rocketrobot/src/environment.h:6: warning: the name `Environment.h' supplied as the second argument in the \file statement is not an input file
-/media/shared/lrk/rocketrobot/src/configuration.cpp:183: warning: no matching class member found for 
-  void Configuration::initConfig(int argc, char *[] argv[], const string &defaultFilename)
-Possible candidates:
-  static void Configuration::initConfig(const std::string &filename)
-  static void Configuration::initConfig(int argc, char *argv[], const std::string &defaultFilename)
-
-/media/shared/lrk/rocketrobot/src/configuration.cpp:225: warning: no matching class member found for 
-  void Configuration::initConfig(const string &filename)
-Possible candidates:
-  static void Configuration::initConfig(const std::string &filename)
-  static void Configuration::initConfig(int argc, char *argv[], const std::string &defaultFilename)
-
 /media/shared/lrk/rocketrobot/src/NeuralNetwork.cpp:28: warning: no matching class member found for 
   NeuralNetwork::NeuralNetwork(const vector< int > &inputs, const vector< int > &outputs, const vector< Node * > &nodes)
 Possible candidates:
@@ -66,8 +54,6 @@ Possible candidates:
 /media/shared/lrk/rocketrobot/src/BaseGfxApp.cpp:3: warning: Found unknown command `\editor'
 /media/shared/lrk/rocketrobot/src/BaseGfxApp.h:5: warning: Found unknown command `\editor'
 /media/shared/lrk/rocketrobot/src/Color.cpp:3: warning: Found unknown command `\editor'
-/media/shared/lrk/rocketrobot/src/configuration.cpp:3: warning: Found unknown command `\editor'
-/media/shared/lrk/rocketrobot/src/configuration.h:69: warning: Unsupported xml/html tag <filename> found
 /media/shared/lrk/rocketrobot/src/LightSource.cpp:4: warning: Found unknown command `\editor'
 /media/shared/lrk/rocketrobot/src/LightSource.h:5: warning: Found unknown command `\editor'
 /media/shared/lrk/rocketrobot/src/Obstacle.cpp:3: warning: Found unknown command `\editor'
@@ -88,11 +74,6 @@ Possible candidates:
 /media/shared/lrk/rocketrobot/src/Color.h:38: warning: Found unknown command `\detail'
 /media/shared/lrk/rocketrobot/src/Color.h:93: warning: Found unknown command `\detail'
 /media/shared/lrk/rocketrobot/src/Color.h:91: warning: Found unknown command `\editor'
-/media/shared/lrk/rocketrobot/src/configuration.h:130: warning: argument 'table' of command @param is not found in the argument list of Configuration::getBoolConfig(const std::string &name)
-/media/shared/lrk/rocketrobot/src/configuration.h:138: warning: argument 'table' of command @param is not found in the argument list of Configuration::getCharConfig(const std::string &name)
-/media/shared/lrk/rocketrobot/src/configuration.h:122: warning: argument 'table' of command @param is not found in the argument list of Configuration::getFloatConfig(const std::string &name)
-/media/shared/lrk/rocketrobot/src/configuration.h:114: warning: argument 'table' of command @param is not found in the argument list of Configuration::getIntConfig(const std::string &name)
-/media/shared/lrk/rocketrobot/src/configuration.h:146: warning: argument 'table' of command @param is not found in the argument list of Configuration::getStringConfig(const std::string &name)
 /media/shared/lrk/rocketrobot/src/LightSource.h:47: warning: argument 'config' of command @param is not found in the argument list of LightSource::LightSource(int radius, Location loc, Color color)
 /media/shared/lrk/rocketrobot/src/Obstacle.h:18: warning: argument 'config' of command @param is not found in the argument list of Obstacle::Obstacle(int radius, Color color)
 /media/shared/lrk/rocketrobot/src/Robot.h:21: warning: The following parameters of Robot::Robot(RobotType robotType, int radius, Color color, Color lineColor, int targetId=-1) are not documented:
