@@ -7,7 +7,7 @@
 
 ## Optimization simulation
 * Optimization processes seem to be dying after a while with no error?
-  * Check if fixed
+  * Fix memory leaks that are causing this
 * Occasional hang-ups after finding new optimal weights
 
 ## Object behavior
@@ -20,7 +20,9 @@
 * More advanced neural network support - maybe feed-back?
 
 ## Project/general
-* Move configuration stuff to lib, build .a and link with -lconfiguration
+* Make environment a class to allow multiple simulations in the same process
+  * Default instance allows objects to be constructed without a new environment
+  * Size passed to constructor
 * Fix makefile so everything gets rebuilt properly
   * Use automake?
 * Fix documentation to include source for .cpp files?
