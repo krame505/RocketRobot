@@ -5,6 +5,7 @@
  */
 
 #include <stdlib.h>
+#include <cassert>
 #include <iostream>
 #include <vector>
 #include <mutex>
@@ -47,8 +48,10 @@ void NeuralNetwork::Node::attatch() {
 
 void NeuralNetwork::Node::detatch() {
   numReferences--;
-  if (numReferences <= 0)
+  assert(numReferences >= 0);
+  if (numReferences == 0) {
     delete this;
+  }
 }
 
 NeuralNetwork::NeuralNetwork(const vector<int> &inputs,
