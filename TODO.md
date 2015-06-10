@@ -21,6 +21,7 @@
   * All current objects become subclasses of CircleObject
   * Add RectangleObstacle class as subclass of RectangleObject
 * More advanced neural network support - maybe feed-back?
+* More types of interesting robots
 
 ## Project/general
 * Make environment a class to allow multiple simulations in the same process
