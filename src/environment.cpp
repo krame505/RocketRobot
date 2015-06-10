@@ -47,15 +47,10 @@ void environment::removeObject(int id) {
 }
 
 void environment::clear() {
-  objectsMutex.lock();
-  for (unsigned i = 0; i < (unsigned)id; i++) {
-    if (objects[i] != NULL) {
-      objects[i] = NULL;
-    }
+  for (objectIterator it = getObjectsBegin(); it != getObjectsEnd(); it++) {
+    delete *it;
   }
-  numObjects = 0;
   id = 0;
-  objectsMutex.unlock();
 }
 
 unsigned environment::getNumObjects() {
