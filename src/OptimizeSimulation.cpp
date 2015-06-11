@@ -314,7 +314,13 @@ int OptimizeSimulation::getPerformanceMaze(const NeuralNetwork &network) {
     advance();
     result++;
   }
-  delete r;
+
+  // Only need to manually delete when it didn't find the target
+  // Otherwise it was deleted automaticly
+  if (result == GET_INT("STEP_LIMIT")) {
+    delete r;
+  }
+
   return result;
 }
 
