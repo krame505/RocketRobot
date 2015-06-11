@@ -154,6 +154,9 @@ void OptimizeSimulation::runMainLoop() {
           vector<int>::iterator loc = find(poolPerformance.begin(), poolPerformance.end(), oldPerformance);
           if (loc != poolPerformance.end()) {
             netId = loc - poolPerformance.begin();
+            if (pool[netId] != NULL) {
+              delete pool[netId];
+            }
             pool[netId] = newNetwork;
             poolPerformance[netId] = newPerformance;
             poolChanged = true;
@@ -165,6 +168,9 @@ void OptimizeSimulation::runMainLoop() {
           }
         }
         else {
+          if (pool[netId] != NULL) {
+            delete pool[netId];
+          }
           pool[netId] = newNetwork;
           poolPerformance[netId] = newPerformance;
           poolChanged = true;

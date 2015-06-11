@@ -140,9 +140,9 @@ ConfigTable loadConfig(const string &filename) {
               ": Unexpected end of line" << endl;
             exit(1);
           }
-          string type = parseResult[1];
-          string name = parseResult[2];
-          string valueText = parseResult[3];
+          string type(parseResult[1]);
+          string name(parseResult[2]);
+          string valueText(parseResult[3]);
           trim_left(valueText);
 
           // Parse the value and check for errors
