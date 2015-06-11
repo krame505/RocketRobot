@@ -48,7 +48,6 @@ void environment::removeObject(int id) {
 
 void environment::clear() {
   for (objectIterator it = getObjectsBegin(); it != getObjectsEnd(); it++) {
-    cout << "Deleting: " << *it << endl;
     delete *it;
   }
   id = 0;
