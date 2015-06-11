@@ -4,39 +4,41 @@
  * \editor Lucas Kramer
  *
  * \file  LightSource.cpp
- * \brief The representation of a target in the simulation.
+ * \brief The representation of a light source (stimuli) in the simulation.
  *
  */
 #include <stdlib.h>
 #include <math.h>
 
 #include "artist.h"
-#include "environment.h"
+#include "Environment.h"
 #include "LightSource.h"
 #include "configuration.h"
-using namespace environment;
 
 LightSource::LightSource(int radius,
-                         Color color) :
-  PhysicalObject(LIGHT, radius, color, false) {}
+                         Color color,
+                         Environment *env) :
+  PhysicalObject(LIGHT, radius, color, false, env) {}
 
 LightSource::LightSource(int maxRadius,
                          int minRadius,
-                         Color color) :
-  PhysicalObject(LIGHT, maxRadius, minRadius, color, false) {}
+                         Color color,
+                         Environment *env) :
+  PhysicalObject(LIGHT, maxRadius, minRadius, color, false, env) {}
 
 LightSource::LightSource(int radius,
                          Location loc,
-                         Color color) :
-  PhysicalObject(LIGHT, radius, loc, color, false) {}
+                         Color color,
+                         Environment *env) :
+  PhysicalObject(LIGHT, radius, loc, color, false, env) {}
 
 LightSource::~LightSource() {}
 
 bool LightSource::handleCollision(int otherId, bool wasHit) {
   if (GET_BOOL("LIGHT_SOURCE_RANDOM_WANDER")) {
     if (otherId == -1 ||
-        getObject(otherId) == NULL || 
-        getObject(otherId)->getSpeed() == 0)
+        env->getObject(otherId) == NULL || 
+        env->getObject(otherId)->getSpeed() == 0)
       setOrientation(rand() % 360);
   }
   else if (getSpeed() != 0) {

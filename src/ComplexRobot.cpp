@@ -16,11 +16,10 @@
 #include <GL/glut.h>
 #include <stdexcept>
 
-#include "environment.h"
+#include "Environment.h"
 #include "Robot.h"
 #include "ComplexRobot.h"
 #include "configuration.h"
-using namespace environment;
 using namespace std;
 
 ComplexRobot::ComplexRobot(int radius, Color color, Color lineColor,
@@ -37,8 +36,9 @@ ComplexRobot::ComplexRobot(int radius, Color color, Color lineColor,
                            float obstacleSensorScale,
                            float targetSensorScale,
                            int defaultSpeed,
-                           int targetId) :
-Robot(COMPLEX, radius, color, lineColor, targetId),
+                           int targetId,
+                           Environment *env) :
+Robot(COMPLEX, radius, color, lineColor, targetId, env),
   enableLightSensors(enableLightSensors),
   enableRobotSensors(enableRobotSensors),
   enableObstacleSensors(enableObstacleSensors),
@@ -67,8 +67,9 @@ ComplexRobot::ComplexRobot(int radius, Location loc, Color color, Color lineColo
                            float obstacleSensorScale,
                            float targetSensorScale,
                            int defaultSpeed,
-                           int targetId) :
-Robot(COMPLEX, radius, loc, color, lineColor, targetId),
+                           int targetId,
+                           Environment *env) :
+Robot(COMPLEX, radius, loc, color, lineColor, targetId, env),
   enableLightSensors(enableLightSensors),
   enableRobotSensors(enableRobotSensors),
   enableObstacleSensors(enableObstacleSensors),

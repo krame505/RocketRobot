@@ -13,8 +13,18 @@
 /** \brief A simple robot with uncrossed feedback. */
 class SimpleRobot : public Robot {
 public:
-  SimpleRobot(int radius, Color color, Color lineColor, int targetId = -1);
-  SimpleRobot(int radius, Location loc, Color color, Color lineColor,  int targetId = -1);
+  SimpleRobot(int radius,
+              Color color,
+              Color lineColor,
+              int targetId = -1,
+              Environment *env = Environment::getEnv());
+
+  SimpleRobot(int radius,
+              Location loc,
+              Color color,
+              Color lineColor,
+              int targetId = -1,
+              Environment *env = Environment::getEnv());
 
   ~SimpleRobot();
 

@@ -13,13 +13,20 @@
 /** \brief Target for the robot to seek */
 class Target: public PhysicalObject {
 public:
-  Target();
+  Target(int radius,
+         Color color,
+         int targetNum=TARGET,
+         Environment *env = Environment::getEnv());
 
-  Target(int radius, Color color, int targetNum=TARGET);
+  Target(int maxRadius, int minRadius,
+         Color color,
+         int targetNum=TARGET,
+         Environment *env = Environment::getEnv());
 
-  Target(int maxRadius, int minRadius, Color color, int targetNum=TARGET);
-
-  Target(int radius, Location loc, Color color, int targetNum=TARGET);
+  Target(int radius, Location loc,
+         Color color,
+         int targetNum=TARGET,
+         Environment *env = Environment::getEnv());
 
   /**
    * \author Lucas Kramer

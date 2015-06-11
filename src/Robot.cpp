@@ -16,26 +16,27 @@
 #include <math.h>
 
 #include "artist.h"
-#include "environment.h"
+#include "Environment.h"
 #include "Robot.h"
 #include "configuration.h"
 using namespace std;
-using namespace environment;
 
 Robot::Robot(RobotType robotType,
              int radius,
              Color color,
              Color lineColor,
-             int targetId) :
-  Robot(robotType, radius, findOpenLocation(radius), color, lineColor, targetId) {}
+             int targetId,
+             Environment *env) :
+  Robot(robotType, radius, findOpenLocation(env, radius), color, lineColor, targetId, env) {}
 
 Robot::Robot(RobotType robotType,
              int radius,
              Location loc,
              Color color,
              Color lineColor,
-             int targetId) :
-  PhysicalObject(ROBOT, radius, loc, color, GET_BOOL("ROBOTS_HITABLE")),
+             int targetId,
+             Environment *env) :
+  PhysicalObject(ROBOT, radius, loc, color, GET_BOOL("ROBOTS_HITABLE"), env),
   robotType(robotType),
   leftLightSensor (   Location(-GET_FLOAT("SENSOR_POSITION_X"), GET_FLOAT("SENSOR_POSITION_Y")), GET_INT("SENSOR_ANGLE_LEFT"),  LIGHT),
   rightLightSensor(   Location( GET_FLOAT("SENSOR_POSITION_X"), GET_FLOAT("SENSOR_POSITION_Y")), GET_INT("SENSOR_ANGLE_RIGHT"), LIGHT),
@@ -43,8 +44,8 @@ Robot::Robot(RobotType robotType,
   rightRobotSensor(   Location( GET_FLOAT("SENSOR_POSITION_X"), GET_FLOAT("SENSOR_POSITION_Y")), GET_INT("SENSOR_ANGLE_RIGHT"), ROBOT),
   leftObstacleSensor (Location(-GET_FLOAT("SENSOR_POSITION_X"), GET_FLOAT("SENSOR_POSITION_Y")), GET_INT("SENSOR_ANGLE_LEFT"),  OBSTACLE),
   rightObstacleSensor(Location( GET_FLOAT("SENSOR_POSITION_X"), GET_FLOAT("SENSOR_POSITION_Y")), GET_INT("SENSOR_ANGLE_RIGHT"), OBSTACLE),
-  leftTargetSensor (  Location(-GET_FLOAT("SENSOR_POSITION_X"), GET_FLOAT("SENSOR_POSITION_Y")), GET_INT("SENSOR_ANGLE_LEFT"),  targetId != -1? (getObject(targetId) != NULL? getObject(targetId)->objectType : (ObjectType)-1) : TARGET),
-  rightTargetSensor(  Location( GET_FLOAT("SENSOR_POSITION_X"), GET_FLOAT("SENSOR_POSITION_Y")), GET_INT("SENSOR_ANGLE_RIGHT"), targetId != -1? (getObject(targetId) != NULL? getObject(targetId)->objectType : (ObjectType)-1) : TARGET),
+  leftTargetSensor (  Location(-GET_FLOAT("SENSOR_POSITION_X"), GET_FLOAT("SENSOR_POSITION_Y")), GET_INT("SENSOR_ANGLE_LEFT"),  targetId != -1? (env->getObject(targetId) != NULL? env->getObject(targetId)->objectType : (ObjectType)-1) : TARGET),
+  rightTargetSensor(  Location( GET_FLOAT("SENSOR_POSITION_X"), GET_FLOAT("SENSOR_POSITION_Y")), GET_INT("SENSOR_ANGLE_RIGHT"), targetId != -1? (env->getObject(targetId) != NULL? env->getObject(targetId)->objectType : (ObjectType)-1) : TARGET),
   lineColor(lineColor),
   defaultColor(color),
   lastUpdateTime(0),
@@ -76,7 +77,7 @@ bool Robot::handleCollision(int otherId, bool wasHit) {
   pauseTime = GET_INT("POST_COLLISION_PAUSE");
 
   if (otherId == targetId && targetId != -1) {
-    delete getObject(targetId);
+    delete env->getObject(targetId);
     delete this;
     return true;
   }
@@ -198,7 +199,7 @@ void Robot::display() {
   }
 
   // Have to set the color after calling display, or it gets reset immediatly.
-  if (isCollidingWithHitable(getId())) {
+  if (env->isCollidingWithHitable(getId())) {
     if (getColor() != GET_COLOR("COLLISION_COLOR") &&
         getColor() != GET_COLOR("UPDATE_COLOR"))
       defaultColor = getColor();

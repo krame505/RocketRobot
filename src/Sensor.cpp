@@ -8,8 +8,7 @@
 
 #include "artist.h"
 #include "Sensor.h"
-#include "environment.h"
-using namespace environment;
+#include "Environment.h"
 #include "configuration.h"
 #include "PhysicalObject.h" /* ObjectType definition */
 
@@ -24,14 +23,19 @@ using namespace std;
 #include <stdexcept> /* invalid_argument */
 using std::invalid_argument;
 
-Sensor::Sensor(Location loc, int orientation, ObjectType typeDetected) :
-	Sensor(loc, orientation, GET_INT("SENSOR_VIEWANGLE"), typeDetected) {}
+Sensor::Sensor(Location loc, int orientation,
+               ObjectType typeDetected,
+               Environment *env) :
+  Sensor(loc, orientation, GET_INT("SENSOR_VIEWANGLE"), typeDetected, env) {}
 
-Sensor::Sensor(Location loc, int orientation, int viewAngle, ObjectType typeDetected) {
+Sensor::Sensor(Location loc, int orientation, int viewAngle,
+               ObjectType typeDetected,
+               Environment *env) :
+  env(env),
+  typeDetected(typeDetected) {
   setPosition(loc);
   setOrientation(orientation);
   setViewAngle(viewAngle);
-  setTypeDetected(typeDetected);
 }
 
 void Sensor::setPosition(Location loc) {
@@ -103,12 +107,12 @@ float Sensor::sense() {
   int absoluteAngleToLight, angle;
 
   float strength = 0.0;
-  for (objectIterator it = getObjectsBegin(); it != getObjectsEnd(); it++) {
-    if ((*it) != NULL && (*it)->objectType == typeDetected) {
+  for (PhysicalObject *o : *Environment::getEnv()) {
+    if (o != NULL && o->objectType == typeDetected) {
       // The angle between two objects
       // Angle = atan2 (delta x, delta y)
-      delta_x = (*it)->getXPosition() - absoluteLoc.x;
-      delta_y = (*it)->getYPosition() - absoluteLoc.y;
+      delta_x = o->getXPosition() - absoluteLoc.x;
+      delta_y = o->getYPosition() - absoluteLoc.y;
       absoluteAngleToLight = (int)(atan2(delta_x, delta_y) * 180 / M_PI);
       angle = (absoluteAngleToLight + 720 - absoluteOrientation) % 360;
       if (angle > 180)
@@ -121,8 +125,8 @@ float Sensor::sense() {
       float angleBrightnessScale = 1.0 / exp(3 * pow(2 * angle / getViewAngle(), 2));
       
       // Instead of squareroot-ing then square-ing to find distance, we do neither
-      distanceSquared  = pow(((*it)->getXPosition() - absoluteLoc.x), 2.0);
-      distanceSquared += pow(((*it)->getYPosition() - absoluteLoc.y), 2.0);
+      distanceSquared  = pow((o->getXPosition() - absoluteLoc.x), 2.0);
+      distanceSquared += pow((o->getYPosition() - absoluteLoc.y), 2.0);
       strength += angleBrightnessScale / distanceSquared;
     }
   }//End for

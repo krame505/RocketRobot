@@ -15,24 +15,25 @@
 #include <GL/glut.h>
 #include <stdexcept>
 
-#include "environment.h"
+#include "Environment.h"
 #include "Robot.h"
 #include "SimpleRobot.h"
 #include "configuration.h"
-using namespace environment;
 
 SimpleRobot::SimpleRobot(int radius,
                          Color color,
                          Color lineColor,
-                         int targetId) :
-  Robot(SIMPLE, radius, color, lineColor, targetId) {}
+                         int targetId,
+                         Environment *env) :
+  Robot(SIMPLE, radius, color, lineColor, targetId, env) {}
 
 SimpleRobot::SimpleRobot(int radius,
                          Location loc,
                          Color color,
                          Color lineColor,
-                         int targetId) :
-  Robot(SIMPLE, radius, loc, color, lineColor, targetId) {}
+                         int targetId,
+                         Environment *env) :
+  Robot(SIMPLE, radius, loc, color, lineColor, targetId, env) {}
 
 SimpleRobot::~SimpleRobot() {}
 

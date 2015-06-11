@@ -15,12 +15,11 @@
 #include <GL/glut.h>
 #include <stdexcept>
 
-#include "environment.h"
+#include "Environment.h"
 #include "Robot.h"
 #include "NeuralNetworkRobot.h"
 #include "NeuralNetwork.h"
 #include "configuration.h"
-using namespace environment;
 using namespace std;
 
 NeuralNetworkRobot::NeuralNetworkRobot(int radius,
@@ -28,8 +27,9 @@ NeuralNetworkRobot::NeuralNetworkRobot(int radius,
                                        Color lineColor,
                                        NeuralNetwork network,
                                        int targetId,
-                                       string filename) :
-  Robot(NEURAL_NETWORK, radius, color, lineColor, targetId),
+                                       string filename,
+                                       Environment *env) :
+  Robot(NEURAL_NETWORK, radius, color, lineColor, targetId, env),
   filename(filename),
   network(network) {}
 
@@ -39,8 +39,9 @@ NeuralNetworkRobot::NeuralNetworkRobot(int radius,
                                        Color lineColor,
                                        NeuralNetwork network,
                                        int targetId,
-                                       string filename) :
-  Robot(NEURAL_NETWORK, radius, loc, color, lineColor, targetId),
+                                       string filename,
+                                       Environment *env) :
+  Robot(NEURAL_NETWORK, radius, loc, color, lineColor, targetId, env),
   filename(filename),
   network(network) {}
 

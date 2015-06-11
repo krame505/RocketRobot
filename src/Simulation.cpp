@@ -28,10 +28,9 @@ using namespace std;
 #include "LightSource.h"
 #include "Location.h"
 #include "configuration.h"
-#include "environment.h"
+#include "Environment.h"
 #include "util.h"
 #include "Simulation.h"
-using namespace environment;
 using namespace util;
 
 Simulation* Simulation::s_currentApp = NULL;
@@ -227,8 +226,8 @@ Simulation::Simulation(int argc, char* argv[]) :
 Simulation::~Simulation() {
   delete neuralNetworkFile;
   delete simulationFile;
-  for (objectIterator it = getObjectsBegin(); it != getObjectsEnd(); it++) {
-    delete *it;
+  for (PhysicalObject *o : *Environment::getEnv()) {
+    delete o;
   }
 }
 
@@ -455,13 +454,15 @@ void Simulation::leftMouseDown(int x, int y) {
     getObject(mouseDownId)->setColor(oldColor);
 
   mouseDownLoc = Location(x, GET_INT("DISPLAY_HEIGHT") - y);
-  mouseDownId = getCollisionId(mouseDownLoc, 0);
+  mouseDownId = Environment::getEnv()->getCollisionId(mouseDownLoc, 0);
   if (mouseDownId != -1) {
     if (GET_BOOL("DEBUG_MESSAGES")) {
       cout << "Clicked on " << mouseDownId << endl;
     }
-    mouseDownDeltaX = getObject(mouseDownId)->getXPosition() - mouseDownLoc.x;
-    mouseDownDeltaY = getObject(mouseDownId)->getYPosition() - mouseDownLoc.y;
+    mouseDownDeltaX =
+      getObject(mouseDownId)->getXPosition() - mouseDownLoc.x;
+    mouseDownDeltaY =
+      getObject(mouseDownId)->getYPosition() - mouseDownLoc.y;
     oldColor = getObject(mouseDownId)->getColor();
     Color newColor(oldColor.red * 0.8, oldColor.green * 0.8, oldColor.blue * 0.8);
     getObject(mouseDownId)->setColor(newColor);
@@ -472,8 +473,8 @@ void Simulation::leftMouseDown(int x, int y) {
 
 void Simulation::leftMouseUp(int x, int y) {
   if (mouseDownId != -1 && getObject(mouseDownId) != NULL) {
-    if (isTouchingWall(mouseDownId)) {
-      removeObject(mouseDownId);
+    if (Environment::getEnv()->isTouchingWall(mouseDownId)) {
+      delete getObject(mouseDownId);
     }
   }
 
@@ -499,7 +500,7 @@ void Simulation::mouseDragged(int x, int y) {
   PhysicalObject *o;
   if (mouseDownId != -1 && (o = getObject(mouseDownId)) != NULL) {
     Location newLoc = Location(x + mouseDownDeltaX, GET_INT("DISPLAY_HEIGHT") - y + mouseDownDeltaY);
-    if (!isTouchingHitableObject(newLoc, o->getRadius(), mouseDownId)) {
+    if (!Environment::getEnv()->isTouchingHitableObject(newLoc, o->getRadius(), mouseDownId)) {
       o->forceSetPosition(newLoc.x, newLoc.y);
     }
   }
@@ -566,7 +567,7 @@ void Simulation::keyboardSpecial(int key, int x, int y) {
         o->setRadius(o->getRadius() + 1);
       else
         o->setRadius(o->getRadius() + 3);
-      while (isCollidingWithHitable(o->getId()))
+      while (Environment::getEnv()->isCollidingWithHitable(o->getId()))
         o->setRadius(o->getRadius() - 1);
       break;
     case GLUT_KEY_DOWN:

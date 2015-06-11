@@ -27,21 +27,24 @@ using namespace std;
 #include "LightSource.h"
 #include "Location.h"
 #include "configuration.h"
-#include "environment.h"
+#include "Environment.h"
 #include "util.h"
-using namespace environment;
 using namespace util;
 
 // Object addition/removal
-std::mutex objectsMutex;
+static mutex objectsMutex;
 
-stack<int> robots;
-stack<int> targets;
-stack<int> lights;
-stack<int> obstacles;
+static stack<int> robots;
+static stack<int> targets;
+static stack<int> lights;
+static stack<int> obstacles;
 
 // Colors
-int colorNum = 0;
+static int colorNum = 0;
+
+PhysicalObject* util::getObject(int id) {
+  return Environment::getEnv()->getObject(id);
+}
 
 void util::reset() {
   colorNum = 0;
@@ -56,7 +59,7 @@ void util::reset() {
     lights.pop();
   while (!obstacles.empty())
     obstacles.pop();
-  clear();
+  Environment::getEnv()->clear();
 }
 
 void util::display() {
@@ -67,15 +70,15 @@ void util::display() {
   objectsMutex.lock();
   
   // Draw non-hitable objects first so they show up underneath everything...
-  for (objectIterator it = getObjectsBegin(); it != getObjectsEnd(); it++) {
-    if (!(*it)->isHitable)
-      (*it)->display();
+  for (PhysicalObject *o : *Environment::getEnv()) {
+    if (!o->isHitable)
+      o->display();
   }
 
   // ... THEN draw everything else
-  for (objectIterator it = getObjectsBegin(); it != getObjectsEnd(); it++) {
-    if ((*it)->isHitable)
-      (*it)->display();
+  for (PhysicalObject *o : *Environment::getEnv()) {
+    if (o->isHitable)
+      o->display();
   }
   objectsMutex.unlock();
 
@@ -92,8 +95,8 @@ void util::display() {
 
 void util::advance() {
   objectsMutex.lock();
-  for (objectIterator it = getObjectsBegin(); it != getObjectsEnd(); it++) {
-    if ((*it)->updatePosition())
+  for (PhysicalObject *o : *Environment::getEnv()) {
+    if (o->updatePosition())
       break;
   }
   objectsMutex.unlock();
@@ -106,10 +109,10 @@ Color util::newColor() {
   while (!foundColor) {
     result = Color(GET_STRING("TARGET_COLORS")[colorNum]);
     foundColor = true;
-    for (objectIterator it = getObjectsBegin(); it != getObjectsEnd(); it++) {
-      if ((*it)->getColor().isSimilar(result) ||
-          ((*it)->objectType == ROBOT &&
-           ((Robot *)*it)->getLineColor().isSimilar(result))) {
+    for (PhysicalObject *o : *Environment::getEnv()) {
+      if (o->getColor().isSimilar(result) ||
+          (o->objectType == ROBOT &&
+           ((Robot*)o)->getLineColor().isSimilar(result))) {
         foundColor = false;
         break;
       }
@@ -124,7 +127,7 @@ Color util::newColor() {
 
 // TODO - relies on robots/targets being the only things that disappear on their own
 int util::getNumRobotsTargets() {
-  return getNumObjects() - (getNumLights() + getNumObstacles());
+  return Environment::getEnv()->getNumObjects() - (getNumLights() + getNumObstacles());
 }
 
 int util::getNumLights() {
@@ -197,7 +200,7 @@ bool util::addRobotTarget(int robotType,
   }
   catch (const NoOpenLocationException *e) {
     if (t != NULL)
-      removeObject(t->getId());
+      delete t;
     objectsMutex.unlock();
     return false;
   }
@@ -306,7 +309,7 @@ bool util::addNeuralNetworkRobotTarget(const NeuralNetwork &network) {
   }
   catch (const NoOpenLocationException *e) {
     if (t != NULL)
-      removeObject(t->getId());
+      delete t;
     objectsMutex.unlock();
     return false;
   }
@@ -395,7 +398,7 @@ bool util::copy(int id, Location loc) {
     PhysicalObject *obj = getObject(id);
     try {
       objectsMutex.lock();
-      if (isCollidingWithHitable(loc, obj->getRadius())) {
+      if (Environment::getEnv()->isCollidingWithHitable(loc, obj->getRadius())) {
         objectsMutex.unlock();
         return false;
       }
@@ -501,10 +504,9 @@ bool util::removeRobotTarget() {
       }
       success = true;
     }
-    //removeObject(robots.top());
     delete getObject(robots.top()); // Destructor calls removeObject
     if (targets.top() != -1)
-      removeObject(targets.top());
+      delete getObject(targets.top());
     objectsMutex.unlock();
     robots.pop();
     targets.pop();
@@ -523,7 +525,6 @@ bool util::removeLightSource() {
       }
       success = true;
     }
-    //removeObject(lights.top());
     delete getObject(lights.top()); // Destructor calls removeObject
     objectsMutex.unlock();
     lights.pop();
@@ -542,7 +543,6 @@ bool util::removeObstacle() {
       }
       success = true;
     }
-    //removeObject(obstacles.top());
     delete getObject(obstacles.top()); // Destructor calls removeObject
     objectsMutex.unlock();
     obstacles.pop();
@@ -560,10 +560,9 @@ void util::removeAllRobotTarget() {
         cout << "Removed target " << targets.top() << endl;
     }
     objectsMutex.lock();
-    //removeObject(robots.top());
     delete getObject(robots.top()); // Destructor calls removeObject
     if (targets.top() != -1)
-      removeObject(targets.top());
+      delete getObject(targets.top());
     objectsMutex.unlock();
     robots.pop();
     targets.pop();
@@ -756,20 +755,20 @@ bool util::save(string filename) {
   if (!out.is_open()) {
     return false;
   }
-
-  for (objectIterator it = getObjectsBegin(); it != getObjectsEnd(); it++) {
+  
+  for (PhysicalObject *o : *Environment::getEnv()) {
     out <<
-      (int)(*it)->objectType << "," <<
-      (*it)->getRadius() << "," <<
-      (*it)->getXPosition() << "," <<
-      (*it)->getYPosition() << "," <<
-      (*it)->getColor().red << "," <<
-      (*it)->getColor().green << "," <<
-      (*it)->getColor().blue << "," <<
-      (*it)->getOrientation() << "," << 
-      (*it)->getSpeed();
-    if ((*it)->objectType == ROBOT) {
-      Robot *r = (Robot*)(*it);
+      (int)o->objectType << "," <<
+      o->getRadius() << "," <<
+      o->getXPosition() << "," <<
+      o->getYPosition() << "," <<
+      o->getColor().red << "," <<
+      o->getColor().green << "," <<
+      o->getColor().blue << "," <<
+      o->getOrientation() << "," << 
+      o->getSpeed();
+    if (o->objectType == ROBOT) {
+      Robot *r = (Robot*)o;
       out << "," <<
         (int)r->robotType << "," <<
         ids[r->getTarget()] << "," <<
@@ -805,7 +804,7 @@ bool util::save(string filename) {
         break;
       }
     }
-    ids[(*it)->getId()] = objectNum;
+    ids[o->getId()] = objectNum;
     objectNum++;
     out << endl;
   }

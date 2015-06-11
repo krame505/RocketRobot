@@ -8,24 +8,27 @@
 #include <stdlib.h>
 #include <math.h>
 
-#include "environment.h"
+#include "Environment.h"
 #include "Obstacle.h"
 #include "configuration.h"
 #include "artist.h"
 
 Obstacle::Obstacle(int radius,
-                   Color color) :
-  PhysicalObject(OBSTACLE, radius, color) {}
+                   Color color,
+                   Environment *env) :
+  PhysicalObject(OBSTACLE, radius, color, env) {}
 
 Obstacle::Obstacle(int maxRadius,
-       int minRadius,
-       Color color) :
-  PhysicalObject(OBSTACLE, maxRadius, minRadius, color) {}
+                   int minRadius,
+                   Color color,
+                   Environment *env) :
+  PhysicalObject(OBSTACLE, maxRadius, minRadius, color, env) {}
 
 Obstacle::Obstacle(int radius,
                    Location loc,
-                   Color color) :
-  PhysicalObject(OBSTACLE, radius, loc, color) {}
+                   Color color,
+                   Environment *env) :
+  PhysicalObject(OBSTACLE, radius, loc, color, env) {}
 
 Obstacle::~Obstacle() {}
 

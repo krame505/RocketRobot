@@ -21,7 +21,9 @@ public:
    * \param orientation orientation of the sensor
    * \param typeDetected type that sensor will detect
    */
-  Sensor(Location loc, int orientation, ObjectType typeDetected);
+  Sensor(Location loc, int orientation,
+         ObjectType typeDetected,
+         Environment *env = Environment::getEnv());
   
   /**
    * Sensor constructor
@@ -30,7 +32,9 @@ public:
    * \param viewAngle view angle of the sensor in degrees
    * \param typeDetected type that sensor will detect
    */
-  Sensor(Location loc, int orientation, int viewAngle, ObjectType typeDetected);
+  Sensor(Location loc, int orientation, int viewAngle,
+         ObjectType typeDetected,
+         Environment *env = Environment::getEnv());
 
   //Location of sensor is relitive to robot sensor.
     
@@ -124,6 +128,8 @@ public:
   float sense();
 
 private:
+  Environment *env;
+
   Location loc, absoluteLoc;
   int orientation, absoluteOrientation;
   int viewAngle;

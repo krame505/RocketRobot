@@ -32,10 +32,9 @@ using namespace boost::interprocess;
 #include "LightSource.h"
 #include "Location.h"
 #include "configuration.h"
-#include "environment.h"
+#include "Environment.h"
 #include "util.h"
 #include "OptimizeSimulation.h"
-using namespace environment;
 using namespace util;
 
 OptimizeSimulation *OptimizeSimulation::s_currentInstance;
@@ -58,8 +57,8 @@ OptimizeSimulation::OptimizeSimulation(int argc, char* argv[]) :
 }
 
 OptimizeSimulation::~OptimizeSimulation() {
-  for (objectIterator it = getObjectsBegin(); it != getObjectsEnd(); it++) {
-    delete *it;
+  for (PhysicalObject *o : *Environment::getEnv()) {
+    delete o;
   }
   for (NeuralNetwork *net : pool) {
     delete net;
