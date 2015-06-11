@@ -76,8 +76,8 @@ bool Robot::handleCollision(int otherId, bool wasHit) {
   pauseTime = GET_INT("POST_COLLISION_PAUSE");
 
   if (otherId == targetId && targetId != -1) {
-    removeObject(targetId);
-    removeObject(getId());
+    delete getObject(targetId);
+    delete this;
     return true;
   }
   GET_BOOL("TRANSLATE_REORIENT");
