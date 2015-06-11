@@ -10,6 +10,7 @@
 #include "Color.h"
 #include "configuration.h"
 #include "Location.h"
+#include "Environment.h"
 
 enum ObjectType {ROBOT, TARGET, OBSTACLE, LIGHT, LAST=LIGHT};
 
@@ -18,13 +19,16 @@ class PhysicalObject {
 public:
   PhysicalObject(ObjectType objectType, int radius = GET_INT("DEFAULT_RADIUS"),
                  Color color = Color('?'),
-                 bool isHitable = true);
+                 bool isHitable = true,
+                 Environment *env = Environment::getEnv());
   PhysicalObject(ObjectType objectType, int maxRadius, int minRadius,
                  Color color = Color('?'),
-                 bool isHitable = true);
+                 bool isHitable = true,
+                 Environment *env = Environment::getEnv());
   PhysicalObject(ObjectType objectType, int radius, Location loc,
                  Color color = Color('?'),
-                 bool isHitable = true);
+                 bool isHitable = true,
+                 Environment *env = Environment::getEnv());
 
   /** This is the class destructor, it is implemented by all subclasses.  */
   virtual ~PhysicalObject();
@@ -209,11 +213,13 @@ public:
   virtual bool handleCollision(int otherId, bool wasHit) = 0;
 
 protected:
-	/**
-  * This function finds an open Location to place the object
-  * \param radius The radius of the object
-  */
-  static Location findOpenLocation(int radius);
+  Environment *env;
+
+  /**
+   * This function finds an open Location to place the object
+   * \param radius The radius of the object
+   */
+  static Location findOpenLocation(Environment *env, int radius);
 
 private:
   int id;
@@ -230,7 +236,8 @@ private:
    * \param maxRadius The maximum radius that can generated
    * \param minRadius The minimum radius that can generated
    */
-  static Location findOpenLocationRandomized(int &radius,
+  static Location findOpenLocationRandomized(Environment *env,
+                                             int &radius,
                                              int maxRadius,
                                              int minRadius);
 

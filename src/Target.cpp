@@ -10,27 +10,29 @@
 #include <stdlib.h>
 #include <math.h>
 
-#include "environment.h"
+#include "Environment.h"
 #include "Target.h"
 #include "configuration.h"
-using namespace environment;
 
 Target::Target(int radius,
                Color color,
-               int targetNum) :
-  PhysicalObject((ObjectType)targetNum, radius, color) {}
+               int targetNum,
+               Environment *env) :
+  PhysicalObject((ObjectType)targetNum, radius, color, env) {}
 
 Target::Target(int maxRadius,
 	       int minRadius,
 	       Color color,
-               int targetNum) :
-  PhysicalObject((ObjectType)targetNum, maxRadius, minRadius, color) {}
+               int targetNum,
+               Environment *env) :
+  PhysicalObject((ObjectType)targetNum, maxRadius, minRadius, color, env) {}
 
 Target::Target(int radius,
                Location loc,
                Color color,
-               int targetNum) :
-  PhysicalObject((ObjectType)targetNum, radius, loc, color) {}
+               int targetNum,
+               Environment *env) :
+  PhysicalObject((ObjectType)targetNum, radius, loc, color, env) {}
 
 Target::~Target() {}
 

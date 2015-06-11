@@ -9,7 +9,7 @@
 #include "Color.h"
 #include "Location.h"
 #include "configuration.h"
-#include "environment.h"
+#include "Environment.h"
 #include "util.h"
 #include "BaseGfxApp.h"
 #include "PhysicalObject.h"

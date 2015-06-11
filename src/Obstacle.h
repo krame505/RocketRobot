@@ -13,47 +13,17 @@
 /** \brief Obstacle for the robot to hit/avoid */
 class Obstacle : public PhysicalObject {
 public:
-
-  /**
-   * \param radius the radius in pixels
-   * \param color a struct of float value 0 to 1 representing a hexedecimal color
-   * \param config a configuration table 
-   * \par Initialization
-   * Obstacle is initialized with the following values:
-   * <tr>
-   * <td>Radius: DEFAULT_RADIUS as specified in ../config/default </td>
-   * <td>Orientation: random</td>
-   * <td>Speed: 0</td>
-   * <td>Position: (loc.x, loc.y) </td>
-   * </tr>
-   */
-  Obstacle(int radius, Color color);
+  Obstacle(int radius,
+           Color color,
+           Environment *env = Environment::getEnv());
   
-  /**
-   * \param minRadius the minimum radius in pixels
-   * \param maxRadius the maximum radius in pixels
-   * \param color a struct of float value 0 to 1 representing a hexedecimal color
-   * \par Initialization
-   * Obstacle is initialized with the following values:
-   * <tr><td>Orientation: random</td>
-   * <td>Speed: 0</td>
-   * <td>Position: (loc.x, loc.y) </td>
-   * </tr>
-   */
-  Obstacle(int maxRadius, int minRadius, Color color);
+  Obstacle(int maxRadius, int minRadius,
+           Color color,
+           Environment *env = Environment::getEnv());
 
-  /**
-   * \param radius the radius in pixels
-   * \param color a struct of float value 0 to 1 representing a hexedecimal color
-   * \param loc a struct of the x,y start Location in pixels
-   * \par Initialization
-   * Obstacle is initialized with the following values:
-   * <tr><td>Orientation: 0</td>
-   * <td>Speed: 0</td>
-   * <td>Position: (loc.x, loc.y) </td>
-   * </tr>
-   */
-  Obstacle(int radius, Location loc, Color color);
+  Obstacle(int radius, Location loc,
+           Color color,
+           Environment *env = Environment::getEnv());
 
   /**
    * \author Lucas Kramer

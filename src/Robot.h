@@ -16,36 +16,16 @@ enum RobotType {SIMPLE, COMPLEX, NEURAL_NETWORK};
 /** \brief Robot that moves around the window and bumps into obstacles */
 class Robot : public PhysicalObject {
 public:
-
-  /**
-   * \param robotType the robot type
-   * \param radius the radius in pixels
-   * \param color color of the robot itself, a struct of float value 0 to 1 representing a hexedecimal color
-   * \param lineColor color of the line, a struct of float value 0 to 1 representing a hexedecimal color
-   * \par Initialization
-   * Robot is initialized with the following values:
-   * <tr><td>Orientation: 0</td>
-   * <td>Speed: 0</td>
-   * <td>Position: (loc.x, loc.y) </td>
-   * </tr>
-   */
-  Robot(RobotType robotType, int radius, Color color, Color lineColor, int targetId = -1);
-
-  /**
-   * \param robotType the robot type
-   * \param radius the radius in pixels
-   * \param color a struct of float value 0 to 1 representing a hexedecimal color
-   * \param linecolor color of the line, a struct of float value 0 to 1 representing a
-   * hexedecimal color
-   * \param loc start Location of the robot
-   * \par Initialization
-   * Robot is initialized with the following values:
-   * <tr><td>Orientation: random</td>
-   * <td>Speed: 0</td>
-   * <td>Position: (loc.x, loc.y) </td>
-   * </tr>
-   */
-  Robot(RobotType robotType, int radius, Location loc, Color color, Color lineColor, int targetId = -1);
+  Robot(RobotType robotType,
+        int radius,
+        Color color, Color lineColor,
+        int targetId = -1,
+        Environment *env = Environment::getEnv());
+  Robot(RobotType robotType,
+        int radius, Location loc,
+        Color color, Color lineColor,
+        int targetId = -1,
+        Environment *env = Environment::getEnv());
 
   /** This is the class destructor.  */
   virtual ~Robot();

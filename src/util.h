@@ -11,6 +11,13 @@
 /** \brief util namespace, contains helper functions to add and remove robots */
 namespace util {
   /**
+   * \brief Finds an object from the current environment
+   * \param id The id of the object to find
+   * \return The object that was looked iup
+   */
+  PhysicalObject* getObject(int id);
+
+  /**
    * \brief Removes all objects and resets to the initial state
    */
   void reset();

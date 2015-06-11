@@ -13,7 +13,6 @@
 /** \brief A complex robot with configurable feedback from all sensors */
 class ComplexRobot : public Robot {
 public:
-  ComplexRobot();
   ComplexRobot(int radius, Color color, Color lineColor,
                bool enableLightSensors,
                bool enableRobotSensors,
@@ -28,7 +27,9 @@ public:
                float obstacleSensorScale,
                float targetSensorScale,
                int defaultSpeed,
-               int targetId = -1);
+               int targetId = -1,
+               Environment *env = Environment::getEnv());
+
   ComplexRobot(int radius, Location loc, Color color, Color lineColor,
                bool enableLightSensors,
                bool enableRobotSensors,
@@ -43,7 +44,8 @@ public:
                float obstacleSensorScale,
                float targetSensorScale,
                int defaultSpeed,
-               int targetId = -1);
+               int targetId = -1,
+               Environment *env = Environment::getEnv());
 
   ~ComplexRobot();
 

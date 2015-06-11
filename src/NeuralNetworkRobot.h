@@ -19,7 +19,8 @@ public:
                      Color lineColor,
                      NeuralNetwork network,
                      int targetId = -1,
-                     std::string filename = GET_STRING("DEFAULT_NEURAL_NETWORK_FILE"));
+                     std::string filename = GET_STRING("DEFAULT_NEURAL_NETWORK_FILE"),
+                     Environment *env = Environment::getEnv());
 
   NeuralNetworkRobot(int radius,
                      Location loc,
@@ -27,7 +28,8 @@ public:
                      Color lineColor,
                      NeuralNetwork network,
                      int targetId = -1,
-                     std::string filename = GET_STRING("DEFAULT_NEURAL_NETWORK_FILE"));
+                     std::string filename = GET_STRING("DEFAULT_NEURAL_NETWORK_FILE"),
+                     Environment *env = Environment::getEnv());
 
   ~NeuralNetworkRobot();
 

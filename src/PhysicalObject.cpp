@@ -23,49 +23,54 @@ using namespace std::chrono;
 */
 #include "artist.h"
 #include "PhysicalObject.h"
-#include "environment.h"
+#include "Environment.h"
 #include "configuration.h"
-using namespace environment;
 
 PhysicalObject::PhysicalObject(ObjectType objectType,
                                int radius,
                                Color color,
-                               bool isHitable) :
+                               bool isHitable,
+                               Environment *env) :
   PhysicalObject(objectType,
                  radius,
-                 findOpenLocation(radius),
+                 findOpenLocation(env, radius),
                  color,
-                 isHitable) {}
+                 isHitable,
+                 env) {}
 
 // Constructor with randomized radius
 PhysicalObject::PhysicalObject(ObjectType objectType,
                                int maxRadius,
                                int minRadius,
                                Color color,
-                               bool isHitable) :
+                               bool isHitable,
+                               Environment *env) :
   PhysicalObject(objectType,
                  radius,
-                 findOpenLocationRandomized(radius, maxRadius, minRadius),
+                 findOpenLocationRandomized(env, radius, maxRadius, minRadius),
                  color,
-                 isHitable) {}
+                 isHitable,
+                 env) {}
 
 PhysicalObject::PhysicalObject(ObjectType objectType,
                                int radius,
                                Location loc,
                                Color color,
-                               bool isHitable) :
+                               bool isHitable,
+                               Environment *env) :
   objectType(objectType),
   isHitable(isHitable),
+  env(env),
   loc(loc),
   orientation(rand() % 360),
   speed(0),
   radius(radius),
   color(color) {
-  id = addObject(this);
+  id = env->addObject(this);
 }
 
 PhysicalObject::~PhysicalObject() {
-  removeObject(getId());
+  env->removeObject(getId());
 }
 
 int PhysicalObject::getId() const {
@@ -73,7 +78,7 @@ int PhysicalObject::getId() const {
 }
 
 // Find a new, nonintersecting Location to place the object
-Location PhysicalObject::findOpenLocation(int radius) {
+Location PhysicalObject::findOpenLocation(Environment *env, int radius) {
   int width = GET_INT("DISPLAY_WIDTH");
   int height = GET_INT("DISPLAY_HEIGHT");
   Location result;
@@ -89,7 +94,7 @@ Location PhysicalObject::findOpenLocation(int radius) {
     if (attempts > GET_INT("FIND_LOCATION_RETRIES")) {
       throw new NoOpenLocationException;
     }
-  } while (isTouchingObject(result, radius));
+  } while (env->isTouchingObject(result, radius));
 
   assert(result.x >= radius); 
   assert(result.x <= width - radius);
@@ -99,7 +104,8 @@ Location PhysicalObject::findOpenLocation(int radius) {
 }
 
 // Find a new, nonintersecting Location to place the object, randomized radius
-Location PhysicalObject::findOpenLocationRandomized(int &radius,
+Location PhysicalObject::findOpenLocationRandomized(Environment *env,
+                                                    int &radius,
                                                     int maxRadius, int minRadius) {
   int width = GET_INT("DISPLAY_WIDTH");
   int height = GET_INT("DISPLAY_HEIGHT");
@@ -119,7 +125,7 @@ Location PhysicalObject::findOpenLocationRandomized(int &radius,
     if (attempts > GET_INT("FIND_LOCATION_RETRIES")) {
       throw new NoOpenLocationException;
     }
-  } while (isTouchingObject(result, radius));
+  } while (env->isTouchingObject(result, radius));
 
   assert(result.x >= radius);
   assert(result.x <= width - radius);
@@ -189,18 +195,18 @@ bool PhysicalObject::translate(float distance) {
   loc.x += distance * sin(orientation * M_PI / 180);
   loc.y += distance * cos(orientation * M_PI / 180);
  
-  if (getObject(id) != NULL && isCollidingWithHitable(id)) {
-    int collisionId = getHitableCollisionId(id);
+  if (env->getObject(id) != NULL && env->isCollidingWithHitable(id)) {
+    int collisionId = env->getHitableCollisionId(id);
     loc = originalPosition;
 
     updateMembers();
  
-    if ((collisionId != -1? getObject(collisionId)->isHitable : true) &&
+    if ((collisionId != -1? env->getObject(collisionId)->isHitable : true) &&
         handleCollision(collisionId, false)) {
       return true;
     }
-    if (collisionId != -1 && isHitable && getObject(collisionId) != NULL) {
-      if (getObject(collisionId)->handleCollision(id, true)) {
+    if (collisionId != -1 && isHitable && env->getObject(collisionId) != NULL) {
+      if (env->getObject(collisionId)->handleCollision(id, true)) {
         return true;
       }
     }

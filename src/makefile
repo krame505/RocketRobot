@@ -24,10 +24,10 @@ CPPFILES += BaseGfxApp Simulation OptimizeSimulation
 CPPFILES += PhysicalObject
 CPPFILES += Robot Target Obstacle LightSource
 CPPFILES += SimpleRobot ComplexRobot NeuralNetworkRobot NeuralNetwork
-CPPFILES += environment util Color
+CPPFILES += Environment util
 CPPFILES += Sensor
+CPPFILES += Color artist
 CPPFILES += main
-CPPFILES += artist
 
 #all the source files
 SOURCES = $(addprefix ../src/,  $(CPPFILES:=.cpp))
