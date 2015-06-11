@@ -61,6 +61,9 @@ OptimizeSimulation::~OptimizeSimulation() {
   for (objectIterator it = getObjectsBegin(); it != getObjectsEnd(); it++) {
     delete *it;
   }
+  for (NeuralNetwork *net : pool) {
+    delete net;
+  }
 }
 
 void OptimizeSimulation::runMainLoop() {

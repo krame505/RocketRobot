@@ -48,7 +48,7 @@ public:
   Robot(RobotType robotType, int radius, Location loc, Color color, Color lineColor, int targetId = -1);
 
   /** This is the class destructor.  */
-  ~Robot();
+  virtual ~Robot();
 
   const RobotType robotType;
 

@@ -1,7 +1,7 @@
 /**
  * \author Lucas Kramer
  * \editor Himawan Go
- * \file   Environment.h
+ * \file   Environment.cpp
  * \brief  Main application class for the robot simulation
  *
  */
@@ -48,6 +48,7 @@ void environment::removeObject(int id) {
 
 void environment::clear() {
   for (objectIterator it = getObjectsBegin(); it != getObjectsEnd(); it++) {
+    cout << "Deleting: " << *it << endl;
     delete *it;
   }
   id = 0;
