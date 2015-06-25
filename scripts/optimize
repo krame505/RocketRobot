@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 FLAGS="-DOPTIMIZE_SIMULATION bool true -DOPTIMIZE_VERBOSE bool false -DPOST_COLLISION_PAUSE int 0 $@"
 LOG=../runtime/neuralnetwork/log
 
