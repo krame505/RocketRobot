@@ -500,7 +500,7 @@ void Simulation::middleMouseDown(int x, int y) {
 void Simulation::mouseDragged(int x, int y) {
   PhysicalObject *o;
   if (mouseDownId != -1 && (o = getObject(mouseDownId)) != NULL) {
-    Location newLoc = Location(x + mouseDownDeltaX, GET_INT("DISPLAY_HEIGHT") - y + mouseDownDeltaY);
+    Location newLoc = Location(x + mouseDownDeltaX, glutGet(GLUT_WINDOW_HEIGHT) - y + mouseDownDeltaY);
     if (!Environment::getEnv()->isTouchingHitableObject(newLoc, o->getRadius(), mouseDownId)) {
       o->forceSetPosition(newLoc.x, newLoc.y);
     }
@@ -540,6 +540,17 @@ void Simulation::keyboard(unsigned char key, int x, int y) {
     default:
       break;
     }
+  }
+  switch (key) {
+  case 0x13: // Ctrl-s
+    strcpy(simulationFile, simulationFileBrowser->get_text());
+    if (glutGetModifiers() == GLUT_ACTIVE_CTRL && string(simulationFile) != "") {
+      showMessage("Saving " + string(simulationFile));
+      trySave();
+    }
+    break;
+  default:
+    break;
   }
 
   showStats();
