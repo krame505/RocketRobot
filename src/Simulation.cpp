@@ -453,7 +453,7 @@ void Simulation::leftMouseDown(int x, int y) {
   if (mouseDownId != -1 && getObject(mouseDownId) != NULL)
     getObject(mouseDownId)->setColor(oldColor);
 
-  mouseDownLoc = Location(x, GET_INT("DISPLAY_HEIGHT") - y);
+  mouseDownLoc = Location(x, glutGet(GLUT_WINDOW_HEIGHT) - y);
   mouseDownId = Environment::getEnv()->getCollisionId(mouseDownLoc, 0);
   if (mouseDownId != -1) {
     if (GET_BOOL("DEBUG_MESSAGES")) {
@@ -487,7 +487,7 @@ void Simulation::middleMouseDown(int x, int y) {
     Color prevColor = getObject(mouseDownId)->getColor();
     getObject(mouseDownId)->setColor(oldColor);
 
-    if (!copy(mouseDownId, Location(x, GET_INT("DISPLAY_HEIGHT") - y)))
+    if (!copy(mouseDownId, Location(x, glutGet(GLUT_WINDOW_HEIGHT) - y)))
       showMessage("Cannot copy object");
 
     getObject(mouseDownId)->setColor(prevColor);
@@ -532,6 +532,9 @@ void Simulation::keyboard(unsigned char key, int x, int y) {
         o->setSpeed(o->getSpeed() - 3);
       else
         o->setSpeed(0);
+      break;
+    case 127: // Delete
+        delete o;
       break;
     default:
       break;
