@@ -28,6 +28,7 @@ using namespace std;
 #include "Location.h"
 #include "configuration.h"
 #include "Environment.h"
+#include "artist.h"
 #include "util.h"
 using namespace util;
 
@@ -68,6 +69,9 @@ void util::display() {
 
   // drawing commands go here
   objectsMutex.lock();
+
+  // Draw background first
+  artist::drawBackground();
   
   // Draw non-hitable objects first so they show up underneath everything...
   for (PhysicalObject *o : *Environment::getEnv()) {

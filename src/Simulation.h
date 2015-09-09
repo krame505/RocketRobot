@@ -130,6 +130,11 @@ public:
    */
   void keyboardSpecial(int key, int x, int y);
 
+  /**
+   * \brief Call-back function for window size change.   
+   */
+  void reshape(int width, int height);
+
   void start(int);
   void pause(int);
   void resume(int);

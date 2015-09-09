@@ -30,6 +30,7 @@ using namespace std;
 #include "configuration.h"
 #include "Environment.h"
 #include "util.h"
+#include "artist.h"
 #include "Simulation.h"
 using namespace util;
 
@@ -591,6 +592,11 @@ void Simulation::keyboardSpecial(int key, int x, int y) {
   showStats();
 }
 
+void Simulation::reshape(int width, int height) {
+  BaseGfxApp::reshape(width, height);
+  s_currentApp->updateUI();
+}
+
 // Static callback functions
 void Simulation::s_start(int a) {
   s_currentApp->start(a);
@@ -733,6 +739,15 @@ void Simulation::showStats() {
 }
 
 void Simulation::updateUI() {
+  // Force an update
+  if (settingsOpen[0]) {
+    settings[0]->close();
+    settings[0]->open();
+  }
+  else {
+    settings[0]->open();
+    settings[0]->close();
+  }
   organizePanels(controls, controlsOpen, GET_INT("MAX_CONTROLS_OPEN"));
   organizePanels(settings, settingsOpen, GET_INT("MAX_SETTINGS_OPEN"));
 }

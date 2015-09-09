@@ -11,8 +11,12 @@
 
 #define GET_COLOR(COLOR_VAR)                            \
   (GET_BOOL("USE_HEX_COLORS")?                          \
-   Color(GET_INT(COLOR_VAR "_HEX")) :                   \
-   Color(GET_CHAR(COLOR_VAR)))
+   (DEFINED(COLOR_VAR "_HEX")?                          \
+    Color(GET_INT(COLOR_VAR "_HEX")) :                  \
+    Color(GET_CHAR(COLOR_VAR))) :                       \
+   (DEFINED(COLOR_VAR)?                                 \
+    Color(GET_CHAR(COLOR_VAR)) :                        \
+    Color(GET_INT(COLOR_VAR "_HEX"))))
 
 /**
  * \brief This struct holds the representation of a color.  
@@ -106,8 +110,8 @@ typedef struct Color {
    */
   bool isSimilar(Color c1);
 
-  std::ostream& operator<<(std::ostream& out) {
-    return out << "(" << red << ", " << green << ", " << blue << ")";
+  friend std::ostream& operator<<(std::ostream& out, Color &c) {
+    return out << "(" << c.red << ", " << c.green << ", " << c.blue << ")";
   }
 
   /**

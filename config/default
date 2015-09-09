@@ -9,7 +9,7 @@ bool EXIT_ON_ALL_ROBOTS_FINISHED = false
 # Window size
 int DISPLAY_WIDTH  = 800
 int DISPLAY_HEIGHT = 675
-int FRAME_SHIFT    = 0   # The calculation of the glui size is slightly off, so we need to adjust it manually
+int FRAME_SHIFT    = 0   # The calculation of the glui size is slightly off, so we sometimes need to adjust it manually
 
 # Graphics
 int START_DELAY       = 10
@@ -26,6 +26,8 @@ int MAX_SETTINGS_OPEN = 3
 # Colors
 bool USE_HEX_COLORS = true
 float COLOR_DELTA   = 0.2
+
+hex BACKGROUND_COLOR_HEX = 0xFFFFFF
 
 # Simulation parameters
 int NUM_ROBOTS_TARGETS = 2

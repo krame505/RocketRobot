@@ -9,6 +9,7 @@
 
 #include "Color.h"
 #include "Location.h"
+#include "configuration.h"
 
 /**
  * \brief graphical commands 
@@ -17,22 +18,29 @@
  * putting OpenGL graphics in each file
  */
 namespace artist {
+  /**
+   * \author Lucas Kramer
+   * Draws a rectangle the size of the drawing area
+   * \param color the color of the background
+   */
+  void drawBackground(Color color = GET_COLOR("BACKGROUND_COLOR"));
+
   void debugArrow(Location loc, int orientation);
 
-/**
- * \author Lucas Kramer
- * Draws the default Object, which is a circle 
- * \param loc absolute Location to draw center of circle
- * \param radius radius of circle
- * \param color the color of the circle
- */
+  /**
+   * \author Lucas Kramer
+   * Draws the default Object, which is a circle 
+   * \param loc absolute Location to draw center of circle
+   * \param radius radius of circle
+   * \param color the color of the circle
+   */
   void drawObject(Location loc, int radius, Color color);
   
-/** Draws a LightSource
- * \param loc absolute Location to draw center of light
- * \param radius radius of 'bulb' of light
- */  
-  void drawLight(Location loc, int radius, Color color);
+  /** Draws a LightSource
+   * \param loc absolute Location to draw center of light
+   * \param radius radius of 'bulb' of light
+   */  
+  void drawLight(Location loc, int radius, Color color = GET_COLOR("LIGHT_COLOR"));
   
 /**
  * Draws an obstacle 
@@ -57,5 +65,5 @@ namespace artist {
  * \param color the color of the robot's body
  * \param lineColor the color of the robot's direction line
  */
-  void drawRobot(Location loc, int radius, int orientation, Color color, Color lineColor);
+  void drawRobot(Location loc, int radius, int orientation, Color color = GET_COLOR("ROBOT_COLOR"), Color lineColor = Color('?'));
 }

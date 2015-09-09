@@ -56,7 +56,7 @@ setup: ../bin
 	mkdir -p ../bin
 
 clean:
-	rm -f $(OBJECTS) $(EXECUTABLE) $(TEST_EXECUTABLE) ../bin/test.cpp .doc
+	rm -f $(OBJECTS) $(EXECUTABLE) $(TEST_EXECUTABLE) ../bin/test.cpp .doc *~
 
 full-clean: clean
 	rm -rf .glui .configuration
