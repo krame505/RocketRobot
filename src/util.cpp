@@ -736,6 +736,8 @@ bool util::open(string filename) {
         break;
       }
       robots.push(r->getId());
+      if (r->getTarget() == -1)
+        targets.push(-1);
       r->setOrientation(orientation);
       r->setSpeed(speed);
       break;

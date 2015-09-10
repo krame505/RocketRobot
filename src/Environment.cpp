@@ -171,11 +171,11 @@ bool Environment::isColliding(int id) {
 }
 
 bool Environment::isCollidingWithHitable(Location l, int r) {
-  return isTouchingWall(l, r) || isTouchingHitableObject(l, r);
+  return isTouchingHitableObject(l, r);
 }
 
 bool Environment::isCollidingWithHitable(int id) {
-  return isTouchingWall(id) || isTouchingHitableObject(id);
+  return isTouchingHitableObject(id);
 }
 
 int Environment::getCollisionId(Location l, int r, int id) {

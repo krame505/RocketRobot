@@ -112,25 +112,25 @@ public:
    * \brief Gets the width of the environment
    * \return The width
    */
-  int getWidth();
+  int getWidth() {return width;}
 
   /**
    * \brief Gets the height of the environment
    * \return The height
    */
-  int getHeight();
+  int getHeight() {return height;}
 
   /**
    * \brief Sets the width of the environment
    * \param width The new width
    */
-  void setWidth(int width);
+  void setWidth(int width) {this->width = width;}
 
   /**
    * \brief Sets the height of the environment
    * \param height The new height
    */
-  void setHeight(int height);
+  void setHeight(int height) {this->height = height;}
 
   /**
    * Checks if an object is in the designated window
@@ -237,7 +237,7 @@ public:
    * a wall or any other hitable objects
    * \param l The Location of the object
    * \param r The radius of the object
-   * \return true when the object is touching a wall or any other hitable object
+   * \return true when the object is touching any other hitable object
    * \see isTouchingWall, isTouchingObject
    */
   bool isCollidingWithHitable(Location l, int r);
@@ -246,7 +246,7 @@ public:
    * Checks if the object specified by the given id is touching
    * a wall or any other hitable objects
    * \param id The id of the object
-   * \return true when the object is touching a wall or any other hitable object
+   * \return true when the object is touching any other hitable object
    * \see isTouchingWall, isTouchingObject
    */
   bool isCollidingWithHitable(int id);
@@ -257,7 +257,7 @@ public:
    * \param r The radius of the object
    * \param id The id of the object to exclude
    * \return The id of one object that is being hit, or -1 if it is hiting
-   * nothing or a wall
+   * nothing
    * \see isColliding
    */
   int getCollisionId(Location l, int r, int id);

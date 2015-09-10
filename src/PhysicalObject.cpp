@@ -194,6 +194,16 @@ bool PhysicalObject::translate(float distance) {
   //sin takes radians, therefore we must convert
   loc.x += distance * sin(orientation * M_PI / 180);
   loc.y += distance * cos(orientation * M_PI / 180);
+
+  // Wrap around the screen
+  if (loc.x <= 0)
+    loc.x += env->getWidth() - 1;
+  if (loc.y <= 0)
+    loc.y += env->getHeight() - 1;
+  if (loc.x >= env->getWidth() - 1)
+    loc.x -= env->getWidth() - 1;
+  if (loc.y >= env->getHeight() - 1)
+    loc.y -= env->getHeight() - 1;
  
   if (env->getObject(id) != NULL && env->isCollidingWithHitable(id)) {
     int collisionId = env->getHitableCollisionId(id);

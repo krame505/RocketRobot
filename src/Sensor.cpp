@@ -109,29 +109,43 @@ float Sensor::sense() {
   float strength = 0.0;
   for (PhysicalObject *o : *Environment::getEnv()) {
     if (o != NULL && o->objectType == typeDetected) {
-      // The angle between two objects
-      // Angle = atan2 (delta x, delta y)
-      delta_x = o->getXPosition() - absoluteLoc.x;
-      delta_y = o->getYPosition() - absoluteLoc.y;
-      absoluteAngleToLight = (int)(atan2(delta_x, delta_y) * 180 / M_PI);
-      angle = (absoluteAngleToLight + 720 - absoluteOrientation) % 360;
-      if (angle > 180)
-        angle -= 360;
-      /* At this point, normalizedAngle is between -180 and 180 and represents the
-       * angle between the directon of the sensor and the light */
-
-      /* Scaling Factor to reduce brightness gradually as light is further from
-       * being directly in front of sensor. Always within [0,1] */
-      float angleBrightnessScale = 1.0 / exp(3 * pow(2 * angle / getViewAngle(), 2));
+      struct {int x; int y;} offsets[] =
+                              {{-env->getWidth(), -env->getHeight()},
+                               {-env->getWidth(), 0},
+                               {-env->getWidth(), env->getHeight()},
+                               {0, -env->getHeight()},
+                               {0, 0},
+                               {0, env->getHeight()},
+                               {env->getWidth(), -env->getHeight()},
+                               {env->getWidth(), 0},
+                               {env->getWidth(), env->getHeight()}};
       
-      // Instead of squareroot-ing then square-ing to find distance, we do neither
-      distanceSquared  = pow((o->getXPosition() - absoluteLoc.x), 2.0);
-      distanceSquared += pow((o->getYPosition() - absoluteLoc.y), 2.0);
-      strength += angleBrightnessScale / distanceSquared;
+      for (unsigned i = 0; i < sizeof(offsets) / sizeof(offsets[0]); i++) {
+        // The angle between two objects
+        // Angle = atan2 (delta x, delta y)
+        delta_x = offsets[i].x + o->getXPosition() - absoluteLoc.x;
+        delta_y = offsets[i].y + o->getYPosition() - absoluteLoc.y;
+        absoluteAngleToLight = (int)(atan2(delta_x, delta_y) * 180 / M_PI);
+        angle = (absoluteAngleToLight + 720 - absoluteOrientation) % 360;
+        if (angle > 180)
+          angle -= 360;
+        /* At this point, normalizedAngle is between -180 and 180 and represents the
+         * angle between the directon of the sensor and the light */
+
+        /* Scaling Factor to reduce brightness gradually as light is further from
+         * being directly in front of sensor. Always within [0,1] */
+        float angleBrightnessScale = 1.0 / exp(3 * pow(2 * angle / getViewAngle(), 2));
+      
+        // Instead of squareroot-ing then square-ing to find distance, we do neither
+        distanceSquared  = pow(delta_x, 2.0);
+        distanceSquared += pow(delta_y, 2.0);
+        strength += angleBrightnessScale / distanceSquared;
+      }
     }
   }//End for
 
   // Treat walls as obstacles
+  /*
   if (typeDetected == OBSTACLE) {
     float distance;
     float delta_x_left = absoluteLoc.y;
@@ -174,6 +188,7 @@ float Sensor::sense() {
 
     strength += GET_FLOAT("WALL_OBSTACLE_SCALE") / pow(distance, 2.0);
   }
+*/
   
   strength *= GET_FLOAT("SENSOR_SCALE");
   if (strength > 1)
