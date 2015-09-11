@@ -610,10 +610,17 @@ bool util::open(string filename) {
   reset();
 
   string line;
+  string token;
+  getline(in, line);
+  istringstream parse(line);
+  getline(parse, token, ',');
+  Environment::getEnv()->setWidth(stoi(token));
+  getline(parse, token, ',');
+  Environment::getEnv()->setHeight(stoi(token));
+  
   while (getline(in, line)) {
     istringstream parse(line);
     queue<string> tokens;
-    string token;
     while (getline(parse, token, ',')) {
       tokens.push(token);
     }
@@ -762,6 +769,10 @@ bool util::save(string filename) {
     return false;
   }
   
+  out <<
+    Environment::getEnv()->getWidth() << "," <<
+    Environment::getEnv()->getHeight() << endl;
+
   for (PhysicalObject *o : *Environment::getEnv()) {
     out <<
       (int)o->objectType << "," <<

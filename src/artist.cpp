@@ -7,14 +7,13 @@
 
 #include "Color.h"
 #include "artist.h"
+#include "Environment.h"
 #include "configuration.h"
 
 #include <GL/glut.h>
 #include <GL/glu.h>
 #define _USE_MATH_DEFINES
 #include <math.h>
-#include <iostream>
-using namespace std;
 
 /* Anonymous namespace. Inaccessable outside this file */
 namespace {
@@ -60,24 +59,24 @@ namespace artist {
     glEnd();
     glBegin(GL_POLYGON);
     glColor3f(color.red, color.green, color.blue);
-    glVertex2f(0, GET_INT("DISPLAY_HEIGHT"));
-    glVertex2f(GET_INT("DISPLAY_WIDTH"), GET_INT("DISPLAY_HEIGHT"));
-    glVertex2f(GET_INT("DISPLAY_WIDTH"), GET_INT("DISPLAY_HEIGHT") - 1);
-    glVertex2f(0, GET_INT("DISPLAY_HEIGHT") - 1);
+    glVertex2f(0, Environment::getEnv()->getHeight());
+    glVertex2f(Environment::getEnv()->getWidth(), Environment::getEnv()->getHeight());
+    glVertex2f(Environment::getEnv()->getWidth(), Environment::getEnv()->getHeight() - 1);
+    glVertex2f(0, Environment::getEnv()->getHeight() - 1);
     glEnd();
     glBegin(GL_POLYGON);
     glColor3f(color.red, color.green, color.blue);
     glVertex2f(0, 0);
-    glVertex2f(0, GET_INT("DISPLAY_HEIGHT"));
-    glVertex2f(1, GET_INT("DISPLAY_HEIGHT"));
+    glVertex2f(0, Environment::getEnv()->getHeight());
+    glVertex2f(1, Environment::getEnv()->getHeight());
     glVertex2f(1, 0);
     glEnd();
     glBegin(GL_POLYGON);
     glColor3f(color.red, color.green, color.blue);
-    glVertex2f(GET_INT("DISPLAY_WIDTH"), 0);
-    glVertex2f(GET_INT("DISPLAY_WIDTH"), GET_INT("DISPLAY_HEIGHT"));
-    glVertex2f(GET_INT("DISPLAY_WIDTH") - 1, GET_INT("DISPLAY_HEIGHT"));
-    glVertex2f(GET_INT("DISPLAY_WIDTH") - 1, 0);
+    glVertex2f(Environment::getEnv()->getWidth(), 0);
+    glVertex2f(Environment::getEnv()->getWidth(), Environment::getEnv()->getHeight());
+    glVertex2f(Environment::getEnv()->getWidth() - 1, Environment::getEnv()->getHeight());
+    glVertex2f(Environment::getEnv()->getWidth() - 1, 0);
     glEnd();
   }
 

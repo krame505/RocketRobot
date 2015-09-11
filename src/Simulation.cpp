@@ -67,6 +67,19 @@ Simulation::Simulation(int argc, char* argv[]) :
   m_glui->add_button_to_panel(toolPanel, "New random", 0, (GLUI_Update_CB)s_random);
   m_glui->add_button_to_panel(toolPanel, "Quit", 0, (GLUI_Update_CB)exit);
   m_glui->add_button_to_panel(toolPanel, "Refresh settings", 0, (GLUI_Update_CB)s_refreshConfiguration);
+  GLUI_Rollout *panelSize = new GLUI_Rollout(m_glui, "Simulation area size     ", false);
+  controls.push_back(panelSize);
+  controlsOpen.push_back(false);
+  width = Environment::getEnv()->getWidth();
+  widthText =
+    m_glui->add_edittext_to_panel(panelSize, "Width", GLUI_EDITTEXT_INT,
+                                  &width, -1, (GLUI_Update_CB)s_updateWidth);
+  height = Environment::getEnv()->getHeight();
+  heightText =
+    m_glui->add_edittext_to_panel(panelSize, "Height", GLUI_EDITTEXT_INT,
+                                  &height, -1, (GLUI_Update_CB)s_updateHeight);
+  /*  GLUI_Button *resize =
+      m_glui->add_button_to_panel(panelSize, "Fit window");*/
   GLUI_Rollout *simulationFiles = new GLUI_Rollout(m_glui, "Open/save simulation");
   controls.push_back(simulationFiles);
   controlsOpen.push_back(true);
@@ -215,6 +228,7 @@ Simulation::Simulation(int argc, char* argv[]) :
   GLUI_Master.get_viewport_area(&tx, &ty, &tw, &th);
   m_width += m_width - tw + GET_INT("FRAME_SHIFT");
   //  m_height += m_height - tw;
+  glutFullScreen();
   
   // Show startup message
   showStartup();
@@ -446,6 +460,34 @@ void Simulation::random(int) {
   initObjects();
 }
 
+void Simulation::updateWidth(int) {
+  bool alerted = false;
+  for (PhysicalObject *o : *Environment::getEnv())
+    if (o->getXPosition() >= width) {
+      width = o->getXPosition() + 1;
+      if (!alerted) {
+        showMessage("Cannot shrink simulation to specified size");
+        alerted = true;
+      }
+    }
+  widthText->update_and_draw_text();
+  Environment::getEnv()->setWidth(width);
+}
+
+void Simulation::updateHeight(int) {
+  bool alerted = false;
+  for (PhysicalObject *o : *Environment::getEnv())
+    if (o->getYPosition() >= height) {
+      height = o->getYPosition() + 1;
+      if (!alerted) {
+        showMessage("Cannot shrink simulation to specified size");
+        alerted = true;
+      }
+    }
+  widthText->update_and_draw_text();
+  Environment::getEnv()->setHeight(height);
+}
+
 void Simulation::gluiControl(int controlID) {
   // nothing here for now
 }
@@ -474,7 +516,7 @@ void Simulation::leftMouseDown(int x, int y) {
 
 void Simulation::leftMouseUp(int x, int y) {
   if (mouseDownId != -1 && getObject(mouseDownId) != NULL) {
-    if (Environment::getEnv()->isTouchingWall(mouseDownId)) {
+    if (!Environment::getEnv()->isOnScreen(mouseDownId)) {
       delete getObject(mouseDownId);
     }
   }
@@ -631,6 +673,14 @@ void Simulation::s_clear(int a) {
 
 void Simulation::s_random(int a) {
   s_currentApp->random(a);
+}
+
+void Simulation::s_updateWidth(int a) {
+  s_currentApp->updateWidth(a);
+}
+
+void Simulation::s_updateHeight(int a) {
+  s_currentApp->updateHeight(a);
 }
 
 void Simulation::s_addRobotTarget(int a) {

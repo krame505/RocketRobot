@@ -142,12 +142,18 @@ public:
   void clear(int);
   void random(int);
 
+  void updateWidth(int);
+  void updateHeight(int);
+
   static void s_start(int);
   static void s_pause(int);
   static void s_resume(int);
   static void s_reset(int);
   static void s_clear(int);
   static void s_random(int);
+
+  static void s_updateWidth(int);
+  static void s_updateHeight(int);
 
   static void s_addRobotTarget(int);
   static void s_addRobot(int);
@@ -211,6 +217,8 @@ private:
   bool isPaused;
   bool isStarted;
 
+  int width, height;
+
   int robotType;
 
   int lightSensorConnectionPattern;
@@ -237,6 +245,8 @@ private:
   std::vector<bool> controlsOpen;
   std::vector<bool> settingsOpen;
 
+  GLUI_EditText *widthText;
+  GLUI_EditText *heightText;
   GLUI_StaticText *radiusText;
   GLUI_StaticText *LocationText;
   GLUI_StaticText *orientationText;

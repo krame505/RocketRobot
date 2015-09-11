@@ -36,7 +36,7 @@ int SENSOR_VIEWANGLE = 135
 # 3: obstacle sensors
 # 4: target sensors
 # default: no sensors
-int DISPLAY_SENSOR = 2
+int DISPLAY_SENSOR = 1
 
 # Translation from sensor readings to speeds
 float WALL_OBSTACLE_SCALE = 3

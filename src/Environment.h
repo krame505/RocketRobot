@@ -148,6 +148,20 @@ public:
   bool isTouchingWall(Location l, int r);
 
   /**
+   * Checks if the center of an object is in the designated window
+   * \details It returns true whenever the following conditions are met:
+   * <tr>
+   * <td>x position >= 0</td>
+   * <td>y position >= 0</td>
+   * <td>x position < width </td>
+   * <td>y position > height</td>
+   * <td>
+   * \param l The Location of the object
+   * \return true when the object is on screen
+   */
+  bool isOnScreen(Location l);
+
+  /**
    * Checks if an object is in the designated window
    * \details It reads in the width, height, x and y position
    * of the object, and then returns true whenever the following conditions are
@@ -162,6 +176,20 @@ public:
    * \return true when the object is touching a wall
    */
   bool isTouchingWall(int id);
+
+/**
+   * Checks if the center of an object is in the designated window
+   * \details It returns true whenever the following conditions are met:
+   * <tr>
+   * <td>x position >= 0</td>
+   * <td>y position >= 0</td>
+   * <td>x position < width </td>
+   * <td>y position > height</td>
+   * <td>
+   * \param id The id of the object
+   * \return true when the object is on screen
+   */
+  bool isOnScreen(int id);
 
   /**
    * Same as isTouchingObject(Location l, int r), but ignores the object with the

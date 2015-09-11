@@ -115,8 +115,6 @@ bool isTouching(Location l1, int r1, Location l2, int r2) {
 }
 
 bool Environment::isTouchingWall(Location l, int r) {
-  int width = GET_INT("DISPLAY_WIDTH");
-  int height = GET_INT("DISPLAY_HEIGHT");
   return
     (l.x - r <= 0) ||
     (l.y - r <= 0) ||
@@ -124,8 +122,21 @@ bool Environment::isTouchingWall(Location l, int r) {
     (l.y + r >= height);
 }
 
+
+bool Environment::isOnScreen(Location l) {
+  return
+    (l.x >= 0) ||
+    (l.y >= 0) ||
+    (l.x < width) ||
+    (l.y < height);
+}
+
 bool Environment::isTouchingWall(int id) {
   return isTouchingWall(getObject(id)->getLocation(), getObject(id)->getRadius());
+}
+
+bool Environment::isOnScreen(int id) {
+  return isOnScreen(getObject(id)->getLocation());
 }
 
 bool Environment::isTouchingObject(Location l, int r, int id) {
