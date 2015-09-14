@@ -222,7 +222,7 @@ Simulation::Simulation(int argc, char* argv[]) :
   glLoadIdentity();
   gluOrtho2D(0, m_width, 0, m_height);
 
-  // Needed to use a subwindow
+  // Accounting for area used by the glui panel - is there a better way?
   int tx, ty, tw, th;
   GLUI_Master.get_viewport_area(&tx, &ty, &tw, &th);
   m_width += m_width - tw + GET_INT("FRAME_SHIFT");
@@ -420,6 +420,12 @@ void Simulation::tryOpen() {
     openedFile = true;
     isStarted = false;
     showStats();
+
+    int tx, ty, tw, th;
+    GLUI_Master.get_viewport_area(&tx, &ty, &tw, &th);
+    if (Environment::getEnv()->getWidth() > tw ||
+        Environment::getEnv()->getHeight() > th)
+      showMessage("Warning: Simulation size exceeds view area");
   }
 }
 
@@ -475,7 +481,7 @@ void updateViewport() {
 
 void Simulation::updateWidth(int) {
   bool alerted = false;
-  for (PhysicalObject *o : *Environment::getEnv())
+  for (PhysicalObject *o : *Environment::getEnv()) {
     if (o->getXPosition() >= width) {
       width = o->getXPosition() + 1;
       if (!alerted) {
@@ -483,14 +489,24 @@ void Simulation::updateWidth(int) {
         alerted = true;
       }
     }
+  }
+
+  int tx, ty, tw, th;
+  GLUI_Master.get_viewport_area(&tx, &ty, &tw, &th);
+  if (width > tw)
+    showMessage("Warning: Simulation size exceeds view area");
+
   widthText->update_and_draw_text();
   Environment::getEnv()->setWidth(width);
+  char str[100];
+  sprintf(str, "%d", width);
+  widthText->set_text(str);
   updateViewport();
 }
 
 void Simulation::updateHeight(int) {
   bool alerted = false;
-  for (PhysicalObject *o : *Environment::getEnv())
+  for (PhysicalObject *o : *Environment::getEnv()) {
     if (o->getYPosition() >= height) {
       height = o->getYPosition() + 1;
       if (!alerted) {
@@ -498,8 +514,18 @@ void Simulation::updateHeight(int) {
         alerted = true;
       }
     }
+  }
+
+  int tx, ty, tw, th;
+  GLUI_Master.get_viewport_area(&tx, &ty, &tw, &th);
+  if (height > th)
+    showMessage("Warning: Simulation size exceeds view area");
+
   widthText->update_and_draw_text();
   Environment::getEnv()->setHeight(height);
+  char str[100];
+  sprintf(str, "%d", height);
+  heightText->set_text(str);
   updateViewport();
 }
 
@@ -668,8 +694,13 @@ void Simulation::reshape(int width, int height) {
 void Simulation::fitWindow(int) {
   int tx, ty, tw, th;
   GLUI_Master.get_viewport_area(&tx, &ty, &tw, &th);
-  Environment::getEnv()->setWidth(tw);
-  Environment::getEnv()->setHeight(th);
+  Environment::getEnv()->setWidth(tw - tx);
+  Environment::getEnv()->setHeight(th - ty);
+  char str[100];
+  sprintf(str, "%d", tw - tx);
+  widthText->set_text(str);
+  sprintf(str, "%d", th - ty);
+  heightText->set_text(str);
   updateViewport();
 }
 
