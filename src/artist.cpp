@@ -53,8 +53,8 @@ namespace artist {
     glBegin(GL_POLYGON);
     glColor3f(color.red, color.green, color.blue);
     glVertex2f(0, 0);
-    glVertex2f(GET_INT("DISPLAY_WIDTH"), 0);
-    glVertex2f(GET_INT("DISPLAY_WIDTH"), 1);
+    glVertex2f(Environment::getEnv()->getWidth(), 0);
+    glVertex2f(Environment::getEnv()->getWidth(), 1);
     glVertex2f(0, 1);
     glEnd();
     glBegin(GL_POLYGON);

@@ -173,7 +173,7 @@ void BaseGfxApp::setCaption(const std::string& caption) {
 
 void BaseGfxApp::reshape(int width, int height) {
   if (s_currentApp->width() != width || s_currentApp->height() != height) {
-    glutReshapeWindow( s_currentApp->width(), s_currentApp->height() );
+    glutReshapeWindow(s_currentApp->width(), s_currentApp->height());
   }
 }
 

@@ -78,8 +78,7 @@ Simulation::Simulation(int argc, char* argv[]) :
   heightText =
     m_glui->add_edittext_to_panel(panelSize, "Height", GLUI_EDITTEXT_INT,
                                   &height, -1, (GLUI_Update_CB)s_updateHeight);
-  /*  GLUI_Button *resize =
-      m_glui->add_button_to_panel(panelSize, "Fit window");*/
+  m_glui->add_button_to_panel(panelSize, "Fit window", -1, (GLUI_Update_CB)s_fitWindow);
   GLUI_Rollout *simulationFiles = new GLUI_Rollout(m_glui, "Open/save simulation");
   controls.push_back(simulationFiles);
   controlsOpen.push_back(true);
@@ -460,6 +459,20 @@ void Simulation::random(int) {
   initObjects();
 }
 
+void updateViewport() {
+  int tx, ty, tw, th;
+  GLUI_Master.get_viewport_area(&tx, &ty, &tw, &th);
+  glViewport(tx, ty, tw, th);
+  glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+  glEnable(GL_BLEND); 
+  glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); 
+  glMatrixMode(GL_PROJECTION); 
+  glLoadIdentity();
+  glMatrixMode(GL_MODELVIEW); 
+  glLoadIdentity();
+  gluOrtho2D(0, tw, 0, th);
+}
+
 void Simulation::updateWidth(int) {
   bool alerted = false;
   for (PhysicalObject *o : *Environment::getEnv())
@@ -472,6 +485,7 @@ void Simulation::updateWidth(int) {
     }
   widthText->update_and_draw_text();
   Environment::getEnv()->setWidth(width);
+  updateViewport();
 }
 
 void Simulation::updateHeight(int) {
@@ -486,6 +500,7 @@ void Simulation::updateHeight(int) {
     }
   widthText->update_and_draw_text();
   Environment::getEnv()->setHeight(height);
+  updateViewport();
 }
 
 void Simulation::gluiControl(int controlID) {
@@ -650,6 +665,14 @@ void Simulation::reshape(int width, int height) {
   s_currentApp->updateUI();
 }
 
+void Simulation::fitWindow(int) {
+  int tx, ty, tw, th;
+  GLUI_Master.get_viewport_area(&tx, &ty, &tw, &th);
+  Environment::getEnv()->setWidth(tw);
+  Environment::getEnv()->setHeight(th);
+  updateViewport();
+}
+
 // Static callback functions
 void Simulation::s_start(int a) {
   s_currentApp->start(a);
@@ -746,6 +769,10 @@ void Simulation::s_open(int a) {
 
 void Simulation::s_save(int a) {
   s_currentApp->trySave();
+}
+
+void Simulation::s_fitWindow(int a) {
+  s_currentApp->fitWindow(a);
 }
 
 // Graphics

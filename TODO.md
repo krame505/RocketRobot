@@ -1,11 +1,6 @@
 # TODO items, by category
 ## User interface / graphics
-* Fix window to be resizeable, work with full screen
-  * Need to figure out how to handle different dimentions with opening simulations
-  * Requires environment mod
-  * How to handle shrinking the field
-    * Delete off-screen objects?
-    * Warn when a simulation is too big to open on the current screen?  
+* Warn the user when opening a simulation that doesn't fit on the screen
 * Color of selected object gets messed up when reseting
 
 ## Optimization simulation

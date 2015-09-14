@@ -144,6 +144,7 @@ public:
 
   void updateWidth(int);
   void updateHeight(int);
+  void fitWindow(int);
 
   static void s_start(int);
   static void s_pause(int);
@@ -172,6 +173,8 @@ public:
   static void s_save(int);
 
   static void s_neuralNetworkFileChanged(int);
+
+  static void s_fitWindow(int);
 
 private:
   /**
