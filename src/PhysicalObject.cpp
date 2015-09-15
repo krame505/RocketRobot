@@ -79,8 +79,8 @@ int PhysicalObject::getId() const {
 
 // Find a new, nonintersecting Location to place the object
 Location PhysicalObject::findOpenLocation(Environment *env, int radius) {
-  int width = GET_INT("DISPLAY_WIDTH");
-  int height = GET_INT("DISPLAY_HEIGHT");
+  int width = env->getWidth();
+  int height = env->getHeight();
   Location result;
   int attempts = 0;
   

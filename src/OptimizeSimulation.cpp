@@ -281,7 +281,7 @@ int OptimizeSimulation::getPerformance(const NeuralNetwork &network) {
   int newSeed = rand();
   srand(123456); // Seed RNG with constant seed so trials are repeatable
   result += getPerformanceRandomRepeated(network);
-  result += getPerformanceMaze(network);
+  //result += getPerformanceMaze(network);
   result += getPerformanceObstacles(network);
   srand(newSeed); // Re-seed RNG
   if (GET_BOOL("OPTIMIZE_VERBOSE"))
@@ -309,12 +309,12 @@ int OptimizeSimulation::getPerformanceMaze(const NeuralNetwork &network) {
   int result = 0;
   open("../runtime/neuralnetwork/setups/maze.rsim");
   Robot *r = new NeuralNetworkRobot(GET_INT("ROBOT_RADIUS"),
-                                    Location(649, 93),
+                                    Location(676, 116),
                                     GET_COLOR("ROBOT_COLOR"),
                                     Color(1, 0, 0),
                                     network,
-                                    11); // Target id from file
-  getObject(11)->setSpeed(GET_INT("OPTIMIZE_MAZE_TARGET_SPEED"));
+                                    26); // Target id from file
+  getObject(26)->setSpeed(GET_INT("OPTIMIZE_MAZE_TARGET_SPEED"));
   while (getNumRobotsTargets() > 0 && result < GET_INT("STEP_LIMIT")) {
     advance();
     result++;
