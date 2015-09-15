@@ -45,8 +45,6 @@ Simulation::Simulation(int argc, char* argv[]) :
   openedFile(false),
   mouseDownLoc(Location(-1, -1)),
   mouseDownId(-1) {
-
-  parseArgs(argc, argv);
   
   setCaption("Robot Simulation");
 
@@ -232,6 +230,9 @@ Simulation::Simulation(int argc, char* argv[]) :
   // Show startup message
   showStartup();
 
+  // Parse commend-line arguments
+  parseArgs(argc, argv);
+
   // Create objects if you aren't opening an existing simulation
   if (!openedFile)
     initObjects();
@@ -279,6 +280,27 @@ void Simulation::parseArgs(int argc, char **argv) {
       else {
         simulationFile = argv[i];
         isStarted = false;
+
+        width = Environment::getEnv()->getWidth();
+        height = Environment::getEnv()->getHeight();
+
+        /* TODO: fix width calculation here...
+        int tx, ty, tw, th;
+        GLUI_Master.get_viewport_area(&tx, &ty, &tw, &th);
+        if (width > tw || height > th)
+          showMessage("Warning: Simulation size exceeds view area");
+        
+        char str[100];
+        sprintf(str, "%d", tw - tx);
+        widthText->set_text(str);
+        sprintf(str, "%d", th - ty);
+        heightText->set_text(str);*/
+
+        char str[100];
+        sprintf(str, "%d", width);
+        widthText->set_text(str);
+        sprintf(str, "%d", height);
+        heightText->set_text(str);
       }
     }
     else {
@@ -421,11 +443,19 @@ void Simulation::tryOpen() {
     isStarted = false;
     showStats();
 
+    width = Environment::getEnv()->getWidth();
+    height = Environment::getEnv()->getHeight();
+
     int tx, ty, tw, th;
     GLUI_Master.get_viewport_area(&tx, &ty, &tw, &th);
-    if (Environment::getEnv()->getWidth() > tw ||
-        Environment::getEnv()->getHeight() > th)
+    if (width > tw || height > th)
       showMessage("Warning: Simulation size exceeds view area");
+
+    char str[100];
+    sprintf(str, "%d", tw - tx);
+    widthText->set_text(str);
+    sprintf(str, "%d", th - ty);
+    heightText->set_text(str);
   }
 }
 
@@ -465,7 +495,7 @@ void Simulation::random(int) {
   initObjects();
 }
 
-void updateViewport() {
+void Simulation::updateViewport() {
   int tx, ty, tw, th;
   GLUI_Master.get_viewport_area(&tx, &ty, &tw, &th);
   glViewport(tx, ty, tw, th);
@@ -688,7 +718,8 @@ void Simulation::keyboardSpecial(int key, int x, int y) {
 
 void Simulation::reshape(int width, int height) {
   BaseGfxApp::reshape(width, height);
-  s_currentApp->updateUI();
+  updateViewport();
+  updateUI();
 }
 
 void Simulation::fitWindow(int) {

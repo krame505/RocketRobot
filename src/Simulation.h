@@ -142,9 +142,10 @@ public:
   void clear(int);
   void random(int);
 
+  void updateViewport();
+  void fitWindow(int);
   void updateWidth(int);
   void updateHeight(int);
-  void fitWindow(int);
 
   static void s_start(int);
   static void s_pause(int);
