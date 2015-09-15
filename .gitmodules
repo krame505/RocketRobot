@@ -1,0 +1,3 @@
+[submodule "lib/configuration"]
+	path = lib/configuration
+	url = https://github.com/krame505/configuration.git
