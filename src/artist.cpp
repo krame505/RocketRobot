@@ -104,6 +104,15 @@ namespace artist {
   }
 
   void drawLight(Location loc, int radius, Color color) {
+    glPushMatrix();
+    
+    //Light center
+    circle(radius, color);
+
+    glPopMatrix();
+  }
+
+  void drawLightBackground(Location loc, int radius, Color color) {
     int slices_per_circle = GET_INT("SLICES_PER_CIRCLE");
     int aura_radius = GET_INT("LIGHT_AURA_RADIUS");
     glPushMatrix();
@@ -125,9 +134,6 @@ namespace artist {
     }
     glEnd();
     glDisable(GL_BLEND);
-    
-    //Light center
-    circle(radius, color);
 
     glPopMatrix();
   }

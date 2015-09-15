@@ -50,9 +50,16 @@ public:
    * \author Lucas Kramer
    * This function gives Robot an appropriate reaction when a collision occurs
    * \param otherId id of the object that it collides with
-   * \param wasHit tells if the object was hit previously
+   * \param wasHit tells if the object caused the collision
    */
   bool handleCollision(int otherId, bool wasHit);
+
+  /**
+   * \author Lucas Kramer
+   * This function deletes the robot and target when the target is found
+   * \param otherId id of the object that it collides with
+   */
+  bool handleNonCollision(int otherId);
 
   /** 
    * \author Lucas Kramer

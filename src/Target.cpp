@@ -18,21 +18,21 @@ Target::Target(int radius,
                Color color,
                int targetNum,
                Environment *env) :
-  PhysicalObject((ObjectType)targetNum, radius, color, env) {}
+  PhysicalObject((ObjectType)targetNum, radius, color, false, env) {}
 
 Target::Target(int maxRadius,
 	       int minRadius,
 	       Color color,
                int targetNum,
                Environment *env) :
-  PhysicalObject((ObjectType)targetNum, maxRadius, minRadius, color, env) {}
+  PhysicalObject((ObjectType)targetNum, maxRadius, minRadius, color, false, env) {}
 
 Target::Target(int radius,
                Location loc,
                Color color,
                int targetNum,
                Environment *env) :
-  PhysicalObject((ObjectType)targetNum, radius, loc, color, env) {}
+  PhysicalObject((ObjectType)targetNum, radius, loc, color, false, env) {}
 
 Target::~Target() {}
 

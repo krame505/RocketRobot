@@ -51,7 +51,7 @@ bool LightSource::handleCollision(int otherId, bool wasHit) {
 }
 
 // Graphics
-void LightSource::display() {
-  artist::drawLight(getLocation(), getRadius(), getColor());
+void LightSource::displayBackground() {
+  artist::drawLightBackground(getLocation(), getRadius(), getColor());
 }
 

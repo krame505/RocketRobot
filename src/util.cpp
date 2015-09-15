@@ -72,6 +72,9 @@ void util::display() {
 
   // Draw background first
   artist::drawBackground();
+  for (PhysicalObject *o : *Environment::getEnv()) {
+      o->displayBackground();
+  }
   
   // Draw non-hitable objects first so they show up underneath everything...
   for (PhysicalObject *o : *Environment::getEnv()) {

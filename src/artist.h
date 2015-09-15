@@ -42,6 +42,12 @@ namespace artist {
    */  
   void drawLight(Location loc, int radius, Color color = GET_COLOR("LIGHT_COLOR"));
   
+  /** Draws a LightSource halo
+   * \param loc absolute Location to draw center of light
+   * \param radius radius of 'bulb' of light
+   */  
+  void drawLightBackground(Location loc, int radius, Color color = GET_COLOR("LIGHT_COLOR"));
+  
 /**
  * Draws an obstacle 
  * \param loc absolute Location to draw center of Obstacle

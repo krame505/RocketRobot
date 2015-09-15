@@ -76,17 +76,20 @@ bool Robot::handleCollision(int otherId, bool wasHit) {
 
   pauseTime = GET_INT("POST_COLLISION_PAUSE");
 
-  if (otherId == targetId && targetId != -1) {
-    delete env->getObject(targetId);
-    delete this;
-    return true;
-  }
-  GET_BOOL("TRANSLATE_REORIENT");
   reorient(GET_BOOL("OPPOSITE_ANGLES") && wasHit?
            GET_INT("REORIENT_ANGLE") :
            -GET_INT("REORIENT_ANGLE"), GET_INT("REORIENT_DISTANCE"));
 
   lastUpdateTime = GET_INT("REORIENT_TIME") - GET_INT("POST_COLLISION_DELAY");
+  return false;
+}
+
+bool Robot::handleNonCollision(int otherId) {
+  if (otherId == targetId && targetId != -1) {
+    delete env->getObject(targetId);
+    delete this;
+    return true;
+  }
   return false;
 }
 

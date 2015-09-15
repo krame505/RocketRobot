@@ -39,7 +39,7 @@ public:
   ~LightSource();
 
   /** 
-   * This function displays the LightSource in the graphics.
+   * This function displays the LightSource halo in the graphics.
    */
-  void display();
+  void displayBackground();
 };

@@ -221,6 +221,11 @@ bool PhysicalObject::translate(float distance) {
       }
     }
   }
+  else if (env->getObject(id) != NULL && env->isColliding(id)) {
+    if (handleNonCollision(env->getCollisionId(id))) {
+      return true;
+    }
+  }
   return false;
 }
 
@@ -311,4 +316,8 @@ void PhysicalObject::update() {}
 void PhysicalObject::updateMembers() {}
 void PhysicalObject::display() {
   artist::drawObject(loc, radius, color);
+}
+void PhysicalObject::displayBackground() {}
+bool PhysicalObject::handleNonCollision(int otherId) {
+  return false;
 }

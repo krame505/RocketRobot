@@ -203,14 +203,30 @@ public:
   virtual void display();
 
   /**
+   * This is implemented by each class, called before display, normally does nothing.  
+   * \see displayAsCircle()
+   */
+  virtual void displayBackground();
+
+  /**
    * This is implemented by each class. It controls the objects behavior 
    * on collision during translate, normally just calls reorient.  
-   * \param otherId The id of the object it hit, or -1 for a wall
+   * \param otherId The id of the object it hit
    * \param wasHit true if the object hit somthing, false if hit by somthing (see translate)
    * \return true if objects were added or removed
    * \see reorient()
    */
   virtual bool handleCollision(int otherId, bool wasHit) = 0;
+
+  /**
+   * This is implemented by each class. It controls the objects behavior 
+   * when interacting with a non-hitable object during translate, normally 
+   * just calls reorient.  
+   * \param otherId The id of the object it hit
+   * \return true if objects were added or removed
+   * \see handleCollision(), reorient()
+   */
+  virtual bool handleNonCollision(int otherId);
 
 protected:
   Environment *env;
