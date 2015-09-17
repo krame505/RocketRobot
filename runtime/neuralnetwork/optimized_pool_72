@@ -4,8 +4,8 @@
  input node 3
  input node 4
  input node 5
-       node 6 connected to 0: 4.80584 1: -4.40832
-       node 7 connected to 1: 0.00633022 2: 0.860399
+       node 6 connected to 0: 4.84031 1: -4.37134
+       node 7 connected to 1: 0.0445352 2: 0.860399
        node 8 connected to 2: 2.38799 3: 1.58854
        node 9 connected to 3: -1.77875 4: 8.18253
        node 10 connected to 4: 3.87111 5: -4.57497
