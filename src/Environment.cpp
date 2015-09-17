@@ -18,12 +18,15 @@ Environment *Environment::currentEnv;
 
 Environment::Environment(int width, int height) :
   id(0), numObjects(0),
-  width(width), height(height) {}
+  width(width), height(height) {
+  objectsMutex = new mutex();
+}
 
 Environment::~Environment() {
   for (PhysicalObject *o : *this) {
     delete o;
   }
+  delete objectsMutex;
 }
 
 Environment *Environment::newEnv(int width, int height) {
@@ -43,28 +46,28 @@ void Environment::setEnv(Environment *newEnv) {
 }
 
 int Environment::addObject(PhysicalObject *object) {
-  objectsMutex.lock();
+  objectsMutex->lock();
   if (id < (int)objects.size())
     objects[id] = object;
   else
     objects.push_back(object);
   id++;
   numObjects++;
-  objectsMutex.unlock();
+  objectsMutex->unlock();
   return id - 1;
 }
 
 void Environment::removeObject(int id) {
-  objectsMutex.lock();
+  objectsMutex->lock();
   if (id < 0) {
-    objectsMutex.unlock();
+    objectsMutex->unlock();
     throw new invalid_argument("Invalid id");
   }
   if (objects[id] != NULL && id < (int)objects.size()) {
     objects[id] = NULL;
     numObjects--;
   }
-  objectsMutex.unlock();
+  objectsMutex->unlock();
 }
 
 void Environment::clear() {
@@ -74,18 +77,18 @@ void Environment::clear() {
   id = 0;
 }
 
-unsigned Environment::getNumObjects() {
+unsigned Environment::getNumObjects() const {
   return numObjects;
 }
 
-PhysicalObject* Environment::getObject(int id) {
+PhysicalObject* Environment::getObject(int id) const {
   if (id >= 0 && id < (int)objects.size())
     return objects[id];
   else
     return NULL;
 }
 
-Environment::iterator Environment::begin() {
+Environment::iterator Environment::begin() const {
   // Need to do this to initialize the iterator to the first object
   // Otherwise it can think it isn't done starting out, and run into
   // an error trying to dereference
@@ -94,7 +97,7 @@ Environment::iterator Environment::begin() {
   return result;
 }
 
-Environment::iterator Environment::end() {
+Environment::iterator Environment::end() const {
   return Environment::iterator(this, objects.size());
 }
 
@@ -114,7 +117,7 @@ bool isTouching(Location l1, int r1, Location l2, int r2) {
   return ((distance - min_distance) < GET_FLOAT("TOUCHING_DELTA")); 
 }
 
-bool Environment::isTouchingWall(Location l, int r) {
+bool Environment::isTouchingWall(Location l, int r) const {
   return
     (l.x - r <= 0) ||
     (l.y - r <= 0) ||
@@ -123,7 +126,7 @@ bool Environment::isTouchingWall(Location l, int r) {
 }
 
 
-bool Environment::isOnScreen(Location l) {
+bool Environment::isOnScreen(Location l) const {
   return
     (l.x >= 0) ||
     (l.y >= 0) ||
@@ -131,15 +134,15 @@ bool Environment::isOnScreen(Location l) {
     (l.y < height);
 }
 
-bool Environment::isTouchingWall(int id) {
+bool Environment::isTouchingWall(int id) const {
   return isTouchingWall(getObject(id)->getLocation(), getObject(id)->getRadius());
 }
 
-bool Environment::isOnScreen(int id) {
+bool Environment::isOnScreen(int id) const {
   return isOnScreen(getObject(id)->getLocation());
 }
 
-bool Environment::isTouchingObject(Location l, int r, int id) {
+bool Environment::isTouchingObject(Location l, int r, int id) const {
   bool result = false;
   for (PhysicalObject *o : *this) {
     if (o->getId() != id)
@@ -148,7 +151,7 @@ bool Environment::isTouchingObject(Location l, int r, int id) {
   return result;
 }
 
-bool Environment::isTouchingHitableObject(Location l, int r, int id) {
+bool Environment::isTouchingHitableObject(Location l, int r, int id) const {
   bool result = false;
   for (PhysicalObject *o : *this) {
     if (o->getId() != id && o->isHitable)
@@ -157,83 +160,83 @@ bool Environment::isTouchingHitableObject(Location l, int r, int id) {
   return result;
 }
 
-bool Environment::isTouchingObject(Location l, int r) {
+bool Environment::isTouchingObject(Location l, int r) const {
   return isTouchingObject(l, r, -1);
 }
 
-bool Environment::isTouchingObject(int id) {
+bool Environment::isTouchingObject(int id) const {
   return isTouchingObject(getObject(id)->getLocation(), getObject(id)->getRadius(), id);
 }
 
-bool Environment::isTouchingHitableObject(Location l, int r) {
+bool Environment::isTouchingHitableObject(Location l, int r) const {
   return isTouchingHitableObject(l, r, -1);
 }
 
-bool Environment::isTouchingHitableObject(int id) {
+bool Environment::isTouchingHitableObject(int id) const {
   return isTouchingHitableObject(getObject(id)->getLocation(), getObject(id)->getRadius(), id);
 }
 
-bool Environment::isColliding(Location l, int r) {
+bool Environment::isColliding(Location l, int r) const {
   return isTouchingWall(l, r) || isTouchingObject(l, r);
 }
 
-bool Environment::isColliding(int id) {
+bool Environment::isColliding(int id) const {
   return isTouchingWall(id) || isTouchingObject(id);
 }
 
-bool Environment::isCollidingWithHitable(Location l, int r) {
+bool Environment::isCollidingWithHitable(Location l, int r) const {
   return isTouchingHitableObject(l, r);
 }
 
-bool Environment::isCollidingWithHitable(int id) {
+bool Environment::isCollidingWithHitable(int id) const {
   return isTouchingHitableObject(id);
 }
 
-int Environment::getCollisionId(Location l, int r, int id) {
+int Environment::getCollisionId(Location l, int r, int id) const {
   for (PhysicalObject *o : *this) {
     if (o->getId() != id &&
         isTouching(l, r, o->getLocation(), o->getRadius())) {
-      objectsMutex.unlock();
+      objectsMutex->unlock();
       return o->getId();
     }
   }
   return -1;
 }
 
-int Environment::getHitableCollisionId(Location l, int r, int id) {
+int Environment::getHitableCollisionId(Location l, int r, int id) const {
   for (PhysicalObject *o : *this) {
     if (o->getId() != id &&
         isTouching(l, r, o->getLocation(), o->getRadius()) &&
         o->isHitable) {
-      objectsMutex.unlock();
+      objectsMutex->unlock();
       return o->getId();
     }
   }
   return -1;
 }
 
-int Environment::getCollisionId(Location l, int r) {
+int Environment::getCollisionId(Location l, int r) const {
   return getCollisionId(l, r, -1);
 }
 
-int Environment::getHitableCollisionId(Location l, int r) {
+int Environment::getHitableCollisionId(Location l, int r) const {
   return getHitableCollisionId(l, r, -1);
 }
 
-int Environment::getCollisionId(int id) {
+int Environment::getCollisionId(int id) const {
   return getCollisionId(getObject(id)->getLocation(), getObject(id)->getRadius(), id);
 }
 
-int Environment::getHitableCollisionId(int id) {
+int Environment::getHitableCollisionId(int id) const {
   return getHitableCollisionId(getObject(id)->getLocation(), getObject(id)->getRadius(), id);
 }
 
 // Environment::iterator
-Environment::iterator::iterator(Environment *env) :
+Environment::iterator::iterator(const Environment *const env) :
   env(env),
   index(0) {}
 
-Environment::iterator::iterator(Environment *env, int index) :
+Environment::iterator::iterator(const Environment *const env, int index) :
   env(env),
   index(index) {}
 
@@ -244,27 +247,27 @@ Environment::iterator::iterator(const Environment::iterator& other) :
 Environment::iterator::~iterator() {}
 
 void Environment::iterator::operator++() {
-  env->objectsMutex.lock();
+  env->objectsMutex->lock();
   index++;
   while (index < env->objects.size() && env->objects[index] == NULL)
     index++;
-   env->objectsMutex.unlock();
+   env->objectsMutex->unlock();
 }
 
 void Environment::iterator::operator++(int) {
-  env->objectsMutex.lock();
+  env->objectsMutex->lock();
   index++;
   while (index < env->objects.size() && env->objects[index] == NULL)
     index++;
-  env->objectsMutex.unlock();
+  env->objectsMutex->unlock();
 }
 
 PhysicalObject* Environment::iterator::operator*() {
-  env->objectsMutex.lock();
+  env->objectsMutex->lock();
   if (index >= env->objects.size()) {
     throw new runtime_error("Cannot dereference iterator: No more elements");
   }
-  env->objectsMutex.unlock();
+  env->objectsMutex->unlock();
   return env->objects[index];
 }
 

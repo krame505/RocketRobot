@@ -229,7 +229,7 @@ public:
   virtual bool handleNonCollision(int otherId);
 
 protected:
-  Environment *env;
+  Environment *const env;
 
   /**
    * This function finds an open Location to place the object

@@ -87,38 +87,38 @@ public:
    * \brief Gets the number of objects in environment
    * \return The number of objects
    */
-  unsigned getNumObjects();
+  unsigned getNumObjects() const;
 
   /**
    * \brief Finds an object from the environment
    * \param id The id of the object to find
    * \return The object that was looked iup
    */
-  PhysicalObject* getObject(int id);
+  PhysicalObject* getObject(int id) const;
 
   /**
    * \brief Gets an iterator to the beginning of the objects
    * \return The iterator
    */
-  Environment::iterator begin();
+  Environment::iterator begin() const;
 
   /**
    * \brief Gets an iterator to the end of the objects
    * \return The iterator
    */
-  Environment::iterator end();
+  Environment::iterator end() const;
 
   /**
    * \brief Gets the width of the environment
    * \return The width
    */
-  int getWidth() {return width;}
+  int getWidth() const {return width;}
 
   /**
    * \brief Gets the height of the environment
    * \return The height
    */
-  int getHeight() {return height;}
+  int getHeight() const {return height;}
 
   /**
    * \brief Sets the width of the environment
@@ -145,7 +145,7 @@ public:
    * \param r The radius of the object
    * \return true when the object is touching a wall
    */
-  bool isTouchingWall(Location l, int r);
+  bool isTouchingWall(Location l, int r) const;
 
   /**
    * Checks if the center of an object is in the designated window
@@ -159,7 +159,7 @@ public:
    * \param l The Location of the object
    * \return true when the object is on screen
    */
-  bool isOnScreen(Location l);
+  bool isOnScreen(Location l) const;
 
   /**
    * Checks if an object is in the designated window
@@ -175,7 +175,7 @@ public:
    * \param id The id of the object
    * \return true when the object is touching a wall
    */
-  bool isTouchingWall(int id);
+  bool isTouchingWall(int id) const;
 
 /**
    * Checks if the center of an object is in the designated window
@@ -189,7 +189,7 @@ public:
    * \param id The id of the object
    * \return true when the object is on screen
    */
-  bool isOnScreen(int id);
+  bool isOnScreen(int id) const;
 
   /**
    * Same as isTouchingObject(Location l, int r), but ignores the object with the
@@ -198,7 +198,7 @@ public:
    * \param r The radius of the object
    * \param id The id of the object to ignore
    */
-  bool isTouchingObject(Location l, int r, int id);
+  bool isTouchingObject(Location l, int r, int id) const;
 
   /**
    * Same as isTouchingObject(Location l, int r), but ignores the object with the
@@ -207,7 +207,7 @@ public:
    * \param r The radius of the object
    * \param id The id of the object to ignore
    */
-  bool isTouchingHitableObject(Location l, int r, int id);
+  bool isTouchingHitableObject(Location l, int r, int id) const;
 
   /**
    * Checks if the object specified by the given Location and radius is touching
@@ -216,7 +216,7 @@ public:
    * \param r The radius of the object
    * \return true when the object is touching any other object
    */
-  bool isTouchingObject(Location l, int r);
+  bool isTouchingObject(Location l, int r) const;
 
   /**
    * Checks if the object specified by the given Location and radius is touching
@@ -225,21 +225,21 @@ public:
    * \param r The radius of the object
    * \return true when the object is touching any other hitable object
    */
-  bool isTouchingHitableObject(Location l, int r);
+  bool isTouchingHitableObject(Location l, int r) const;
 
   /**
    * Checks if the object specified by the given id is touching any other objects
    * \param id The id of the object
    * \return true when the object is touching any other object
    */
-  bool isTouchingObject(int id);
+  bool isTouchingObject(int id) const;
 
   /**
    * Checks if the object specified by the given id is touching any other hitable objects
    * \param id The id of the object
    * \return true when the object is touching any other hitable object
    */
-  bool isTouchingHitableObject(int id);
+  bool isTouchingHitableObject(int id) const;
 
   /**
    * Checks if the object specified by the given Location and radius is touching
@@ -249,7 +249,7 @@ public:
    * \return true when the object is touching a wall or any other object
    * \see isTouchingWall, isTouchingObject
    */
-  bool isColliding(Location l, int r);
+  bool isColliding(Location l, int r) const;
 
   /**
    * Checks if the object specified by the given id is touching
@@ -258,7 +258,7 @@ public:
    * \return true when the object is touching a wall or any other object
    * \see isTouchingWall, isTouchingObject
    */
-  bool isColliding(int id);
+  bool isColliding(int id) const;
 
   /**
    * Checks if the object specified by the given Location and radius is touching
@@ -268,7 +268,7 @@ public:
    * \return true when the object is touching any other hitable object
    * \see isTouchingWall, isTouchingObject
    */
-  bool isCollidingWithHitable(Location l, int r);
+  bool isCollidingWithHitable(Location l, int r) const;
 
   /**
    * Checks if the object specified by the given id is touching
@@ -277,7 +277,7 @@ public:
    * \return true when the object is touching any other hitable object
    * \see isTouchingWall, isTouchingObject
    */
-  bool isCollidingWithHitable(int id);
+  bool isCollidingWithHitable(int id) const;
 
   /**
    * Determines what object is being hit by another object
@@ -288,7 +288,7 @@ public:
    * nothing
    * \see isColliding
    */
-  int getCollisionId(Location l, int r, int id);
+  int getCollisionId(Location l, int r, int id) const;
 
   /**
    * Determines what hitable object is being hit by another object
@@ -299,7 +299,7 @@ public:
    * nothing or a wall
    * \see isColliding
    */
-  int getHitableCollisionId(Location l, int r, int id);
+  int getHitableCollisionId(Location l, int r, int id) const;
 
   /**
    * Determines what object is being hit by another object
@@ -309,7 +309,7 @@ public:
    * nothing or a wall
    * \see isColliding
    */
-  int getCollisionId(Location l, int r);
+  int getCollisionId(Location l, int r) const;
 
   /**
    * Determines what hitable object is being hit by another object
@@ -319,7 +319,7 @@ public:
    * nothing or a wall
    * \see isColliding
    */
-  int getHitableCollisionId(Location l, int r);
+  int getHitableCollisionId(Location l, int r) const;
 
   /**
    * Determines what object is being hit by another object
@@ -328,7 +328,7 @@ public:
    * nothing or a wall
    * \see isColliding
    */
-  int getCollisionId(int id);
+  int getCollisionId(int id) const;
 
   /**
    * Determines what hitable object is being hit by another object
@@ -337,7 +337,7 @@ public:
    * nothing or a wall
    * \see isColliding
    */
-  int getHitableCollisionId(int id);
+  int getHitableCollisionId(int id) const;
 
   /**
    * \brief a simple iterator for the objects in the environment
@@ -348,7 +348,7 @@ public:
      * \brief The default constructor, the iterated objects are always the objects
      * vector in the environment
      */
-    iterator(Environment *env);
+    iterator(const Environment *const env);
 
     /**
      * \brief The copy constructor, the iterated objects are always the objects
@@ -371,17 +371,17 @@ public:
     bool operator==(const iterator& other);
     bool operator!=(const iterator& other);
 
-    friend Environment::iterator Environment::begin();
-    friend Environment::iterator Environment::end();
+    friend Environment::iterator Environment::begin() const;
+    friend Environment::iterator Environment::end() const;
 
   private:
     /**
      * \brief A private constructor that allows iteration to start at a given index.
      * Used for getObjectsBegin() and getObjectsEnd()
      */
-    iterator(Environment *env, int index);
+    iterator(const Environment *const env, int index);
 
-    Environment *env;
+    const Environment *const env;
 
     unsigned index;
   };
@@ -391,7 +391,7 @@ private:
   int numObjects;
   std::vector<PhysicalObject*> objects;
 
-  std::mutex objectsMutex;
+  std::mutex *objectsMutex;
 
   int width, height;
 
