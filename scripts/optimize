@@ -1,11 +1,48 @@
 #!/bin/bash
 FLAGS="-DOPTIMIZE_SIMULATION bool true -DOPTIMIZE_VERBOSE bool false -DPOST_COLLISION_PAUSE int 0 $@"
 LOG=../runtime/neuralnetwork/log
+NUM_PROCESSES=10
+SHOW_DEAD=false
+
+function handler() {
+    echo "Exiting"
+    ./stop_optimize
+    exit 0
+}
+
+trap handler INT
+
+if [ "$#" -gt 1 ] || ( [ "$#" -eq 1 ] && ! [[ $1 == ?(-)+([0-9]) ]] )
+then
+    echo "Usage: $0 [number of processes]"
+    exit 1
+fi
+
+if [ "$#" -eq 1 ]
+then
+    NUM_PROCESSES=$1
+fi
 
 echo "Started optimize at "`date` >> $LOG
 
-for ((i=0;i<10;++i))
+for ((i=0;i<$NUM_PROCESSES;++i))
 do
-    ../bin/gorobot $FLAGS | tee -a $LOG &
+    nice ../bin/gorobot $FLAGS | tee -a $LOG &
+    sleep 1
+done
+
+while true
+do
+    if [ $(ps -ef | grep -v grep | grep gorobot | wc -l) -lt $NUM_PROCESSES ]
+    then
+        STR="Detected dead process at "`date`
+        if $SHOW_DEAD
+        then
+            echo $STR | tee -a $LOG
+        else
+            echo $STR >> $LOG
+        fi
+        nice ../bin/gorobot $FLAGS | tee -a $LOG &
+    fi
     sleep 1
 done
