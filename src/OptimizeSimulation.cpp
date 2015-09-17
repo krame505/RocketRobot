@@ -281,7 +281,7 @@ int OptimizeSimulation::getPerformance(const NeuralNetwork &network) {
   int newSeed = rand();
   srand(123456); // Seed RNG with constant seed so trials are repeatable
   result += getPerformanceRandomRepeated(network);
-  //result += getPerformanceMaze(network);
+  result += getPerformanceMaze(network);
   result += getPerformanceObstacles(network);
   srand(newSeed); // Re-seed RNG
   if (GET_BOOL("OPTIMIZE_VERBOSE"))

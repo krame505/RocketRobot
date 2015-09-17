@@ -1,7 +1,7 @@
 #!/bin/bash
 FLAGS="-DOPTIMIZE_SIMULATION bool true -DOPTIMIZE_VERBOSE bool false -DPOST_COLLISION_PAUSE int 0 $@"
 LOG=../runtime/neuralnetwork/log
-NUM_PROCESSES=10
+NUM_PROCESSES=15
 SHOW_DEAD=false
 
 function handler() {
