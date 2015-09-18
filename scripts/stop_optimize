@@ -1,3 +1,3 @@
 #!/bin/bash
-pkill optimize
-pkill -f gorobot
+killall -q optimize
+killall -q gorobot
