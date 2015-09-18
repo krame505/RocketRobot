@@ -6,7 +6,7 @@ SHOW_DEAD=false
 
 function handler() {
     echo "Exiting"
-    ./stop_optimize
+    pkill -f gorobot
     exit 0
 }
 

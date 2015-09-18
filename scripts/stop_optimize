@@ -1,2 +1,3 @@
 #!/bin/bash
+pkill optimize
 pkill -f gorobot
