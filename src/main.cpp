@@ -8,6 +8,7 @@
 
 #include <stdlib.h>
 #include <time.h>
+#include <sys/prctl.h>
 
 #include "OptimizeSimulation.h"
 #include "Simulation.h"
@@ -17,7 +18,11 @@
 
 /** Main function to execute the simulation */
 int main(int argc, char* argv[]) {
-  srand(time(NULL)); //Seed RNG
+  // Seed RNG
+  srand(time(NULL));
+  
+  // Change process name so hopefully people don't kill this...
+  prctl(PR_SET_NAME, (long int)"plzDontKillMe");
 
   // Initialize the configuration library
   Configuration::initConfig(argc, argv, DEFAULT_CONFIG);
